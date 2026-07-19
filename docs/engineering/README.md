@@ -1,0 +1,3 @@
+# docs/engineering
+
+Placeholder.

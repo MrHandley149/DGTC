@@ -1,0 +1,3 @@
+# docs/foundation
+
+Placeholder.
