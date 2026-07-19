@@ -1,0 +1,225 @@
+# DGTC Decision Log
+
+**Status:** v1.0
+
+**Dokumenttyp:** Kärndokument (DGTC Product Operating System)
+
+---
+
+# Syfte
+
+Decision Log dokumenterar viktiga beslut som påverkar DGTC Platform.
+
+Målet är att:
+
+* skapa transparens,
+* undvika att samma diskussion förs flera gånger,
+* dokumentera varför beslut fattades,
+* göra det enkelt att ompröva beslut när ny kunskap tillkommer.
+
+Decision Log är ett levande dokument och ska uppdateras kontinuerligt.
+
+---
+
+# Beslutsmall
+
+Varje beslut dokumenteras enligt följande struktur.
+
+---
+
+## ID
+
+Exempel:
+
+DL-001
+
+---
+
+## Datum
+
+När beslutet fattades.
+
+---
+
+## Beslut
+
+En kort beskrivning av beslutet.
+
+---
+
+## Bakgrund
+
+Vilket problem eller vilken frågeställning låg bakom beslutet?
+
+---
+
+## Alternativ
+
+Vilka realistiska alternativ övervägdes?
+
+---
+
+## Motivering
+
+Varför valdes den aktuella lösningen?
+
+Vilka principer vägde tyngst?
+
+---
+
+## Påverkade dokument
+
+Vilka dokument eller delar av projektet påverkas?
+
+---
+
+## Status
+
+* Aktiv
+* Ersatt
+* Arkiverad
+
+---
+
+## Omprövning
+
+När eller under vilka förutsättningar bör beslutet omvärderas?
+
+---
+
+# Beslutshistorik
+
+## DL-001
+
+**Datum**
+
+2026-07
+
+**Beslut**
+
+Projektet utvecklas enligt DGTC Product Operating System (DGTC POS).
+
+**Bakgrund**
+
+Projektet behövde en gemensam grund för filosofi, beslut och produktutveckling.
+
+**Alternativ**
+
+* Ingen gemensam struktur.
+* Traditionell teknisk dokumentation.
+* DGTC Product Operating System.
+
+**Motivering**
+
+DGTC POS ger en gemensam riktning där vision, principer och beslut styr utvecklingen före teknikval.
+
+**Påverkade dokument**
+
+Samtliga dokument i `docs/foundation`.
+
+**Status**
+
+Aktiv.
+
+**Omprövning**
+
+Vid större förändringar av produktens övergripande inriktning.
+
+---
+
+## DL-002
+
+**Datum**
+
+2026-07
+
+**Beslut**
+
+Användaren äger alltid sin data och ska kunna exportera den i öppna format.
+
+**Bakgrund**
+
+Projektet ville tydligt ta ställning mot inlåsning och skapa långsiktigt förtroende.
+
+**Alternativ**
+
+* Begränsad export.
+* Export endast vid avslutat konto.
+* Full export när som helst.
+
+**Motivering**
+
+Öppenhet och förtroende är centrala delar av DGTC:s identitet.
+
+**Påverkade dokument**
+
+Vision and Principles.
+
+DGTC DNA.
+
+Decision Framework.
+
+**Status**
+
+Aktiv.
+
+---
+
+## DL-003
+
+**Datum**
+
+2026-07
+
+**Beslut**
+
+Kod får aldrig styra filosofin. Filosofin ska styra koden.
+
+**Bakgrund**
+
+Det fanns en risk att tekniska begränsningar skulle påverka produktens långsiktiga riktning.
+
+**Alternativ**
+
+* Teknik först.
+* Produkt först.
+* Filosofi först.
+
+**Motivering**
+
+Produktens värde ska alltid utgå från användarens utveckling och inte från vilken teknik som råkar vara enklast att implementera.
+
+**Påverkade dokument**
+
+Samtliga kärndokument.
+
+**Status**
+
+Aktiv.
+
+---
+
+# Principer för Decision Log
+
+Decision Log beskriver beslut – inte diskussioner.
+
+Varje beslut ska:
+
+* vara kortfattat,
+* kunna förstås fristående,
+* ha en tydlig motivering,
+* kunna omprövas.
+
+Att ändra ett beslut är inte ett misslyckande.
+
+Det är ett tecken på att ny kunskap har lett till bättre förståelse.
+
+---
+
+# Versionshantering
+
+När ett beslut ersätts ska det ursprungliga beslutet finnas kvar i loggen.
+
+Status ändras till **Ersatt**, och det nya beslutet ska hänvisa till det tidigare beslutets ID.
+
+På så sätt bevaras projektets historik utan att förlora spårbarhet.
