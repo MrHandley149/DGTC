@@ -8,11 +8,13 @@
 
 # Vision
 
-DGTC ska hjälpa människor att utvecklas genom datadrivna insikter, medveten träning och bättre beslut.
+DGTC ska hjälpa människor att utvecklas genom glädjefylld, medveten träning, datadrivna insikter och bättre beslut.
 
 Discgolf är den första tillämpningen.
 
 Den långsiktiga visionen är att bygga en plattform för lärande, prestationsutveckling och beslutsstöd där användaren alltid står i centrum.
+
+Utvecklingen ska börja med en låg tröskel och ett högt upplevt värde, för att stegvis leda användaren mot mer medveten träning och långsiktig utveckling.
 
 ---
 
@@ -43,6 +45,16 @@ Vi börjar med det som fungerar.
 Misstag är information, inte identitet.
 
 Feedback ska stärka motivation och lärande.
+
+---
+
+## Progressive Engagement
+
+DGTC ska ge användaren ett tydligt värde från första användningen.
+
+Produkten ska introducera nya funktioner stegvis, i takt med att användaren vill utvecklas.
+
+Djupet får aldrig stå i vägen för det första kastet.
 
 ---
 
@@ -140,6 +152,8 @@ Inför varje större beslut ska följande frågor besvaras:
 * Har datainsamlingen ett tydligt syfte?
 * Respekterar vi användarens äganderätt till sin data?
 * Finns balans mellan Ethos, Pathos och Logos?
+* Gör detta produkten enklare att börja använda?
+* Bidrar detta till ett naturligt nästa steg för användaren?
 
 Om svaret är nej på någon av dessa frågor ska lösningen omprövas.
 
