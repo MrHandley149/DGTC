@@ -223,3 +223,102 @@ När ett beslut ersätts ska det ursprungliga beslutet finnas kvar i loggen.
 Status ändras till **Ersatt**, och det nya beslutet ska hänvisa till det tidigare beslutets ID.
 
 På så sätt bevaras projektets historik utan att förlora spårbarhet.
+## DL-004
+
+**Datum**
+
+2026-07-20
+
+---
+
+### Beslut
+
+Progressive Engagement blir en grundläggande produktprincip för The Training Companion.
+
+Produkten ska introducera funktioner stegvis och skapa ett tydligt värde på varje nivå.
+
+---
+
+### Bakgrund
+
+Många träningsappar förlorar användare redan efter första användningen.
+
+Vanliga orsaker är:
+
+* hög starttröskel,
+* komplicerade arbetsflöden,
+* fokus på registrering istället för träning,
+* för lite glädje i den första upplevelsen.
+
+DGTC ska istället ge användaren ett positivt första möte och därefter successivt introducera mer avancerade funktioner.
+
+---
+
+### Alternativ
+
+**Alternativ A**
+
+Visa hela systemet direkt.
+
+Förkastades.
+
+Skapar högre tröskel.
+
+---
+
+**Alternativ B**
+
+Bygga enbart en mycket enkel träningsapp.
+
+Förkastades.
+
+Ger inget långsiktigt utvecklingsdjup.
+
+---
+
+**Alternativ C**
+
+Progressive Engagement.
+
+Accepterades.
+
+Ger låg starttröskel samtidigt som produkten kan växa tillsammans med användaren.
+
+---
+
+### Motivering
+
+Produkten ska ge användaren:
+
+1. glädje,
+2. variation,
+3. utveckling,
+4. förbättrad prestation.
+
+Quick Challenge blir därför produktens primära ingång.
+
+Training Programs och Training Scenarios introduceras när användaren själv vill ta nästa steg.
+
+---
+
+### Påverkade dokument
+
+* Vision & Principles
+* Decision Framework
+* PRD
+* MVP
+* Navigation
+* Architecture
+* System Overview
+
+---
+
+### Status
+
+Aktiv
+
+---
+
+### Omprövning
+
+Beslutet ska endast omprövas om användartester visar att den stegvisa produktresan inte fungerar eller om produktens övergripande vision förändras.
