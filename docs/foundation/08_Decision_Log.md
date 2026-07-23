@@ -420,3 +420,63 @@ Locked
 
 ---
 
+## DL-009 – Implementation tasks shall be requirement-based
+
+**Datum:** 2026-07-24
+
+### Beslut
+
+Implementation inom DGTC ska planeras och genomföras på FRS-nivå.
+
+En utvecklare eller AI-agent ska inte få en hel feature eller modul som odelad arbetsuppgift.
+
+Varje implementation ska utgå från ett beslutat och dokumenterat behov och resultera i en avgränsad förändring som kan testas, mätas och utvärderas.
+
+### Motivation
+
+Features och moduler är för stora arbetsobjekt och innehåller flera separata beteenden, beroenden och risker.
+
+Requirement-baserade arbetsuppgifter:
+
+- minskar risken för feltolkning,
+- begränsar omfattningen,
+- förbättrar spårbarheten,
+- förenklar testning och review,
+- gör det möjligt att utvärdera varje förändring separat,
+- minskar risken för feature creep och oavsiktliga sidoändringar.
+
+### Arbetsprincip
+
+Ett arbetsobjekt ska följa denna kedja:
+
+**Beslutat behov → FRS-krav → Implementation Task → Kod → Test → Review → Godkännande**
+
+### Konsekvens
+
+- Features delas upp i funktionella krav.
+- Funktionella krav implementeras genom en eller flera avgränsade Implementation Tasks.
+- Varje Implementation Task ska hänvisa till ett specifikt FRS-krav.
+- En Implementation Task får inte samtidigt implementera orelaterade krav.
+- Godkännande ska baseras på definierade och verifierbara acceptanskriterier.
+
+### Status
+
+Approved
+
+---
+
+DL-010
+
+Guardian Rules har konsoliderats.
+
+Väktarregel 004 införs:
+
+"Förutsätt aldrig att ett steg är utfört."
+
+Instruktioner ska ges i den ordning de ska utföras och endast en verifierbar uppgift åt gången.
+
+Motivering:
+Regeln verifierades under installationen av Flutter SDK och minskade både kognitiv belastning och risken för felaktiga antaganden.
+
+---
+

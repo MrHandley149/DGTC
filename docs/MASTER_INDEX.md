@@ -115,51 +115,58 @@ Om inga finns:
 
 ---
 
-## Väktarregler
+# Väktarregler
 
-### Väktarregel 001
+## Väktarregel 001 – Idéer avbryter aldrig implementation
 
-En ny idé får aldrig avbryta implementationen.
+Nya idéer får aldrig avbryta pågående implementation.
 
-Alla nya idéer följer processen:
+Alla nya idéer ska dokumenteras innan de kan behandlas.
 
-**Idé → RFC → Change Queue → Prioritering → Implementation**
+Arbetsflöde:
 
-Undantag görs endast för kritiska fel eller blockerande beslut.
-
----
-
-### Väktarregel 002
-
-MASTER_INDEX är projektets kontrollrum.
-
-Dokumentet ska visa projektets aktuella status, riktning och nästa steg.
-
-Det ska **inte** duplicera information från andra dokument.
-
-MASTER_INDEX ska sammanfatta och hänvisa vidare, inte återge innehållet i PRD, RFC, Decision Log eller arkitekturdokument.
+Idé → Future Queue → RFC → Beslut → Implementation
 
 ---
 
-### Väktarregel 003
+## Väktarregel 002 – MASTER_INDEX är projektets kontrollrum
 
-Implementera alltid **minsta möjliga förändring** som uppfyller ett godkänt beslut.
+MASTER_INDEX är projektets centrala översikt.
 
-När ett RFC implementeras ska endast de delar av ett dokument som direkt påverkas av beslutet ändras.
+Alla förändringar som påverkar projektets status, dokumentation eller arbetsflöde ska återspeglas i MASTER_INDEX.
 
-Undvik att samtidigt:
+MASTER_INDEX ska alltid kunna besvara:
 
-* skriva om formuleringar,
-* förbättra språk,
-* omstrukturera innehåll,
-* lägga till nya idéer,
-* göra andra förbättringar som inte är en direkt följd av RFC:t.
+* Var befinner vi oss?
+* Vad arbetar vi med?
+* Vad är nästa steg?
+* Vilka beslut är fattade?
 
-Om ytterligare förbättringar identifieras under arbetet ska de istället läggas i **Change Queue** eller hanteras genom ett nytt RFC.
+---
 
-**Syfte**
+## Väktarregel 003 – Minimal implementation
 
-Varje förändring ska vara spårbar till ett specifikt beslut. Det gör projektet enklare att granska, underhålla och vidareutveckla.
+Implementera alltid den minsta lösning som uppfyller kravet.
+
+Undvik framtida funktionalitet, spekulativa abstraktioner och onödig komplexitet.
+
+Filosofi:
+
+> Så enkelt som möjligt – men inte enklare än att kravet uppfylls.
+
+---
+
+## Väktarregel 004 – Förutsätt aldrig att ett steg är utfört
+
+Instruktioner ska ges i den ordning de ska utföras.
+
+Ge endast en verifierbar uppgift åt gången.
+
+Nästa steg får inte introduceras förrän det föregående steget har verifierats.
+
+Projektets väktare får aldrig förutsätta att ett mellanliggande steg har genomförts.
+
+Syftet är att minska kognitiv belastning, undvika antaganden och skapa ett arbetsflöde som fungerar lika bra för människor som för AI-agenter.
 
 ---
 
@@ -341,16 +348,16 @@ Ställ följande frågor regelbundet:
 
 | Metric | Value |
 |---------|------:|
-| Total beers | 2 |
-| Unique beers | 2 |
-| Breweries | 2 |
-| Beer styles | 2 |
+| Total beers | 5 |
+| Unique beers | 5 |
+| Breweries | 5 |
+| Beer styles | 5 |
 
 ### Latest beer
 
 | Date | Beer | Brewery | Style | Sprint | Task |
 |------|------|----------|-------|--------|------|
-| 2026-07-22 | Falcon Bayerskt | Falcon | Bayer/Lager | Consolidation Sprint 1 | Decision Framework |
+| 2026-07-24 | Premium Gold | Spendrups | Stark lager | Sprint 0 Planning | Git Installation |
 
 ---
 
