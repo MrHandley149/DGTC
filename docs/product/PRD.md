@@ -4,7 +4,7 @@
 
 **Första produkt:** Disc Golf Training Companion (DGTC)
 
-**Status:** v1.0 Draft
+**Status:** v1.1 Approved
 
 ---
 
@@ -32,6 +32,7 @@ DGTC bygger på principerna i DGTC Product Operating System (DGTC POS), där anv
 
 DGTC ska hjälpa användaren att:
 
+* komma igång med träningen,
 * träna mer varierat,
 * träna mer medvetet,
 * förstå sin utveckling,
@@ -66,6 +67,7 @@ Produkten ska innehålla funktioner för att:
 
 Produkten ska vara:
 
+* lätt att komma igång med,
 * enkel att förstå,
 * snabb att använda,
 * positiv i sin återkoppling,
@@ -121,3 +123,26 @@ DGTC utvecklas inte för att innehålla flest funktioner.
 DGTC utvecklas för att skapa största möjliga värde för användaren.
 
 Varje funktion ska kunna motiveras utifrån användarens utveckling och produktens övergripande vision.
+
+---
+
+## DL-006 – PRD updated for RFC-001
+
+**Datum:** 2026-07-22
+
+**Beslut**
+
+PRD har uppdaterats för att implementera RFC-001 (Progressive Engagement).
+
+**Genomförda ändringar**
+
+- Produktmål kompletterat med "komma igång med träningen".
+- Designprinciper kompletterade med "lätt att komma igång med".
+
+**Relaterad RFC**
+
+RFC-001
+
+**Status**
+
+Implemented

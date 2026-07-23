@@ -1,6 +1,6 @@
 # DGTC Decision Framework
 
-**Status:** v1.0 Draft
+**Status:** v1.1 Approved
 
 **Dokumenttyp:** Kärndokument (DGTC Product Operating System)
 
@@ -35,9 +35,10 @@ Teknik är ett verktyg för att uppnå visionen – aldrig tvärtom.
 
 Alla större beslut ska prövas mot följande frågor.
 
-## 1. Hjälper detta användaren att utvecklas?
+## 1. Hjälper detta användaren att börja, fortsätta och utvecklas?
 
 Om svaret är nej ska beslutet omprövas.
+Ett bra beslut ska göra det enklare för användaren att börja, fortsätta och utvecklas.
 
 ---
 
@@ -52,6 +53,7 @@ Inte funktioner bara för att de är tekniskt möjliga.
 ## 3. Följer beslutet våra grundprinciper?
 
 * Positive First
+* Progressive Engagement
 * Train Hard, Compete Low
 * Everything Has a Reason
 * Data With Purpose
@@ -98,7 +100,7 @@ Bygger den på kunskap, erfarenhet och ansvar?
 
 Hur upplevs lösningen?
 
-Skapar den motivation, engagemang och en positiv användarupplevelse?
+Skapar den glädje, motivation, engagemang och en positiv användarupplevelse?
 
 ---
 
@@ -157,7 +159,7 @@ DGTC ska inte:
 Ett bra beslut kännetecknas av att det:
 
 * stödjer visionen,
-* hjälper användaren att utvecklas,
+* hjälper användaren framåt,
 * är begripligt,
 * kan motiveras,
 * går att utvärdera,

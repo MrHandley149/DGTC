@@ -322,3 +322,50 @@ Aktiv
 ### Omprövning
 
 Beslutet ska endast omprövas om användartester visar att den stegvisa produktresan inte fungerar eller om produktens övergripande vision förändras.
+
+DL-005
+
+Titel:
+Implementation of RFC-001 in Decision Framework
+
+Beslut:
+Decision Framework har uppdaterats för att implementera Progressive Engagement som grundprincip.
+
+Genomförda ändringar:
+- Progressive Engagement tillagd som grundprincip.
+- Beslutsfilter 1 ändrat till "Hjälper detta användaren framåt?"
+- Förklarande text tillagd för att definiera "framåt".
+- Pathos kompletterat med "glädje".
+- Definitionen av ett bra beslut uppdaterad till "hjälper användaren framåt".
+
+Relaterad RFC:
+RFC-001
+
+Status:
+Implemented
+
+---
+
+## DL-007 – MVP updated for RFC-001
+
+**Datum:** 2026-07-22
+
+**Beslut**
+
+MVP har uppdaterats för att implementera RFC-001 (Progressive Engagement).
+
+**Genomförda ändringar**
+
+- Kärnvärdet kompletterat med "enklare att komma igång med".
+- Icke-funktionella krav kompletterade med "vara lätt att komma igång med".
+
+**Relaterad RFC**
+
+RFC-001
+
+**Status**
+
+Implemented
+
+---
+

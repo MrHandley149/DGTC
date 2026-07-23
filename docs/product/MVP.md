@@ -2,10 +2,9 @@
 
 **Produkt:** Disc Golf Training Companion (DGTC)
 
-**Version:** MVP v1.0
+**Version:** MVP v1.1
 
-**Status:** Draft
-
+**Status:** Approved
 ---
 
 # Syfte
@@ -14,7 +13,7 @@ Detta dokument definierar innehållet i den första publika versionen av DGTC.
 
 Målet med MVP är inte att innehålla alla planerade funktioner, utan att validera produktens kärnvärde:
 
-> Kan DGTC göra träningen mer varierad, roligare och mer medveten?
+> Kan DGTC göra träningen enklare att komma igång med, mer varierad, roligare och mer medveten?
 
 ---
 
@@ -120,12 +119,12 @@ Användaren ska kunna:
 
 MVP ska:
 
+* vara lätt att komma igång med,
 * fungera offline,
 * starta snabbt,
 * kännas responsiv,
 * fungera på Android och iOS,
 * ha ett enkelt och konsekvent gränssnitt.
-
 ---
 
 # Ingår inte i MVP
@@ -158,8 +157,8 @@ MVP är lyckad om användare upplever att:
 * appen är enkel att förstå,
 * träningen blir mer varierad,
 * det går snabbt att komma igång,
-* de vill använda appen igen.
-
+* de vill använda appen igen,
+* de vill bjuda in andra att använda appen.
 ---
 
 # Definition av "klar"
