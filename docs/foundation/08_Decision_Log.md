@@ -369,3 +369,54 @@ Implemented
 
 ---
 
+## DL-007 – Architecture updated for RFC-001
+
+**Datum:** 2026-07-23
+
+**Beslut**
+
+Architecture har uppdaterats för att implementera RFC-001 (Progressive Engagement).
+
+**Genomförda ändringar**
+
+- Arkitekturmålen kompletterades med "Lätt att komma igång med."
+
+**Relaterad RFC**
+
+RFC-001
+
+**Status**
+
+Implemented
+
+---
+
+## DL-008 – Documentation v1.1 Baseline Locked
+
+**Datum:** 2026-07-23
+
+### Beslut
+
+Documentation v1.1 har granskats och godkänts.
+
+Versionen utgör projektets första officiella baseline.
+
+Från och med detta beslut ska ändringar i dokumentationen ske genom RFC eller godkänd Future Queue-process.
+
+### Omfattning
+
+Baselinen omfattar:
+
+- Vision & Principles
+- Decision Framework
+- PRD
+- MVP
+- Architecture
+- MASTER_INDEX
+
+### Status
+
+Locked
+
+---
+

@@ -4,10 +4,9 @@
 
 **Dokument:** ARCHITECTURE.md
 
-**Version:** v1.0
+**Version:** v1.1
 
-**Status:** Draft
-
+**Status:** Approved
 ---
 
 # Syfte
@@ -24,13 +23,13 @@ Arkitekturen är teknikoberoende och beskriver principer, ansvar och struktur.
 
 DGTC ska vara:
 
+* Lätt att komma igång med.
 * Offline First.
 * Modulär.
 * Skalbar.
 * Testbar.
 * Enkel att underhålla.
 * Förberedd för framtida funktioner.
-
 ---
 
 # Arkitekturprinciper

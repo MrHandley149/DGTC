@@ -56,3 +56,19 @@ Det handlar om att användaren snabbt ska uppleva:
 Detta kan komma att påverka onboarding, första träningspasset och Quick Challenge.
 
 ---
+
+FQ-004
+
+Titel:
+Low Coordination Cost
+
+Beskrivning
+
+Projektet ska organiseras så att nya utvecklare och AI-agenter snabbt kan förstå projektets syfte, status och arbetssätt utan omfattande muntlig överlämning.
+
+Motivering
+
+Tid som läggs på tydlig struktur tidigt minskar behovet av koordinering, introduktion och omarbete senare.
+
+---
+

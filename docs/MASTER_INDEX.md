@@ -15,10 +15,10 @@
 | **Projekt** | The Training Companion |
 | **Produkt** | The Disc Golf Training Companion |
 | **Version** | Documentation v1.1 |
-| **Current Phase** | Consolidation Sprint 1 |
+| **Current Phase** | Sprint 0 Planning |
 | **Current Sprint** | Consolidation Sprint 1 |
-| **Current Task** | Architecture |
-| **Next Task** | Documentation v1.1 Lock |
+| **Current Task** | Documentation v1.1 Lock |
+| **Next Task** | Sprint 0 Planning |
 | **Blockers** | None |
 | **Project Health** | 🟢 |
 | **Last Updated** | 2026-07-22 |
@@ -28,9 +28,9 @@
 
 | Fält | Värde |
 |------|--------|
-| **Last Completed** | MVP |
-| **Current** | Architecture |
-| **Next** | Documentation v1.1 Lock |
+| **Last Completed** | Architecture |
+| **Current** | Documentation v1.1 Lock |
+| **Next** | Sprint 0 Planning |
 
 ---
 
@@ -86,7 +86,7 @@ Om inga finns:
 | ------------------ | ------ |
 | Foundation         | ✅      |
 | Documentation v1.0 | ✅      |
-| Documentation v1.1 | ☐      |
+| Documentation v1.1 | ✅ |
 | Sprint 0           | ☐      |
 | Sprint 1           | ☐      |
 | MVP                | ☐      |
@@ -199,7 +199,7 @@ Om projektets status inte går att förstå genom att läsa detta dokument på t
 | Dokument | Version | Status |
 |----------|---------|--------|
 | System Overview | v1.0 | ✅ Aktuell |
-| Architecture | v1.0 | ⏳ Ska uppdateras |
+| Architecture | v1.1 | ✅ Aktuell |
 | Domain Model | v1.0 | ✅ Aktuell |
 | State Model | v1.0 | ✅ Aktuell |
 | Data Model | v1.0 | ✅ Aktuell |
@@ -233,7 +233,7 @@ Om projektets status inte går att förstå genom att läsa detta dokument på t
 
 | RFC | Status | Implementering |
 |-----|--------|----------------|
-| RFC-001 – Progressive Engagement | Approved | In Progress |
+| RFC-001 – Progressive Engagement | Implemented | Closed |
 ---
 
 # CHANGE QUEUE
@@ -268,14 +268,13 @@ Implementera RFC-001 konsekvent i hela dokumentationen utan att introducera nya 
 
 ### Sprint Backlog
 
-### Sprint Backlog
-
 - ✅ Vision & Principles
 - ✅ Decision Framework
 - ✅ PRD
 - ✅ MVP
-- ▶ Architecture
-- ⏳ MASTER_INDEX och sprintstängning
+- ✅ Architecture
+- ▶ MASTER_INDEX och sprintstängning
+
 ### Completed
 
 - RFC-001 – Progressive Engagement
@@ -284,6 +283,7 @@ Implementera RFC-001 konsekvent i hela dokumentationen utan att introducera nya 
 - Decision Framework v1.1
 - PRD v1.1
 - MVP v1.1
+- Architecture v1.1
 
 ---
 
@@ -297,8 +297,9 @@ Implementera RFC-001 konsekvent i hela dokumentationen utan att introducera nya 
 | Decision Framework | ✅ Klar |
 | PRD | ✅ Klar |
 | MVP | ✅ Klar |
-| Architecture | ▶ Nästa |
-| MASTER_INDEX | ⏳ Väntar på slutlig stängning |
+| Architecture | ✅ Klar |
+| MASTER_INDEX | ✅ Klar |
+
 ---
 
 # SESSION CHECKLIST
