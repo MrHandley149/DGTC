@@ -1,7 +1,6 @@
 # Sprint 0
 
-**Status:** Planning
-
+**Status:** Completed
 ---
 
 # Sprint Goal
@@ -46,43 +45,46 @@ Produktfunktioner, användargränssnitt och affärslogik ingår inte.
 
 ☑ Verifiera Flutter
 
-☐ Verifiera Android
+☑ Installera Android Studio
+☑ Installera Android SDK
+☑ Installera Android SDK Command-line Tools
+☑ Godkänn Android SDK-licenser
+☑ Verifiera Android toolchain
 
-☐ Verifiera Visual Studio Code
+☑ Verifiera Visual Studio Code
 
 ☐ Verifiera iOS (senare)
 ---
 
 ## Repository
 
-☐ Fastställ katalogstruktur
+☑ Fastställ katalogstruktur
 
-☐ Fastställ namnstandard
+☑ Fastställ namnstandard
 
-☐ Skapa grundstruktur
+☑ Skapa grundstruktur
 
 ---
 
 ## Development Workflow
 
-☐ Git-strategi
+☑ Git-strategi
 
-☐ Branch-strategi
+☑ Branch-strategi
 
-☐ Commit-standard
+☑ Commit-standard
 
-☐ Kodstandard
+☑ Kodstandard
 
 ---
 
 ## First Build
 
-☐ Projektet bygger
+☑ Projektet bygger
 
-☐ Projektet startar
+☑ Projektet startar
 
-☐ Första tomma applikationen körs
-
+☑ Första tomma applikationen körs
 ---
 
 # Grundprincip

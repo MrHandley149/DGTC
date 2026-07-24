@@ -161,3 +161,16 @@ Detta minskar risken för missförstånd och skapar ett robust kvalitetssystem s
 
 ---
 
+FQ-007
+
+Titel:
+Beer Log
+
+Beskrivning:
+Undersök om Beer Commit och Beer-o-meter bör kompletteras med en Beer Log som dokumenterar projektets viktigaste milstolpar, lärdomar och retrospektiv.
+
+Motivering:
+Beer Commit har utvecklats från ett roligt inslag till ett värdefullt sätt att dokumentera projektets historia och viktiga insikter.
+
+Status:
+Ej prioriterad.

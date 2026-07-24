@@ -348,10 +348,23 @@ Ställ följande frågor regelbundet:
 
 | Metric | Value |
 |---------|------:|
-| Total beers | 5 |
-| Unique beers | 5 |
-| Breweries | 5 |
-| Beer styles | 5 |
+| Total beers | 6 |
+| Unique beers | 6 |
+| Breweries | 6 |
+| Beer styles | 6 |
+
+---
+
+## 🍺 Beer History
+
+| # | Beer | Milestone | Date |
+|---|------|-----------|------|
+| 1 | Falcon Bayerskt | Decision Framework | 2026-xx-xx |
+| 2 | Norrlands Guld | PRD | 2026-xx-xx |
+| 3 | Gränges Original | Sprint 0 Planning | 2026-xx-xx |
+| 4 | Mythos | Implementation Workflow | 2026-xx-xx |
+| 5 | Premium Gold | Git Installation | 2026-xx-xx |
+| 6 | Stockholm Festival | One Step at a Time | 2026-07-24 |
 
 ### Latest beer
 
