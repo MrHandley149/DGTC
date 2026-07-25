@@ -1,96 +1,204 @@
+# Feature Request Log
+
+---
+
 ## FR-001
 
-### Titel
+### Title
 
 Disc Golf Deck of Cards
 
+### Type
+
+Feature
+
 ### Status
 
-Feature Request
+Proposed
 
-### Prioritet
+### Priority
 
-Ej prioriterad
+Backlog
 
-### Kategori
+### Category
 
-Social / Träning / Spelmekanik
+Social / Training / Game Mechanics
 
-### Beskrivning
+### Description
 
-Undersök möjligheten att skapa ett kortbaserat spelläge för träning och socialt spel, inspirerat av fysiska discgolf-kortspel såsom Ript, Disc Golf Frenzy och Bag of Powers.
+Investigate the possibility of creating a card-based game mode for training and social play, inspired by physical disc golf card games such as Ript, Disc Golf Frenzy and Bag of Powers.
 
-Målet är inte att kopiera befintliga produkter utan att utforska hur ett digitalt kortsystem kan skapa variation, motivation och social interaktion inom DGTC.
+The goal is not to copy existing products, but to explore how a digital card system can create variation, motivation and social interaction within DGTC.
 
-### Mål
+### Goal
 
-- Skapa variation i träningen.
-- Göra träning roligare.
-- Fungera både ensam och tillsammans med andra.
-- Passa DGTC:s filosofi om glädje, utveckling och positiv förstärkning.
+- Create variation in practice.
+- Make practice more enjoyable.
+- Work both solo and with friends.
+- Align with DGTC's philosophy of joy, development and positive reinforcement.
 
-### Inspirationskällor
+### Inspiration
 
 - Ript
 - Disc Golf Frenzy
 - Bag of Powers
 - Reddit: Disc Golf Card Game
 
-### Nästa steg
+### Next Step
 
-Förstudie innan eventuell RFC.
+Feasibility study before a possible RFC.
 
 ---
 
 ## FR-002
 
-### Titel
+### Title
 
-Undersök integration med UDisc och Tjing
+Investigate Integration with UDisc and Tjing
+
+### Type
+
+Investigation
 
 ### Status
 
-Feature Request
+Proposed
 
-### Prioritet
+### Priority
 
-Ej prioriterad
+Backlog
 
-### Kategori
+### Category
 
 Integration
 
-### Beskrivning
+### Description
 
-Undersök möjligheten att integrera DGTC med externa discgolftjänster.
+Investigate the possibility of integrating DGTC with external disc golf services.
 
-Syftet är att analysera om integration kan förbättra användarupplevelsen genom att minska dubbelregistrering och återanvända befintlig information.
+The purpose is to determine whether integration can improve the user experience by reducing duplicate work and reusing existing information.
 
-### Förstudie
+### Feasibility Study
 
 #### UDisc
 
-- Finns publikt API?
-- Vilka integrationsmöjligheter erbjuds?
-- Kan rundor, statistik eller baninformation synkroniseras?
-- Vilka licens- och användarvillkor gäller?
+- Is there a public API?
+- What integration possibilities exist?
+- Can rounds, statistics or course information be synchronized?
+- What licensing and terms of service apply?
 
 #### Tjing
 
-- Finns API eller annan integrationsmöjlighet?
-- Kan tävlingar, anmälningar eller resultat hämtas?
-- Hur fungerar autentisering?
-- Finns tekniska eller juridiska begränsningar?
+- Is there an API or other integration method?
+- Can tournaments, registrations or results be imported?
+- How does authentication work?
+- Are there technical or legal limitations?
 
-### Mål
+### Goal
 
-Om integration är möjlig ska den:
+If integration is possible it should:
 
-- minska manuellt arbete,
-- förbättra användarupplevelsen,
-- följa DGTC:s princip om att användaren äger sin data,
-- undvika inlåsning mot externa tjänster.
+- reduce manual work,
+- improve the user experience,
+- follow DGTC's principle that the user owns their data,
+- avoid vendor lock-in.
 
-### Nästa steg
+### Next Step
 
-Teknisk och juridisk förstudie innan eventuell RFC.
+Technical and legal feasibility study before a possible RFC.
+
+---
+
+## RFC-001
+
+### Title
+
+Social Philosophy
+
+### Type
+
+Philosophy
+
+### Status
+
+Proposed
+
+### Priority
+
+High
+
+### Category
+
+Product Philosophy
+
+### Reason
+
+To ensure that every future feature strengthens the social experience instead of replacing it.
+
+### Purpose
+
+Disc golf is more than scores, ratings and statistics.
+
+It is a sport built on shared experiences, encouragement, laughter, friendly competition and the people you meet along the way.
+
+DGTC exists to help players improve, but never at the expense of the joy of playing together.
+
+This philosophy shall influence every product decision within DGTC.
+
+---
+
+## Core Principle
+
+**Train Hard. Compete Low. Play Together.**
+
+- **Train Hard** — Practice with intention. Improvement comes from deliberate effort.
+- **Compete Low** — Trust your training. Compete with confidence, not fear.
+- **Play Together** — Remember why we fell in love with the sport. The people matter more than the scorecard.
+
+---
+
+## Design Philosophy
+
+Every feature should strengthen at least one of these:
+
+- Learning
+- Confidence
+- Community
+
+No feature should encourage isolation, toxicity or unhealthy comparison.
+
+---
+
+## Success
+
+A successful round is not always the one with the lowest score.
+
+A successful round is one that makes you want to play another.
+
+---
+
+## Community First
+
+Competition should create friendships.
+
+Statistics should create insights.
+
+Technology should create conversations.
+
+DGTC should never replace the social experience.
+
+It should amplify it.
+
+---
+
+## Guiding Questions
+
+When making a design decision, always ask:
+
+**Will this help the player improve?**
+
+**Will this make people want to play together again?**
+
+### Next Step
+
+Develop this philosophy into a complete RFC and determine how it should influence Vision & Principles, UX and future feature development.

@@ -2,18 +2,21 @@
 
 **Produkt:** Disc Golf Training Companion (DGTC)
 
-**Version:** MVP v1.1
+**Version:** MVP v1.2
 
 **Status:** Approved
+
 ---
 
 # Syfte
 
 Detta dokument definierar innehållet i den första publika versionen av DGTC.
 
-Målet med MVP är inte att innehålla alla planerade funktioner, utan att validera produktens kärnvärde:
+MVP:n finns för att validera produktens kärnvärde, inte för att maximera antalet funktioner.
 
-> Kan DGTC göra träningen enklare att komma igång med, mer varierad, roligare och mer medveten?
+Målet med MVP är att besvara frågan:
+
+> Kan DGTC göra träningen enklare att komma igång med, mer varierad, roligare och mer medveten – utan att komma i vägen för själva träningen?
 
 ---
 
@@ -25,7 +28,7 @@ Efter att ha använt MVP ska användaren kunna:
 * få varierade kastuppgifter genom snurrhjulen,
 * registrera resultat,
 * avsluta träningspasset,
-* se en enkel sammanfattning av passet.
+* reflektera över sitt träningspass genom en enkel sammanfattning.
 
 ---
 
@@ -49,11 +52,11 @@ Användaren ska kunna:
 
 ---
 
-## Lucky Wheels
+## Challenge Wheels
 
-Två hjul visas på startsidan.
+Två Challenge Wheels visas på startsidan.
 
-Hjulen används för att skapa slumpmässiga träningsuppgifter.
+Hjulen används för att skapa varierade träningsutmaningar.
 
 Användaren ska kunna:
 
@@ -61,7 +64,6 @@ Användaren ska kunna:
 * snurra båda samtidigt,
 * se tydlig animation och ljud,
 * låsa ett hjul och endast snurra det andra.
-
 ---
 
 ## Redigera hjul
@@ -83,6 +85,8 @@ Efter varje övning ska användaren kunna registrera ett enkelt resultat.
 
 MVP fokuserar på snabb registrering framför detaljerad statistik.
 
+Registreringen ska kunna genomföras med så få steg som möjligt.
+
 ---
 
 ## Sammanfattning
@@ -92,6 +96,24 @@ När ett träningspass avslutas visas en sammanfattning med exempelvis:
 * antal genomförda övningar,
 * träningstid,
 * registrerade resultat.
+
+Efter sammanfattningen får användaren besvara en enkel fråga om appupplevelsen.
+
+Fråga:
+
+> **Did DGTC get in the way of your training today?**
+
+Svar:
+
+* Yes
+* No
+
+Vid **Yes** får användaren:
+
+* välja en eller flera orsaker (snabbval),
+* lämna en frivillig kommentar i fritext.
+
+Syftet är att identifiera friktion i produktupplevelsen, inte att mäta nöjdhet.
 
 ---
 
@@ -125,6 +147,7 @@ MVP ska:
 * kännas responsiv,
 * fungera på Android och iOS,
 * ha ett enkelt och konsekvent gränssnitt.
+
 ---
 
 # Ingår inte i MVP
@@ -150,15 +173,63 @@ Följande funktioner är planerade men ingår inte i den första versionen:
 
 ---
 
-# Framgångskriterier
+# Utvecklingsprincip
 
-MVP är lyckad om användare upplever att:
+Under utvecklingen ska vi kontinuerligt fråga:
+
+> Bidrar denna funktion till att validera produktens kärnvärde?
+
+Om svaret är nej hör funktionen inte hemma i MVP.
+
+Om funktionen löser ett verkligt hinder för användaren är den ett **Need**.
+
+Om funktionen endast förbättrar upplevelsen är den ett **Want**.
+
+Under MVP prioriteras alltid Needs framför Wants.
+
+---
+
+# Valideringskriterier
+
+Syftet med MVP är att validera produktupplevelsen.
+
+Framgång mäts inte i antalet funktioner.
+
+Framgång mäts i om spelaren kan genomföra ett träningspass utan att DGTC blir ett hinder.
+
+## Produktupplevelse
+
+MVP är lyckad när spelare upplever att:
 
 * appen är enkel att förstå,
-* träningen blir mer varierad,
 * det går snabbt att komma igång,
-* de vill använda appen igen,
-* de vill bjuda in andra att använda appen.
+* träningen blir mer varierad,
+* arbetsflödet känns naturligt,
+* DGTC stödjer träningen istället för att störa den.
+
+## Friktionsmätning
+
+Efter varje träningspass ställs frågan:
+
+> **Did DGTC get in the way of your training today?**
+
+Om svaret är **Yes** får användaren identifiera orsaken och, om de vill, beskriva vad som hände.
+
+Målet är inte att samla nöjdhetsbetyg.
+
+Målet är att identifiera och eliminera friktion.
+
+## Valideringsmål
+
+MVP anses validerad när:
+
+* spelare konsekvent kan genomföra hela träningspass,
+* återkommande friktionspunkter har identifierats,
+* de största friktionerna har åtgärdats,
+* produktupplevelsen överensstämmer med principen:
+
+> **The Interface Disappears.**
+
 ---
 
 # Definition av "klar"
@@ -168,14 +239,4 @@ MVP är färdig när:
 * samtliga funktioner i detta dokument fungerar stabilt,
 * appen kan användas utan internetuppkoppling,
 * inga kritiska fel återstår,
-* produkten kan användas under ett helt träningspass utan hinder.
-
----
-
-# Utvecklingsprincip
-
-Under utvecklingen ska vi kontinuerligt fråga:
-
-> Bidrar denna funktion till att validera produktens kärnvärde?
-
-Om svaret är nej hör funktionen inte hemma i MVP.
+* produkten kan användas under ett helt träningspass utan att DGTC kommer i vägen för träningen.

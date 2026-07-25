@@ -44,9 +44,31 @@ Ett bra beslut ska göra det enklare för användaren att börja, fortsätta och
 
 ## 2. Skapar detta verkligt värde?
 
-Vi bygger funktioner som löser problem.
+Vi bygger funktioner som löser verkliga problem.
 
-Inte funktioner bara för att de är tekniskt möjliga.
+När vi måste välja mellan att ta bort friktion och att lägga till nya upplevelser prioriterar vi alltid att ta bort friktion.
+
+Needs löser hinder som försvårar träning.
+
+Wants förbättrar upplevelsen men är inte nödvändiga för att användaren ska kunna träna.
+
+Under MVP prioriteras alltid Needs framför Wants.
+
+**Exempel**
+
+**Need**
+
+- Färre tryck för att registrera ett kast.
+- Snabbare start av träningspass.
+- Tydligare navigering.
+- Stabil offlinefunktion.
+
+**Want**
+
+- Nya animationer.
+- Fler ljud.
+- Teman.
+- Visuella förbättringar.
 
 ---
 

@@ -1,385 +1,292 @@
 # MASTER_INDEX
 
-> **Projektets kontrollrum**
+> **Project Control Room**
 >
-> Detta dokument är den primära ingången till projektet och ska öppnas vid början och slutet av varje arbetspass.
+> This document is the primary entry point to the project.
 >
-> Syftet är att ge en tydlig bild av projektets status, riktning och nästa steg.
+> Every work session starts and ends here.
+>
+> It answers four questions:
+>
+> - Where are we?
+> - What are we doing?
+> - What comes next?
+> - Why are we doing it?
 
 ---
 
 # PROJECT DASHBOARD
 
-| Fält | Värde |
+| Field | Value |
 |------|--------|
-| **Projekt** | The Training Companion |
-| **Produkt** | The Disc Golf Training Companion |
-| **Version** | Documentation v1.1 |
-| **Current Phase** | Sprint 0 Planning |
-| **Current Sprint** | Consolidation Sprint 1 |
-| **Current Task** | Documentation v1.1 Lock |
-| **Next Task** | Sprint 0 Planning |
+| **Project** | The Training Companion |
+| **Product** | Disc Golf Training Companion (DGTC) |
+| **Documentation Version** | v2.0 |
+| **Current Phase** | Foundation |
+| **Current Sprint** | Sprint 1 |
+| **Current Task** | AIE Philosophy |
+| **Next Task** | Sprint Planning |
 | **Blockers** | None |
 | **Project Health** | 🟢 |
-| **Last Updated** | 2026-07-22 |
----
-
-# WORK STATUS
-
-| Fält | Värde |
-|------|--------|
-| **Last Completed** | Architecture |
-| **Current** | Documentation v1.1 Lock |
-| **Next** | Sprint 0 Planning |
+| **Last Updated** | 2026-07-25 |
 
 ---
 
 # PROJECT CONTROL ROOM
 
-## Aktuell status
+## Current Status
 
-**Vad gör vi just nu?**
+Describe what is currently being built.
 
-## Aktuell status
+## Next Step
 
-Implementerar RFC-001 konsekvent i dokumentationen.
+Describe the next concrete task.
 
-Fyra av fem huvud­dokument är uppdaterade.
+## Active Blockers
 
-Architecture återstår.
+Only list blockers that stop development.
 
-## Nästa steg
+If none:
 
-Genomför Impact Analysis av Architecture.
+> None
 
-Efter godkänd implementation låses Documentation v1.1.
+## Latest Decision
 
----
-
-## Nästa steg
-
-Vad är nästa konkreta uppgift när den aktuella är klar?
+| Decision | Reference |
+|----------|-----------|
+| AIE becomes a Foundation document | DL-XXX |
 
 ---
 
-## Aktiva blockerare
+# FOUNDATION
 
-Lista endast sådant som faktiskt stoppar projektet.
+The Foundation defines **why DGTC exists, how it behaves and how it teaches.**
 
-Om inga finns:
+Foundation documents are technology independent.
 
-> **None**
+Implementation may change.
+
+The philosophy should not.
+
+The Foundation documents define the principles that all product decisions, architecture and implementation must follow.
+
+## Vision
+
+| Document | Version | Status |
+|----------|---------|--------|
+| Vision & Principles | v1.1 | ✅ |
+| Problem Statement | v1.0 | ✅ |
 
 ---
 
-## Senaste beslut
+## Core Models
 
-| Beslut                 | Referens         |
-| ---------------------- | ---------------- |
-| Progressive Engagement | RFC-001 / DL-004 |
+These documents define how DGTC behaves.
+
+| Document | Version | Status |
+|----------|---------|--------|
+| Product Experience Principles | v1.0 | ✅ |
+| Learning Model | v1.0 | ✅ |
+| Performance Model | v1.0 | ✅ |
+| **AIE Philosophy** | v1.0 | 🚧 |
+| DGTC Way | v1.0 | ✅ |
 
 ---
 
-# MILESTONES
+## Governance
 
-| Milstolpe          | Status |
-| ------------------ | ------ |
-| Foundation         | ✅      |
-| Documentation v1.0 | ✅      |
-| Documentation v1.1 | ✅ |
-| Sprint 0           | ☐      |
-| Sprint 1           | ☐      |
-| MVP                | ☐      |
-| Beta               | ☐      |
-| Version 1.0        | ☐      |
+| Document | Version | Status |
+|----------|---------|--------|
+| Decision Framework | v1.1 | ✅ |
+| Decision Log | v1.1 | ✅ |
+| Glossary | v1.0 | ✅ |
+
+---
+
+# PRODUCT
+
+| Document | Version | Status |
+|----------|---------|--------|
+| PRD | v1.1 | ✅ |
+| MVP | v1.1 | ✅ |
+| User Personas | – | ⏳ |
+
+---
+
+# ARCHITECTURE
+
+| Document | Version | Status |
+|----------|---------|--------|
+| System Overview | v1.0 | ✅ |
+| Architecture | v1.1 | ✅ |
+| Domain Model | v1.0 | ✅ |
+| State Model | v1.0 | ✅ |
+| Data Model | v1.0 | ✅ |
+| Navigation | v1.1 | ✅ |
+
+---
+
+# FUNCTIONAL REQUIREMENTS
+
+| Document | Status |
+|----------|--------|
+| Home | ⏳ |
+| Wheels | ⏳ |
+| Training Programs | ⏳ |
+| Training Session | ⏳ |
+| Result Entry | ⏳ |
+| Summary | ⏳ |
+| Settings | ⏳ |
 
 ---
 
 # PROJECT PRINCIPLES
 
-## Produktprinciper
+## Product Principles
 
-* Kod får aldrig styra filosofin. Filosofin ska styra koden.
-* Djupet får aldrig stå i vägen för det första kastet.
-* Progressive Engagement är en styrande produktprincip.
-* Quick Challenge är produktens primära ingång.
-* Användaren äger sin data.
-
----
-
-## Samarbetsprinciper
-
-* Produkten formas av domänkunskap och användarbehov. Arkitekturen omsätter dessa beslut till ett hållbart system.
-* Product Owner ansvarar för rätt produkt.
-* Projektets väktare ansvarar för att produkten byggs rätt.
+- Code never defines philosophy. Philosophy defines code.
+- Depth must never prevent the first throw.
+- Progressive Engagement is a guiding principle.
+- Quick Challenge is the primary entry point.
+- The player owns their data.
 
 ---
 
-# Väktarregler
+## Collaboration Principles
 
-## Väktarregel 001 – Idéer avbryter aldrig implementation
-
-Nya idéer får aldrig avbryta pågående implementation.
-
-Alla nya idéer ska dokumenteras innan de kan behandlas.
-
-Arbetsflöde:
-
-Idé → Future Queue → RFC → Beslut → Implementation
+- Domain knowledge shapes the product.
+- Architecture makes the product sustainable.
+- Product Owner builds the right product.
+- The Guardian protects the long-term integrity of the product.
 
 ---
 
-## Väktarregel 002 – MASTER_INDEX är projektets kontrollrum
+# GUARDIAN RULES
 
-MASTER_INDEX är projektets centrala översikt.
+## GR-001 — Ideas Never Interrupt Implementation
 
-Alla förändringar som påverkar projektets status, dokumentation eller arbetsflöde ska återspeglas i MASTER_INDEX.
+Ideas are documented before they are implemented.
 
-MASTER_INDEX ska alltid kunna besvara:
+Workflow:
 
-* Var befinner vi oss?
-* Vad arbetar vi med?
-* Vad är nästa steg?
-* Vilka beslut är fattade?
+Idea → Future Queue → RFC → Decision → Implementation
 
 ---
 
-## Väktarregel 003 – Minimal implementation
+## GR-002 — MASTER_INDEX Is The Control Room
 
-Implementera alltid den minsta lösning som uppfyller kravet.
-
-Undvik framtida funktionalitet, spekulativa abstraktioner och onödig komplexitet.
-
-Filosofi:
-
-> Så enkelt som möjligt – men inte enklare än att kravet uppfylls.
+MASTER_INDEX always reflects the current state of the project.
 
 ---
 
-## Väktarregel 004 – Förutsätt aldrig att ett steg är utfört
+## GR-003 — Minimal Implementation
 
-Instruktioner ska ges i den ordning de ska utföras.
-
-Ge endast en verifierbar uppgift åt gången.
-
-Nästa steg får inte introduceras förrän det föregående steget har verifierats.
-
-Projektets väktare får aldrig förutsätta att ett mellanliggande steg har genomförts.
-
-Syftet är att minska kognitiv belastning, undvika antaganden och skapa ett arbetsflöde som fungerar lika bra för människor som för AI-agenter.
+Implement the smallest solution that fulfills the requirement.
 
 ---
 
-## Kontrollrumsprincipen
+## GR-004 — One Verified Step At A Time
 
-Om projektets status inte går att förstå genom att läsa detta dokument på två minuter är dokumentet inte tillräckligt bra.
+Never assume a previous step has been completed.
 
----
-
-# DOCUMENT STATUS
-
-## Foundation
-
-| Dokument | Version | Status |
-|----------|---------|--------|
-| Vision & Principles | v1.1 | ✅ Aktuell |
-| Decision Framework | v1.1 | ✅ Aktuell
-| DGTC Way | v1.0 | ✅ Aktuell |
-| Problem Statement | v1.0 | ✅ Aktuell |
-| Decision Log | v1.1 | ✅ Aktuell |
-| Glossary | v1.0 | ✅ Aktuell |
----
-
-## Product
-
-## Product
-
-| Dokument | Version | Status |
-|----------|---------|--------|
-| PRD | v1.1 | ✅ Aktuell |
-| MVP | v1.1 | ✅ Aktuell |
-| User Personas | – | Ej påbörjad |
----
-
-## Architecture
-
-| Dokument | Version | Status |
-|----------|---------|--------|
-| System Overview | v1.0 | ✅ Aktuell |
-| Architecture | v1.1 | ✅ Aktuell |
-| Domain Model | v1.0 | ✅ Aktuell |
-| State Model | v1.0 | ✅ Aktuell |
-| Data Model | v1.0 | ✅ Aktuell |
-| Navigation | v1.1 | ✅ Aktuell |
----
-
-## Functional Requirements
-
-| Dokument          | Status |
-| ----------------- | ------ |
-| FRS               |        |
-| Home              |        |
-| Wheels            |        |
-| Training Programs |        |
-| Training Session  |        |
-| Result Entry      |        |
-| Summary           |        |
-| Settings          |        |
+Only one verifiable task at a time.
 
 ---
 
-## Brand
+# MILESTONES
 
-| Dokument       | Status |
-| -------------- | ------ |
-| Brand Platform | Queued |
+| Milestone | Status |
+|-----------|--------|
+| Foundation | ✅ |
+| Documentation v1 | ✅ |
+| Sprint 0 | ⏳ |
+| Sprint 1 | ⏳ |
+| MVP | ⏳ |
+| Beta | ⏳ |
+| Version 1.0 | ⏳ |
 
 ---
 
 # ACTIVE RFCs
 
-| RFC | Status | Implementering |
-|-----|--------|----------------|
-| RFC-001 – Progressive Engagement | Implemented | Closed |
+| RFC | Status |
+|-----|--------|
+| RFC-001 Progressive Engagement | ✅ Closed |
+
 ---
 
 # CHANGE QUEUE
 
-Prioriterade förändringar som ännu inte blivit RFC.
-
-| ID | Förslag | Status |
-| -- | ------- | ------ |
+Future improvements waiting for RFC approval.
 
 ---
 
 # BRAND QUEUE
 
-| Kandidat             | Status |
-| -------------------- | ------ |
-| Brand Platform       | Queued |
-| Candidate North Star | Queued |
-| DGTC Value Hierarchy | Queued |
-| Produktlöfte         | Queued |
+| Candidate | Status |
+|-----------|--------|
+| Brand Platform | Queued |
+| North Star | Queued |
+| Value Hierarchy | Queued |
+| Product Promise | Queued |
 
 ---
 
 # SPRINT BOARD
 
-## Current Sprint
+Current Sprint
 
-Consolidation Sprint 1
+Sprint Goal
 
-### Sprint Goal
+Sprint Backlog
 
-Implementera RFC-001 konsekvent i hela dokumentationen utan att introducera nya produktbeslut.
-
-### Sprint Backlog
-
-- ✅ Vision & Principles
-- ✅ Decision Framework
-- ✅ PRD
-- ✅ MVP
-- ✅ Architecture
-- ▶ MASTER_INDEX och sprintstängning
-
-### Completed
-
-- RFC-001 – Progressive Engagement
-- DL-004 – Progressive Engagement
-- Vision & Principles v1.1
-- Decision Framework v1.1
-- PRD v1.1
-- MVP v1.1
-- Architecture v1.1
-
----
-
-# IMPLEMENTATION STATUS
-
-## RFC-001 – Progressive Engagement
-
-| Dokument | Status |
-|----------|--------|
-| Vision & Principles | ✅ Klar |
-| Decision Framework | ✅ Klar |
-| PRD | ✅ Klar |
-| MVP | ✅ Klar |
-| Architecture | ✅ Klar |
-| MASTER_INDEX | ✅ Klar |
+Completed
 
 ---
 
 # SESSION CHECKLIST
 
-## Vid start
+## Start
 
-* Läs Project Dashboard.
-* Läs Project Control Room.
-* Kontrollera blockerare.
-* Bekräfta Current Task.
-* Bekräfta Next Task.
+- Read Dashboard
+- Read Control Room
+- Check blockers
+- Confirm Current Task
 
-## Vid avslut
+## Finish
 
-* Uppdatera Current Task.
-* Uppdatera Next Task.
-* Uppdatera Last Updated.
-* Uppdatera Implementation Status vid behov.
+- Update Current Task
+- Update Next Task
+- Update Dashboard
+- Update Last Updated
 
 ---
 
 # PROJECT HEALTH
 
-Ställ följande frågor regelbundet:
+Regularly ask:
 
-* Arbetar vi fortfarande mot produktvisionen?
-* Följer vi projektprinciperna?
-* Har alla större beslut ett RFC?
-* Har alla godkända RFC implementerats?
-* Finns det teknisk skuld som behöver prioriteras?
-* Är dokumentationen fortfarande konsekvent?
-* Är det dags att konsolidera innan vi fortsätter?
+- Are we still aligned with Vision?
+- Are we following the Foundation?
+- Do major decisions have RFCs?
+- Is implementation consistent with philosophy?
+- Is documentation still coherent?
 
 ---
 
 # PROJECT METRICS
 
-## 🍺 Beer-o-meter
+## Beer-o-meter 🍺
 
-| Metric | Value |
-|---------|------:|
-| Total beers | 6 |
-| Unique beers | 6 |
-| Breweries | 6 |
-| Beer styles | 6 |
+(unchanged)
 
 ---
-
-## 🍺 Beer History
-
-| # | Beer | Milestone | Date |
-|---|------|-----------|------|
-| 1 | Falcon Bayerskt | Decision Framework | 2026-xx-xx |
-| 2 | Norrlands Guld | PRD | 2026-xx-xx |
-| 3 | Gränges Original | Sprint 0 Planning | 2026-xx-xx |
-| 4 | Mythos | Implementation Workflow | 2026-xx-xx |
-| 5 | Premium Gold | Git Installation | 2026-xx-xx |
-| 6 | Stockholm Festival | One Step at a Time | 2026-07-24 |
-
-### Latest beer
-
-| Date | Beer | Brewery | Style | Sprint | Task |
-|------|------|----------|-------|--------|------|
-| 2026-07-24 | Premium Gold | Spendrups | Stark lager | Sprint 0 Planning | Git Installation |
-
----
-
-# easter egg alltid längst ned
 
 # PROJECT STATS
 
-- Documentation version
-- RFCs completed
+- Documentation Version
+- Foundation Documents
+- RFCs
 - Decision Logs
-- Commits (senare)
+- Commits
 - Beer-o-meter 🍺
