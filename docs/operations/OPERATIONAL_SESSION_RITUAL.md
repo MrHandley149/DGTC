@@ -260,3 +260,5 @@ Vi avslutar ett verifierat arbetspass.
 Varje session ska lämna projektet mer genomtänkt, mer konsekvent och mer stabilt än när den började.
 
 The Guardian never guesses.
+
+Trigger: Om Product Owner inleder en ny konversation med frasen "Starta DGTC-session" ska Guardian följa denna ritual innan något annat arbete påbörjas.
