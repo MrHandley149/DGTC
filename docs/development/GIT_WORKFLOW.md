@@ -1,115 +1,122 @@
 # Git Workflow
 
-**Version:** v1.0
-
-**Status:** Draft
-
----
-
-# Syfte
-
-Detta dokument beskriver hur kod och dokumentation hanteras i Git inom DGTC.
-
-Syftet är att säkerställa små, spårbara och granskningsbara förändringar som enkelt kan förstås av både människor och AI-agenter.
+**Document Type:** Development  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Development
 
 ---
 
-# Grundprincip
+# Purpose
 
-En commit ska representera en tydlig och sammanhängande förändring.
+This document defines the Git workflow used by the DGTC project.
 
-Commits ska vara små nog att förstå, granska, testa och vid behov återställa.
-
----
-
-# Branch-strategi
-
-Projektet använder följande huvudbranch:
-
-- `main`
-
-`main` ska alltid innehålla en stabil och godkänd version av projektet.
-
-Utveckling sker i separata arbetsbrancher.
-
-Exempel:
-
-- `feature/it-wheels-001`
-- `fix/it-session-003`
-- `docs/update-implementation-workflow`
-- `chore/setup-flutter-project`
+It describes how changes move from idea to the default branch.
 
 ---
 
-# Branch-namn
-
-Branch-namn ska:
-
-- vara skrivna med små bokstäver,
-- använda bindestreck mellan ord,
-- beskriva förändringens syfte,
-- hänvisa till Implementation Task när en sådan finns.
-
-Format:
-
-`typ/identifierare-kort-beskrivning`
-
-Exempel:
-
-- `feature/it-home-001-start-screen`
-- `feature/it-wheels-002-spin-wheel`
-- `fix/it-result-004-save-result`
-- `docs/repository-structure`
-- `chore/flutter-setup`
-
----
-
-# Commit-standard
-
-Commit-meddelanden ska vara korta, tydliga och beskriva vad förändringen gör.
-
-Format:
-
-`typ: kort beskrivning`
-
-Tillåtna typer:
-
-- `feat` – ny funktionalitet
-- `fix` – rättning av fel
-- `docs` – dokumentation
-- `test` – testkod eller testunderlag
-- `refactor` – kodförändring utan ändrat beteende
-- `chore` – verktyg, konfiguration eller underhåll
-- `build` – byggsystem eller beroenden
-- `ci` – automatiserade arbetsflöden
-
-Exempel:
-
-- `feat: implement IT-WHEELS-001`
-- `fix: preserve wheel state after restart`
-- `docs: add Git workflow`
-- `test: verify IT-HOME-001 acceptance criteria`
-- `chore: create Flutter project structure`
-
----
-
-# Commit description
-
-När en förändring behöver mer förklaring ska committen innehålla en längre beskrivning.
-
-Beskrivningen ska ange:
-
-- vad som ändrades,
-- varför det ändrades,
-- vilket krav eller beslut förändringen hänvisar till,
-- hur förändringen verifierades.
-
-Exempel:
+# Workflow
 
 ```text
-feat: implement IT-WHEELS-001
+Identify change
+    ↓
+Synchronize repository
+    ↓
+Create branch (if needed)
+    ↓
+Implement one logical change
+    ↓
+Review locally
+    ↓
+Commit
+    ↓
+Push
+    ↓
+Pull Request
+    ↓
+Review
+    ↓
+Merge
+```
 
-- Added independent wheel spinning
-- Implemented according to FRS-WHEELS-001
-- Added automated tests for defined acceptance criteria
-- Verified that unrelated wheel behavior remains unchanged
+---
+
+# Working principles
+
+- One logical change per commit.
+- One topic per branch.
+- Keep the repository buildable.
+- Avoid mixing refactoring and new functionality.
+- Complete one revision before starting another.
+
+---
+
+# Commit messages
+
+Use the imperative mood.
+
+Examples:
+
+- Add session summary
+- Update navigation
+- Consolidate documentation
+- Refactor domain model
+
+Avoid:
+
+- Fix stuff
+- Update files
+- Changes
+
+---
+
+# Branch strategy
+
+Suggested naming:
+
+```text
+feature/<name>
+fix/<name>
+docs/<name>
+refactor/<name>
+release/<version>
+```
+
+---
+
+# Pull requests
+
+Every Pull Request should:
+
+- solve one problem,
+- have a clear description,
+- reference related decisions when applicable,
+- be reviewed before merge.
+
+---
+
+# Merge strategy
+
+Prefer a clean repository history.
+
+Merged work shall:
+
+- preserve document ownership,
+- maintain valid references,
+- avoid duplicate information.
+
+---
+
+# Related documents
+
+- GitHub Guide
+- Decision Framework
+- Guardian Operating Procedure
+
+---
+
+# Revision history
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
