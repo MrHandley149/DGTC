@@ -1,117 +1,99 @@
 # Development Workflow
 
-**Version:** v1.0
-
-**Status:** Draft
-
----
-
-# Syfte
-
-Detta dokument beskriver den övergripande utvecklingsprocessen för DGTC.
-
-Syftet är att säkerställa att alla förändringar genomförs konsekvent, spårbart och i rätt ordning.
+**Document Type:** Development  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Development
 
 ---
 
-# Grundprincip
+# Purpose
 
-Utvecklingsprocessen ska minska behovet av omarbete.
+This document defines the standard development workflow for the DGTC project.
 
-Vi investerar tid tidigt för att minska arbete senare.
-
----
-
-# Utvecklingsflöde
-
-Alla större förändringar följer samma process.
-
-Idé
-
-↓
-
-Future Queue
-
-↓
-
-Prioritering
-
-↓
-
-RFC
-
-↓
-
-Dokumentation
-
-↓
-
-FRS
-
-↓
-
-Implementation Workflow
-
-↓
-
-Kod
-
-↓
-
-Verifiering
-
-↓
-
-Godkännande
-
-↓
-
-Git Commit
-
-↓
-
-MASTER_INDEX
+It ensures a repeatable process from identifying work to delivering completed changes.
 
 ---
 
-# Ansvar
+# Workflow
 
-## Product Owner
-
-Ansvarar för:
-
-- produktvision,
-- prioritering,
-- krav,
-- acceptans.
-
----
-
-## Projektets och den tekniske väktaren
-
-Ansvarar för:
-
-- process,
-- spårbarhet,
-- arkitektur,
-- implementation,
-- kvalitet,
-- konsekvens.
+```text
+Identify work
+    ↓
+Confirm governing documents
+    ↓
+Plan implementation
+    ↓
+Implement
+    ↓
+Verify
+    ↓
+Commit
+    ↓
+Review
+    ↓
+Merge
+```
 
 ---
 
-# Principer
+# Development principles
 
-- Rätt beslut i rätt ordning.
-- Dokumentationen är projektets API.
-- Kod implementerar dokumentationen.
-- Implementera alltid minsta möjliga förändring.
-- Fråga alltid: "Vad påverkas inte?"
-- Nya idéer avbryter aldrig implementation.
-- Skapar detta glädje?
+Development should:
+
+- follow approved architecture,
+- follow the Decision Framework,
+- preserve the Single Source of Truth,
+- produce small incremental changes,
+- leave the repository in a consistent state.
 
 ---
 
-# Sammanfattning
+# Before implementation
 
-DGTC utvecklas genom en dokumentdriven och kravbaserad process där varje beslut ska kunna spåras från idé till färdig implementation.
+Verify:
+
+- objective is understood,
+- document ownership is clear,
+- dependencies are identified,
+- no duplicate work already exists.
+
+---
+
+# During implementation
+
+Maintain:
+
+- one logical objective,
+- consistent terminology,
+- reusable components,
+- minimal scope,
+- clear traceability.
+
+---
+
+# Before commit
+
+Verify:
+
+- implementation is complete,
+- references remain valid,
+- documentation reflects the change,
+- no duplicate information has been introduced.
+
+---
+
+# Related documents
+
+- Decision Framework
+- Git Workflow
+- GitHub Guide
+- System Overview
+
+---
+
+# Revision history
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
