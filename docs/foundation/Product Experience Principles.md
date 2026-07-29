@@ -1,235 +1,133 @@
-# DGTC UX Principles
+# Product Experience Principles
 
-> These principles define how DGTC should feel to use.
->
-> Every feature, screen and interaction should support these principles.
-
----
-
-# 1. One Primary Action
-
-> Every screen should have one obvious thing to do.
-
-The user should never wonder what to do next.
-
-Every screen must have one clear primary action.
-Secondary actions should never compete for attention.
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# 2. 15-Second Rule
+# Purpose
 
-> A new player should start their first challenge within 15 seconds.
+This document defines the principles that shape the DGTC user experience.
 
-The first experience should be immediate.
-
-If a feature slows down the user's first throw, it should be reconsidered or moved later in the experience.
-
-The first throw is more important than the first setup.
+Every feature, interaction and workflow should support these principles.
 
 ---
 
-# 3. Guided Entry Principle
+# Experience Principles
 
-> The app teaches itself while the user uses it.
+## One Primary Action
+
+Every screen should present one clear primary action.
+
+Secondary actions should never compete for the user's attention.
+
+---
+
+## 15-Second Rule
+
+A new user should be able to begin their first challenge within 15 seconds.
+
+The first experience should prioritize action over configuration.
+
+---
+
+## Guided Entry
 
 Users should learn by doing.
 
-Avoid lengthy onboarding, manuals and tutorials.
-
-Show guidance only when it becomes useful.
-
-Small steps.
-Small victories.
+Guidance should appear when it becomes relevant rather than through lengthy onboarding.
 
 ---
 
-# 4. Progressive Discovery
+## Progressive Discovery
 
-> Complexity is earned, never presented.
+Complexity should increase with user experience.
 
-The app should reveal new capabilities as the user becomes ready.
-
-Never overwhelm new users with advanced functionality.
-
-The interface should grow together with the player.
+Advanced functionality should appear only when it creates value.
 
 ---
 
-# 5. Positive First
+## Positive First
 
-> Every interaction should encourage the next throw.
+Every interaction should encourage continued learning and practice.
 
-DGTC should always motivate, never punish.
+Feedback should strengthen confidence, curiosity and improvement.
 
-Feedback should inspire confidence, curiosity and improvement.
+---
 
-The goal is to keep the player engaged and learning.
+## The Slide Principle
+
+The first experience should feel effortless.
+
+The natural flow is:
+
+Open → Start → Challenge → Action
+
+Avoid unnecessary decisions before the first activity.
+
+---
+
+## No Dead Ends
+
+Every screen should provide a clear next step.
+
+The user should always know what to do next.
+
+---
+
+## Protect the Start Screen
+
+The Start screen exists to begin an activity quickly.
+
+New elements must justify their presence by improving the first experience.
+
+---
+
+## Adaptive Friction
+
+Guidance should decrease as user competence increases.
+
+Beginners need support.
+
+Experienced users need momentum.
+
+---
+
+## Insight Before Statistics
+
+Present actionable insights before presenting raw data whenever practical.
+
+Understanding is more valuable than information alone.
+
+---
+
+## Protect Confidence
+
+Training should build confidence before increasing difficulty.
+
+Challenge should support growth rather than discourage progress.
 
 ---
 
 # UX Decision Filter
 
-Before adding a feature, ask:
+Before introducing a feature, ask:
 
-1. Does this help the player get started faster?
-2. Does this help the player improve?
-3. Can this wait until later?
+- Does this help users get started faster?
+- Does this help users improve?
+- Can this be introduced later?
 
-If the answer to Question 3 is "Yes",
-the feature probably should not be part of the first experience.
-
----
-
-# Experience Statement
-
-> The best interface is the one you stop noticing after your first throw.
-
-The interface should disappear.
-
-The player should focus on throwing discs—not navigating the app.
+If the final answer is yes, it should probably not be part of the initial experience.
 
 ---
 
----
+# Experience Goal
 
-# 6. The Slide Principle
+The interface should become nearly invisible.
 
-> The first experience should feel like a slide, not a staircase.
-
-The player should move naturally from opening the app to throwing their first disc.
-
-Avoid unnecessary decisions, setup steps and interruptions.
-
-The first experience should create momentum.
-
-The player should feel:
-
-> Open → Start → Throw.
-
-Not:
-
-> Open → Think → Decide → Configure → Start.
-
-Every interaction should reduce friction and increase flow.
-
----
-
-# 7. No Dead Ends
-
-> Every screen should naturally lead to the next action.
-
-The player should never wonder:
-
-> "What do I do now?"
-
-Every screen must provide a clear next step.
-
-Progress should always feel natural and uninterrupted.
-
----
-
-# 8. Protect the Start Screen
-
-> Every new element on the Start screen must justify why it deserves to interrupt the slide.
-
-The Start screen exists for one purpose:
-
-To get the player throwing as quickly as possible.
-
-Any new feature added to the Start screen must clearly improve the first experience.
-
-If it does not, it belongs somewhere else.
-
----
-
----
-
-# The Player Journey
-
-The player's journey should feel effortless.
-
-Open the app.
-
-↓
-
-See the challenge.
-
-↓
-
-Press START.
-
-↓
-
-Feel the haptic confirmation.
-
-↓
-
-Watch the wheels spin.
-
-↓
-
-Receive today's challenge.
-
-↓
-
-Throw.
-
-↓
-
-Press SPIN AGAIN.
-
-Repeat.
-
-The interface should disappear.
-
-The player should stay in flow.
-
-Less thinking.
-
-More throwing.
-
----
-
-# Adaptive Friction
-
-> Friction should decrease as experience increases.
-
-The more confident the player becomes, the less the interface should ask of them.
-
-Beginners receive guidance.
-
-Experienced players receive momentum.
-
-The app should gradually disappear.
-
----
-
-# Insight Before Statistics
-
-> Statistics describe the past.
-
-Insights improve the future.
-
-Whenever possible, present actionable insight before presenting raw statistics.
-
-The goal is not to show more data.
-
-The goal is to help the player become better.
----
-# Protect Confidence
-
-> Confidence is built before it is tested.
-
-The purpose of training is not to expose weakness.
-
-The purpose of training is to build capability.
-
-AIE should strengthen confidence before increasing difficulty.
-
-Challenge should come after success, not before it.
-
----
+Users should focus on learning and performing rather than navigating the application.
 
 ---
 
@@ -238,4 +136,22 @@ Challenge should come after success, not before it.
 When in doubt, remove a step.
 
 Less thinking.
-More throwing.
+
+More doing.
+
+---
+
+# Related Documents
+
+- The DGTC Way
+- Vision and Principles
+- DGTC DNA
+- AIE Philosophy
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
