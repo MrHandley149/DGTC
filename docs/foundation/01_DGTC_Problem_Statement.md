@@ -1,220 +1,149 @@
 # DGTC Problem Statement
 
-**Status:** v1.0 Draft
-
-**Dokumenttyp:** Kärndokument (DGTC Product Operating System)
-
----
-
-# Syfte
-
-Detta dokument beskriver vilket problem DGTC Platform är skapad för att lösa.
-
-Målet är att säkerställa att alla framtida funktioner, designbeslut och tekniska lösningar utgår från användarens verkliga behov.
-
-Vi bygger inte funktioner för att de är möjliga.
-
-Vi bygger funktioner för att de löser ett problem.
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# Varför finns DGTC?
+# Purpose
 
-Människor vill utvecklas.
+This document defines the problem DGTC exists to solve.
 
-De flesta är villiga att träna.
-
-Många tränar ofta.
-
-Ändå når många aldrig sin fulla potential.
-
-Problemet är sällan brist på vilja.
-
-Problemet är att träningen ofta saknar struktur, reflektion och beslutsstöd som leder till verklig utveckling.
+It provides the foundation for product strategy and ensures that future decisions are driven by real user needs rather than technical possibilities.
 
 ---
 
-# Problemet
+# Problem
 
-De flesta träningsverktyg hjälper användaren att registrera vad som har hänt.
+People want to improve.
 
-Få hjälper användaren att förstå varför det hände.
+Most are willing to practice.
 
-Ännu färre hjälper användaren att veta vad nästa steg bör vara.
+Many practice regularly.
 
-Resultatet blir att användaren:
+Yet many never reach their full potential.
 
-* tränar mer,
-* samlar mer data,
-* men inte alltid utvecklas snabbare.
+The problem is rarely motivation alone.
 
----
-
-# Statistik är inte utveckling
-
-Statistik beskriver det förflutna.
-
-Beslutsstöd påverkar framtiden.
-
-Att samla data är enkelt.
-
-Att skapa förståelse är svårt.
-
-DGTC:s mål är därför inte att visa fler siffror.
-
-DGTC:s mål är att hjälpa användaren fatta bättre beslut.
+The problem is that practice often lacks structure, reflection and decision support that lead to meaningful improvement.
 
 ---
 
-# Motivation är inte konstant
+# Current Situation
 
-Motivation förändras över tid.
+Most training applications help users record what happened.
 
-Den påverkas av:
+Few help users understand why it happened.
 
-* framgång,
-* motgång,
-* återhämtning,
-* vardag,
-* mål,
-* social miljö.
+Even fewer help users decide what to do next.
 
-En bra träningsplattform måste därför hjälpa användaren att fortsätta utvecklas även när motivationen varierar.
+As a result, users often:
 
----
-
-# Träning handlar om lärande
-
-Repetition är viktig.
-
-Men upprepning utan reflektion leder sällan till maximal utveckling.
-
-Den som utvecklas snabbast är inte alltid den som tränar mest.
-
-Det är ofta den som lär sig mest av varje träningspass.
+- practice more,
+- collect more data,
+- but do not necessarily improve faster.
 
 ---
 
-# Positiv prestationsutveckling
+# Our Perspective
 
-DGTC bygger på principen **Positive First**.
+Statistics describe the past.
 
-Vi tror att människor utvecklas bäst när de:
+Decision support influences the future.
 
-* vågar prova,
-* vågar misslyckas,
-* vågar reflektera,
-* vågar försöka igen.
+Collecting data is easy.
 
-Misstag är information.
+Creating understanding is difficult.
 
-Inte identitet.
+DGTC exists to transform data into understanding that supports better decisions.
 
 ---
 
-# Den mentala dimensionen
+# Learning
 
-Prestation handlar inte bara om teknik.
+Improvement is created through learning rather than repetition alone.
 
-Den handlar också om:
+Reflection transforms experience into knowledge.
 
-* mod,
-* tillit,
-* fokus,
-* självförtroende,
-* rutiner,
-* beslutsfattande,
-* återhämtning.
-
-Den mentala träningen är därför en naturlig del av prestationsutvecklingen.
+Better decisions lead to better performance over time.
 
 ---
 
-# Varför börjar vi med discgolf?
+# Positive Development
 
-Discgolf är en sport där:
+DGTC follows the Positive First principle.
 
-* teknik,
-* precision,
-* strategi,
-* psykologi,
-* variation,
-* beslutsfattande,
-* träning,
-* statistik
+People improve when they feel safe to:
 
-samverkar på ett tydligt sätt.
+- experiment,
+- make mistakes,
+- reflect,
+- improve.
 
-Det gör discgolf till en utmärkt första tillämpning för DGTC Platform.
+Mistakes are information.
+
+They are not identity.
 
 ---
 
-# Varför har ingen löst detta fullt ut?
+# Performance
 
-Många produkter fokuserar på:
+Performance includes technical, tactical and mental dimensions.
 
-* mer statistik,
-* fler funktioner,
-* mer gamification.
-
-DGTC väljer en annan väg.
-
-Vi kombinerar:
-
-* datadrivet beslutsstöd,
-* evidensinformerad design,
-* positiv prestationspsykologi,
-* lekfull träningsdesign,
-* förklarbara rekommendationer.
+DGTC supports the complete learning process rather than isolated statistics.
 
 ---
 
-# Vad gör DGTC annorlunda?
+# First Application
 
-DGTC samlar inte data för statistikens skull.
+Disc golf is the first implementation because it combines:
 
-DGTC samlar data för att hjälpa användaren förstå sin utveckling.
+- technique,
+- precision,
+- strategy,
+- psychology,
+- decision-making,
+- measurable performance.
 
-Vi använder spelmekanik för att öka motivationen.
-
-Inte för att skapa beroende.
-
-Vi vill att användaren ska bli mer självständig.
-
-Inte mer beroende av appen.
-
----
-
-# Den verkliga produkten
-
-Discgolf är den första tillämpningen.
-
-Den verkliga produkten är ett system som hjälper människor att:
-
-* lära sig bättre,
-* förstå sin utveckling,
-* fatta bättre beslut,
-* prestera bättre över tid.
+The platform itself is designed to extend beyond a single sport.
 
 ---
 
-# Definition av framgång
+# Differentiation
 
-DGTC har lyckats när användaren:
+DGTC does not collect data for its own sake.
 
-* förstår sin träning bättre,
-* vågar prova oftare,
-* lär sig snabbare,
-* känner större glädje i träningen,
-* blir mer självständig,
-* och med tiden behöver mindre stöd från appen för att fatta bra beslut.
+It uses meaningful data to help users understand their development and make better decisions.
+
+The objective is greater independence rather than greater dependence on the platform.
 
 ---
 
-# Sammanfattning
+# Success
 
-DGTC bygger på övertygelsen att verklig utveckling inte skapas av fler funktioner eller mer statistik.
+DGTC succeeds when users:
 
-Verklig utveckling skapas när rätt data, presenterad vid rätt tidpunkt och med rätt förklaring, hjälper användaren att fatta bättre beslut.
+- understand their development,
+- learn faster,
+- make better decisions,
+- enjoy meaningful improvement,
+- become increasingly self-sufficient.
 
-Det är därför DGTC finns.
+---
+
+# Related Documents
+
+- The DGTC Way
+- Vision and Principles
+- DGTC DNA
+- Performance Model
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
