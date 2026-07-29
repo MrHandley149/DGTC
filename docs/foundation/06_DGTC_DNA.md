@@ -1,187 +1,193 @@
 # DGTC DNA
 
-**Status:** v1.0 Draft
-
-**Dokumenttyp:** Kärndokument (DGTC Product Operating System)
-
----
-
-# Syfte
-
-DGTC DNA beskriver vilka vi är, hur vi tänker och vilka värderingar som ska genomsyra hela plattformen.
-
-Teknik, funktioner och design kommer att förändras över tid.
-
-Vårt DNA ska bestå.
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# Vår identitet
+# Purpose
 
-DGTC utvecklas för att hjälpa människor att lära, utvecklas och fatta bättre beslut.
+DGTC DNA defines the identity, philosophy and enduring values of the project.
 
-Discgolf är den första tillämpningen.
+It describes who we are, how we think and the principles that guide every product decision.
 
-Den verkliga produkten är ett system för lärande, prestationsutveckling och beslutsstöd.
+Technology, architecture and implementation may evolve.
 
----
-
-# Vår filosofi
-
-Vi tror att människor utvecklas när de:
-
-* är nyfikna,
-* tränar medvetet,
-* reflekterar över sina erfarenheter,
-* fattar bättre beslut,
-* bygger förståelse över tid.
-
-Vi tror inte på genvägar.
-
-Vi tror på kontinuerlig utveckling.
+The DNA remains stable.
 
 ---
 
-# Våra ledord
+# Identity
+
+DGTC exists to help people learn, improve and make better decisions.
+
+Disc golf is the first application.
+
+The core product is a platform for learning, performance development and decision support.
+
+---
+
+# Core beliefs
+
+We believe people improve through:
+
+- curiosity,
+- deliberate practice,
+- reflection,
+- better decisions,
+- continuous learning.
+
+Improvement is a long-term process.
+
+---
+
+# Core principles
 
 ## Positive First
 
-Vi börjar med det som fungerar.
+Start with what works.
 
 ---
 
 ## Train Hard, Compete Low
 
-Utmana dig själv på träning så att tävlingen känns enklare.
+Training should prepare users for easier performance under pressure.
 
 ---
 
 ## Everything Has a Reason
 
-Resultat har orsaker.
+Performance has identifiable causes.
 
-Vår uppgift är att hjälpa användaren förstå dem.
+Understanding those causes creates improvement.
 
 ---
 
 ## Data With Purpose
 
-Vi samlar bara in data som skapar värde.
+Only collect data that creates value.
 
 ---
 
 ## Actionable Insights
 
-Insikter ska leda till handling.
+Insights should support meaningful action.
 
 ---
 
 ## Explainability
 
-Rekommendationer ska kunna förstås.
+Recommendations should be understandable.
 
 ---
 
 ## Growth Mindset
 
-Förmågor utvecklas genom träning och erfarenhet.
+Ability develops through practice and experience.
 
 ---
 
-# Hur vi bygger
+# Building philosophy
 
-Vi bygger långsiktigt.
+We build for the long term.
 
-Vi väljer enkla lösningar framför komplexa när de ger samma värde.
+We prefer simplicity over unnecessary complexity.
 
-Vi prioriterar kvalitet framför hastighet.
+We value quality over speed.
 
-Vi förbättrar hellre än börjar om.
-
----
-
-# Hur vi ser på användaren
-
-Användaren äger sin data.
-
-Användaren fattar sina beslut.
-
-Användaren ska förstå sina resultat.
-
-Användaren ska kunna lämna DGTC utan hinder.
-
-Vi bygger relation genom värde – inte genom inlåsning.
+We improve existing solutions before replacing them.
 
 ---
 
-# Hur vi ser på teknik
+# View of the user
 
-Teknik är ett verktyg.
+The user owns their data.
 
-Den ska stödja människan, inte styra henne.
+The user makes the final decisions.
 
-Kod får aldrig styra filosofin.
+The user should understand their results.
 
-Filosofin ska styra koden.
+The user must always be free to leave the platform without unnecessary barriers.
 
----
-
-# Hur vi ser på AI
-
-AI ska förstärka människans förmåga att förstå.
-
-AI ska inte ersätta användarens omdöme.
-
-Rekommendationer ska vara transparenta, begripliga och möjliga att ifrågasätta.
+We build trust through value rather than lock-in.
 
 ---
 
-# Hur vi arbetar
+# View of technology
 
-Vi:
+Technology exists to serve people.
 
-* testar idéer,
-* mäter resultat,
-* lär oss,
-* förbättrar.
+Code shall implement philosophy.
 
-Vi ändrar oss när ny kunskap visar en bättre väg.
+It shall never define it.
 
 ---
 
-# Hur vi fattar beslut
+# View of AI
 
-När vi är osäkra frågar vi:
+AI augments human understanding.
 
-* Hjälper detta användaren att utvecklas?
-* Är det förenligt med våra principer?
-* Är lösningen evidensinformerad?
-* Kan vi förklara varför vi gör detta?
+It does not replace human judgement.
 
-Om svaret är nej ska beslutet omprövas.
+Recommendations should be transparent, explainable and open to challenge.
 
 ---
 
-# Vår ambition
+# Continuous improvement
 
-Vi vill inte bygga den app som samlar in mest data.
+We:
 
-Vi vill bygga den app som skapar mest förståelse.
+- experiment,
+- measure,
+- learn,
+- improve.
 
-Vi vill inte ha flest funktioner.
-
-Vi vill ha de mest meningsfulla funktionerna.
-
-Vi vill inte att användaren ska använda DGTC så mycket som möjligt.
-
-Vi vill att varje använd minut ska skapa verkligt värde.
+New evidence may justify better solutions.
 
 ---
 
-# Sammanfattning
+# Decision filter
 
-DGTC utvecklas med människan som utgångspunkt.
+When uncertainty exists, ask:
 
-Varje funktion, varje designbeslut och varje rad kod ska bidra till samma mål:
+- Does this help the user improve?
+- Is it aligned with our principles?
+- Is it evidence-informed?
+- Can we explain the decision?
 
-Att hjälpa människor att utvecklas genom bättre förståelse, bättre beslut och meningsfull träning.
+If the answer is no, reconsider the decision.
+
+---
+
+# Long-term ambition
+
+We do not aim to collect the most data.
+
+We aim to create the most understanding.
+
+We do not aim to deliver the most features.
+
+We aim to deliver the most meaningful features.
+
+We do not seek maximum engagement.
+
+We seek maximum value from every interaction.
+
+---
+
+# Related documents
+
+- Vision and Principles
+- Decision Framework
+- AI Philosophy
+- Performance Model
+
+---
+
+# Revision history
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
