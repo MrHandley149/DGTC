@@ -1,136 +1,135 @@
 # DGTC Foundation
 
-> This document is a consolidated, read-only version of the DGTC Foundation.
->
-> Source of truth:
-> All content originates from the individual Foundation documents.
-> This file exists only to simplify reading and analysis.
->
-> Status: Frozen
->
-> Do not edit this document directly.
-> Update the original Foundation documents instead, then regenerate this file.
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Generated  
+**Information Owner:** Project
+
+---
+
+# Purpose
+
+This document is a generated, read-only compilation of the Foundation documentation.
+
+Its purpose is to simplify reading, analysis and AI-assisted review.
+
+The authoritative content remains in the individual Foundation documents.
+
+This document shall never become the source of truth.
+
+---
+
+# Source of Truth
+
+All Foundation content is maintained in the individual Foundation documents.
+
+Changes shall always be made to the authoritative document first.
+
+This document is regenerated after approved changes.
 
 ---
 
 # Reading Order
 
-1. 00_The_DGTC_Way.md
-2. 01_DGTC_Problem_Statement.md
-3. 02_Learning_Building_Blocks.md
-4. 03_Performance_Model.md
-5. 04_Vision_and_Principles.md
-6. Product Experience Principles.md
-7. AIE Philosophy.md
-8. 05_Decision_Framework.md
-9. 06_DGTC_DNA.md
-10. 07_Glossary.md
-11. 08_Decision_Log.md
+1. The DGTC Way
+2. DGTC Problem Statement
+3. Learning Building Blocks
+4. Performance Model
+5. Vision and Principles
+6. Product Experience Principles
+7. AIE Philosophy
+8. Decision Framework
+9. DGTC DNA
+10. Glossary
+11. Decision Log
 
 ---
 
-# AI Instructions
+# AI Guidance
 
 When using this document:
 
-- Treat this as the complete Foundation.
-- Never use information outside this document unless explicitly instructed.
-- Never modify Foundation.
+- Treat it as a generated snapshot of the Foundation.
+- Do not modify this document directly.
 - Distinguish clearly between:
   - Direct Quote
   - Summary
   - Recommendation
-- Never present interpretations as project decisions.
+- Do not present interpretations as project decisions.
 - If information is missing, state that it is missing.
-- GitHub (main) is the official source of truth.
+- The individual Foundation documents remain authoritative.
 
 ---
 
-# ------------------------------------------------------------------
-# 00_The_DGTC_Way.md
-# ------------------------------------------------------------------
+# Consolidated Content
 
-<<PASTE COMPLETE FILE HERE>>
+The complete contents of each Foundation document are inserted below during the generation process.
 
 ---
 
-# ------------------------------------------------------------------
-# 01_DGTC_Problem_Statement.md
-# ------------------------------------------------------------------
+## The DGTC Way
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 02_Learning_Building_Blocks.md
-# ------------------------------------------------------------------
+## DGTC Problem Statement
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 03_Performance_Model.md
-# ------------------------------------------------------------------
+## Learning Building Blocks
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 04_Vision_and_Principles.md
-# ------------------------------------------------------------------
+## Performance Model
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# Product Experience Principles.md
-# ------------------------------------------------------------------
+## Vision and Principles
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# AIE Philosophy.md
-# ------------------------------------------------------------------
+## Product Experience Principles
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 05_Decision_Framework.md
-# ------------------------------------------------------------------
+## AIE Philosophy
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 06_DGTC_DNA.md
-# ------------------------------------------------------------------
+## Decision Framework
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 07_Glossary.md
-# ------------------------------------------------------------------
+## DGTC DNA
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
 
 ---
 
-# ------------------------------------------------------------------
-# 08_Decision_Log.md
-# ------------------------------------------------------------------
+## Glossary
 
-<<PASTE COMPLETE FILE HERE>>
+<<GENERATED CONTENT>>
+
+---
+
+## Decision Log
+
+<<GENERATED CONTENT>>
 
 ---
 
