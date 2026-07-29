@@ -1,148 +1,133 @@
 # Product Requirements Document (PRD)
 
-**Produkt:** DGTC Platform
-
-**Första produkt:** Disc Golf Training Companion (DGTC)
-
-**Status:** v1.1 Approved
-
----
-
-# Syfte
-
-Detta dokument beskriver vad DGTC Platform ska leverera.
-
-PRD fungerar som den övergripande produktbeskrivningen och utgör grunden för produktutveckling, design, systemarkitektur och implementation.
-
-Detaljerade specifikationer för MVP, roadmap, målgrupper och framgångsmått beskrivs i separata dokument.
+**Document Type:** Product  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# Produktöversikt
+# Purpose
 
-DGTC är en plattform för lärande, prestationsutveckling och beslutsstöd.
+This document defines the product requirements for the DGTC Platform.
 
-Den första produkten riktar sig till discgolfspelare och hjälper dem att skapa mer varierad, strukturerad och utvecklande träning.
+It provides the overall product scope and serves as the foundation for product development, design and implementation.
 
-DGTC bygger på principerna i DGTC Product Operating System (DGTC POS), där användarens utveckling alltid står i centrum.
-
----
-
-# Produktmål
-
-DGTC ska hjälpa användaren att:
-
-* komma igång med träningen,
-* träna mer varierat,
-* träna mer medvetet,
-* förstå sin utveckling,
-* fatta bättre beslut,
-* bibehålla motivation över tid.
-
-Produkten ska kombinera enkelhet med möjligheten att växa tillsammans med användaren.
+Detailed specifications are maintained in separate authoritative documents.
 
 ---
 
-# Omfattning
+# Product Overview
 
-Den första versionen fokuserar på individuell träning.
+DGTC is a platform for learning, performance development and decision support.
 
-Produkten ska från början utformas så att framtida funktioner, exempelvis sociala funktioner, klubbstöd, coachverktyg och sponsorinnehåll, kan integreras utan att grundarkitekturen behöver förändras.
+The first product serves disc golf players by helping them practice with greater structure, variation and purpose.
 
----
-
-# Grundfunktioner
-
-Produkten ska innehålla funktioner för att:
-
-* skapa och genomföra träningspass,
-* skapa variation i träningen,
-* registrera relevanta träningsresultat,
-* ge användaren överblick över sin utveckling,
-* lagra data lokalt med möjlighet till framtida synkronisering.
+The platform is designed to evolve while maintaining its core philosophy.
 
 ---
 
-# Designprinciper
+# Product Goals
 
-Produkten ska vara:
+DGTC shall help users:
 
-* lätt att komma igång med,
-* enkel att förstå,
-* snabb att använda,
-* positiv i sin återkoppling,
-* transparent i sina rekommendationer,
-* tillgänglig även utan internetuppkoppling.
-
----
-
-# Tekniska principer
-
-Produkten utvecklas enligt följande principer:
-
-* Offline First.
-* Modularitet.
-* Plattformsoberoende arkitektur.
-* Förberedd för framtida AI-stöd.
-* Förberedd för flera språk.
-* Användaren äger sin data.
-
-Tekniska detaljer dokumenteras i systemarkitekturen.
+- start practicing quickly,
+- practice with greater variation,
+- practice intentionally,
+- understand their development,
+- make better decisions,
+- maintain long-term motivation.
 
 ---
 
-# Avgränsning
+# Product Scope
 
-PRD beskriver produktens mål och funktionella omfattning.
+The initial product focuses on individual practice.
 
-Följande dokument innehåller detaljer:
+The platform shall support future expansion without requiring fundamental architectural changes.
 
-* **MVP.md** – innehåll i första versionen.
-* **ROADMAP.md** – planerad utveckling efter MVP.
-* **USER_PERSONAS.md** – målgrupper.
-* **SUCCESS_METRICS.md** – hur produktens framgång mäts.
+Potential future capabilities include:
 
----
-
-# Definition av framgång
-
-DGTC är framgångsrik när användarna upplever att:
-
-* träningen blivit roligare,
-* träningen blivit mer varierad,
-* de förstår sin utveckling bättre,
-* de känner större motivation att fortsätta träna,
-* de fattar bättre beslut på och utanför banan.
+- social features,
+- coaching,
+- clubs,
+- sponsorship,
+- additional sports.
 
 ---
 
-# Produktprincip
+# Core Capabilities
 
-DGTC utvecklas inte för att innehålla flest funktioner.
+The product shall support:
 
-DGTC utvecklas för att skapa största möjliga värde för användaren.
-
-Varje funktion ska kunna motiveras utifrån användarens utveckling och produktens övergripande vision.
+- practice sessions,
+- training variation,
+- result registration,
+- progress visibility,
+- local data storage,
+- future synchronization capability.
 
 ---
 
-## DL-006 – PRD updated for RFC-001
+# Design Principles
 
-**Datum:** 2026-07-22
+The product shall be:
 
-**Beslut**
+- easy to start,
+- easy to understand,
+- fast to use,
+- positive,
+- transparent,
+- available offline.
 
-PRD har uppdaterats för att implementera RFC-001 (Progressive Engagement).
+---
 
-**Genomförda ändringar**
+# Technical Principles
 
-- Produktmål kompletterat med "komma igång med träningen".
-- Designprinciper kompletterade med "lätt att komma igång med".
+The platform shall follow:
 
-**Relaterad RFC**
+- Offline First
+- Modular Architecture
+- Platform Independence
+- AI Readiness
+- Multilingual Support
+- User Data Ownership
 
-RFC-001
+Implementation details belong in the technical documentation.
 
-**Status**
+---
 
-Implemented
+# Product Success
+
+DGTC succeeds when users experience:
+
+- more enjoyable practice,
+- greater variation,
+- improved understanding,
+- sustained motivation,
+- better decisions.
+
+---
+
+# Product Principle
+
+Features are created to deliver meaningful value.
+
+Every feature should contribute to user development and align with the project's guiding principles.
+
+---
+
+# Related Documents
+
+- MVP
+- User Personas
+- The DGTC Way
+- DGTC Problem Statement
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
