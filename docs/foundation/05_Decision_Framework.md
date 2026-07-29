@@ -1,209 +1,214 @@
-# DGTC Decision Framework
+# Decision Framework
 
-**Status:** v1.1 Approved
-
-**Dokumenttyp:** Kärndokument (DGTC Product Operating System)
-
----
-
-# Syfte
-
-Detta dokument beskriver hur beslut fattas inom DGTC Platform.
-
-Målet är att skapa konsekventa beslut över tid, oavsett vem som deltar i utvecklingen.
-
-När olika lösningar är möjliga ska beslut fattas utifrån DGTC:s filosofi, inte utifrån personlig smak eller tekniska preferenser.
+**Document Type:** Governance  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product Owner
 
 ---
 
-# Beslutshierarki
+# Purpose
 
-När ett beslut ska fattas används följande ordning:
+This document defines how decisions are made within the DGTC project.
 
-1. Vision
-2. Grundprinciper
-3. Användarens utveckling
-4. Evidens
-5. Produktmål
-6. Teknik
+Its purpose is to:
 
-Teknik är ett verktyg för att uppnå visionen – aldrig tvärtom.
+- ensure consistent decision making,
+- protect the product vision,
+- maintain architectural integrity,
+- prevent unnecessary complexity,
+- provide transparent decision criteria.
 
----
+This document defines the decision process.
 
-# Beslutsfilter
-
-Alla större beslut ska prövas mot följande frågor.
-
-## 1. Hjälper detta användaren att börja, fortsätta och utvecklas?
-
-Om svaret är nej ska beslutet omprövas.
-Ett bra beslut ska göra det enklare för användaren att börja, fortsätta och utvecklas.
+Decision history is recorded in `08_Decision_Log.md`.
 
 ---
 
-## 2. Skapar detta verkligt värde?
+# Decision hierarchy
 
-Vi bygger funktioner som löser verkliga problem.
+When multiple alternatives exist they are evaluated in the following order.
 
-När vi måste välja mellan att ta bort friktion och att lägga till nya upplevelser prioriterar vi alltid att ta bort friktion.
+## 1. User value
 
-Needs löser hinder som försvårar träning.
+Does this help the user improve?
 
-Wants förbättrar upplevelsen men är inte nödvändiga för att användaren ska kunna träna.
+If no:
 
-Under MVP prioriteras alltid Needs framför Wants.
-
-**Exempel**
-
-**Need**
-
-- Färre tryck för att registrera ett kast.
-- Snabbare start av träningspass.
-- Tydligare navigering.
-- Stabil offlinefunktion.
-
-**Want**
-
-- Nya animationer.
-- Fler ljud.
-- Teman.
-- Visuella förbättringar.
+Reject.
 
 ---
 
-## 3. Följer beslutet våra grundprinciper?
+## 2. Product vision
 
-* Positive First
-* Progressive Engagement
-* Train Hard, Compete Low
-* Everything Has a Reason
-* Data With Purpose
-* Actionable Insights
-* Explainability
-* Growth Mindset
+Is the decision aligned with the DGTC vision?
+
+If no:
+
+Reject.
 
 ---
 
-## 4. Är lösningen evidensinformerad?
+## 3. Foundation
 
-Beslut ska, där det är möjligt, baseras på:
+Is the decision consistent with:
 
-* forskning,
-* praktisk erfarenhet,
-* användarvalidering.
+- The DGTC Way
+- Vision and Principles
+- DGTC DNA
 
----
+If no:
 
-## 5. Respekterar vi användaren?
-
-Beslut ska värna om:
-
-* transparens,
-* integritet,
-* användarens data,
-* användarens självständighet.
+Reject or escalate.
 
 ---
 
-# Ethos, Pathos och Logos
+## 4. Architecture
 
-Alla större design- och produktbeslut ska balansera tre perspektiv.
+Does the solution preserve the architectural principles?
 
-## Ethos
+If no:
 
-Är lösningen trovärdig?
-
-Bygger den på kunskap, erfarenhet och ansvar?
+Redesign.
 
 ---
 
-## Pathos
+## 5. Implementation
 
-Hur upplevs lösningen?
+Only after the previous steps have been satisfied may implementation details influence the decision.
 
-Skapar den glädje, motivation, engagemang och en positiv användarupplevelse?
-
----
-
-## Logos
-
-Är lösningen logisk?
-
-Kan beslutet motiveras med fakta och tydliga resonemang?
+Technology never drives product direction.
 
 ---
 
-En stark lösning balanserar alla tre perspektiven.
+# Decision classes
+
+## Class A
+
+Editorial changes.
+
+Examples:
+
+- spelling
+- formatting
+- broken links
+- documentation consistency
+
+No Product Owner approval required.
 
 ---
 
-# När principer krockar
+## Class B
 
-Om två principer står mot varandra gäller följande prioritering:
+Structural improvements without behavioural change.
 
-1. Användarens långsiktiga utveckling.
-2. Användarens integritet och förtroende.
-3. Transparens och förklarbarhet.
-4. Enkelhet.
-5. Teknisk elegans.
+Examples:
 
----
+- document restructuring
+- navigation improvements
+- repository cleanup
+- naming consistency
 
-# Beslut under osäkerhet
-
-När tillräcklig kunskap saknas ska vi:
-
-1. Identifiera antaganden.
-2. Dokumentera osäkerheter.
-3. Testa i liten skala.
-4. Mäta resultat.
-5. Revidera beslutet vid behov.
-
-Vi föredrar lärande framför gissningar.
+Reviewer approval required.
 
 ---
 
-# Vad vi inte gör
+## Class C
 
-DGTC ska inte:
+Product decisions.
 
-* samla in data utan syfte,
-* skapa beroende hos användaren,
-* använda mörka designmönster (dark patterns),
-* låsa in användarens data,
-* prioritera kortsiktig tillväxt framför användarens bästa.
+Examples:
 
----
+- new features
+- changed workflows
+- UX changes
+- product behaviour
+- business rules
 
-# Definition av ett bra beslut
-
-Ett bra beslut kännetecknas av att det:
-
-* stödjer visionen,
-* hjälper användaren framåt,
-* är begripligt,
-* kan motiveras,
-* går att utvärdera,
-* kan ändras när ny kunskap tillkommer.
+Require Product Owner approval.
 
 ---
 
-# Beslutsprocess
+## Class D
 
-Vid större produktbeslut används följande arbetsgång:
+Foundational decisions.
 
-1. Definiera problemet.
-2. Samla relevant kunskap.
-3. Identifiera alternativa lösningar.
-4. Pröva alternativen mot beslutsfiltren.
-5. Dokumentera beslutet.
-6. Utvärdera resultatet efter implementation.
+Examples:
+
+- philosophy
+- architecture principles
+- governance
+- product direction
+
+Require explicit Product Owner approval and Decision Log entry.
 
 ---
 
-# Sammanfattning
+# Evaluation questions
 
-DGTC bygger på principen att goda produkter skapas genom goda beslut.
+Every significant proposal should answer:
 
-Beslut ska vara konsekventa, transparenta och alltid utgå från användarens långsiktiga utveckling.
+- Does it create user value?
+- Does it simplify the product?
+- Does it support deliberate practice?
+- Does it preserve Offline First?
+- Does it reduce unnecessary complexity?
+- Is it understandable by a new contributor?
+- Does it duplicate an existing capability?
+- Is another document the correct owner?
+
+---
+
+# Conflict resolution
+
+If two documents disagree:
+
+1. Foundation
+2. Decision Framework
+3. PRD
+4. FRS
+5. Architecture
+6. Domain Model
+7. Data Model
+8. State Model
+9. Implementation documentation
+
+The higher document owns the decision.
+
+---
+
+# Decision process
+
+```text
+Proposal
+    ↓
+Classify
+    ↓
+Evaluate
+    ↓
+Approve
+    ↓
+Decision Log
+    ↓
+Implementation
+```
+
+---
+
+# Decision ownership
+
+| Area | Owner |
+|------|-------|
+| Product | Product Owner |
+| Architecture | Architecture |
+| Documentation | Information Owner |
+| Repository | Project |
+
+---
+
+# Revision history
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
+
