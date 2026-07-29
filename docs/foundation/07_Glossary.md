@@ -1,220 +1,124 @@
-# DGTC Glossary
+# Glossary
 
-**Status:** v1.0 Draft
-
-**Dokumenttyp:** Kärndokument (DGTC Product Operating System)
-
----
-
-# Syfte
-
-Detta dokument definierar de begrepp som används inom DGTC Platform.
-
-Målet är att säkerställa att alla använder samma språk och samma definitioner.
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Project
 
 ---
 
-# A
+# Purpose
 
-## Actionable Insights
+This glossary defines the canonical terminology used throughout the DGTC documentation.
 
-Insikter som leder till konkreta och genomförbara åtgärder.
-
----
-
-## AIE (Actionable Insights Engine)
-
-DGTC:s analysmotor som omvandlar data till förklarbara rekommendationer och beslutsstöd.
+Terms should have one definition only.
 
 ---
 
-# B
+# Core terms
 
-## Bag Tag
+## Architecture
 
-En digital eller fysisk identitet kopplad till utmaningar, prestationer eller ranking.
-
-Bag Tags kan vara säsongsbaserade eller permanenta.
+The high-level structure of the system and its major components.
 
 ---
 
-## Badge
+## Decision
 
-En visuell utmärkelse som belönar prestation, utveckling eller deltagande.
-
----
-
-# C
-
-## Coach
-
-Framtida funktion som ger individanpassad vägledning baserad på användarens data och mål.
+An approved choice that affects the project or product.
 
 ---
 
-## Context
+## Document Owner
 
-De yttre faktorer som påverkar en prestation, exempelvis väder, bana eller tävlingssituation.
-
----
-
-# D
-
-## Data With Purpose
-
-Principen att all datainsamling ska ha ett tydligt syfte och skapa värde för användaren.
+The document responsible for maintaining the authoritative definition of a subject.
 
 ---
 
-## Decision Framework
+## Lifecycle
 
-DGTC:s modell för hur produkt-, design- och teknikbeslut fattas.
+The current maturity of a document.
 
----
+Values:
 
-## DGTC Platform
-
-Den långsiktiga plattformen för lärande, prestationsutveckling och beslutsstöd.
-
-Discgolf är den första tillämpningen.
-
----
-
-# E
-
-## Ethos
-
-Trovärdighet, ansvar och kunskapsgrund i ett beslut.
+- Draft
+- Review
+- Approved
+- Deprecated
+- Archived
 
 ---
 
-## Everything Has a Reason
+## Repository
 
-Grundprincip som betonar att prestation och resultat har bakomliggande orsaker som kan analyseras och förstås.
-
----
-
-## Explainability
-
-Förmågan att förklara hur och varför en rekommendation eller analys har tagits fram.
+The complete DGTC source code and documentation.
 
 ---
 
-# G
+## Single Source of Truth (SSOT)
 
-## Growth Mindset
-
-Synsättet att förmågor utvecklas genom träning, erfarenhet och reflektion.
+The single authoritative location for a specific type of information.
 
 ---
 
-# L
+## Stakeholder
 
-## Learning Building Blocks
-
-DGTC:s grundläggande modell över de komponenter som bygger mänskligt lärande.
+A person or group with an interest in the project.
 
 ---
 
-## Learning Model
+## User Story
 
-Modellen som beskriver hur människor utvecklas genom erfarenhet, reflektion och handling.
-
----
-
-# P
-
-## Pathos
-
-Användarens upplevelse, känslor och motivation.
+A description of functionality from the user's perspective.
 
 ---
 
-## Performance Model
+## Requirement
 
-Modellen som beskriver vilka faktorer som påverkar prestation och hur de samverkar.
-
----
-
-## Positive First
-
-Grundprincip som innebär att återkoppling utgår från styrkor och möjligheter till utveckling.
+A statement describing what the system shall do.
 
 ---
 
-# R
+## Feature
 
-## Research Team
-
-Den funktion som ansvarar för att samla, värdera och omsätta relevant forskning till design- och produktbeslut.
+A coherent capability delivered to the user.
 
 ---
 
-## Rules Engine
+## Component
 
-Den komponent som hanterar regler för exempelvis bag tags, utmaningar, träningsformat och framtida tävlingsfunktioner.
-
----
-
-# S
-
-## Skin
-
-Ett utbytbart visuellt tema som förändrar appens utseende utan att påverka funktionaliteten.
+A reusable part of the system architecture.
 
 ---
 
-## Sticker
+## Module
 
-En digital samlarobjektsfunktion som kan användas för belöningar, progression eller events.
-
----
-
-# T
-
-## Train Hard, Compete Low
-
-DGTC:s träningsfilosofi där träningen ska vara mer utmanande än tävlingen för att skapa trygghet och stabil prestation.
+A logical grouping of related functionality.
 
 ---
 
-# U
+## Revision
 
-## User Development
-
-DGTC:s övergripande mål att hjälpa användaren utvecklas över tid genom bättre förståelse och bättre beslut.
+A controlled change to documentation or software.
 
 ---
 
-# V
+## Traceability
 
-## Vision
-
-Den långsiktiga riktning som styr utvecklingen av DGTC Platform.
+The ability to follow a requirement through design, implementation and validation.
 
 ---
 
-# Ö
+# Related documents
 
-## Öppen data
-
-Principen att användaren äger sin data och ska kunna exportera den i öppna format utan begränsningar.
-
----
-
-# Definitioner
-
-När ett nytt begrepp introduceras i DGTC ska det:
-
-* ha en tydlig definition,
-* vara konsekvent använt,
-* dokumenteras i detta Glossary,
-* granskas vid behov av Research Team och produktansvariga.
+- Decision Framework
+- System Overview
+- Document Register
 
 ---
 
-# Versionshantering
+# Revision history
 
-Glossary är ett levande dokument.
-
-Nya begrepp kan läggas till, men befintliga definitioner ska endast ändras när det finns goda skäl och förändringen dokumenteras i Decision Log.
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
