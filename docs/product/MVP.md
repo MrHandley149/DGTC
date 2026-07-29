@@ -1,242 +1,217 @@
 # MVP Specification
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Version:** MVP v1.2
-
-**Status:** Approved
-
----
-
-# Syfte
-
-Detta dokument definierar innehållet i den första publika versionen av DGTC.
-
-MVP:n finns för att validera produktens kärnvärde, inte för att maximera antalet funktioner.
-
-Målet med MVP är att besvara frågan:
-
-> Kan DGTC göra träningen enklare att komma igång med, mer varierad, roligare och mer medveten – utan att komma i vägen för själva träningen?
+**Document Type:** Product  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# Mål
+# Purpose
 
-Efter att ha använt MVP ska användaren kunna:
+This document defines the scope of the first public release of DGTC.
 
-* starta ett träningspass på några sekunder,
-* få varierade kastuppgifter genom snurrhjulen,
-* registrera resultat,
-* avsluta träningspasset,
-* reflektera över sitt träningspass genom en enkel sammanfattning.
+The MVP exists to validate the product's core value rather than maximize functionality.
 
----
+The primary question is:
 
-# Målgrupp
-
-MVP riktar sig till enskilda discgolfspelare, från nybörjare till erfarna motionärer.
-
-Ingen klubb-, coach- eller sponsorfunktion ingår.
+> Can DGTC make practice easier to start, more varied, more enjoyable and more intentional without getting in the way of training?
 
 ---
 
-# Funktioner i MVP
+# Objectives
 
-## Träningspass
+The MVP shall enable users to:
 
-Användaren ska kunna:
+- start a practice session within seconds,
+- receive varied challenges through the Challenge Wheels,
+- record simple results,
+- complete a practice session,
+- review a concise session summary.
 
-* skapa ett nytt träningspass,
-* namnge passet (valfritt),
-* starta och avsluta passet.
+---
+
+# Target Users
+
+The MVP targets individual disc golf players ranging from beginners to recreational experienced players.
+
+Club, coach and sponsor functionality are outside the MVP scope.
+
+---
+
+# Functional Scope
+
+## Practice Sessions
+
+Users shall be able to:
+
+- create a session,
+- optionally name the session,
+- start and finish the session.
 
 ---
 
 ## Challenge Wheels
 
-Två Challenge Wheels visas på startsidan.
+Two Challenge Wheels are available on the start screen.
 
-Hjulen används för att skapa varierade träningsutmaningar.
+Users shall be able to:
 
-Användaren ska kunna:
-
-* snurra varje hjul individuellt,
-* snurra båda samtidigt,
-* se tydlig animation och ljud,
-* låsa ett hjul och endast snurra det andra.
----
-
-## Redigera hjul
-
-Användaren ska kunna:
-
-* skapa egna alternativ,
-* ändra befintliga alternativ,
-* ta bort alternativ,
-* återställa till standard.
-
-Alla ändringar sparas lokalt.
+- spin each wheel independently,
+- spin both wheels together,
+- lock one wheel,
+- view animation and receive audio feedback.
 
 ---
 
-## Resultatregistrering
+## Wheel Management
 
-Efter varje övning ska användaren kunna registrera ett enkelt resultat.
+Users shall be able to:
 
-MVP fokuserar på snabb registrering framför detaljerad statistik.
+- create custom entries,
+- edit entries,
+- delete entries,
+- restore default wheels.
 
-Registreringen ska kunna genomföras med så få steg som möjligt.
+Changes are stored locally.
 
 ---
 
-## Sammanfattning
+## Result Registration
 
-När ett träningspass avslutas visas en sammanfattning med exempelvis:
+Users shall be able to register a simple result after each exercise.
 
-* antal genomförda övningar,
-* träningstid,
-* registrerade resultat.
+The workflow shall prioritize speed over detailed statistics.
 
-Efter sammanfattningen får användaren besvara en enkel fråga om appupplevelsen.
+---
 
-Fråga:
+## Session Summary
+
+When a session ends, the application shall present a summary including examples such as:
+
+- completed exercises,
+- session duration,
+- recorded results.
+
+The application shall then ask:
 
 > **Did DGTC get in the way of your training today?**
 
-Svar:
+Possible responses:
 
-* Yes
-* No
+- Yes
+- No
 
-Vid **Yes** får användaren:
+If the answer is **Yes**, the user may:
 
-* välja en eller flera orsaker (snabbval),
-* lämna en frivillig kommentar i fritext.
+- select one or more predefined reasons,
+- optionally provide additional comments.
 
-Syftet är att identifiera friktion i produktupplevelsen, inte att mäta nöjdhet.
-
----
-
-## Lokal lagring
-
-All data lagras lokalt på enheten.
-
-Ingen inloggning krävs.
-
-Ingen internetanslutning krävs.
+The purpose is to identify friction in the product experience.
 
 ---
 
-## Inställningar
+## Local Storage
 
-Användaren ska kunna:
+The MVP shall:
 
-* välja språk,
-* slå av eller på ljud,
-* återställa standardhjulen.
-
----
-
-# Icke-funktionella krav
-
-MVP ska:
-
-* vara lätt att komma igång med,
-* fungera offline,
-* starta snabbt,
-* kännas responsiv,
-* fungera på Android och iOS,
-* ha ett enkelt och konsekvent gränssnitt.
+- store all data locally,
+- require no user account,
+- function without an internet connection.
 
 ---
 
-# Ingår inte i MVP
+## Settings
 
-Följande funktioner är planerade men ingår inte i den första versionen:
+Users shall be able to:
 
-* användarkonton,
-* molnsynkronisering,
-* sociala funktioner,
-* vänner,
-* topplistor,
-* bag tags,
-* sponsorinnehåll,
-* coachfunktioner,
-* AI-baserade rekommendationer,
-* Actionable Insights Engine,
-* smartwatch-stöd,
-* GPS- och distansmätning,
-* klubbfunktioner,
-* avancerad statistik,
-* prestationstrender,
-* exportfunktioner.
+- select language,
+- enable or disable sound,
+- restore default Challenge Wheels.
 
 ---
 
-# Utvecklingsprincip
+# Non-Functional Requirements
 
-Under utvecklingen ska vi kontinuerligt fråga:
+The MVP shall:
 
-> Bidrar denna funktion till att validera produktens kärnvärde?
-
-Om svaret är nej hör funktionen inte hemma i MVP.
-
-Om funktionen löser ett verkligt hinder för användaren är den ett **Need**.
-
-Om funktionen endast förbättrar upplevelsen är den ett **Want**.
-
-Under MVP prioriteras alltid Needs framför Wants.
+- be easy to learn,
+- function offline,
+- start quickly,
+- feel responsive,
+- support Android and iOS,
+- maintain a consistent user experience.
 
 ---
 
-# Valideringskriterier
+# Out of Scope
 
-Syftet med MVP är att validera produktupplevelsen.
+The following capabilities are intentionally excluded:
 
-Framgång mäts inte i antalet funktioner.
+- user accounts,
+- cloud synchronization,
+- social features,
+- friends,
+- leaderboards,
+- bag tags,
+- sponsored content,
+- coaching features,
+- AIE recommendations,
+- smartwatch support,
+- GPS and distance measurement,
+- club functionality,
+- advanced statistics,
+- performance trends,
+- data export.
 
-Framgång mäts i om spelaren kan genomföra ett träningspass utan att DGTC blir ett hinder.
+---
 
-## Produktupplevelse
+# Development Principle
 
-MVP är lyckad när spelare upplever att:
+Every feature shall answer the question:
 
-* appen är enkel att förstå,
-* det går snabbt att komma igång,
-* träningen blir mer varierad,
-* arbetsflödet känns naturligt,
-* DGTC stödjer träningen istället för att störa den.
+> Does this validate the core value of the product?
 
-## Friktionsmätning
+If not, it does not belong in the MVP.
 
-Efter varje träningspass ställs frågan:
+Needs take priority over Wants.
 
-> **Did DGTC get in the way of your training today?**
+---
 
-Om svaret är **Yes** får användaren identifiera orsaken och, om de vill, beskriva vad som hände.
+# Validation
 
-Målet är inte att samla nöjdhetsbetyg.
+The MVP succeeds when users can complete a full practice session without DGTC becoming an obstacle.
 
-Målet är att identifiera och eliminera friktion.
+Success is measured by product experience rather than feature count.
 
-## Valideringsmål
-
-MVP anses validerad när:
-
-* spelare konsekvent kan genomföra hela träningspass,
-* återkommande friktionspunkter har identifierats,
-* de största friktionerna har åtgärdats,
-* produktupplevelsen överensstämmer med principen:
+The guiding principle is:
 
 > **The Interface Disappears.**
 
 ---
 
-# Definition av "klar"
+# Definition of Done
 
-MVP är färdig när:
+The MVP is complete when:
 
-* samtliga funktioner i detta dokument fungerar stabilt,
-* appen kan användas utan internetuppkoppling,
-* inga kritiska fel återstår,
-* produkten kan användas under ett helt träningspass utan att DGTC kommer i vägen för träningen.
+- all defined functionality operates reliably,
+- the application works offline,
+- no critical defects remain,
+- users can complete an entire practice session without DGTC interfering with training.
+
+---
+
+# Related Documents
+
+- Product Experience Principles
+- The DGTC Way
+- DGTC Problem Statement
+- PRD
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
