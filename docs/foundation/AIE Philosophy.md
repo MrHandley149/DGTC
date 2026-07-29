@@ -1,14 +1,19 @@
 # AIE Philosophy
 
-## Purpose
+**Document Type:** Foundation  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
-Actionable Insights Engine (AIE) is DGTC's coaching philosophy.
+---
 
-It is technology independent.
+# Purpose
 
-Artificial Intelligence, Machine Learning, Large Language Models, statistical models and rule-based systems are implementation details.
+The Actionable Insights Engine (AIE) defines DGTC's coaching philosophy.
 
-The philosophy remains the same.
+The philosophy is independent of implementation.
+
+Artificial Intelligence, Machine Learning, statistical models and rule-based systems are technologies that may implement the philosophy, but they do not define it.
 
 AIE exists to help every player become a better version of themselves.
 
@@ -16,295 +21,154 @@ AIE exists to help every player become a better version of themselves.
 
 # Mission
 
-Increase the player's confidence to make the right decision.
+AIE exists to increase the player's ability to make better decisions.
 
-AIE does not optimize statistics.
-
-AIE does not optimize ratings.
-
-AIE does not optimize difficulty.
-
-AIE optimizes better decisions.
-
-Better decisions create better players.
+Better decisions lead to better performance, greater confidence and continuous development.
 
 ---
 
-# Core Belief
+# Core Beliefs
 
-Every player is unique.
-
-Every player throws differently.
-
-Every player learns differently.
-
-Every player builds confidence differently.
-
-There is no perfect throw.
-
-There is no perfect bag.
-
-There is only the best version of each individual player.
-
-AIE should never try to make all players play the same way.
-
-It should help every player understand their own game.
+- Every player is unique.
+- Every player learns differently.
+- Every player develops confidence differently.
+- There is no universal solution.
+- Coaching should be personalized.
 
 ---
 
-# The Coach
+# Coaching Philosophy
 
 AIE is a coach.
 
-Not a judge.
+Its role is to:
 
-Not a critic.
+- observe,
+- understand,
+- recommend,
+- support.
 
-Not an instructor.
-
-Not a replacement for a human coach.
-
-Its role is to observe, understand and recommend.
-
-AIE should coach with humility.
+AIE does not replace human judgement or human coaches.
 
 ---
 
-# Earn the Right to Coach
+# Coaching Principles
 
-AIE should never assume.
+## Understand Before Teaching
 
-AIE should observe.
+Observation precedes recommendation.
 
-AIE should learn.
+Recommendations should become more personalized as understanding increases.
 
-Only then should it coach.
-
-Recommendations become more advanced as understanding increases.
-
-Trust is earned.
+Trust is earned through consistent value.
 
 ---
 
-# Positive Reinforcement
+## Positive Reinforcement
 
-AIE should actively identify strengths.
+Build on strengths before addressing weaknesses.
 
-Strengths are not the end of development.
-
-They are the foundation for future growth.
-
-Build confidence.
-
-Expand capability.
-
-Repeat.
+Confidence creates the foundation for continued improvement.
 
 ---
 
-# Decision Before Technique
+## Decisions Before Technique
 
-Many poor throws begin with poor decisions.
+Decision quality should be understood before attempting to change technique.
 
-AIE should understand the player's decisions before trying to change the player's technique.
-
-Sometimes the solution is a different throw.
-
-Sometimes it is a different disc.
-
-Sometimes it is better course management.
-
-Technique is only one part of performance.
+Better decisions often produce better outcomes without technical changes.
 
 ---
 
-# Confidence
+## Evidence Before Opinion
 
-Confidence is one of the player's most valuable resources.
+Recommendations should be supported by observable evidence whenever possible.
 
-Players perform better when they trust their own decisions.
+Evidence builds trust.
 
-Confidence should be built through evidence, not motivation.
-
-AIE should reinforce what already works before introducing new challenges.
+Trust strengthens confidence.
 
 ---
 
-# Decision Confidence
+## Insights Before Statistics
 
-The goal is not simply confidence.
+Statistics describe previous performance.
 
-The goal is Decision Confidence.
+Insights help improve future performance.
 
-A player should know:
-
-"I know why I am choosing this disc."
-
-"I know why I am choosing this line."
-
-"I trust this decision."
+Whenever practical, actionable insight should precede raw statistics.
 
 ---
 
-# Confidence Budget
+## Progressive Coaching
 
-Confidence is a limited resource.
+Coaching should evolve with the player.
 
-Every training session either builds or spends confidence.
+Beginners require simplicity.
 
-AIE should understand when confidence needs to be built, maintained or challenged.
-
-The order of exercises matters.
+Experienced players benefit from deeper personalization.
 
 ---
 
-# Mental Capital
+## Independence
 
-Mental Capital is built from many factors.
+The long-term objective is independent players.
 
-Examples include:
-
-• Confidence
-• Decision Confidence
-• Motivation
-• Momentum
-• Trust
-• Enjoyment
-
-Training should increase Mental Capital whenever possible.
+Success is achieved when users increasingly make confident decisions without relying on AIE.
 
 ---
 
-# Reinforcement Before Challenge
+# Player Context
 
-AIE should not expose weakness for its own sake.
+Recommendations should consider the player's current situation rather than historical data alone.
 
-AIE should strengthen effective behaviors before increasing difficulty.
+Relevant context may include:
 
-Challenge should follow success.
-
-Not the other way around.
-
----
-
-# Player State
-
-AIE should understand where the player is today.
-
-Player State may include:
-
-• Experience
-• Confidence
-• Mental Capital
-• Recent Performance
-• Recovery
-• Goals
-• Learning Phase
-
-Recommendations should be based on Player State rather than historical statistics alone.
-
----
-
-# Personalized Coaching
-
-Every recommendation should be personal.
-
-Not based on what works for most players.
-
-Not based on what professionals throw.
-
-Not based on manufacturer flight numbers.
-
-Based on what consistently works for this player.
-
-AIE learns the player.
-
-Not disc golf in general.
-
----
-
-# Insights Before Statistics
-
-Statistics describe the past.
-
-Insights improve the future.
-
-Statistics are evidence.
-
-Insights are coaching.
-
-Whenever possible, AIE should present actionable insight before raw statistics.
-
----
-
-# Evidence Before Opinion
-
-Recommendations should be supported by evidence.
-
-Examples:
-
-• Your Deputy has produced the smallest dispersion over your last 300 approach shots.
-
-• Your accuracy improves when choosing slower discs between 40 and 60 meters.
-
-Evidence creates trust.
-
-Trust creates confidence.
-
----
-
-# Progressive Coaching
-
-AIE grows with the player.
-
-A beginner should experience very little coaching.
-
-As understanding increases, recommendations become deeper and more personal.
-
-Coaching is earned.
-
-Never forced.
-
----
-
-# Independence
-
-The purpose of coaching is independence.
-
-AIE should gradually teach players to understand their own game.
-
-Success is not measured by how much players depend on AIE.
-
-Success is measured by how confidently players make good decisions without it.
+- experience,
+- confidence,
+- recent performance,
+- recovery,
+- goals,
+- learning stage.
 
 ---
 
 # Technology Independence
 
-This philosophy should remain valid regardless of implementation.
+The coaching philosophy shall remain valid regardless of future technological implementation.
 
-Future technologies may change.
+Technology may evolve.
 
-The philosophy should not.
+The philosophy should remain stable.
 
 ---
 
 # AIE Mantra
 
-The Coach Understands Before It Teaches.
+> **The coach understands before it teaches.**
 
 ---
 
 # AIE Promise
 
-AIE doesn't optimize throws.
+AIE does not optimize throws.
 
-It optimizes decisions.
+AIE optimizes decisions.
 
 ---
 
-# Final Principle
+# Related Documents
 
-The best coach is not the one who always knows the answer.
+- The DGTC Way
+- DGTC DNA
+- Product Experience Principles
+- Learning Building Blocks
+- Performance Model
 
-The best coach is the one who understands what the player needs today.
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
