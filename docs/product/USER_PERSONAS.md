@@ -1,155 +1,141 @@
 # User Personas
 
-**Produkt:** DGTC Platform
-
-**Status:** v1.0 Draft
-
----
-
-# Syfte
-
-Detta dokument beskriver de primära användargrupperna för DGTC Platform.
-
-Personas används för att förstå användarnas mål, behov och utmaningar. De ska vägleda beslut inom produktutveckling, design och prioritering.
-
-Personas bygger på användarbeteenden och mål, inte på ålder, kön eller andra demografiska faktorer.
+**Document Type:** Product  
+**Version:** v2.0  
+**Lifecycle:** Approved  
+**Information Owner:** Product
 
 ---
 
-# Primär persona – Den aktiva discgolfaren
+# Purpose
 
-## Beskrivning
+This document defines the primary user groups for the DGTC Platform.
 
-Den aktiva discgolfaren spelar och tränar regelbundet och vill fortsätta utvecklas.
+Personas represent user goals, needs and behaviours, and guide product design, prioritization and development.
 
-Personen söker struktur, variation och motivation men vill inte lägga mycket tid på planering eller administration.
-
-## Mål
-
-* Träna regelbundet.
-* Skapa variation i träningen.
-* Utveckla sina färdigheter.
-* Ha roligt under träningspassen.
-
-## Utmaningar
-
-* Träningen blir lätt repetitiv.
-* Svårt att veta vad som ska tränas.
-* Motivation varierar över tid.
-
-## Hur DGTC hjälper
-
-DGTC skapar varierad träning, gör det enkelt att komma igång och hjälper användaren att följa sin utveckling.
+They are based on user objectives rather than demographic characteristics.
 
 ---
 
-# Sekundär persona – Tävlingsspelaren
+# Persona Priority
 
-## Beskrivning
+When priorities conflict, the following order applies:
 
-Tävlingsspelaren använder träning för att prestera bättre under tävling.
+1. Active Disc Golfer
+2. Competitive Player
+3. Coach
+4. Club
+5. Sponsor
 
-Fokus ligger på kvalitet, struktur och återkommande förbättringar.
-
-## Mål
-
-* Träna effektivt.
-* Förbättra beslutsfattandet.
-* Förbereda sig inför tävling.
-
-## Utmaningar
-
-* Svårt att identifiera utvecklingsområden.
-* Risk att fastna i invanda träningsmönster.
-
-## Hur DGTC hjälper
-
-DGTC ger varierade träningspass och lägger grunden för framtida analys- och coachfunktioner.
+The primary player experience always takes precedence.
 
 ---
 
-# Framtida persona – Tränaren
+# Primary Persona — Active Disc Golfer
 
-## Beskrivning
+## Description
 
-Tränaren vill hjälpa andra att utvecklas genom planering, uppföljning och återkoppling.
+Practices and plays regularly.
 
-## Mål
+Seeks structured, varied and enjoyable training with minimal preparation.
 
-* Planera träning.
-* Följa utveckling.
-* Ge relevant feedback.
+## Goals
 
-## Status
+- Practice consistently.
+- Improve skills.
+- Maintain motivation.
+- Enjoy training.
 
-Ingår inte i MVP.
+## Challenges
 
----
+- Repetitive practice.
+- Limited training structure.
+- Fluctuating motivation.
 
-# Framtida persona – Klubben
+## Product Value
 
-## Beskrivning
-
-Klubben vill skapa engagemang, gemenskap och återkommande aktiviteter för sina medlemmar.
-
-## Mål
-
-* Arrangera träningar.
-* Skapa utmaningar.
-* Följa deltagande.
-
-## Status
-
-Ingår inte i MVP.
+DGTC simplifies getting started, creates meaningful variation and supports continuous improvement.
 
 ---
 
-# Framtida persona – Sponsorn
+# Secondary Persona — Competitive Player
 
-## Beskrivning
+## Description
 
-Sponsorn vill skapa värde för spelare och klubbar genom relevanta erbjudanden och aktiviteter.
+Uses practice to improve competitive performance.
 
-## Mål
+Values structure, deliberate practice and measurable progress.
 
-* Nå rätt målgrupp.
-* Stödja sporten.
-* Skapa långsiktiga relationer.
+## Goals
 
-## Status
+- Practice efficiently.
+- Improve decision-making.
+- Prepare for competition.
 
-Ingår inte i MVP.
+## Challenges
 
----
+- Identifying improvement opportunities.
+- Avoiding repetitive practice patterns.
 
-# Designprinciper
+## Product Value
 
-Oavsett användargrupp ska DGTC:
-
-* vara enkelt att komma igång med,
-* ge positiv och konstruktiv återkoppling,
-* minimera administration,
-* stödja användarens utveckling,
-* respektera användarens tid och data.
+DGTC provides structured practice and establishes the foundation for future coaching and performance analysis.
 
 ---
 
-# Prioritering
+# Future Persona — Coach
 
-Vid konflikt mellan olika användarbehov gäller följande prioritering:
+## Description
 
-1. Den aktiva discgolfaren
-2. Tävlingsspelaren
-3. Tränaren
-4. Klubben
-5. Sponsorn
+Supports the development of other players through planning, observation and feedback.
 
-Denna prioritering säkerställer att kärnupplevelsen för den enskilda spelaren alltid kommer först.
+**Status:** Outside MVP.
 
 ---
 
-# Sammanfattning
+# Future Persona — Club
 
-DGTC utvecklas först och främst för den aktiva discgolfaren.
+## Description
 
-Övriga målgrupper är viktiga för plattformens långsiktiga utveckling, men får aldrig försämra upplevelsen för den primära användaren.
+Creates organized activities and engagement for members.
+
+**Status:** Outside MVP.
+
+---
+
+# Future Persona — Sponsor
+
+## Description
+
+Creates value for players and clubs through relevant partnerships and activities.
+
+**Status:** Outside MVP.
+
+---
+
+# Design Principles
+
+For every persona, DGTC shall:
+
+- be easy to begin using,
+- provide constructive feedback,
+- minimize administration,
+- support meaningful improvement,
+- respect user time and data.
+
+---
+
+# Related Documents
+
+- PRD
+- MVP
+- Product Experience Principles
+- DGTC Problem Statement
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| v2.0 | 2026-07-29 | Repository consolidation |
