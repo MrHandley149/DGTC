@@ -1,176 +1,223 @@
 # Future Queue
 
-## FQ-001 – Viral onboarding
+## Purpose
 
-Status: Future
+This document captures ideas, principles, and initiatives that are intentionally deferred. Entries in this queue are not approved work and do not imply implementation commitment.
 
-Beskrivning
-
-Produkten ska göra det enkelt för befintliga användare att introducera nya användare genom naturliga arbetsflöden.
-
-Målet är organisk tillväxt utan att störa användarupplevelsen.
-
-Anteckningar
-
-- Enkel inbjudan
-- Visa appen för en vän
-- Dela träningspass
-- QR-kod
-- "Prova detta träningspass"
+Items may later become RFCs, roadmap initiatives, or implementation tasks after evaluation.
 
 ---
 
-## FQ-002 – Quality First Development
+# FQ-001 — Viral Onboarding
 
-**Status:** Future
+## Metadata
 
-### Beskrivning
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Growth |
 
-Vi investerar tid tidigt för att minska arbete senare.
+## Description
 
-Vi ska arbeta hårt för att arbeta smart.
+Enable existing users to naturally introduce new users through everyday product workflows.
 
-Genom att fatta rätt beslut i rätt ordning minskar behovet av omskrivningar, refaktorering och omarbete.
+The objective is sustainable organic growth without disrupting the user experience.
 
-### Motivation
+## Ideas
 
-Kvalitet skapas genom rätt beslut tidigt i processen, inte genom att rätta fel sent i projektet.
-
----
-
-FQ-003
-
-MVP Onboarding Philosophy
-
-Vi behöver definiera vad "komma igång" egentligen betyder.
-
-Det handlar inte bara om tid.
-
-Det handlar om att användaren snabbt ska uppleva:
-
-- nytta
-- glädje
-- enkelhet
-- motivation
-
-Detta kan komma att påverka onboarding, första träningspasset och Quick Challenge.
+- Simple invitations
+- Show the app to a friend
+- Share training sessions
+- QR codes
+- "Try this training session"
 
 ---
 
-FQ-004
+# FQ-002 — Quality First Development
 
-Titel:
-Low Coordination Cost
+## Metadata
 
-Beskrivning
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Development Philosophy |
 
-Projektet ska organiseras så att nya utvecklare och AI-agenter snabbt kan förstå projektets syfte, status och arbetssätt utan omfattande muntlig överlämning.
+## Description
 
-Motivering
+Invest time early to reduce work later.
 
-Tid som läggs på tydlig struktur tidigt minskar behovet av koordinering, introduktion och omarbete senare.
+Work hard to work smart.
 
----
+Making the right decisions in the right order reduces unnecessary rewrites, refactoring, and rework.
 
-## FQ-005 – Development Philosophy
+## Motivation
 
-**Status:** Future
-
-### Beskrivning
-
-Dokumentera den utvecklingsfilosofi som används för att bygga DGTC.
-
-Filosofin ska beskriva hur projektet fattar beslut, utvecklar processer och säkerställer långsiktig kvalitet.
-
-Dokumentet ska fungera som en vägledning för både människor och AI-agenter.
-
-### Principer att utforska
-
-- Bra produkter byggs genom bra beslut.
-- Bra beslut byggs genom bra processer.
-- Rätt beslut i rätt ordning.
-- Filosofin styr produkten.
-- Produkten styr arkitekturen.
-- Arkitekturen styr koden.
-- Kod får aldrig styra filosofin.
-- Vi investerar tid tidigt för att minska arbete senare.
-- Vi ska arbeta hårt för att arbeta smart.
-- Dokumentationen är projektets API.
-- Processen ska minska koordinationskostnaden.
-- Fråga alltid "Vad påverkas inte?" innan implementation.
-- Implementera alltid minsta möjliga förändring.
-- Skapar detta glädje?
-
-### Reflektion
-
-När en funktion eller ett beslut diskuteras ska vi inte bara fråga om det är tekniskt möjligt eller strategiskt korrekt.
-
-Vi ska också fråga:
-
-> Skapar detta glädje?
-
-Om inte, fråga varför.
-
-Om svaret fortfarande är nej, fråga om funktionen verkligen hör hemma i produkten.
-
-Glädje är inte en bonus.
-
-Glädje är en del av användarupplevelsen och en förutsättning för långsiktig motivation.
-
-### Motivation
-
-Projektets utvecklingsfilosofi har vuxit fram organiskt under arbetet med Documentation v1.1.
-
-Dokumentet bör skrivas först när filosofin har prövats både genom dokumentation och praktisk utveckling under Sprint 0 och Sprint 1.
-
-Målet är att skapa ett utvecklingssystem som är lika hållbart som den produkt det används för att bygga.
+Quality is created through good early decisions rather than fixing mistakes late in the project.
 
 ---
 
-## FQ-006 – Verification vs Approval
+# FQ-003 — MVP Onboarding Philosophy
 
-**Status:** Future
+## Metadata
 
-### Beskrivning
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Product Experience |
 
-Definiera en tydlig skillnad mellan verifiering och godkännande i DGTC:s utvecklingsprocess.
+## Description
 
-Processen ska säkerställa att teknisk kvalitet och produktacceptans behandlas som två separata steg.
+Define what "getting started" actually means.
 
-### Principer att utforska
+Success is measured not only by speed, but by how quickly users experience:
 
-- Verifiering visar att kraven är uppfyllda.
-- Godkännande innebär att rätt person accepterar resultatet.
-- Ett test är inte färdigt förrän resultatet är dokumenterat.
-- Ett test är inte godkänt förrän testledaren har verifierat resultatet mot acceptanskriterierna.
-- En Implementation Task är inte avslutad förrän Product Owner/Projektledare har godkänt leveransen.
-- Varje Implementation Task ska kunna följas från krav till godkänd leverans genom dokumenterad spårbarhet.
+- Value
+- Enjoyment
+- Simplicity
+- Motivation
 
-### Motivation
-
-Många utvecklingsprojekt blandar ihop begreppen verifiering, test och godkännande.
-
-DGTC ska istället ha en tydlig ansvarsfördelning där:
-
-- utvecklaren implementerar,
-- testledaren verifierar,
-- Product Owner accepterar,
-- projektets dokumentation säkerställer full spårbarhet.
-
-Detta minskar risken för missförstånd och skapar ett robust kvalitetssystem som fungerar lika väl för människor som för AI-agenter.
+This work may influence onboarding, the first training session, and Quick Challenge.
 
 ---
 
-FQ-007
+# FQ-004 — Low Coordination Cost
 
-Titel:
-Beer Log
+## Metadata
 
-Beskrivning:
-Undersök om Beer Commit och Beer-o-meter bör kompletteras med en Beer Log som dokumenterar projektets viktigaste milstolpar, lärdomar och retrospektiv.
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Development Process |
 
-Motivering:
-Beer Commit har utvecklats från ett roligt inslag till ett värdefullt sätt att dokumentera projektets historia och viktiga insikter.
+## Description
 
-Status:
-Ej prioriterad.
+Organize the project so new developers and AI agents can quickly understand its purpose, current state, and workflows without extensive verbal handover.
+
+## Motivation
+
+Investing in clear structure early reduces coordination, onboarding effort, and future rework.
+
+---
+
+# FQ-005 — Development Philosophy
+
+## Metadata
+
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Development Philosophy |
+
+## Description
+
+Document the development philosophy used to build DGTC.
+
+The philosophy should explain how the project makes decisions, evolves processes, and maintains long-term quality for both humans and AI agents.
+
+## Principles to Explore
+
+- Great products are built through good decisions.
+- Good decisions are built through good processes.
+- Make the right decisions in the right order.
+- Philosophy guides the product.
+- Product guides the architecture.
+- Architecture guides the code.
+- Code must never guide the philosophy.
+- Invest time early to reduce work later.
+- Work hard to work smart.
+- Documentation is the project's API.
+- Reduce coordination cost.
+- Ask "What is not affected?" before implementation.
+- Implement the smallest possible change.
+- Does this create joy?
+
+## Reflection
+
+When discussing a feature or decision, ask:
+
+> Does this create joy?
+
+If not, ask why.
+
+If the answer remains no, reconsider whether the feature belongs in the product.
+
+Joy is not a bonus.
+
+It is part of the user experience and long-term motivation.
+
+## Motivation
+
+The development philosophy has emerged organically during repository consolidation.
+
+It should be documented after being validated through Sprint 0 and Sprint 1.
+
+---
+
+# FQ-006 — Verification vs Approval
+
+## Metadata
+
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Category | Quality Assurance |
+
+## Description
+
+Define a clear distinction between verification and approval within the DGTC development process.
+
+Technical quality and product acceptance should remain separate activities.
+
+## Principles to Explore
+
+- Verification demonstrates that requirements are satisfied.
+- Approval accepts the delivered result.
+- A test is not complete until its results are documented.
+- A test is not approved until verification against acceptance criteria is complete.
+- An implementation task is not complete until Product Owner approval.
+- Every implementation task should support complete traceability from requirement to approved delivery.
+
+## Motivation
+
+Separating implementation, verification, approval, and documentation creates a robust quality system for both humans and AI agents.
+
+---
+
+# FQ-007 — Beer Log
+
+## Metadata
+
+| Property | Value |
+|----------|-------|
+| Status | Future |
+| Priority | Low |
+| Category | Project Culture |
+
+## Description
+
+Investigate whether Beer Commit and Beer-o-meter should be complemented by a Beer Log documenting major milestones, lessons learned, and project retrospectives.
+
+## Motivation
+
+Beer Commit has evolved from a humorous tradition into a useful way of documenting important project history and insights.
+
+---
+
+## Related Documents
+
+- `DOCUMENT_REGISTER.md`
+- `../development/DEVELOPMENT_WORKFLOW.md`
+- `../foundation/05_Decision_Framework.md`
+- `../foundation/06_DGTC_DNA.md`
+
+---
+
+**Status:** Living Document
+
+**Owner:** Project
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.
