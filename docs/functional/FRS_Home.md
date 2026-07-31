@@ -1,168 +1,202 @@
-# FRS – Home Screen
+# FRS — Home and Quick Challenge
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Dokument:** FRS_Home.md
-
-**Version:** v1.0
-
-**Status:** Draft
+**Product:** Disc Golf Training Companion (DGTC)  
+**Version:** 2.0  
+**Status:** Frozen  
+**Information Owner:** Product
 
 ---
 
-# Syfte
+## Purpose
 
-Startskärmen är appens huvudsakliga arbetsyta.
+The Home screen is the primary entry point into DGTC.
 
-Den ska ge användaren snabb tillgång till de funktioner som används under ett träningspass och minimera antalet steg innan träningen kan börja.
-
----
-
-# Mål
-
-När användaren öppnar appen ska det vara möjligt att starta ett träningspass inom några sekunder.
-
-Startskärmen ska kännas enkel, tydlig och fokuserad.
+It shall minimize the time and number of decisions between opening the application and beginning practice. Quick Challenge is the primary action. Configuration, onboarding, accounts, and advanced training structures shall not block the first throw.
 
 ---
 
-# User Stories
+## User Outcome
 
-### US-001
+A new player shall be able to open DGTC, generate a clear challenge, and begin practice within seconds.
 
-Som användare vill jag snabbt kunna starta ett träningspass så att jag kan börja träna utan onödiga steg.
+The intended first-use flow is:
 
----
-
-### US-002
-
-Som användare vill jag direkt se Lucky Wheels eftersom de är appens centrala funktion.
-
----
-
-### US-003
-
-Som användare vill jag enkelt kunna komma åt inställningar och andra funktioner utan att de stör huvudflödet.
-
----
-
-# Funktionella krav
-
-## FRS-H-001
-
-Startskärmen ska visas när appen öppnas.
-
-**Prioritet:** Must Have
+```text
+Open DGTC
+    ↓
+Start Quick Challenge
+    ↓
+Spin Challenge Wheels
+    ↓
+Receive Challenge
+    ↓
+Throw
+```
 
 ---
 
-## FRS-H-002
+## User Stories
 
-Lucky Wheels ska vara det mest framträdande elementet på skärmen.
+### US-H-001
 
-**Prioritet:** Must Have
+As a player, I want to start a Quick Challenge immediately so that I can begin practice without setup.
 
----
+### US-H-002
 
-## FRS-H-003
+As a player, I want the two Challenge Wheels to be immediately understandable and accessible.
 
-Användaren ska kunna starta ett träningspass från startskärmen.
+### US-H-003
 
-**Prioritet:** Must Have
+As a returning player with an active Training Session, I want to resume it without losing progress.
 
----
+### US-H-004
 
-## FRS-H-004
-
-Navigering till övriga delar av appen ska vara tydlig och konsekvent.
-
-**Prioritet:** Must Have
+As a player, I want secondary navigation to remain available without competing with the primary action.
 
 ---
 
-## FRS-H-005
+## Functional Requirements
 
-Gränssnittet ska fungera i både stående och liggande orientering.
+### FRS-H-001 — Default Entry
 
-**Prioritet:** Should Have
+The Home screen shall be displayed when the application opens and no active Training Session requires resumption.
 
----
+**Priority:** Must Have
 
-## FRS-H-006
+### FRS-H-002 — Primary Action
 
-Startskärmen ska fungera utan internetuppkoppling.
+Quick Challenge shall be the single most prominent action on the Home screen.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-H-003 — Immediate Challenge Generation
 
-# Affärsregler
+Starting Quick Challenge shall make the two Challenge Wheels available without requiring login, program selection, or configuration.
 
-## BR-001
+**Priority:** Must Have
 
-Startskärmen ska alltid kunna visas även om användaren saknar sparad data.
+### FRS-H-004 — Challenge Visibility
 
----
+After the wheels stop, the selected challenge shall be displayed as one clear and actionable training instruction.
 
-## BR-002
+**Priority:** Must Have
 
-Ingen inloggning krävs för att använda startskärmen.
+### FRS-H-005 — Start Training
 
----
+The player shall be able to start a Training Session from the generated challenge.
 
-## BR-003
+**Priority:** Must Have
 
-Startskärmen får inte blockeras av reklam, popup-fönster eller introduktionsguider.
+### FRS-H-006 — Generate Another Challenge
 
----
+Before or during a Training Session, the player shall be able to generate another challenge without returning through an onboarding or configuration flow.
 
-# Användargränssnitt
+**Priority:** Must Have
 
-Startskärmen ska prioritera:
+### FRS-H-007 — Resume Active Session
 
-1. Lucky Wheels.
-2. Start av träningspass.
-3. Enkel navigering.
-4. Minimal visuell belastning.
+When a Training Session is active, the Home screen shall prominently offer **Resume Training Session** and shall not create a second active session accidentally.
 
-Designen ska stödja snabb användning även utomhus i varierande ljusförhållanden.
+**Priority:** Must Have
 
----
+### FRS-H-008 — Secondary Navigation
 
-# Felhantering
+Navigation to wheel editing and Settings shall be available but visually subordinate to Quick Challenge and session resumption.
 
-Om lokal data inte kan läsas ska appen:
+**Priority:** Must Have
 
-* starta med standardinställningar,
-* informera användaren,
-* fortsätta fungera.
+### FRS-H-009 — Offline Operation
 
-Appen får aldrig krascha på grund av saknad användardata.
+All Home and Quick Challenge behavior required by the MVP shall function without an internet connection.
 
----
+**Priority:** Must Have
 
-# Acceptanskriterier
+### FRS-H-010 — Orientation
 
-Funktionen är godkänd när:
+The MVP shall support the primary mobile orientation selected during implementation. Additional orientation support may be implemented only when it does not delay or complicate the MVP.
 
-* startskärmen öppnas korrekt,
-* Lucky Wheels visas direkt,
-* användaren kan starta ett träningspass,
-* navigation fungerar,
-* appen fungerar utan internet,
-* inga kritiska fel uppstår.
+**Priority:** Should Have
 
 ---
 
-# Framtida utveckling
+## Business Rules
 
-Möjliga tillägg efter MVP:
+### BR-H-001
 
-* personliga genvägar,
-* senaste träningspass,
-* dagliga utmaningar,
-* favoritövningar,
-* molnsynkronisering,
-* widgets,
-* coachrekommendationer,
-* AIE-insikter.
+The Home screen shall remain usable when no user-created data exists.
+
+### BR-H-002
+
+No account or personal profile is required.
+
+### BR-H-003
+
+Advertising, modal promotions, or mandatory tutorials shall not interrupt the primary start flow.
+
+### BR-H-004
+
+Only one Training Session may be active at a time.
+
+### BR-H-005
+
+Navigation shall never discard an active session or unsaved result.
+
+---
+
+## Failure Handling
+
+If editable wheel data cannot be loaded, DGTC shall:
+
+1. preserve any unaffected local data,
+2. use valid built-in wheel content where possible,
+3. inform the player without blocking the primary flow,
+4. avoid application failure.
+
+---
+
+## Acceptance Criteria
+
+The capability is accepted when:
+
+- Quick Challenge is the obvious primary action,
+- a first challenge can be generated within the 15-second UX target,
+- the two Challenge Wheels are available immediately,
+- the generated challenge is clear,
+- a Training Session can start from the challenge,
+- an active session can be resumed,
+- a second active session cannot be created accidentally,
+- all Must Have behavior works offline,
+- no critical failure blocks the first throw.
+
+---
+
+## Deferred Capabilities
+
+The following are outside the MVP:
+
+- personalized shortcuts,
+- daily challenges delivered from a server,
+- recent-session recommendations,
+- cloud synchronization,
+- widgets,
+- AIE coaching,
+- advanced structured-training discovery.
+
+---
+
+## Related Documents
+
+- [MVP Specification](../product/MVP.md)
+- [Product Experience Principles](../foundation/Product%20Experience%20Principles.md)
+- [Navigation](../architecture/NAVIGATION.md)
+- [FRS — Challenge Wheels](FRS_Wheels.md)
+- [FRS — Training Session](FRS_Training_Session.md)
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | Initial | Initial Home specification. |
+| 2.0 | 2026-07-31 | Aligned Home with Quick Challenge, Progressive Engagement, active-session recovery, and the frozen MVP scope. |
