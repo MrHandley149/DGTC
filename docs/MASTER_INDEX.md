@@ -88,7 +88,7 @@ Architecture documentation defines how the product requirements are represented 
 
 Development documentation defines how approved requirements and architecture are implemented, reviewed, and maintained.
 
-Relevant workflows, procedures, and guides will be listed here after their authoritative locations have been verified.
+- [GitHub Working Agreement](development/GITHUB_WORKING_AGREEMENT.md)
 
 ---
 
