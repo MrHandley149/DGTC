@@ -1,103 +1,127 @@
 # Functional Requirements Specification (FRS)
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Version:** v1.0
-
-**Status:** Draft
-
----
-
-# Syfte
-
-Detta dokument beskriver den funktionella strukturen för DGTC MVP.
-
-Detaljerade krav dokumenteras i separata FRS-dokument för varje funktion.
-
-Målet är att skapa en tydlig koppling mellan produktkrav, design, implementation och test.
+**Product:** Disc Golf Training Companion (DGTC)  
+**Version:** 2.0  
+**Status:** Frozen  
+**Information Owner:** Product
 
 ---
 
-# Omfattning
+## Purpose
 
-FRS omfattar de funktioner som ingår i MVP.
+This document defines the functional requirements structure for the DGTC MVP.
 
-Varje funktion beskrivs i ett eget dokument med:
-
-* syfte,
-* användarberättelser,
-* funktionella krav,
-* affärsregler,
-* acceptanskriterier,
-* framtida utvecklingsmöjligheter.
+Detailed requirements are maintained in capability-specific FRS documents. Together, they provide traceability from approved product scope to implementation, testing, verification, and acceptance.
 
 ---
 
-# Dokumentstruktur
+## MVP Functional Scope
 
-| Dokument                | Beskrivning                                      |
-| ----------------------- | ------------------------------------------------ |
-| FRS_Home.md             | Startskärmen och appens huvudsakliga navigation  |
-| FRS_Wheels.md           | Lucky Wheels och hantering av hjulen             |
-| FRS_Training_Session.md | Skapa, genomföra och avsluta träningspass        |
-| FRS_Result_Entry.md     | Registrering av resultat under träningspass      |
-| FRS_Summary.md          | Sammanfattning efter avslutat träningspass       |
-| FRS_Settings.md         | Inställningar och grundläggande appkonfiguration |
+The Frozen MVP implementation baseline consists of:
 
----
+| Document | Capability |
+|---|---|
+| [FRS_Home.md](FRS_Home.md) | Home, Quick Challenge, and active-session entry |
+| [FRS_Wheels.md](FRS_Wheels.md) | Two Challenge Wheels, spinning, locking, animation, sound, and editing |
+| [FRS_Training_Session.md](FRS_Training_Session.md) | Training-session lifecycle and recovery |
+| [FRS_Result_Entry.md](FRS_Result_Entry.md) | Fast local result registration |
+| [FRS_Summary.md](FRS_Summary.md) | Session summary and friction feedback |
+| [FRS_Settings.md](FRS_Settings.md) | Language, sound, and wheel reset |
 
-# Gemensamma principer
-
-Samtliga funktioner ska följa DGTC Product Operating System (DGTC POS).
-
-Det innebär bland annat att varje funktion ska:
-
-* stödja användarens utveckling,
-* vara enkel att förstå,
-* ge snabb återkoppling,
-* följa principen Positive First,
-* fungera offline,
-* vara konsekvent med övriga delar av produkten.
+[FRS_Training_Programs.md](FRS_Training_Programs.md) is a Draft post-MVP specification. It is not part of the Frozen MVP implementation baseline and shall not be implemented during the MVP without an explicit product decision.
 
 ---
 
-# Kravnivåer
+## Requirement Structure
 
-Funktionella krav delas in i tre nivåer.
+Each capability specification may contain:
 
-## Must Have
+- purpose,
+- user stories,
+- functional requirements,
+- business rules,
+- failure handling,
+- acceptance criteria,
+- explicitly deferred capabilities.
 
-Krav som måste uppfyllas för att MVP ska anses komplett.
-
----
-
-## Should Have
-
-Krav som är viktiga men kan skjutas till en senare version om det behövs.
-
----
-
-## Could Have
-
-Önskvärda funktioner som inte ingår i MVP men dokumenteras för framtida utveckling.
+Requirements use stable identifiers so that they can be referenced by Implementation Tasks, tests, reviews, and commits.
 
 ---
 
-# Spårbarhet
+## Requirement Priorities
 
-Varje funktionellt krav ska kunna spåras till:
+### Must Have
 
-* PRD
-* MVP Specification
-* Implementation
-* Testfall
+Required for the MVP to satisfy its approved scope and Definition of Done.
 
-Syftet är att säkerställa att alla funktioner har ett tydligt affärsvärde och kan verifieras.
+### Should Have
+
+Valuable but not required for the initial MVP acceptance decision.
+
+### Could Have
+
+Deferred capability documented for future consideration. Could Have requirements shall not enter implementation without approval.
 
 ---
 
-# Versionshantering
+## Governing Principles
 
-Alla ändringar av funktionella krav ska dokumenteras i Decision Log och vid behov uppdateras i PRD eller MVP Specification.
+Every MVP capability shall:
 
-FRS ska alltid spegla den aktuella versionen av produkten.
+- support the user's development,
+- minimize friction before the first throw,
+- follow Positive First,
+- function offline,
+- preserve user data,
+- remain consistent with the approved MVP, architecture, data model, and state model,
+- collect only data with a defined product purpose.
+
+---
+
+## Traceability
+
+Every implemented Must Have requirement shall be traceable through:
+
+```text
+MVP or PRD
+    ↓
+FRS Requirement
+    ↓
+Implementation Task
+    ↓
+Code
+    ↓
+Test Result
+    ↓
+Verification
+    ↓
+Product Owner Acceptance
+    ↓
+Git Commit
+```
+
+---
+
+## Change Control
+
+This document and the listed MVP capability specifications are Frozen.
+
+They may not receive routine, editorial, or convenience changes. Unlocking requires an explicit governance decision. Product-scope changes require an approved RFC or equivalent recorded product decision before implementation begins.
+
+---
+
+## Related Documents
+
+- [PRD](../product/PRD.md)
+- [MVP Specification](../product/MVP.md)
+- [Implementation Workflow](../development/IMPLEMENTATION_WORKFLOW.md)
+- [Repository Review Matrix](../project/REVIEW_MATRIX.md)
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | Initial | Initial functional requirements structure. |
+| 2.0 | 2026-07-31 | Aligned the FRS set with approved MVP scope and froze the implementation baseline. |
