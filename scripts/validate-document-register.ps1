@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
 $repoRoot = (Get-Location).Path
 $docsPath = Join-Path $repoRoot "docs"
 $registerPath = Join-Path $docsPath "project\DOCUMENT_REGISTER.md"
