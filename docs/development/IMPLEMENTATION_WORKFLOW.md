@@ -200,7 +200,7 @@ Following this process keeps implementation predictable, auditable, and aligned 
 - `DEVELOPMENT_WORKFLOW.md`
 - `Decision_Framework.md`
 - `GIT_WORKFLOW.md`
-- `Guardian_Operating_Procedure.md`
+- `Repository_Review_Procedure.md`
 
 ---
 

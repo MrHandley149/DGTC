@@ -89,7 +89,7 @@ When an AI assistant is asked to analyze DGTC using only the Foundation, it shou
 
 # Relationship to Other Project Documents
 
-- MASTER_INDEX.md is the project's Control Room.
+- docs/business/BUSINESS_INDEX.md is the project's Control Room.
 - DOCUMENT_REGISTER.md tracks document lifecycle.
 - Foundation defines philosophy.
 - Product documents define implementation.

@@ -137,7 +137,7 @@ Changes should improve repository quality without introducing duplication or amb
 
 - `GIT_WORKFLOW.md`
 - `Decision_Framework.md`
-- `Guardian_Operating_Procedure.md`
+- `Repository_Review_Procedure.md`
 - `DEVELOPMENT_WORKFLOW.md`
 
 ---

@@ -6,7 +6,7 @@ This repository contains the product foundation, requirements, architecture, gov
 
 ## Start here
 
-Open the [documentation index](docs/MASTER_INDEX.md) to navigate the project documentation.
+Open the [documentation index](docs/docs/business/BUSINESS_INDEX.md) to navigate the project documentation.
 
 ## Repository purpose
 

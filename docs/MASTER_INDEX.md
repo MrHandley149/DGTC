@@ -45,6 +45,18 @@ Product documentation defines what DGTC should deliver and for whom.
 
 ---
 
+---
+
+## Business
+
+Business documentation defines how DGTC is positioned, governed, communicated, financed, and brought to market.
+
+The authoritative navigation document for the Business Operating System is:
+
+- [Business Index](business/BUSINESS_INDEX.md)
+
+---
+
 ## Functional Requirements
 
 Functional requirements define the expected behavior of individual product capabilities.
@@ -116,3 +128,5 @@ State
 API
 ↓
 Implementation
+
+---

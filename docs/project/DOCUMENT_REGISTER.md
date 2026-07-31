@@ -172,9 +172,10 @@ The `Owner` column identifies the Information Owner, not the current editor.
 |---|---|---:|---|---|
 | `../engineering/README.md` | README | — | Engineering | Domain entry document |
 | `../engineering/Getting_Started.md` | Guide | — | Engineering | Filename does not conform to naming standard |
-| `../engineering/GitHub_Guide.md` | Guide | — | Development | Overlaps Git Workflow |
+| `../development/GitHub_Guide.md` | Guide | — | Development | Overlaps Git Workflow |
 
 ---
+
 
 ## Operations
 
@@ -182,7 +183,7 @@ The `Owner` column identifies the Information Owner, not the current editor.
 |---|---|---:|---|---|
 | `../operations/BUSINESS_PROFILE.md` | Profile | — | Business | — |
 | `../operations/DEVELOPMENT_PROFILE.md` | Profile | — | Development | — |
-| `../operations/Guardian_Operating_Procedure.md` | Procedure | — | Project | Duplicate filename and overlapping scope with `../development/Guardian_Operating_Procedure.md`; authority must be resolved |
+| `../operations/Repository_Review_Procedure.md` | Procedure | — | Project | Duplicate filename and overlapping scope with `../development/Repository_Review_Procedure.md`; authority must be resolved |
 | `../operations/OPERATIONAL_SESSION_RITUAL.md` | Procedure | — | Project | Overlaps Guardian Operating Procedure |
 
 ---
@@ -192,7 +193,7 @@ The `Owner` column identifies the Information Owner, not the current editor.
 | Path | Type | Lifecycle | Owner | Consolidation note |
 |---|---|---:|---|---|
 | `../business/readme.md` | README | — | Business | Filename casing does not conform |
-| `../business/MASTER_INDEX.md` | Index | — | Business | Name overlaps repository MASTER_INDEX |
+| `../business/BUSINESS_INDEX.md` | Index | — | Business | Name overlaps repository MASTER_INDEX |
 | `../business/BRAND_PLATFORM.md` | Business | — | Business | Existing file was previously listed as planned |
 | `../business/BUSINESS_GUARDRAILS.md` | Governance | — | Business | — |
 | `../business/CHANGE_QUEUE.md` | Queue | — | Business | Boundary with Future Queue must be verified |

@@ -11,14 +11,14 @@
 .\docs\business\BUSINESS_GUARDRAILS.md
 .\docs\business\CHANGE_QUEUE.md
 .\docs\business\FOUNDATION_ANALYSIS.md
-.\docs\business\MASTER_INDEX.md
+.\docs\business\docs/business/BUSINESS_INDEX.md
 .\docs\business\MESSAGING_FRAMEWORK.md
 .\docs\business\readme.md
 .\docs\development\CODING_STANDARD.md
 .\docs\development\DEVELOPMENT_WORKFLOW.md
 .\docs\development\GIT_WORKFLOW.md
 .\docs\development\GitHub_Guide.md
-.\docs\development\Guardian_Operating_Procedure.md
+.\docs\development\Repository_Review_Procedure.md
 .\docs\development\IMPLEMENTATION_WORKFLOW.md
 .\docs\development\REPOSITORY_STRUCTURE.md
 .\docs\development\SPRINT_0.md
@@ -50,7 +50,7 @@
 .\docs\MASTER_INDEX.md
 .\docs\operations\BUSINESS_PROFILE.md
 .\docs\operations\DEVELOPMENT_PROFILE.md
-.\docs\operations\Guardian_Operating_Procedure.md
+.\docs\operations\Repository_Review_Procedure.md
 .\docs\operations\OPERATIONAL_SESSION_RITUAL.md
 .\docs\product\feature_requests\Feature_Request_Log.md
 .\docs\product\MVP.md

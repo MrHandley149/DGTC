@@ -157,7 +157,7 @@ The repository should remain easy to navigate months or years after changes are 
 
 - `GitHub_Guide.md`
 - `Decision_Framework.md`
-- `Guardian_Operating_Procedure.md`
+- `Repository_Review_Procedure.md`
 - `DEVELOPMENT_WORKFLOW.md`
 
 ---

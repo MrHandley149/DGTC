@@ -116,7 +116,7 @@ Ideas should never disappear without traceability.
 ## Related Documents
 
 - `BUSINESS_DECISION_LOG.md`
-- `MASTER_INDEX.md`
+- `docs/business/BUSINESS_INDEX.md`
 - `BUSINESS_GUARDRAILS.md`
 
 ---

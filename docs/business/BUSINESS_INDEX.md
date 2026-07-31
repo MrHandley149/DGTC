@@ -96,7 +96,7 @@ Governance documents manage the Business Operating System itself.
 | Document | Status | Purpose |
 |----------|----------|---------|
 | `BUSINESS_DECISION_LOG.md` | Planned | Strategic decision history |
-| `MASTER_INDEX.md` | Draft | Documentation navigation |
+| `docs/business/BUSINESS_INDEX.md` | Draft | Documentation navigation |
 
 ---
 

@@ -125,7 +125,7 @@ business/
 
 README.md
 
-MASTER_INDEX.md
+docs/business/BUSINESS_INDEX.md
 
 FOUNDATION_ANALYSIS.md
 
@@ -325,7 +325,7 @@ The Master Index should always reflect the current structure and status of the B
 - `BUSINESS_GUARDRAILS.md`
 - `BRAND_PLATFORM.md`
 - `MESSAGING_FRAMEWORK.md`
-- `MASTER_INDEX.md`
+- `docs/business/BUSINESS_INDEX.md`
 
 ---
 

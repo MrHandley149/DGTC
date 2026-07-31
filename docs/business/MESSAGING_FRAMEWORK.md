@@ -421,7 +421,7 @@ Every communication channel should reinforce the same identity while adapting on
 - `FOUNDATION_ANALYSIS.md`
 - `BUSINESS_GUARDRAILS.md`
 - `BRAND_PLATFORM.md`
-- `MASTER_INDEX.md`
+- `docs/business/BUSINESS_INDEX.md`
 - `BUSINESS_DECISION_LOG.md`
 
 ---
