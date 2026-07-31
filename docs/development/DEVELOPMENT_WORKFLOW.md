@@ -1,8 +1,11 @@
 # Development Workflow
 
-**Document Type:** Development  
-**Version:** v2.0  
-**Lifecycle:** Approved  
+**Document Type:** Development
+
+**Version:** 3.0
+
+**Status:** Approved
+
 **Information Owner:** Development
 
 ---
@@ -11,89 +14,124 @@
 
 This document defines the standard development workflow for the DGTC project.
 
-It ensures a repeatable process from identifying work to delivering completed changes.
+Its purpose is to provide a consistent, repeatable process for transforming ideas into completed, verified, and maintainable software.
+
+The workflow emphasizes incremental delivery, traceability, and long-term repository quality.
 
 ---
 
-# Workflow
+# Development Workflow
+
+Every implementation should follow the same sequence.
 
 ```text
-Identify work
-    ↓
-Confirm governing documents
-    ↓
-Plan implementation
-    ↓
+Identify Work
+      │
+      ▼
+Confirm Governing Documents
+      │
+      ▼
+Plan Implementation
+      │
+      ▼
 Implement
-    ↓
+      │
+      ▼
 Verify
-    ↓
+      │
+      ▼
 Commit
-    ↓
+      │
+      ▼
 Review
-    ↓
+      │
+      ▼
 Merge
 ```
 
----
+Each step should be completed before progressing to the next.
 
-# Development principles
-
-Development should:
-
-- follow approved architecture,
-- follow the Decision Framework,
-- preserve the Single Source of Truth,
-- produce small incremental changes,
-- leave the repository in a consistent state.
+Skipping stages increases technical debt and reduces traceability.
 
 ---
 
-# Before implementation
+# Development Principles
 
-Verify:
+Every development activity should:
 
-- objective is understood,
-- document ownership is clear,
-- dependencies are identified,
-- no duplicate work already exists.
+- Follow the approved architecture.
+- Follow the Decision Framework.
+- Preserve the Single Source of Truth.
+- Deliver small, incremental improvements.
+- Leave the repository in a consistent and deployable state.
+- Maintain clear traceability between decisions, implementation, and documentation.
 
----
-
-# During implementation
-
-Maintain:
-
-- one logical objective,
-- consistent terminology,
-- reusable components,
-- minimal scope,
-- clear traceability.
+Development should optimize for clarity and sustainability rather than speed alone.
 
 ---
 
-# Before commit
+# Before Implementation
 
-Verify:
+Before writing code, verify that:
 
-- implementation is complete,
-- references remain valid,
-- documentation reflects the change,
-- no duplicate information has been introduced.
+- The objective is clearly understood.
+- Ownership of the affected documents or components is known.
+- Dependencies have been identified.
+- No equivalent implementation already exists.
+- The proposed work aligns with the Foundation and architectural principles.
 
----
-
-# Related documents
-
-- Decision Framework
-- Git Workflow
-- GitHub Guide
-- System Overview
+Time invested in planning reduces unnecessary rework.
 
 ---
 
-# Revision history
+# During Implementation
+
+Maintain the following principles throughout development:
+
+- One logical objective per implementation.
+- Consistent terminology across code and documentation.
+- Reusable components where appropriate.
+- Minimal implementation scope.
+- Clear traceability from requirement to solution.
+- Continuous alignment with project standards.
+
+Avoid expanding scope while implementing unrelated improvements.
+
+---
+
+# Before Commit
+
+Before creating a commit, verify that:
+
+- The implementation is complete.
+- References remain valid.
+- Documentation has been updated where necessary.
+- No duplicate information has been introduced.
+- The repository remains internally consistent.
+- All intended changes have been verified.
+
+A commit should represent one complete, logical unit of work.
+
+---
+
+# Related Documents
+
+- `Decision_Framework.md`
+- `GIT_WORKFLOW.md`
+- `GitHub_Guide.md`
+- `SYSTEM_OVERVIEW.md`
+
+---
+
+**Status:** Approved
+
+**Owner:** Development
+
+**Last Updated:** 2026-07-30
+
+### Revision History
 
 | Version | Date | Description |
-|---|---|---|
-| v2.0 | 2026-07-29 | Repository consolidation |
+|----------|------------|--------------------------------|
+| 3.0 | 2026-07-30 | Repository documentation consolidated. |
+| 2.0 | 2026-07-29 | Repository consolidation. |

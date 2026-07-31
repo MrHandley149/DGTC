@@ -1,179 +1,218 @@
 # Implementation Workflow
 
-**Version:** v1.0
+**Document Type:** Development
 
-**Status:** Draft
+**Version:** 2.0
 
----
+**Status:** Approved
 
-# Syfte
-
-Detta dokument beskriver hur ett beslutat krav går från dokumentation till färdig och godkänd implementation.
-
-Syftet är att säkerställa spårbarhet, hög kvalitet och konsekvent utveckling för både människor och AI-agenter.
+**Information Owner:** Development
 
 ---
 
-# Grundprincip
+# Purpose
 
-Kod implementerar dokumentationen.
+This document defines how an approved requirement progresses from documentation to a completed and verified implementation.
 
-Dokumentationen anpassas aldrig efter koden.
+Its purpose is to ensure complete traceability, consistent quality, and a repeatable development process for both human contributors and AI agents.
 
----
-
-# Arbetsobjekt
-
-Projektets minsta implementerbara arbetsenhet är en **Implementation Task**.
-
-En Implementation Task är en avgränsad arbetsorder som implementerar ett specifikt funktionellt krav (FRS).
-
-Varje Implementation Task ska kunna:
-
-- implementeras självständigt,
-- testas självständigt,
-- granskas självständigt,
-- verifieras självständigt,
-- godkännas självständigt,
-- spåras tillbaka till ett beslutat krav.
-
-En Implementation Task får aldrig implementera flera orelaterade krav.
+Every implementation should be directly connected to an approved project requirement.
 
 ---
 
-# Arbetsflöde
+# Core Principle
 
-Alla implementationer följer samma arbetsgång.
+Code implements documentation.
 
-Beslutat behov
+Documentation is never rewritten to justify existing code.
 
-↓
+Implementation always follows approved project decisions, ensuring that the repository remains the authoritative source of truth.
 
-FRS
+---
 
-↓
+# Implementation Tasks
 
+The smallest implementation unit within the project is an **Implementation Task**.
+
+An Implementation Task is a self-contained work item that implements one specific Functional Requirement Specification (FRS).
+
+Each Implementation Task shall be capable of being:
+
+- Implemented independently.
+- Tested independently.
+- Reviewed independently.
+- Verified independently.
+- Approved independently.
+- Traced back to a single approved requirement.
+
+An Implementation Task shall never implement multiple unrelated requirements.
+
+Keeping tasks focused improves review quality, testing efficiency, and long-term maintainability.
+
+---
+
+# Implementation Workflow
+
+Every implementation follows the same standardized process.
+
+```text
+Approved Business Need
+        │
+        ▼
+Functional Requirement Specification (FRS)
+        │
+        ▼
 Implementation Task
-
-↓
-
-Kod
-
-↓
-
-Test
-
-↓
-
-Verifiering
-
-↓
-
-Godkännande
-
-↓
-
+        │
+        ▼
+Implementation
+        │
+        ▼
+Testing
+        │
+        ▼
+Verification
+        │
+        ▼
+Approval
+        │
+        ▼
 Git Commit
+```
+
+Each stage must be completed before the next stage begins.
 
 ---
 
-# Spårbarhet
+# Traceability
 
-Varje Implementation Task ska kunna följas genom hela utvecklingsprocessen.
+Every Implementation Task shall remain traceable throughout the complete development lifecycle.
 
-Beslutat behov
-
-↓
-
-FRS
-
-↓
-
+```text
+Approved Business Need
+        │
+        ▼
+Functional Requirement Specification (FRS)
+        │
+        ▼
 Implementation Task
-
-↓
-
-Kod
-
-↓
-
-Testresultat
-
-↓
-
-Verifiering
-
-↓
-
-Godkännande
-
-↓
-
+        │
+        ▼
+Source Code
+        │
+        ▼
+Test Results
+        │
+        ▼
+Verification
+        │
+        ▼
+Approval
+        │
+        ▼
 Git Commit
+```
 
-Varje steg ska kunna spåras både framåt och bakåt.
+Traceability shall exist in both directions.
 
----
-
-# Regler
-
-- En Implementation Task implementerar ett krav.
-- En commit ska endast innehålla en sammanhängande förändring.
-- Review ska verifiera både funktion och spårbarhet.
-- Nya idéer som uppstår under implementation förs till Future Queue.
-- Om ett krav behöver ändras stoppas implementationen och frågan hanteras genom RFC.
-- Kod får aldrig implementeras utan ett beslutat krav.
+A reviewer should always be able to move from a business requirement to the implementation, and from an implementation back to the originating requirement.
 
 ---
 
+# Implementation Rules
+
+Every implementation shall follow these rules:
+
+- One Implementation Task implements one requirement.
+- One commit represents one logical change.
+- Reviews verify both functionality and traceability.
+- New ideas discovered during implementation are added to the Future Queue.
+- If a requirement changes, implementation stops until the change has been approved through the RFC process.
+- Code shall never be implemented without an approved requirement.
+
+These rules preserve project consistency and reduce implementation risk.
+
+---
 # Definition of Done
 
-En Implementation Task är klar när:
+An Implementation Task is considered complete only when all of the following conditions have been satisfied:
 
-- FRS-kravet är implementerat.
-- Samtliga acceptanskriterier är verifierade.
-- Testresultatet är dokumenterat.
-- Eventuella avvikelser är hanterade eller accepterade.
-- Testledaren har godkänt testresultatet.
-- Product Owner/Projektledare har godkänt Implementation Task.
-- Kodgranskning är genomförd.
-- Git Commit är genomförd.
-- Spårbarheten mellan FRS, Implementation Task och Git Commit är dokumenterad.
+- The Functional Requirement Specification (FRS) has been fully implemented.
+- All acceptance criteria have been successfully verified.
+- Test results have been documented.
+- Any deviations have been resolved or formally accepted.
+- Test results have been approved by the designated reviewer.
+- The Product Owner or Project Lead has approved the Implementation Task.
+- Code review has been completed.
+- The Git commit has been created.
+- Traceability between the FRS, the Implementation Task, and the Git commit has been documented.
 
----
-
-# Identifiering
-
-Varje Implementation Task ska ha ett unikt ID.
-
-Exempel:
-
-- IT-HOME-001
-- IT-WHEELS-001
-- IT-SESSION-001
-- IT-RESULT-001
-
-ID:t ska användas i:
-
-- dokumentation,
-- kodgranskning,
-- testprotokoll,
-- Git Commits,
-- Decision Log när relevant.
+Completion is measured by verified outcomes rather than code alone.
 
 ---
 
-# Sammanfattning
+# Identification
 
-DGTC implementerar aldrig funktioner direkt.
+Every Implementation Task shall have a unique identifier.
 
-DGTC implementerar alltid ett beslutat krav genom en avgränsad Implementation Task.
+Example identifiers:
 
-Det säkerställer:
+```text
+IT-HOME-001
+IT-WHEELS-001
+IT-SESSION-001
+IT-RESULT-001
+```
 
-- full spårbarhet,
-- hög kvalitet,
-- små och kontrollerade förändringar,
-- enkel testning,
-- enkel granskning,
-- effektivt samarbete mellan människor och AI-agenter.
+The identifier shall be referenced in:
+
+- Documentation.
+- Code reviews.
+- Test reports.
+- Git commits.
+- Decision Log, when applicable.
+
+Consistent identifiers improve traceability across the entire development lifecycle.
+
+---
+
+# Summary
+
+DGTC never implements features directly.
+
+Instead, every implementation begins with an approved requirement and proceeds through a clearly defined Implementation Task.
+
+This workflow ensures:
+
+- Complete traceability.
+- High implementation quality.
+- Small and controlled changes.
+- Straightforward testing.
+- Efficient reviews.
+- Effective collaboration between human contributors and AI agents.
+
+Following this process keeps implementation predictable, auditable, and aligned with the project's architectural principles.
+
+---
+
+# Related Documents
+
+- `DEVELOPMENT_WORKFLOW.md`
+- `Decision_Framework.md`
+- `GIT_WORKFLOW.md`
+- `Guardian_Operating_Procedure.md`
+
+---
+
+**Status:** Approved
+
+**Owner:** Development
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+| Version | Date | Description |
+|----------|------------|--------------------------------|
+| 2.0 | 2026-07-30 | Repository documentation consolidated and expanded. |
+| 1.0 | Initial | First draft. |

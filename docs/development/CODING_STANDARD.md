@@ -1,56 +1,73 @@
 # Coding Standard
 
-**Version:** v1.0
+**Version:** 2.0
 
 **Status:** Draft
 
----
-
-# Syfte
-
-Detta dokument beskriver den kodfilosofi som används inom DGTC.
-
-Målet är att skapa kod som är enkel att förstå, enkel att underhålla och enkel att överlämna till både människor och AI-agenter.
+**Document Type:** Development Standard
 
 ---
 
-# Grundprincip
+# Purpose
 
-Kod ska vara enkel att förstå.
+This document defines the coding philosophy used throughout the DGTC project.
 
-Inte imponerande att skriva.
+Its objective is to produce software that is easy to understand, easy to maintain, and easy to hand over to both human developers and AI agents.
 
----
-
-# Kodfilosofi
-
-DGTC ska byggas med enkel, tydlig och långsiktigt underhållbar kod.
-
-Vi bygger inte bloatware.
-
-Vi bygger en funktion i taget och undviker automagi, onödiga abstraktioner och spekulativa lösningar.
-
-Kod ska vara:
-
-- läsbar före smart,
-- enkel före generell,
-- explicit före automatisk,
-- testbar,
-- dokumenterad där avsikten annars inte är självklar,
-- organiserad enligt tydliga ansvarsgränser,
-- möjlig att snabbt överlämna till en ny programmerare eller AI-agent.
-
-Varje beroende, abstraktion och tekniskt mönster ska kunna motiveras utifrån ett konkret behov.
-
-Vi skapar inte flexibilitet för problem som ännu inte finns.
-
-Vi optimerar först när ett verkligt behov är identifierat och mätt.
-
-En funktion implementeras, testas, verifieras och godkänns innan nästa funktion påbörjas.
-
-Kodkvalitet innebär inte att koden är avancerad.
-
-Kodkvalitet innebär att koden är begriplig, korrekt, testbar och enkel att förändra.
+Code should remain understandable long after it has been written.
 
 ---
 
+# Core Principle
+
+Code should be easy to understand.
+
+Not impressive to write.
+
+Readability is considered a long-term investment.
+
+Every future developer should be able to understand *why* code exists before needing to understand *how* it works.
+
+---
+
+# Coding Philosophy
+
+DGTC is built using simple, explicit, and maintainable code.
+
+The project values long-term clarity over short-term cleverness.
+
+We build one feature at a time.
+
+We avoid unnecessary abstraction, hidden behavior, speculative architecture, and "magic" solutions that reduce readability.
+
+Code should be:
+
+- Readable before clever
+- Simple before generic
+- Explicit before automatic
+- Testable
+- Self-documenting whenever possible
+- Documented when intent is not immediately obvious
+- Organized with clear responsibilities
+- Easy to transfer to another developer or AI agent
+
+Every dependency, abstraction, framework, or architectural pattern should solve a real and identifiable problem.
+
+Flexibility should never be introduced for hypothetical future requirements.
+
+Optimization should occur only after a measurable need has been identified.
+
+Every feature should be:
+
+1. Implemented
+2. Tested
+3. Verified
+4. Approved
+
+Only then should development continue with the next feature.
+
+Code quality is not measured by complexity.
+
+Code quality is measured by clarity, correctness, maintainability, and ease of change.
+
+---

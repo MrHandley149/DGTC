@@ -1,8 +1,11 @@
 # GitHub Guide
 
-**Document Type:** Development  
-**Version:** v2.0  
-**Lifecycle:** Approved  
+**Document Type:** Development
+
+**Version:** 3.0
+
+**Status:** Approved
+
 **Information Owner:** Development
 
 ---
@@ -11,104 +14,143 @@
 
 This document defines how GitHub is used within the DGTC repository.
 
-It establishes a consistent workflow for branches, commits and pull requests.
+Its purpose is to establish a consistent workflow for branches, commits, pull requests, and repository maintenance while preserving a clean, traceable development history.
+
+GitHub serves as the authoritative collaboration platform for all repository changes.
 
 ---
 
-# General principles
+# General Principles
 
-The repository shall:
+The repository should always:
 
-- maintain a clean history,
-- use small atomic commits,
-- keep the default branch releasable,
-- avoid unrelated changes in the same commit.
+- Maintain a clean and understandable history.
+- Use small, atomic commits.
+- Keep the default branch in a releasable state.
+- Avoid combining unrelated changes in the same commit.
+- Preserve repository consistency after every merge.
+
+These principles improve collaboration, simplify reviews, and reduce long-term maintenance costs.
 
 ---
 
-# Standard workflow
+# Standard Workflow
+
+Every contribution should follow the same workflow.
 
 ```text
-Synchronize repository
-    ↓
-Create or select branch
-    ↓
-Implement one logical change
-    ↓
+Synchronize Repository
+        │
+        ▼
+Create or Select Branch
+        │
+        ▼
+Implement One Logical Change
+        │
+        ▼
 Review
-    ↓
+        │
+        ▼
 Commit
-    ↓
+        │
+        ▼
 Push
-    ↓
+        │
+        ▼
 Create Pull Request (when applicable)
-    ↓
+        │
+        ▼
 Merge
 ```
 
+Each step should be completed before moving to the next.
+
 ---
 
-# Commit guidelines
+# Commit Guidelines
 
 Every commit should:
 
-- contain one logical change,
-- have a clear commit message,
-- leave the repository in a working state.
+- Contain one logical change.
+- Include a clear and descriptive commit message.
+- Leave the repository in a working state.
+- Be independently understandable when viewed in history.
 
-Examples:
+Examples of good commit messages:
 
 - Add MVP navigation
 - Consolidate Decision Framework
 - Update Domain Model
+- Improve validation logic
+
+Commit messages should describe **what the commit does**, using the imperative mood.
 
 ---
 
 # Branches
 
-Use short descriptive branch names.
+Use short, descriptive branch names that clearly communicate the purpose of the work.
 
-Examples:
+Recommended examples:
 
-- docs/consolidation
-- feature/training-session
-- fix/navigation
-- refactor/domain-model
+```text
+docs/consolidation
+feature/training-session
+fix/navigation
+refactor/domain-model
+```
+
+Branch names should remain focused on a single objective and avoid unnecessary complexity.
+
+---
+# Pull Requests
+
+Pull Requests should:
+
+- Have a clearly defined purpose.
+- Be limited to a single logical objective.
+- Be reviewed before merging.
+- Resolve one well-defined problem.
+- Include sufficient context for reviewers to understand the change.
+
+Large or unrelated changes should be divided into multiple Pull Requests whenever practical.
+
+A focused Pull Request is easier to review, test, and maintain.
 
 ---
 
-# Pull requests
+# Repository Structure
 
-Pull requests should:
+Documentation and source code should preserve:
 
-- have a clear purpose,
-- be limited in scope,
-- be reviewed before merge,
-- resolve one logical problem.
+- Clear document ownership.
+- A Single Source of Truth.
+- Consistent naming conventions.
+- Valid internal references.
+- A logical repository structure.
 
----
-
-# Repository structure
-
-Documentation changes should preserve:
-
-- document ownership,
-- single source of truth,
-- consistent naming,
-- valid references.
+Changes should improve repository quality without introducing duplication or ambiguity.
 
 ---
 
-# Related documents
+# Related Documents
 
-- GIT_WORKFLOW.md
-- Decision Framework
-- Guardian Operating Procedure
+- `GIT_WORKFLOW.md`
+- `Decision_Framework.md`
+- `Guardian_Operating_Procedure.md`
+- `DEVELOPMENT_WORKFLOW.md`
 
 ---
 
-# Revision history
+**Status:** Approved
+
+**Owner:** Development
+
+**Last Updated:** 2026-07-30
+
+### Revision History
 
 | Version | Date | Description |
-|---|---|---|
-| v2.0 | 2026-07-29 | Repository consolidation |
+|----------|------------|--------------------------------|
+| 3.0 | 2026-07-30 | Repository documentation consolidated. |
+| 2.0 | 2026-07-29 | Repository consolidation. |
