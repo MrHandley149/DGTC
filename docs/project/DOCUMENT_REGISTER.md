@@ -21,15 +21,15 @@ The [DGTC Documentation Index](../MASTER_INDEX.md) owns documentation navigation
 
 ## Lifecycle model
 
-The repository uses the following lifecycle states:
-
 | Status | Meaning |
 |---|---|
 | Draft | The document is being created and is not yet authoritative. |
 | Review | The document is being evaluated before approval. |
-| Approved | The document is authoritative and active. |
+| Approved | The document is authoritative and maintained through the normal governance process. |
+| Frozen | The document is authoritative and intentionally protected from routine modification. Changes require an explicit governance decision. |
 | Deprecated | The document has been replaced but remains temporarily available for reference. |
 | Archived | The document is retained for historical purposes and is no longer active. |
+
 
 No additional lifecycle states may be used.
 

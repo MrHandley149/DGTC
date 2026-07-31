@@ -1,331 +1,119 @@
-# DGTC Business Operating System (BOS)
+# DGTC Business Operating System
 
-**Version:** 2.0
+## Purpose
 
-**Status:** Draft
+The DGTC Business Operating System defines how the philosophy established by the DGTC Foundation is translated into brand, communication, governance, partnerships, and commercial strategy.
 
----
+The Business Operating System does not define product behavior, product requirements, user experience, architecture, or technical implementation.
 
-# Purpose
+Those areas belong to the Product Operating System and the relevant product, architecture, and engineering documentation.
 
-The DGTC Business Operating System (BOS) defines how the philosophy established by the DGTC Foundation is translated into brand, communication, marketing, partnerships, and commercial strategy.
+Business documentation must remain aligned with the DGTC Foundation without redefining it.
 
-The BOS does **not** define product behavior.
-
-Product philosophy, user experience, and technical direction belong to the Product Operating System (POS).
-
-The Business Operating System exists to interpret, communicate, and commercialize the Foundation without altering it.
-
----
-
-# Relationship to the Product Operating System
+## Relationship to the Product Operating System
 
 The Product Operating System answers:
 
-> **What is the product?**
+> What is the product, and how should it support player development?
 
 The Business Operating System answers:
 
-> **How is the product perceived?**
+> How should the product be positioned, communicated, governed, and brought to market?
 
-Both systems share a single source of truth:
+Both systems share the DGTC Foundation as their authoritative philosophical source.
 
-**The DGTC Foundation.**
+## Business Development Flow
 
-The Foundation defines identity.
-
-The Business Operating System communicates that identity consistently across every external touchpoint.
-
----
-
-# Business Development Flow
-
-Business strategy is developed through a structured progression.
+Business strategy should develop through the following sequence:
 
 ```text
 Foundation
-        │
-        ▼
+↓
 Foundation Analysis
-        │
-        ▼
+↓
 Business Guardrails
-        │
-        ▼
+↓
 Brand Platform
-        │
-        ▼
+↓
 Messaging Framework
-        │
-        ▼
-Website Strategy
-        │
-        ▼
-Community Strategy
-        │
-        ▼
-Partnership & Sponsorship Strategy
-        │
-        ▼
-Pricing Strategy
-        │
-        ▼
-Go-To-Market
-        │
-        ▼
-External Communication
+↓
+Execution Strategies
 ```
 
-Each stage builds upon the previous one.
+Execution strategies may include website, community, partnership, pricing, and go-to-market strategies as those documents are created and approved.
 
-Business decisions should never bypass this progression.
+## Documents
 
----
+| Document                 | Purpose                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| `BUSINESS_INDEX.md`      | Provides authoritative navigation for the Business Operating System.                 |
+| `FOUNDATION_ANALYSIS.md` | Interprets the Foundation from a business and market perspective.                    |
+| `BUSINESS_GUARDRAILS.md` | Defines governance principles and strategic boundaries for Business documentation.   |
+| `BRAND_PLATFORM.md`      | Defines DGTC brand identity, positioning, personality, promise, and differentiation. |
+| `MESSAGING_FRAMEWORK.md` | Defines how DGTC communicates consistently with different audiences.                 |
+| `CHANGE_QUEUE.md`        | Records proposed improvements and future Business documentation work.                |
 
-# Core Principles
+## Governance Principles
 
-The Business Operating System shall always:
+Business documentation must:
 
-- Build upon the Foundation.
-- Use Foundation Analysis as its strategic interpretation.
-- Follow all Business Guardrails.
-- Avoid introducing new product decisions.
-- Never contradict the Foundation.
-- Build long-term trust rather than short-term attention.
-- Maintain consistent communication across every channel.
+* Be derived from the DGTC Foundation.
+* Comply with the Business Guardrails.
+* Avoid introducing product requirements.
+* Avoid contradicting authoritative product documentation.
+* Distinguish approved strategy from proposals and planned work.
+* Support long-term trust rather than short-term attention.
+* Maintain consistency across external communication.
 
----
+## Responsibilities
 
-# Business Guardrails
-
-The Business Operating System uses two categories of governance.
-
-## Hard Guardrails
-
-Hard Guardrails define absolute strategic rules.
-
-Breaking a Hard Guardrail requires an explicit strategic decision.
-
-These rules protect the identity of DGTC.
-
-## Soft Guardrails
-
-Soft Guardrails define preferred behaviors and communication patterns.
-
-They provide flexibility while maintaining consistency.
-
-Exceptions should be intentional rather than accidental.
-
----
-
-# Documentation Structure
-
-```text
-business/
-
-README.md
-
-docs/business/BUSINESS_INDEX.md
-
-FOUNDATION_ANALYSIS.md
-
-BUSINESS_GUARDRAILS.md
-
-BRAND_PLATFORM.md
-
-MESSAGING_FRAMEWORK.md
-
-WEBSITE_STRATEGY.md
-
-COMMUNITY_STRATEGY.md
-
-PARTNERSHIP_STRATEGY.md
-
-PRICING_STRATEGY.md
-
-GO_TO_MARKET.md
-
-BUSINESS_DECISION_LOG.md
-```
-
----
-
-# Document Overview
-
-## Foundation Analysis
-
-Distills the Foundation into strategic business insights for branding, positioning, communication, and commercial decision-making.
-
-## Business Guardrails
-
-Defines the Hard and Soft Guardrails that govern every Business document.
-
-All Business documentation should comply with these guardrails.
-
-## Brand Platform
-
-Defines the DGTC brand identity, positioning, personality, promise, and market differentiation.
-
-## Messaging Framework
-
-Defines how DGTC communicates with different audiences while maintaining a consistent voice.
-## Brand Platform
-
-Defines the long-term strategic identity of DGTC.
-
-This document describes:
-
-- Brand purpose
-- Vision
-- Positioning
-- Brand promise
-- Personality
-- Core values
-- Differentiators
-
-The Brand Platform ensures consistent strategic positioning across products, communication, and partnerships.
-
----
-
-## Messaging Framework
-
-Defines how DGTC communicates with different audiences while maintaining a consistent voice.
-
-The framework establishes:
-
-- Core messages
-- Audience-specific messaging
-- Tone of voice
-- Communication principles
-- Narrative structure
-
----
-
-## Website Strategy
-
-Defines the objectives, structure, and communication goals for the DGTC website.
-
-The website should communicate the Foundation while supporting product discovery, education, and conversion.
-
----
-
-## Community Strategy
-
-Defines how DGTC builds and supports a long-term community.
-
-The strategy focuses on:
-
-- Community growth
-- Engagement
-- Knowledge sharing
-- Long-term relationships
-- Player development
-
----
-
-## Partnership Strategy
-
-Defines how DGTC approaches commercial partnerships and sponsorships.
-
-Partnerships should strengthen the DGTC ecosystem while remaining aligned with the Foundation.
-
----
-
-## Pricing Strategy
-
-Defines pricing principles, commercial offerings, and monetization strategy.
-
-Pricing should reinforce long-term trust and sustainable business growth.
-
----
-
-## Go-To-Market
-
-Defines the launch strategy for new products, features, and markets.
-
-The strategy includes:
-
-- Product launches
-- Marketing campaigns
-- Growth initiatives
-- Market expansion
-
----
-
-## Business Decision Log
-
-Documents significant business decisions together with their rationale.
-
-The log provides historical context for future strategic decisions.
-
----
-
-## Master Index
-
-Maintains document status, version information, ownership, and relationships across the Business Operating System.
-
----
-
-# Responsibilities
-
-## Product Operating System (POS)
+### Product Operating System
 
 Responsible for:
 
-- Product philosophy
-- Product decisions
-- User experience
-- Architecture
-- Software development
+* Product philosophy
+* Product requirements
+* User experience
+* Functional behavior
+* Architecture
+* Software development
 
-## Business Operating System (BOS)
+### Business Operating System
 
 Responsible for:
 
-- Brand strategy
-- Positioning
-- Communication
-- Marketing
-- Business development
-- Partnerships
-- Commercial strategy
+* Brand strategy
+* Positioning
+* Communication
+* Marketing
+* Partnerships
+* Commercial strategy
+* Business governance
 
----
+## Navigation
 
-# Relationship Between POS and BOS
+The authoritative navigation document for this directory is:
 
-The Product Operating System and Business Operating System evolve together while remaining independent.
+* [Business Index](BUSINESS_INDEX.md)
 
-The Foundation remains the shared source of truth.
+Repository-wide documentation navigation is maintained in:
 
-Business strategy must never redefine the Foundation.
+* [DGTC Documentation Index](../MASTER_INDEX.md)
 
-Likewise, the Foundation should never be modified solely to support marketing objectives.
+Document lifecycle, ownership, type, and consolidation metadata are maintained in:
 
-When the Foundation evolves, the Business Operating System should be reviewed and updated where necessary to maintain alignment.
-
----
-
-# Version Management
-
-The Business Operating System is intended to evolve alongside the organization.
-
-New strategic documents may be introduced as the business matures.
-
-Strategic decisions should be documented in the Business Decision Log.
-
-The Master Index should always reflect the current structure and status of the Business Operating System.
-
----
+* [Document Register](../project/DOCUMENT_REGISTER.md)
 
 ## Related Documents
 
-- `../foundation/FOUNDATION.md`
-- `../foundation/FOUNDATION_ANALYSIS.md`
-- `BUSINESS_GUARDRAILS.md`
-- `BRAND_PLATFORM.md`
-- `MESSAGING_FRAMEWORK.md`
-- `docs/business/BUSINESS_INDEX.md`
+* [DGTC Foundation](../foundation/FOUNDATION.md)
+* [Foundation README](../foundation/README.md)
+* [Business Index](BUSINESS_INDEX.md)
+* [Foundation Analysis](FOUNDATION_ANALYSIS.md)
+* [Business Guardrails](BUSINESS_GUARDRAILS.md)
+* [Brand Platform](BRAND_PLATFORM.md)
+* [Messaging Framework](MESSAGING_FRAMEWORK.md)
+* [Change Queue](CHANGE_QUEUE.md)
 
 ---
 
@@ -333,8 +121,9 @@ The Master Index should always reflect the current structure and status of the B
 
 **Owner:** Business
 
-**Last Updated:** 2026-07-30
+**Last Updated:** 2026-07-31
 
 ### Revision History
 
-- **2026-07-30** – Repository documentation consolidated and aligned with the Product Operating System.
+* **2026-07-31** – Consolidated the Business directory entry document, corrected navigation, and removed duplicate and unverified document descriptions.
+* **2026-07-30** – Repository documentation consolidated and aligned with the Product Operating System.
