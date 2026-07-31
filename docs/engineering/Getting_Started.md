@@ -108,6 +108,33 @@ För varje steg gäller:
 5. Först därefter börjar implementationen.
 
 ---
+# Hur ofta ska jag committa?
+
+Hellre många små commits än få stora.
+
+En bra tumregel är:
+
+> En idé = en commit.
+
+---
+# Om något blir fel
+
+GitHub gör att vi nästan alltid kan gå tillbaka till en tidigare version.
+
+Var därför inte rädd för att göra misstag.
+
+Misstag är en naturlig del av utvecklingen.
+
+---
+# Våra regler
+
+Vi committar bara sådant som fungerar eller är godkänt.
+
+Vi dokumenterar större beslut innan vi börjar implementera dem.
+
+Vi försöker hålla commit-meddelanden korta och tydliga.
+
+---
 
 # Definition of Done
 
@@ -130,6 +157,24 @@ Vi stannar upp, förenklar och dokumenterar på ett bättre sätt.
 Tekniken ska anpassas till människan – inte tvärtom.
 
 ---
+# Ordlista
+
+**Repository**
+Projektets samlade filer.
+
+**Commit**
+Spara en version av projektet.
+
+**Push**
+Skicka ändringarna till GitHub.
+
+**Pull**
+Hämta de senaste ändringarna från GitHub.
+
+**Branch**
+En separat arbetsgren. Vi kommer att börja använda detta längre fram i projektet.
+
+---
 
 # Kom ihåg
 
@@ -138,3 +183,15 @@ Du behöver inte kunna allt.
 Du behöver bara veta nästa steg.
 
 Det är därför den här guiden finns.
+
+---
+
+# Sammanfattning
+
+För att arbeta med DGTC behöver du i början bara komma ihåg tre steg:
+
+1. Gör ändringen.
+2. Commit.
+3. Push.
+
+Resten lär vi oss när vi behöver det.
