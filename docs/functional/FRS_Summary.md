@@ -1,165 +1,209 @@
-# FRS – Summary
+# FRS — Session Summary and Friction Feedback
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Dokument:** FRS_Summary.md
-
-**Version:** v1.0
-
-**Status:** Draft
+**Product:** Disc Golf Training Companion (DGTC)  
+**Version:** 2.0  
+**Status:** Frozen  
+**Information Owner:** Product
 
 ---
 
-# Syfte
+## Purpose
 
-Summary presenterar en översikt över ett avslutat träningspass.
+The Session Summary confirms that a Training Session has ended and presents a concise, read-only account of what was completed.
 
-Funktionen ska ge användaren en snabb och tydlig återblick utan att analysera eller värdera prestationen.
+The summary also collects the MVP's primary product-friction signal:
 
----
+> **Did DGTC get in the way of your training today?**
 
-# Mål
-
-Efter avslutat träningspass ska användaren enkelt kunna se:
-
-* att träningspasset har sparats,
-* vad som genomfördes,
-* grundläggande information om träningspasset.
-
-Summary ska ge användaren en känsla av avslut innan nästa träningspass påbörjas.
+The purpose of this question is to identify and remove friction. It is not a satisfaction score and does not evaluate player performance.
 
 ---
 
-# User Stories
+## User Stories
 
 ### US-S-001
 
-Som användare vill jag se en sammanfattning när träningspasset avslutas.
-
----
+As a player, I want confirmation that my completed session was saved.
 
 ### US-S-002
 
-Som användare vill snabbt förstå vad jag genomfört.
-
----
+As a player, I want a concise summary of the session without performance judgment.
 
 ### US-S-003
 
-Som användare vill kunna lämna sammanfattningen och återgå till startskärmen.
+As the Product Owner, I want to know whether DGTC interfered with practice so that recurring friction can be identified and removed.
+
+### US-S-004
+
+As a player, I want to return to Home after completing the summary and optional feedback.
 
 ---
 
-# Funktionella krav
+## Functional Requirements
 
-## FRS-S-001
+### FRS-S-001 — Automatic Display
 
-Summary ska visas automatiskt när ett träningspass avslutas.
+The Session Summary shall be displayed after a Training Session is successfully completed and persisted.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-S-002 — Save Confirmation
 
-## FRS-S-002
+The summary shall clearly confirm that the Training Session has been saved.
 
-Summary ska visa träningspassets starttid.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-S-003 — Duration
 
----
+The summary shall show the session duration derived from persisted start and completion timestamps.
 
-## FRS-S-003
+**Priority:** Must Have
 
-Summary ska visa träningspassets sluttid.
+### FRS-S-004 — Completed Exercises
 
-**Prioritet:** Must Have
+The summary shall show the number of completed exercises.
 
----
+**Priority:** Must Have
 
-## FRS-S-004
+### FRS-S-005 — Attempts
 
-Summary ska visa träningspassets totala längd.
+The summary shall show the number of recorded attempts when attempts are represented separately in the implementation.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-S-006 — Results
 
-## FRS-S-005
+The summary shall show the number of recorded results.
 
-Summary ska visa antal genomförda övningar.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-S-007 — Session Source
 
----
+When available, the summary shall identify the Quick Challenge or other approved source used to start the session.
 
-## FRS-S-006
+**Priority:** Must Have
 
-Summary ska visa antal registrerade resultat.
+### FRS-S-008 — Friction Question
 
-**Prioritet:** Must Have
+After the summary, the player shall be asked:
 
----
+> **Did DGTC get in the way of your training today?**
 
-## FRS-S-007
+Available answers:
 
-Användaren ska kunna återgå till startskärmen från Summary.
+- Yes
+- No
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-S-009 — Friction Reasons
 
-# Affärsregler
+When the player answers **Yes**, DGTC shall allow one or more predefined reasons to be selected.
 
-## BR-S-001
+**Priority:** Must Have
 
-Summary får endast visas för avslutade träningspass.
+### FRS-S-010 — Optional Comment
 
----
+When the player answers **Yes**, DGTC shall provide an optional free-text comment field.
 
-## BR-S-002
+**Priority:** Must Have
 
-Informationen i Summary ska hämtas från det sparade träningspasset.
+### FRS-S-011 — Non-Blocking Feedback
 
----
+The player shall be able to finish the flow without writing a comment. Failure to store feedback shall not invalidate or remove the completed Training Session.
 
-## BR-S-003
+**Priority:** Must Have
 
-Summary ska vara skrivskyddad.
+### FRS-S-012 — Return Home
 
-Användaren kan inte ändra träningspassets innehåll från denna vy.
+The player shall be able to return to Home after completing or dismissing the feedback flow.
 
----
-
-# Felhantering
-
-Om delar av träningspassets information saknas ska Summary fortfarande visas.
-
-Tillgänglig information ska presenteras utan att appen kraschar.
+**Priority:** Must Have
 
 ---
 
-# Acceptanskriterier
+## Business Rules
 
-Summary är godkänd när användaren kan:
+### BR-S-001
 
-* se sammanfattningen direkt efter avslutat träningspass,
-* se grundläggande information om träningspasset,
-* återgå till startskärmen,
-* använda funktionen helt offline.
+A Session Summary shall only represent a completed Training Session.
+
+### BR-S-002
+
+Summary values shall be derived from persisted session data and shall not be independently editable.
+
+### BR-S-003
+
+The summary shall not provide performance analysis, coaching, ratings, or comparative judgment during the MVP.
+
+### BR-S-004
+
+Friction feedback is product-experience data and shall remain separate from training-performance results.
+
+### BR-S-005
+
+The answer **No** requires no additional input.
+
+### BR-S-006
+
+The answer **Yes** permits quick-select reasons and an optional comment; it shall not require a written explanation.
 
 ---
 
-# Framtida utveckling
+## Failure Handling
 
-Arkitekturen ska möjliggöra framtida stöd för:
+If some nonessential summary values are unavailable, the summary shall display all valid available information without crashing.
 
-* prestationsanalys,
-* personliga rekord,
-* utveckling över tid,
-* jämförelser mellan träningspass,
-* AI-genererade insikter,
-* export av träningspass,
-* delning av träningspass,
-* coachkommentarer.
+If friction feedback cannot be saved:
 
-Dessa funktioner ingår inte i MVP och dokumenteras separat när de planeras.
+- the completed Training Session shall remain saved,
+- the player shall be informed without being trapped in the flow,
+- the application may offer a retry.
+
+---
+
+## Acceptance Criteria
+
+The capability is accepted when:
+
+- the summary appears after a successfully saved session,
+- the player can see duration, completed exercises, attempts when applicable, and results,
+- the summary remains read-only and nonjudgmental,
+- the friction question appears exactly as approved,
+- **No** completes the feedback step without additional input,
+- **Yes** exposes predefined reasons and optional free text,
+- feedback failure cannot delete or invalidate the session,
+- the player can return to Home,
+- all Must Have behavior works offline.
+
+---
+
+## Deferred Capabilities
+
+Outside the MVP:
+
+- performance analysis,
+- personal records,
+- trend comparisons,
+- AIE insights,
+- sharing and export,
+- coach comments,
+- satisfaction ratings or engagement scoring.
+
+---
+
+## Related Documents
+
+- [MVP Specification](../product/MVP.md)
+- [FRS — Training Session](FRS_Training_Session.md)
+- [FRS — Result Entry](FRS_Result_Entry.md)
+- [Data Model](../architecture/DATA_MODEL.md)
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | Initial | Initial session summary specification. |
+| 2.0 | 2026-07-31 | Added the approved MVP friction-feedback flow and froze the requirements. |
