@@ -1,370 +1,399 @@
 # Navigation
 
-**Produkt:** DGTC Platform
-**Dokument:** NAVIGATION.md
-**Version:** v1.1
-**Status:** Draft
+## Purpose
+
+This document defines the overall navigation structure and primary user flows of the DGTC Platform.
+
+The navigation system is designed to allow users to:
+
+- Start a Quick Challenge immediately.
+- Access structured training.
+- Manage Lucky Wheels.
+- Create and maintain Training Programs.
+- Complete Training Sessions.
+- Record Results.
+- Review a Session Summary.
+
+This document describes logical navigation rather than implementation details.
 
 ---
 
-# Syfte
+# Navigation Principles
 
-Detta dokument beskriver DGTC:s övergripande navigation och centrala användarflöden.
+## First Throw First
 
-Navigationen ska göra det möjligt att:
+A user should be able to open the application and receive a training challenge with a single primary action.
 
-* snabbt starta en enkel träningsutmaning,
-* välja strukturerad träning,
-* redigera Lucky Wheels,
-* skapa och hantera träningsprogram,
-* genomföra ett träningspass,
-* registrera resultat,
-* avsluta passet och se en sammanfattning.
+No login flow, configuration screen, onboarding process, or program selection should block this experience.
 
-Dokumentet beskriver logiska vyer och användarflöden.
-
----
-
-# Navigationsprinciper
-
-## Första kastet först
-
-Användaren ska kunna öppna appen och få en träningsuppgift med ett enda primärt knapptryck.
-
-Ingen inloggning, konfigurering eller programväljare får blockera detta flöde.
-
-> **Djupet får aldrig stå i vägen för det första kastet.**
+> **Depth must never stand in the way of the first throw.**
 
 ---
 
 ## Progressive Engagement
 
-DGTC ska introducera funktioner stegvis.
+DGTC introduces functionality gradually.
 
-Varje nivå ska ge tillräckligt värde för att användaren naturligt vill utforska nästa.
+Each level should provide sufficient value to naturally encourage users to explore the next.
 
-Produkten ska aldrig försöka skapa beroende.
+The product should never attempt to create dependency.
 
-Produkten ska skapa nytta, glädje och utveckling.
+Instead, it should create value through enjoyment, learning, and personal development.
 
 ---
 
-## Två tydliga vägar
+## Two Primary Paths
 
-DGTC erbjuder två huvudsakliga sätt att träna.
+DGTC provides two distinct training experiences.
 
 ### Quick Challenge
 
-Den snabbaste vägen till träning.
+The fastest possible route into practice.
 
-Öppna appen.
+Open the app.
 
-Tryck.
+Tap once.
 
-Kasta.
+Throw.
 
----
+### Structured Training
 
-### Strukturerad träning
-
-För användare som vill arbeta mer målmedvetet med träningsprogram och scenarier.
+Designed for players who want to train with greater intention through reusable Training Programs and Training Scenarios.
 
 ---
 
-## Progressiv fördjupning
+## Progressive Discovery
 
-Avancerade funktioner introduceras när användaren själv är redo.
+Advanced functionality should only become important when users are ready.
 
-Användaren ska inte behöva förstå:
+New users should not need to understand:
 
-* träningsprogram,
-* scenarier,
-* statistik,
-* analys,
-* AI,
+- Training Programs
+- Training Scenarios
+- Statistics
+- Analytics
+- AI
 
-för att uppleva värde från första användningen.
-
----
-
-## Bevara aktiv träning
-
-Ett aktivt träningspass ska aldrig gå förlorat på grund av navigation.
+to experience immediate value.
 
 ---
 
-# DGTC:s användarresa
+## Preserve Active Training
 
-Produkten är utformad för att stegvis hjälpa användaren att utvecklas.
+Navigation must never accidentally interrupt or discard an active Training Session.
+
+Users should always be able to resume where they left off.
+
+---
+
+# User Journey
+
+DGTC is designed to guide players through increasing levels of engagement.
 
 ```text
 Quick Challenge
         │
         ▼
-Utforska Lucky Wheels
+Explore Lucky Wheels
         │
         ▼
-Skapa egna Lucky Wheels
+Create Custom Lucky Wheels
         │
         ▼
-Använd Training Programs
+Use Training Programs
         │
         ▼
-Träna med Training Scenarios
+Train with Training Scenarios
         │
         ▼
-Reflektion, analys och framtida beslutsstöd
+Reflection, Analysis, and Future Decision Support
 ```
 
-Varje steg ska kännas naturligt.
+Every step should feel like a natural progression.
 
-Användaren ska själv vilja ta nästa steg.
+Users should choose to advance rather than being forced through predefined workflows.
 
 ---
 
-# Övergripande navigation
+# Overall Navigation Structure
 
 ```text
-Startskärm
-│
+Home
+
 ├── Quick Challenge
-│   ├── Genererad uppgift
-│   ├── Aktivt träningspass
-│   ├── Resultatregistrering
-│   └── Sammanfattning
+│     ├── Generated Challenge
+│     ├── Active Training Session
+│     ├── Result Recording
+│     └── Session Summary
 │
-├── Strukturerad träning
-│   ├── Träningsprogram
-│   ├── Scenario
-│   ├── ScenarioVisual
-│   ├── Aktivt träningspass
-│   ├── Resultatregistrering
-│   └── Sammanfattning
+├── Structured Training
+│     ├── Training Programs
+│     ├── Training Scenarios
+│     ├── Scenario Visual
+│     ├── Active Training Session
+│     ├── Result Recording
+│     └── Session Summary
 │
 ├── Lucky Wheels
-│   ├── Visa hjul
-│   └── Redigera hjul
+│     ├── Browse Wheels
+│     └── Edit Wheels
 │
-├── Egna träningsprogram
-│   ├── Skapa
-│   ├── Redigera
-│   └── Ta bort
+├── Training Programs
+│     ├── Create
+│     ├── Edit
+│     └── Delete
 │
-└── Inställningar
+└── Settings
 ```
 
 ---
 
-# Startskärmen
+# Home Screen
 
-Startskärmen är produktens viktigaste vy.
+The Home Screen is the most important view within the application.
 
-Den ska ge ett omedelbart intryck av att DGTC är enkel, rolig och användbar.
+It should immediately communicate that DGTC is:
 
-Prioritering:
+- Simple
+- Fun
+- Useful
+
+Navigation priority:
 
 1. Quick Challenge
-2. Strukturerad träning
+2. Structured Training
 3. Lucky Wheels
-4. Inställningar
+4. Settings
 
 ---
 
-## Primär åtgärd
+# Primary Action
 
-Quick Challenge ska vara den mest framträdande åtgärden.
+Quick Challenge is the primary call to action.
 
-Ett knapptryck ska:
+A single tap should:
 
-1. använda aktuella Lucky Wheels,
-2. generera en träningsutmaning,
-3. visa uppgiften direkt.
+1. Use the currently selected Lucky Wheels.
+2. Generate a new training challenge.
+3. Display the challenge immediately.
 
-Målet är att användaren ska kunna börja kasta inom några sekunder.
-
----
-
-## Sekundär åtgärd
-
-Strukturerad träning leder användaren vidare till:
-
-* Training Programs
-* Training Scenarios
-* Virtuella utmaningar
+The user should be able to begin throwing within seconds.
 
 ---
 
-## Aktivt träningspass
+# Secondary Action
 
-Om ett träningspass redan är aktivt ska startskärmen erbjuda:
+Structured Training guides users toward:
 
-**Fortsätt träningspass**
-
-Det ska inte vara möjligt att oavsiktligt skapa flera aktiva träningspass.
+- Training Programs
+- Training Scenarios
+- Future Virtual Challenges
 
 ---
 
-# Flöde – Quick Challenge
+# Active Training Session
+
+If a Training Session is already active, the Home Screen should prominently display:
+
+**Resume Training Session**
+
+Only one active Training Session may exist at any time.
+# Quick Challenge Flow
 
 ```text
-Startskärm
-        │
-        ▼
+Home
+    │
+    ▼
 Quick Challenge
-        │
-        ▼
+    │
+    ▼
 Lucky Wheels
-        │
-        ▼
-Utmaning visas
-        │
- ┌──────┴─────────┐
- │                │
- ▼                ▼
-Ny utmaning   Starta träning
-                    │
-                    ▼
-             Aktivt träningspass
-                    │
-                    ▼
-            Resultatregistrering
-                    │
-        ┌───────────┴───────────┐
-        ▼                       ▼
- Ny utmaning              Avsluta pass
-                                    │
-                                    ▼
-                              Sammanfattning
+    │
+    ▼
+Challenge Generated
+    │
+ ┌──┴────────────┐
+ │               │
+ ▼               ▼
+New Challenge    Start Training
+                     │
+                     ▼
+            Active Training Session
+                     │
+                     ▼
+               Record Results
+                     │
+         ┌───────────┴───────────┐
+         ▼                       ▼
+ New Challenge            Finish Session
+                                  │
+                                  ▼
+                           Session Summary
 ```
+
+The Quick Challenge flow prioritizes speed.
+
+The player should move from launching the application to throwing discs with minimal interaction.
 
 ---
 
-# Flöde – Strukturerad träning
+# Structured Training Flow
 
 ```text
-Startskärm
-        │
-        ▼
+Home
+    │
+    ▼
 Training Program
-        │
-        ▼
+    │
+    ▼
 Training Scenario
-        │
-        ▼
-ScenarioVisual (valfri)
-        │
-        ▼
+    │
+    ▼
+Scenario Visual (Optional)
+    │
+    ▼
 Lucky Wheels
-        │
-        ▼
-Aktivt träningspass
-        │
-        ▼
-Resultatregistrering
-        │
-        ▼
-Sammanfattning
+    │
+    ▼
+Active Training Session
+    │
+    ▼
+Result Recording
+    │
+    ▼
+Session Summary
 ```
+
+Structured Training emphasizes planning and repeatability while preserving the same lightweight experience during active practice.
 
 ---
 
 # Lucky Wheels
 
-Lucky Wheels ska kunna användas:
+Lucky Wheels can be accessed from multiple areas of the application.
 
-* i Quick Challenge,
-* i Training Scenarios,
-* från egen hanteringsvy.
+They may be used:
 
----
+- During Quick Challenges
+- Inside Training Scenarios
+- From the dedicated Wheel Management screen
 
-## Redigering
+## Editing
 
-Användaren ska kunna:
+Users may:
 
-* lägga till alternativ,
-* ändra alternativ,
-* ta bort alternativ,
-* ändra ordning,
-* spara,
-* avbryta.
+- Add Wheel Options
+- Modify Wheel Options
+- Delete Wheel Options
+- Reorder Wheel Options
+- Save Changes
+- Cancel Changes
 
-Efter sparning ska hjulet kunna användas direkt.
-
----
-
-# Aktivt träningspass
-
-När ett träningspass är aktivt ska navigationen fokusera på träningen.
-
-Användaren ska kunna:
-
-* fortsätta träna,
-* registrera resultat,
-* generera nästa övning,
-* avsluta passet.
+Saved wheels become immediately available throughout the application.
 
 ---
 
-# Resultatregistrering
+# Active Training Session
 
-Registreringen ska vara snabb och inte upplevas som administration.
+During an active session, navigation should prioritize practice over configuration.
 
-Efter registrering ska användaren kunna:
+Users should be able to:
 
-* göra ett nytt försök,
-* få nästa övning,
-* avsluta träningspasset.
+- Continue the session
+- Record Results
+- Generate the next Exercise
+- Finish the session
 
----
-
-# Sammanfattning
-
-Efter avslutat träningspass visas:
-
-* träningspassets längd,
-* antal övningar,
-* antal försök,
-* antal registrerade resultat,
-* vilket träningsprogram eller scenario som användes.
-
-Ingen analys eller coachning ingår i MVP.
+Navigation should minimize distractions and reduce opportunities for accidental interruption.
 
 ---
 
-# Inställningar
+# Result Recording
 
-Inställningar ska innehålla:
+Result recording should feel quick and unobtrusive.
 
-* språk,
-* ljud,
-* återställ Lucky Wheels.
+After recording a Result, the user may:
 
-Inga övriga funktioner ska störa huvudupplevelsen.
+- Attempt the Exercise again
+- Generate the next Exercise
+- Finish the Training Session
 
----
-
-# Navigationsregler
-
-1. Quick Challenge är alltid produktens primära ingång.
-2. Strukturerad träning är en naturlig fördjupning.
-3. Endast ett träningspass får vara aktivt.
-4. Aktiv träning ska alltid kunna återupptas.
-5. Lucky Wheels ska kunna användas utan träningsprogram.
-6. Navigation får aldrig orsaka förlust av användarens data.
-7. Varje vy ska ha en tydlig väg tillbaka.
-8. Produkten ska alltid prioritera enkelhet före komplexitet.
+The recording process should never feel like administrative work.
 
 ---
 
-# Sammanfattning
+# Session Summary
 
-DGTC ska ge användaren omedelbar nytta från första knapptrycket.
+After completing a Training Session, the Summary should include:
 
-Quick Challenge är inkastaren.
+- Session duration
+- Number of Exercises
+- Number of Attempts
+- Number of recorded Results
+- Training Program or Training Scenario used
 
-Lucky Wheels skapar variation.
+Performance analysis, coaching, and AI recommendations are intentionally excluded from the MVP.
 
-Training Programs och Training Scenarios ger struktur och djup.
+---
 
-Genom Progressive Engagement utvecklas användaren stegvis från spontan träning till ett komplett system för lärande, beslutsfattande och prestationsutveckling – utan att enkelheten någonsin går förlorad.
+# Settings
+
+The MVP Settings screen should contain only essential options.
+
+Initially this includes:
+
+- Language
+- Sound
+- Reset Lucky Wheels
+
+Additional settings should not distract from the core training experience.
+
+---
+
+# Navigation Rules
+
+1. Quick Challenge is always the primary entry point.
+2. Structured Training provides the natural progression.
+3. Only one Training Session may be active.
+4. Active Training Sessions must always be recoverable.
+5. Lucky Wheels must be usable independently of Training Programs.
+6. Navigation must never cause user data loss.
+7. Every screen should provide a clear path back.
+8. Simplicity always takes precedence over complexity.
+
+---
+
+# Summary
+
+DGTC is designed to deliver immediate value from the very first interaction.
+
+Quick Challenge serves as the primary entry point.
+
+Lucky Wheels provide variety and replayability.
+
+Training Programs and Training Scenarios introduce structure for users seeking long-term improvement.
+
+Through Progressive Engagement, users naturally evolve from spontaneous practice toward a comprehensive learning and performance system—without sacrificing simplicity.
+
+---
+
+## Related Documents
+
+- `ARCHITECTURE.md`
+- `SYSTEM_OVERVIEW.md`
+- `DOMAIN_MODEL.md`
+- `STATE_MODEL.md`
+- `../product/PRD.md`
+- `../product/MVP.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Architecture
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

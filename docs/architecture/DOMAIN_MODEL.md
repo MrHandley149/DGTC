@@ -1,974 +1,965 @@
 # Domain Model
 
-**Produkt:** DGTC Platform
-**Dokument:** DOMAIN_MODEL.md
-**Version:** v1.0
-**Status:** Draft
+## Purpose
+
+This document defines the core domain model for DGTC.
+
+The domain model establishes a common language for product development, architecture, implementation, testing, and future analytics.
+
+It describes the concepts that exist within DGTC and the responsibilities and relationships of those concepts.
+
+This document does not define:
+
+- Database schemas
+- Technical frameworks
+- User interface design
+- Flutter classes
+- Storage implementations
 
 ---
 
-# Syfte
+## Domain Principles
 
-Detta dokument beskriver de centrala objekten i DGTC:s domän och relationerna mellan dem.
+### Domain Before Technology
 
-Domänmodellen ska skapa ett gemensamt språk för:
+Technology should be built around the domain.
 
-* produktutveckling,
-* design,
-* arkitektur,
-* implementation,
-* testning,
-* framtida analys och beslutsstöd.
+The domain model must remain independent of user interface design, storage technology, and implementation details.
 
-Modellen beskriver vad som existerar i DGTC-världen och vilket ansvar varje objekt har.
+### Immediate Value First
 
-Dokumentet beskriver inte:
+DGTC should provide immediate value.
 
-* databastabeller,
-* tekniska ramverk,
-* användargränssnitt,
-* Flutter-klasser,
-* exakta lagringsformat.
+A new user should be able to:
 
----
+1. Open the app
+2. Start a Quick Challenge
+3. Receive a training task
+4. Begin practicing
 
-# Grundprinciper
+Advanced training programs and scenarios should deepen the experience without creating barriers to entry.
 
-## Domänen styr implementationen
+> Depth must never prevent the first throw.
 
-Tekniska modeller ska byggas utifrån domänen.
+### Scenarios Describe Situations
 
-Domänmodellen ska inte formas efter en viss skärm, databas eller teknisk begränsning.
+A Training Scenario describes the conditions of a training situation.
+
+The player—not the application—chooses the solution.
+
+DGTC supports decision-making and records outcomes rather than prescribing a single correct answer.
 
 ---
 
-## Enkelt först, större djup senare
+# Domain Areas
 
-DGTC ska erbjuda omedelbart värde.
+The DGTC domain consists of the following primary areas:
 
-Användaren ska kunna:
-
-1. öppna appen,
-2. trycka på en knapp,
-3. få en utmaning,
-4. börja träna.
-
-Mer avancerade träningsprogram och scenarier ska finnas tillgängliga när användaren vill fördjupa träningen.
-
-> Djupet får aldrig stå i vägen för det första kastet.
-
----
-
-## Scenariot beskriver situationen
-
-Ett scenario ska beskriva förutsättningarna för en träningssituation.
-
-Discgolfaren väljer själv:
-
-* disc,
-* kasttyp,
-* kastlinje,
-* strategi,
-* risknivå.
-
-DGTC ska stödja beslutet och dokumentera utfallet, inte alltid ange den rätta lösningen.
+1. User
+2. Quick Challenges
+3. Lucky Wheels
+4. Training Programs
+5. Training Scenarios
+6. Training Sessions
+7. Attempts and Results
+8. Scenario Components
+9. Player Decisions
+10. Settings
 
 ---
 
-# Domänens huvudområden
-
-DGTC:s kärndomän delas in i följande områden:
-
-1. Utmaningar och övningar
-2. Lucky Wheels
-3. Träningsprogram och scenarier
-4. Träningspass
-5. Försök och resultat
-6. Scenariokomponenter
-7. Discgolfarens val
-8. Inställningar och lokalt innehåll
-
----
-
-# Kärnobjekt
+# Core Domain Objects
 
 ## User
 
-`User` representerar den person som använder DGTC.
+Represents the person using DGTC.
 
-I MVP krävs inget användarkonto. User representerar därför den lokala användaren på enheten.
+The MVP does not require an online account.
 
-### Ansvar
+The User therefore represents the local device owner.
 
-* Äga lokal användardata.
-* Ha personliga inställningar.
-* Skapa egna hjul, program och scenarier.
-* Genomföra träningspass.
-* Registrera försök och resultat.
+### Responsibilities
 
-### Viktig princip
+- Own local user data
+- Store personal settings
+- Create Lucky Wheels
+- Create Training Programs
+- Create Training Scenarios
+- Complete Training Sessions
+- Register Attempts and Results
 
-Användaren äger sin data.
+### Principle
+
+Users own their data.
 
 ---
 
 ## QuickChallenge
 
-`QuickChallenge` representerar en träningsuppgift som kan genereras och startas direkt utan att användaren först behöver välja eller skapa ett träningsprogram.
+Represents a training activity that can begin immediately without prior configuration.
 
-Quick Challenge är DGTC:s enklaste ingång.
+Quick Challenge is the primary entry point into DGTC.
 
-### Ansvar
+### Responsibilities
 
-* Ge omedelbar träningsnytta.
-* Skapa variation genom Lucky Wheels.
-* Presentera en tydlig och direkt genomförbar uppgift.
-* Kunna startas med mycket få användarsteg.
+- Deliver immediate training value
+- Generate variation using Lucky Wheels
+- Produce a clear, actionable training task
+- Require minimal interaction before training begins
 
-### Exempel
+### Examples
 
-* Kasta en hyzer med putter.
-* Genomför ett forehandkast med midrange.
-* Träna precision från 40–50 meter.
+- Throw a putter hyzer.
+- Throw a forehand with a midrange.
+- Practice approach shots from 40–50 meters.
 
-### Relationer
+### Relationships
 
-* Genereras av ett eller flera `LuckyWheel`.
-* Skapar eller innehåller en `Exercise`.
-* Kan genomföras inom en `TrainingSession`.
+- Uses one or more Lucky Wheels
+- Produces an Exercise
+- Can initiate a Training Session
 
 ---
 
 ## TrainingProgram
 
-`TrainingProgram` representerar ett strukturerat träningsupplägg med ett gemensamt mål.
+Represents a structured collection of Training Scenarios with a common training objective.
 
-### Exempel
+### Examples
 
-* Precision på 50 meter.
-* Hyzer med putter och midrange.
-* Forehand från skogskant.
-* Riskhantering vid inspel.
-* Puttning från ojämna lägen.
+- 50 Meter Accuracy
+- Putter and Midrange Hyzer
+- Forehand Through Tight Gaps
+- Safe Approach Strategy
+- Uneven Lie Putting
 
-### Ansvar
+### Responsibilities
 
-* Beskriva programmets träningsmål.
-* Samla ett eller flera träningsscenarier.
-* Kunna väljas, skapas, redigeras och återanvändas.
-* Fungera som startpunkt för strukturerad träning.
+- Define a training objective
+- Organize one or more Training Scenarios
+- Support creation, editing, and reuse
+- Serve as the entry point for structured training
 
-### Grundläggande information
+### Required Information
 
-Ett träningsprogram ska minst ha:
+A Training Program should contain at minimum:
 
-* unikt ID,
-* namn,
-* valfri beskrivning,
-* ett eller flera scenarier,
-* information om programmets ursprung.
+- Unique identifier
+- Name
+- Optional description
+- One or more Training Scenarios
+- Information describing its origin
 
-### Ursprung
+### Content Origin
 
-Ett träningsprogram kan vara:
+Training Programs may be:
 
-* förinstallerat,
-* skapat av användaren,
-* framtida nedladdat innehåll,
-* framtida innehåll från coach, klubb eller sponsor.
+- Built-in
+- User-created
+- Downloaded
+- Provided by coaches, clubs, or sponsors
 
-### Relationer
+### Relationships
 
-* Innehåller ett eller flera `TrainingScenario`.
-* Kan användas av flera `TrainingSession`.
-* Ska inte förändra historiska träningspass när programmet redigeras.
+- Contains one or more Training Scenarios
+- Can be used by multiple Training Sessions
+- Historical Training Sessions must not change if the program is edited
 
 ---
 
 ## TrainingScenario
 
-`TrainingScenario` representerar en verklig eller virtuell spelsituation som discgolfaren ska lösa.
+Represents a real or simulated disc golf situation.
 
-Scenariot beskriver situationen, men behöver inte ange lösningen.
+The scenario describes the situation but does not prescribe the correct solution.
 
-### Exempel
+### Examples
 
-**Skogskanten**
+**Forest Edge**
 
-Discgolfaren befinner sig i kanten av en skogsdunge. Korgen ligger cirka 50 meter bort, snett åt höger.
+The player stands beside a wooded area with the basket approximately 50 meters away.
 
-**OB bakom korgen**
+**OB Behind Basket**
 
-Discgolfaren befinner sig på fairway cirka 30 meter från korgen. Till vänster och bakom korgen finns OB.
+The player approaches from the fairway with OB beyond the target.
 
-**Ojämnt underlag**
+**Uneven Lie**
 
-Discgolfaren står med ena foten betydligt högre än den andra och ska genomföra ett inspel.
+The player must throw from uneven footing.
 
-### Ansvar
+### Responsibilities
 
-* Beskriva träningssituationen.
-* Definiera mål och förutsättningar.
-* Kombinera relevanta scenariokomponenter.
-* Kunna kopplas till Lucky Wheels.
-* Kunna ha en visuell representation.
-* Kunna användas för flera träningspass.
+- Describe the training situation
+- Define goals and conditions
+- Combine Scenario Components
+- Use Lucky Wheels where appropriate
+- Optionally include a visual representation
+- Support repeated use across Training Sessions
 
-### Grundläggande information
+### Basic Information
 
-Ett scenario ska kunna innehålla:
+A Training Scenario may include:
 
-* unikt ID,
-* namn,
-* beskrivning,
-* träningsmål,
-* avstånd,
-* mål,
-* miljö,
-* hinder,
-* terräng,
-* stansbegränsningar,
-* väderförhållanden,
-* underlagsförhållanden,
-* risker,
-* kopplade Lucky Wheels,
-* valfri visualisering.
+- Identifier
+- Name
+- Description
+- Training objective
+- Distance
+- Target
+- Environment
+- Obstacles
+- Terrain
+- Stance constraints
+- Weather
+- Surface conditions
+- Risks
+- Associated Lucky Wheels
+- Optional visualization
 
-### Relationer
+### Relationships
 
-* Tillhör ett `TrainingProgram`.
-* Innehåller eller refererar till `ScenarioComponent`.
-* Kan använda ett eller flera `LuckyWheel`.
-* Kan skapa en eller flera `Exercise`.
-* Kan användas inom flera `TrainingSession`.
-
----
-
+- Belongs to a Training Program
+- References Scenario Components
+- May use one or more Lucky Wheels
+- Produces one or more Exercises
+- Can be used by multiple Training Sessions
 ## ScenarioVisual
 
-`ScenarioVisual` representerar en visuell presentation av ett träningsscenario.
+Represents an optional visual representation of a Training Scenario.
 
-Visualiseringen hjälper discgolfaren att föreställa sig situationen även när träningen genomförs på en enkel eller öppen plats.
+Visuals help players understand and imagine the situation but are never required for core functionality.
 
-### Möjliga format
+### Possible Formats
 
-* statisk illustration,
-* fotografi,
-* genererad bild,
-* kartvy,
-* framtida animation,
-* framtida AR-representation.
+- Illustration
+- Photograph
+- Generated image
+- Course map
+- Animation (future)
+- Augmented Reality (future)
 
-### Ansvar
+### Responsibilities
 
-* Visualisera scenariots miljö, hinder och mål.
-* Förstärka förståelsen av träningsuppgiften.
-* Kunna vara valfri utan att scenariot slutar fungera.
+- Visualize the training situation
+- Improve understanding of the scenario
+- Support learning without becoming mandatory
 
-### Viktig princip
+### Principle
 
-Ett scenario ska kunna användas utan en bild.
-
-Visualisering är ett stöd, inte ett krav för kärnfunktionaliteten.
+A Training Scenario must remain fully usable without a visual representation.
 
 ---
 
 ## LuckyWheel
 
-`LuckyWheel` representerar en mekanism som gör ett slumpmässigt val bland ett antal alternativ.
+Represents a mechanism that randomly selects one option from a collection.
 
-Lucky Wheel skapar variation, men är inte själva träningsuppgiften.
+Lucky Wheels create variation but do not define the training task themselves.
 
-### Ansvar
+### Responsibilities
 
-* Innehålla två eller flera alternativ.
-* Välja ett alternativ på ett rättvist sätt.
-* Kunna låsas eller snurras.
-* Kunna redigeras av användaren.
-* Kunna återanvändas i flera program och scenarier.
-* Kunna återställas till standardinnehåll.
+- Contain two or more options
+- Produce a fair random selection
+- Allow locking and spinning
+- Support editing
+- Support reuse across multiple Training Programs and Scenarios
+- Allow restoration of default content
 
-### Exempel på hjul
+### Example Wheels
 
-* disctyp,
-* kasttyp,
-* kastlinje,
-* avstånd,
-* hinder,
-* miljö,
-* stans,
-* väderförhållande.
+- Disc Type
+- Throw Type
+- Throw Line
+- Distance
+- Obstacle
+- Environment
+- Stance
+- Weather
 
-### Relationer
+### Relationships
 
-* Innehåller flera `WheelOption`.
-* Producerar ett `WheelResult`.
-* Kan användas av `QuickChallenge`.
-* Kan kopplas till `TrainingScenario`.
+- Contains multiple WheelOptions
+- Produces a WheelResult
+- Can be used by QuickChallenge
+- Can be referenced by TrainingScenario
 
 ---
 
 ## WheelOption
 
-`WheelOption` representerar ett möjligt utfall i ett Lucky Wheel.
+Represents one possible outcome of a Lucky Wheel.
 
-### Exempel
+### Examples
 
-* Putter
-* Midrange
-* Forehand
-* Hyzer
-* Stå på ett knä
-* Mando höger
-* Duggregn
+- Putter
+- Midrange
+- Forehand
+- Hyzer
+- One Knee
+- Mando Right
+- Light Rain
 
-### Ansvar
+### Responsibilities
 
-* Ha ett tydligt namn eller värde.
-* Tillhöra ett Lucky Wheel.
-* Kunna skapas, redigeras, tas bort och sorteras.
-* Kunna användas för att bygga en övning eller ett scenario.
+- Store a unique value
+- Belong to one Lucky Wheel
+- Support creation, editing, deletion, and ordering
+- Participate in Exercises and Training Scenarios
 
-### Affärsregler
+### Business Rules
 
-* Ett alternativ får inte vara tomt.
-* Identiska alternativ ska inte förekomma i samma hjul.
-* Ett hjul ska alltid ha minst två alternativ.
+- A Wheel Option cannot be empty.
+- Duplicate options are not allowed within the same wheel.
+- Every Lucky Wheel must contain at least two options.
 
 ---
 
 ## WheelResult
 
-`WheelResult` representerar det alternativ som valdes när ett Lucky Wheel snurrades.
+Represents the option selected when a Lucky Wheel is spun.
 
-### Ansvar
+### Responsibilities
 
-* Referera till det valda alternativet.
-* Dokumentera när valet gjordes.
-* Bevara resultatet efter avslutad snurrning.
-* Kunna användas för att skapa en träningsuppgift.
+- Reference the selected WheelOption
+- Record when the selection occurred
+- Preserve the selection after spinning
+- Support Exercise generation
 
-### Relationer
+### Relationships
 
-* Skapas av ett `LuckyWheel`.
-* Refererar till en `WheelOption`.
-* Kan användas som en del av en `Exercise`.
+- Created by LuckyWheel
+- References one WheelOption
+- May be used by an Exercise
 
 ---
 
 ## Exercise
 
-`Exercise` representerar den konkreta träningsuppgift som discgolfaren ska genomföra.
+Represents the concrete training task that the player performs.
 
-Övningen kan vara:
+Exercises may be generated by:
 
-* direkt genererad av Lucky Wheels,
-* skapad från ett träningsscenario,
-* definierad i ett träningsprogram.
+- Quick Challenge
+- Training Scenario
+- Training Program
 
-### Exempel
+### Examples
 
-* Kasta en hyzer med putter från cirka 50 meter och försök landa inom bekvämt puttavstånd.
-* Lös situationen vid skogskanten med valfri disc och kasttyp.
-* Putta från ett knä på ojämnt underlag.
+- Throw a putter hyzer from approximately 50 meters.
+- Solve the forest edge scenario using any disc.
+- Putt from one knee on uneven ground.
 
-### Ansvar
+### Responsibilities
 
-* Beskriva vad som ska genomföras.
-* Referera till relevant scenario och hjulresultat.
-* Definiera ett träningsmål.
-* Kunna genomföras en eller flera gånger.
-* Kunna kopplas till registrerade försök.
+- Describe the training task
+- Reference relevant Scenario and Wheel Results
+- Define a training objective
+- Support one or more Attempts
+- Connect Attempts with Results
 
-### Relationer
+### Relationships
 
-* Kan skapas av `QuickChallenge`.
-* Kan skapas från ett `TrainingScenario`.
-* Kan ingå i en `TrainingSession`.
-* Har ett eller flera `Attempt`.
+- May be created by QuickChallenge
+- May be created from TrainingScenario
+- Belongs to a TrainingSession
+- Contains one or more Attempts
 
 ---
 
 ## TrainingSession
 
-`TrainingSession` representerar ett sammanhållet träningspass.
+Represents one complete training session.
 
-### Ansvar
+### Responsibilities
 
-* Registrera start- och sluttid.
-* Samla genomförda övningar.
-* Samla försök och resultat.
-* Bevara vilket program och scenario som användes.
-* Kunna återställas efter en oväntad avstängning.
-* Skapa underlag för en sammanfattning.
+- Record start and end time
+- Collect completed Exercises
+- Store Attempts and Results
+- Preserve Program and Scenario information
+- Recover after unexpected interruption
+- Produce a Session Summary
 
-### Tillstånd
+### States
 
-Ett träningspass kan vara:
+A Training Session may be:
 
-* skapat,
-* aktivt,
-* avslutat.
+- Created
+- Active
+- Completed
 
-De exakta tillstånden definieras i `STATE_MODEL.md`.
+Detailed state transitions are defined in `STATE_MODEL.md`.
 
-### Relationer
+### Relationships
 
-Ett träningspass kan startas från:
+A Training Session may begin from:
 
-* en `QuickChallenge`,
-* ett `TrainingProgram`,
-* ett `TrainingScenario`.
+- QuickChallenge
+- TrainingProgram
+- TrainingScenario
 
-Ett träningspass innehåller:
+A Training Session contains:
 
-* en eller flera `Exercise`,
-* noll eller flera `Attempt`,
-* noll eller flera `Result`.
+- One or more Exercises
+- Zero or more Attempts
+- Zero or more Results
 
 ---
 
 ## Attempt
 
-`Attempt` representerar ett enskilt genomförande av en övning.
+Represents one execution of an Exercise.
 
-Ett försök beskriver vad discgolfaren valde och genomförde.
+### Responsibilities
 
-### Ansvar
+- Belong to exactly one Exercise
+- Belong to exactly one Training Session
+- Record execution time
+- Capture player decisions
+- Reference one Result
 
-* Tillhöra exakt en övning.
-* Tillhöra exakt ett träningspass.
-* Registrera tidpunkten för försöket.
-* Dokumentera discgolfarens val.
-* Kopplas till ett resultat.
+### Recorded Decisions
 
-### Möjliga val
+An Attempt may include:
 
-Ett försök kan dokumentera:
+- Disc
+- Throw Type
+- Throw Line
+- Strategy
+- Risk Level
+- Optional notes
 
-* vald disc,
-* vald kasttyp,
-* vald kastlinje,
-* vald strategi,
-* vald risknivå,
-* valfri kommentar.
-
-Alla dessa uppgifter behöver inte vara obligatoriska i MVP.
+Not all fields are required in the MVP.
 
 ---
 
 ## Result
 
-`Result` representerar utfallet av ett försök.
+Represents the outcome of an Attempt.
 
-### Ansvar
+### Responsibilities
 
-* Beskriva vad som hände.
-* Tillhöra ett specifikt försök.
-* Kunna registreras snabbt.
-* Kunna användas i sammanfattningar.
-* Kunna stödja framtida statistik och beslutsstöd.
+- Describe what happened
+- Belong to one Attempt
+- Support rapid entry
+- Contribute to Session Summaries
+- Support future analytics
 
-### Möjliga resultat
+### Possible Outcomes
 
-* lyckat,
-* delvis lyckat,
-* misslyckat,
-* inom målområde,
-* utanför målområde,
-* OB,
-* hazard,
-* nära korg,
-* antal lyckade kast,
-* avstånd från mål.
+- Success
+- Partial Success
+- Failure
+- Inside target area
+- Outside target area
+- Out of Bounds
+- Hazard
+- Near basket
+- Successful throws
+- Distance from target
 
-Den exakta resultatmodellen definieras senare och ska hållas enkel i MVP.
+The exact Result model will remain intentionally simple during the MVP.
 
-### Viktig princip
+### Principle
 
-`Attempt` beskriver vad discgolfaren gjorde.
+An Attempt records what the player did.
 
-`Result` beskriver vad utfallet blev.
+A Result records what happened.
 
 ---
 
 ## SessionSummary
 
-`SessionSummary` representerar en skrivskyddad sammanfattning av ett avslutat träningspass.
+Represents the read-only summary of a completed Training Session.
 
-### Ansvar
+### Responsibilities
 
-* Visa starttid och sluttid.
-* Visa träningspassets längd.
-* Visa antal övningar.
-* Visa antal registrerade försök eller resultat.
-* Bekräfta att träningspasset har sparats.
+- Display start and end time
+- Display duration
+- Display completed Exercises
+- Display recorded Attempts and Results
+- Confirm that the session has been saved
 
-### Viktig avgränsning
+### Principle
 
-Session Summary beskriver träningspasset.
+Session Summary describes the session.
 
-Den analyserar eller värderar inte prestationen i MVP.
+It does not evaluate player performance during the MVP.
 
 ---
 
 ## AppSettings
 
-`AppSettings` representerar användarens lokala inställningar.
+Represents locally stored application settings.
 
-### Ansvar
+### Responsibilities
 
-* Spara valt språk.
-* Spara ljudinställning.
-* Hantera framtida appinställningar.
-* Fungera helt offline.
+- Store selected language
+- Store sound preferences
+- Support future application settings
+- Operate completely offline
 
-### Relationer
+### Relationships
 
-* Tillhör den lokala användaren eller installationen.
-* Är oberoende av enskilda träningspass.
+- Belongs to the local installation
+- Independent of individual Training Sessions
+# Scenario Components
 
----
+Scenario Components describe the conditions of a Training Scenario.
 
-# Scenariokomponenter
-
-`ScenarioComponent` är ett samlingsbegrepp för faktorer som beskriver en träningssituation.
-
-Scenariokomponenter kan kombineras för att skapa många olika situationer utan att varje kombination behöver definieras som en helt separat objekttyp.
+They allow many unique situations to be created by combining reusable building blocks rather than defining every possible scenario individually.
 
 ---
 
 ## Environment
 
-`Environment` beskriver den övergripande miljön.
+Represents the overall surroundings in which training takes place.
 
-### Exempel
+### Examples
 
-* fairway,
-* skog,
-* skogsbryn,
-* dunge,
-* öppet fält,
-* högt gräs,
-* vattennära område.
+- Fairway
+- Forest
+- Forest Edge
+- Grove
+- Open Field
+- Tall Grass
+- Waterside
 
 ---
 
 ## Obstacle
 
-`Obstacle` beskriver ett hinder eller en regelbegränsning.
+Represents physical obstacles or rule-based restrictions.
 
-### Exempel
+### Examples
 
-* mur som kräver en hög kastlinje,
-* låg gren,
-* trång lucka,
-* inne i skogen,
-* Mando höger,
-* Mando vänster,
-* OB,
-* hazard,
-* å,
-* bäck,
-* dunge,
-* buske.
+- High Wall
+- Low Branch
+- Tight Gap
+- Dense Forest
+- Mando Right
+- Mando Left
+- Out of Bounds
+- Hazard
+- Creek
+- Bush
 
 ---
 
 ## Terrain
 
-`Terrain` beskriver markens form och lutning.
+Represents the shape and condition of the ground.
 
-### Exempel
+### Examples
 
-* plan mark,
-* uppförsbacke,
-* nedförsbacke,
-* sidolutning,
-* ojämnt underlag,
-* ena foten högre än den andra.
+- Flat Ground
+- Uphill
+- Downhill
+- Side Slope
+- Uneven Ground
+- Elevated Footing
 
 ---
 
 ## StanceConstraint
 
-`StanceConstraint` beskriver hur discgolfaren kan eller ska placera kroppen.
+Represents limitations on how the player may position their body.
 
-### Exempel
+### Examples
 
-* stå på ett knä vid inspel,
-* stå på ett knä vid puttning,
-* begränsad ansats,
-* stillastående kast,
-* ena foten högre än den andra,
-* dåligt fotfäste.
+- One Knee
+- Standing Still
+- Limited Run-Up
+- Uneven Footing
+- Poor Footing
 
 ---
 
 ## WeatherCondition
 
-`WeatherCondition` beskriver väderförhållanden som påverkar träningssituationen.
+Represents weather conditions affecting the training situation.
 
-### Exempel
+### Examples
 
-* vindstilla,
-* motvind,
-* medvind,
-* sidvind,
-* duggregn,
-* regnskurar,
-* hällregn,
-* snö,
-* temperatur.
+- Calm
+- Headwind
+- Tailwind
+- Crosswind
+- Light Rain
+- Heavy Rain
+- Snow
+- Temperature
 
 ---
 
 ## SurfaceCondition
 
-`SurfaceCondition` beskriver underlagets skick.
+Represents the condition of the playing surface.
 
-### Exempel
+### Examples
 
-* torrt,
-* vått,
-* lerigt,
-* halt,
-* isigt,
-* snötäckt,
-* stenigt,
-* rötter,
-* grus,
-* högt gräs.
+- Dry
+- Wet
+- Muddy
+- Slippery
+- Ice
+- Snow
+- Gravel
+- Roots
+- Tall Grass
 
 ---
 
 ## Target
 
-`Target` beskriver vart discgolfaren försöker placera discen eller avsluta uppgiften.
+Represents the intended destination of the throw.
 
-### Exempel
+### Examples
 
-* korg,
-* landningszon,
-* målområde,
-* Circle 1,
-* Circle 2,
-* bekvämt puttavstånd.
+- Basket
+- Landing Zone
+- Target Area
+- Circle 1
+- Circle 2
+- Comfortable Putting Distance
 
 ---
 
 ## Distance
 
-`Distance` beskriver avståndet till målet eller den avsedda landningszonen.
+Represents the distance to the intended target.
 
-Avstånd kan anges som:
+Distances may be expressed as:
 
-* exakt värde,
-* ungefärligt värde,
-* intervall,
-* kategori.
+- Exact value
+- Approximate value
+- Range
+- Category
 
-### Exempel
+### Examples
 
-* 30 meter,
-* cirka 50 meter,
-* 40–60 meter,
-* kort inspel.
+- 30 meters
+- Approximately 50 meters
+- 40–60 meters
+- Short Approach
 
 ---
 
 ## Risk
 
-`Risk` beskriver möjliga negativa konsekvenser eller riskområden i situationen.
+Represents hazards or negative consequences associated with the situation.
 
-### Exempel
+### Examples
 
-* OB bakom korgen,
-* vatten till vänster,
-* sluttning bakom målet,
-* hazard nära landningszonen,
-* smal säker kastlinje.
+- OB Behind Basket
+- Water Left
+- Steep Drop Behind Target
+- Hazard Near Landing Zone
+- Narrow Safe Line
 
 ---
 
-# Discgolfarens val
+# Player Decisions
 
-Discgolfarens val ska hållas åtskilda från scenariots förutsättningar.
+Player decisions are intentionally separated from Scenario conditions.
 
-Scenariot beskriver situationen.
+The Scenario defines the situation.
 
-Discgolfaren väljer lösningen.
+The player chooses how to solve it.
 
 ---
 
 ## Disc
 
-`Disc` representerar den disc eller disctyp som används vid ett försök.
+Represents the disc selected during an Attempt.
 
-### Grundläggande typer
+### Basic Types
 
-* putter,
-* midrange,
-* fairway driver,
-* distance driver.
+- Putter
+- Midrange
+- Fairway Driver
+- Distance Driver
 
-Framtida versioner kan innehålla:
+Future versions may include:
 
-* discmodell,
-* tillverkare,
-* plast,
-* vikt,
-* stabilitet,
-* personlig discbag.
+- Manufacturer
+- Model
+- Plastic
+- Weight
+- Stability
+- Personal Bag
 
 ---
 
 ## ThrowType
 
-`ThrowType` beskriver den grundläggande kasttekniken.
+Represents the throwing technique.
 
-### Exempel
+### Examples
 
-* backhand,
-* forehand,
-* putt,
-* jump putt,
-* step putt,
-* roller,
-* tomahawk,
-* thumber.
+- Backhand
+- Forehand
+- Putt
+- Jump Putt
+- Step Putt
+- Roller
+- Tomahawk
+- Thumber
 
 ---
 
 ## ThrowLine
 
-`ThrowLine` beskriver discens avsedda flyglinje.
+Represents the intended flight path.
 
-### Exempel
+### Examples
 
-* hyzer,
-* flat,
-* anhyzer,
-* spike hyzer,
-* låg linje,
-* hög linje,
-* turnover,
-* flexlinje.
+- Hyzer
+- Flat
+- Anhyzer
+- Spike Hyzer
+- Low Line
+- High Line
+- Turnover
+- Flex Line
 
 ---
 
 ## Strategy
 
-`Strategy` beskriver discgolfarens övergripande plan för att lösa situationen.
+Represents the player's overall tactical approach.
 
-### Exempel
+### Examples
 
-* säker landningszon,
-* attackera korgen,
-* spela bort från OB,
-* lägga upp för nästa kast,
-* välja minsta möjliga risk.
+- Safe Landing Zone
+- Attack the Basket
+- Avoid OB
+- Lay Up
+- Minimize Risk
 
 ---
 
 ## RiskLevel
 
-`RiskLevel` representerar discgolfarens valda risknivå.
+Represents the player's chosen level of risk.
 
-### Exempel
+### Examples
 
-* låg,
-* medel,
-* hög.
+- Low
+- Medium
+- High
 
-Risknivån kan i framtiden användas för reflektion och beslutsstöd.
+Risk Level may support future reflection and decision analysis.
 
 ---
 
-# Relationer mellan kärnobjekten
+# Relationships Between Core Objects
 
-## Direktträning
+## Quick Challenge Flow
 
 ```text
 User
-  │
-  ▼
+    │
+    ▼
 QuickChallenge
-  │
-  ├── använder LuckyWheel
-  │       │
-  │       ├── innehåller WheelOption
-  │       └── skapar WheelResult
-  │
-  ▼
+    │
+    ├── uses LuckyWheel
+    │       │
+    │       ├── contains WheelOption
+    │       └── produces WheelResult
+    │
+    ▼
 Exercise
-  │
-  ▼
+    │
+    ▼
 TrainingSession
-  │
-  ▼
+    │
+    ▼
 Attempt
-  │
-  ▼
+    │
+    ▼
 Result
-  │
-  ▼
+    │
+    ▼
 SessionSummary
 ```
 
 ---
 
-## Strukturerad träning
+## Structured Training Flow
 
 ```text
 User
-  │
-  ▼
+    │
+    ▼
 TrainingProgram
-  │
-  ▼
+    │
+    ▼
 TrainingScenario
-  │
-  ├── består av ScenarioComponent
-  ├── kan ha ScenarioVisual
-  └── kan använda LuckyWheel
-                  │
-                  ▼
-               Exercise
-                  │
-                  ▼
-           TrainingSession
-                  │
-                  ▼
-               Attempt
-                  │
-                  ▼
-                Result
-                  │
-                  ▼
-            SessionSummary
+    │
+    ├── contains ScenarioComponents
+    ├── optional ScenarioVisual
+    └── may use LuckyWheel
+            │
+            ▼
+        Exercise
+            │
+            ▼
+    TrainingSession
+            │
+            ▼
+        Attempt
+            │
+            ▼
+         Result
+            │
+            ▼
+    SessionSummary
 ```
 
 ---
 
-# Historisk integritet
+# Historical Integrity
 
-Historiska träningspass får inte förändras när användaren senare redigerar:
+Historical Training Sessions must never change when users later edit:
 
-* Lucky Wheels,
-* Wheel Options,
-* Training Programs,
-* Training Scenarios,
-* övningsmallar.
+- Lucky Wheels
+- Wheel Options
+- Training Programs
+- Training Scenarios
+- Exercise templates
 
-Ett träningspass ska därför bevara den information som faktiskt användes vid genomförandet.
+Training Sessions must preserve the exact information used during the original session.
 
-Detta kan lösas genom kopior, snapshots eller versionsreferenser. Den tekniska lösningen definieras i `DATA_MODEL.md`.
+The implementation may use snapshots, copies, or version references.
 
----
-
-# Ägarskap
-
-## Förinstallerat innehåll
-
-Förinstallerade program, scenarier och hjul tillhör appens standardinnehåll.
-
-Användaren ska kunna använda dem direkt.
-
-Det ska vara möjligt att återställa redigerbart innehåll till standard.
+Implementation details are defined in `DATA_MODEL.md`.
 
 ---
 
-## Användarskapat innehåll
+# Ownership
 
-Användaren äger:
+## Built-in Content
 
-* egna hjul,
-* egna hjulalternativ,
-* egna träningsprogram,
-* egna scenarier,
-* egna träningspass,
-* egna försök,
-* egna resultat.
+Built-in Programs, Scenarios, and Lucky Wheels belong to the application.
+
+They should be immediately available.
+
+Modified built-in content should be restorable to its default state.
 
 ---
 
-## Framtida externt innehåll
+## User Content
 
-Arkitekturen ska senare kunna skilja mellan innehåll från:
+Users own:
 
-* DGTC,
-* användare,
-* coach,
-* klubb,
-* sponsor,
-* community.
-
-Detta ingår inte i MVP men ska kunna läggas till utan att kärnobjekten behöver ersättas.
-
----
-
-# Domänregler för MVP
-
-1. Appen ska kunna användas utan ett användarkonto.
-2. Kärnfunktionaliteten ska fungera offline.
-3. Endast ett träningspass får vara aktivt åt gången.
-4. Ett Lucky Wheel ska innehålla minst två alternativ.
-5. Ett Training Program ska innehålla minst ett Training Scenario.
-6. Ett resultat får endast registreras under ett aktivt träningspass.
-7. Ett Attempt ska tillhöra exakt en Exercise och en TrainingSession.
-8. Ett Result ska tillhöra exakt ett Attempt.
-9. Avslutade träningspass ska vara skrivskyddade i MVP.
-10. Historiska träningspass ska inte påverkas av senare innehållsändringar.
-11. Quick Challenge ska kunna startas utan föregående konfigurering.
-12. ScenarioVisual ska vara valfritt.
-13. Användaren ska kunna skapa och redigera lokalt innehåll utan internet.
+- Lucky Wheels
+- Wheel Options
+- Training Programs
+- Training Scenarios
+- Training Sessions
+- Attempts
+- Results
 
 ---
 
-# Medvetna avgränsningar
+## External Content
 
-Följande definieras inte i detalj i denna version:
+Future versions may distinguish content supplied by:
 
-* användarkonton,
-* molnsynkronisering,
-* communitydelning,
-* AI-genererade bilder,
-* AI-genererade program,
-* coachportaler,
-* klubbar,
-* sponsorer,
-* avancerad statistik,
-* exakta resultattyper,
-* exakta metadata för discar,
-* GPS och distansmätning.
+- DGTC
+- Users
+- Coaches
+- Clubs
+- Sponsors
+- Community
 
-Domänmodellen ska kunna utökas med dessa områden senare utan att MVP:s kärnmodell behöver ersättas.
+This capability is outside the MVP but should not require changes to the core domain model.
+# MVP Domain Rules
+
+The MVP follows these domain rules:
+
+1. The application must be usable without an account.
+2. Core functionality must operate completely offline.
+3. Only one Training Session may be active at a time.
+4. Every Lucky Wheel must contain at least two Wheel Options.
+5. Every Training Program must contain at least one Training Scenario.
+6. Results may only be recorded during an active Training Session.
+7. Every Attempt belongs to exactly one Exercise and one Training Session.
+8. Every Result belongs to exactly one Attempt.
+9. Completed Training Sessions are read-only.
+10. Historical Training Sessions must never change after completion.
+11. Quick Challenge must be available without prior configuration.
+12. ScenarioVisual is optional.
+13. Users may create and edit local content entirely offline.
 
 ---
 
-# Sammanfattning
+# Out of Scope
 
-DGTC har två vägar in i träningen:
+The following areas are intentionally excluded from the current domain model:
 
-## Direktträning
+- User accounts
+- Cloud synchronization
+- Community sharing
+- AI-generated imagery
+- AI-generated Training Programs
+- Coach portals
+- Clubs
+- Sponsors
+- Advanced analytics
+- Detailed Result models
+- Complete Disc metadata
+- GPS and distance measurement
 
-Användaren öppnar appen, genererar en utmaning och börjar träna.
+These capabilities should be added later without requiring changes to the core domain model.
 
-## Strukturerad träning
+---
 
-Användaren väljer ett träningsprogram och ett scenario för att träna mer målmedvetet och situationsbaserat.
+# Summary
 
-Lucky Wheels skapar variation.
+DGTC provides two primary ways to begin training.
 
-Training Scenarios beskriver situationen.
+## Quick Challenge
 
-Exercises beskriver uppgiften.
+The player opens the application, generates a challenge, and immediately begins practicing.
 
-Discgolfaren fattar besluten.
+## Structured Training
 
-Attempts dokumenterar genomförandet.
+The player selects a Training Program and a Training Scenario for more focused, deliberate practice.
 
-Results dokumenterar utfallet.
+Lucky Wheels create variation.
 
-DGTC ska ge omedelbar glädje och nytta samtidigt som samma domänmodell skapar grunden för ett större ekosystem för lärande, beslutsträning och prestationsutveckling.
+Training Scenarios describe the situation.
+
+Exercises define the task.
+
+The player makes the decisions.
+
+Attempts record what the player did.
+
+Results record what happened.
+
+The domain model supports immediate value for new users while providing a scalable foundation for future learning, coaching, analytics, and long-term player development.
+
+---
+
+## Related Documents
+
+- `SYSTEM_OVERVIEW.md`
+- `ARCHITECTURE.md`
+- `DATA_MODEL.md`
+- `STATE_MODEL.md`
+- `../product/PRD.md`
+- `../product/MVP.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Architecture
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

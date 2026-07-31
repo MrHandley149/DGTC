@@ -1,739 +1,752 @@
 # Data Model
 
-**Produkt:** DGTC Platform
-**Dokument:** DATA_MODEL.md
-**Version:** v1.0
-**Status:** Draft
+## Purpose
+
+This document defines the logical data model for DGTC.
+
+The data model describes how domain information is represented, stored, related, and preserved throughout the lifetime of the application.
+
+It supports:
+
+- Offline-first operation
+- Local storage
+- Editable Lucky Wheels
+- Quick Challenges
+- Training Programs
+- Training Scenarios
+- Training Sessions
+- Attempts and Results
+- Historical integrity
+- Future import, export, and synchronization
+
+This document defines the logical data model only.
+
+It does not define:
+
+- Database technology
+- Flutter packages
+- SQL schemas
+- File formats
+- Cloud synchronization implementation
 
 ---
 
-# Syfte
+# Data Principles
 
-Detta dokument beskriver hur DGTC:s domäninformation ska representeras och lagras.
+## Local Data First
 
-Datamodellen ska stödja:
+The local device is the primary source of truth.
 
-* offline-first,
-* lokal lagring,
-* redigerbara Lucky Wheels,
-* Quick Challenges,
-* träningsprogram,
-* träningsscenarier,
-* träningspass,
-* försök och resultat,
-* historisk integritet,
-* framtida import, export och synkronisering.
+Core functionality must never depend on:
 
-Dokumentet beskriver den logiska datamodellen.
-
-Det beskriver inte:
-
-* val av databas,
-* Flutter-paket,
-* SQL-tabeller,
-* exakta filformat,
-* implementation av molnsynkronisering.
+- User accounts
+- Internet connectivity
+- External servers
+- Cloud synchronization
 
 ---
 
-# Grundprinciper
+## Stable Identifiers
 
-## Lokal data är primär
+Every major object must have a unique and stable identifier.
 
-I MVP är den lokala lagringen systemets primära datakälla.
+Identifiers must never depend on:
 
-Kärnfunktioner ska inte vara beroende av:
+- Display names
+- List positions
+- Database sequence numbers
+- User language
 
-* användarkonto,
-* internetuppkoppling,
-* extern server,
-* molnsynkronisering.
+Stable identifiers enable future support for:
 
----
-
-## Unika identifierare
-
-Alla centrala objekt ska ha ett unikt och stabilt ID.
-
-ID ska inte bero på:
-
-* objektets namn,
-* objektets position i en lista,
-* lokal databassekvens,
-* användarens språk.
-
-Stabila ID gör det möjligt att senare stödja:
-
-* export och import,
-* synkronisering,
-* delning,
-* versionshantering,
-* spårbarhet.
+- Import and export
+- Synchronization
+- Sharing
+- Versioning
+- Traceability
 
 ---
 
-## Historisk integritet
+## Historical Integrity
 
-Ett genomfört träningspass ska alltid beskriva vad som faktiskt användes vid träningstillfället.
+Completed Training Sessions must always represent what actually occurred.
 
-Om användaren senare ändrar eller tar bort:
+Editing or deleting:
 
-* ett träningsprogram,
-* ett träningsscenario,
-* ett Lucky Wheel,
-* ett Wheel Option,
+- Training Programs
+- Training Scenarios
+- Lucky Wheels
+- Wheel Options
 
-får det historiska träningspasset inte förändras.
-
----
-
-## Snapshot-principen
-
-Historiska träningspass ska lagra en ögonblicksbild, en så kallad snapshot, av den information som behövs för att förstå träningspasset.
-
-Ett träningspass ska därför inte enbart vara beroende av aktuella versioner av redigerbart innehåll.
-
-Exempel:
-
-Om alternativet `Midrange` senare döps om eller tas bort ska ett äldre träningspass fortfarande visa att alternativet `Midrange` användes.
+must never alter historical Training Sessions.
 
 ---
 
-## Användarskapat innehåll
+## Snapshot Principle
 
-Användarskapade objekt ska lagras separat från förinstallerat standardinnehåll där det är praktiskt möjligt.
+Historical Training Sessions preserve snapshots of the information required to understand the completed session.
 
-Det ska gå att skilja mellan:
+Historical records must never rely solely on the current editable version of content.
 
-* förinstallerat innehåll,
-* användarskapat innehåll,
-* framtida nedladdat innehåll,
-* framtida innehåll från coach, klubb, sponsor eller community.
+Example:
 
----
-
-## Radering
-
-När användaren tar bort ett redigerbart objekt ska historiska träningspass inte raderas.
-
-Radering ska endast påverka framtida användning av objektet.
+If a Wheel Option named **Midrange** is later renamed or deleted, historical sessions must still show that **Midrange** was originally used.
 
 ---
 
-# Gemensamma datafält
+## User Content
 
-Centrala objekt bör kunna innehålla följande gemensamma fält.
+User-created content should be stored separately from built-in content whenever practical.
 
-## ID
+The model should distinguish between:
 
-Unik identifierare.
+- Built-in content
+- User-created content
+- Downloaded content
+- Coach content
+- Club content
+- Sponsor content
+- Community content
 
-## CreatedAt
+Only built-in and user-created content are required for the MVP.
 
-Tidpunkt då objektet skapades.
+---
 
-## UpdatedAt
+## Deletion
 
-Tidpunkt då objektet senast ändrades.
+Deleting editable content must never delete historical Training Sessions.
 
-## SourceType
+Deletion only affects future availability.
 
-Objektets ursprung.
+---
 
-Exempel:
+# Shared Fields
 
-* system,
-* user,
-* downloaded,
-* coach,
-* club,
-* sponsor,
-* community.
+Most persistent objects should support a common set of metadata.
 
-Endast `system` och `user` krävs i MVP.
+## id
 
-## SchemaVersion
+Unique identifier.
 
-Version av objektets datastruktur.
+## createdAt
 
-Fältet möjliggör framtida datamigrering.
+Timestamp when the object was created.
 
-## IsDeleted
+## updatedAt
 
-Anger om objektet har tagits bort logiskt men behöver finnas kvar för historik eller framtida synkronisering.
+Timestamp when the object was last modified.
 
-Fältet behöver inte användas för alla objekt i MVP, men modellen ska kunna stödja det.
+## sourceType
+
+Describes where the object originated.
+
+Possible values include:
+
+- system
+- user
+- downloaded
+- coach
+- club
+- sponsor
+- community
+
+Only `system` and `user` are required in the MVP.
+
+## schemaVersion
+
+Identifies the version of the object's data structure.
+
+Supports future migrations.
+
+## isDeleted
+
+Optional logical deletion flag.
+
+Objects marked as deleted may still exist to preserve historical references or support synchronization.
+
+This field is optional during the MVP but should remain part of the overall model.
 
 ---
 
 # UserProfile
 
-`UserProfile` representerar den lokala användaren eller installationen.
+Represents the local user or installation.
 
-Inget konto krävs i MVP.
+No online account is required.
 
-## Data
+### Data
 
-* `id`
-* valfritt visningsnamn
-* `createdAt`
-* `updatedAt`
+- id
+- Optional displayName
+- createdAt
+- updatedAt
 
-## Relationer
+### Relationships
 
-UserProfile kan äga:
+A UserProfile owns:
 
-* AppSettings,
-* Lucky Wheels,
-* Training Programs,
-* Training Scenarios,
-* Training Sessions.
+- AppSettings
+- Lucky Wheels
+- Training Programs
+- Training Scenarios
+- Training Sessions
 
-## MVP-avgränsning
+### MVP Principle
 
-Appen ska fungera även om inget namn eller annan personlig information anges.
+The application must function without any personal information.
 
 ---
 
 # AppSettings
 
-`AppSettings` lagrar användarens lokala inställningar.
+Stores locally persisted application settings.
 
-## Data
+### Data
 
-* `id`
-* `languageCode`
-* `soundEnabled`
-* `createdAt`
-* `updatedAt`
-* `schemaVersion`
+- id
+- languageCode
+- soundEnabled
+- createdAt
+- updatedAt
+- schemaVersion
 
-## Regler
+### Rules
 
-* Endast en aktiv uppsättning appinställningar behövs i MVP.
-* Ändringar ska sparas direkt.
-* Tidigare giltiga värden ska behållas om en sparning misslyckas.
+- Only one active settings object is required.
+- Changes should be saved immediately.
+- Failed saves must preserve the previous valid configuration.
 
 ---
 
 # LuckyWheel
 
-`LuckyWheel` lagrar ett redigerbart hjul.
+Represents an editable Lucky Wheel.
 
-## Data
+### Data
 
-* `id`
-* `name`
-* valfri beskrivning
-* `sourceType`
-* `isSystemDefault`
-* `createdAt`
-* `updatedAt`
-* `schemaVersion`
+- id
+- name
+- Optional description
+- sourceType
+- isSystemDefault
+- createdAt
+- updatedAt
+- schemaVersion
 
-## Relationer
+### Relationships
 
-* Ett Lucky Wheel innehåller minst två `WheelOption`.
-* Ett Lucky Wheel kan användas av flera Training Scenarios.
-* Ett Lucky Wheel kan användas av flera Quick Challenges.
-* Ett Lucky Wheel kan användas i flera träningspass.
+A Lucky Wheel:
 
-## Regler
+- Contains two or more Wheel Options
+- May be referenced by multiple Training Scenarios
+- May be used by multiple Quick Challenges
+- May appear in multiple Training Sessions
 
-* Hjulets namn behöver inte vara unikt globalt.
-* Förinstallerade hjul ska kunna återställas.
-* Redigering av ett hjul får inte ändra historiska träningspass.
+### Rules
+
+- Wheel names do not need to be globally unique.
+- Built-in wheels should be restorable.
+- Editing a wheel must never modify historical Training Sessions.
 
 ---
 
 # WheelOption
 
-`WheelOption` lagrar ett möjligt alternativ i ett Lucky Wheel.
+Represents one selectable option within a Lucky Wheel.
 
-## Data
+### Data
 
-* `id`
-* `wheelId`
-* `label`
-* `sortOrder`
-* valfri typ eller kategori
-* `createdAt`
-* `updatedAt`
+- id
+- wheelId
+- label
+- sortOrder
+- Optional category
+- createdAt
+- updatedAt
 
-## Regler
+### Rules
 
-* `label` får inte vara tomt.
-* Ett hjul ska ha minst två alternativ.
-* Identiska etiketter får inte förekomma i samma hjul.
-* `sortOrder` bestämmer visningsordningen men ska inte påverka slumpmässigheten.
+- Labels cannot be empty.
+- Every wheel must contain at least two options.
+- Duplicate labels are not allowed within the same wheel.
+- sortOrder controls presentation only and must never influence randomness.
 
 ---
 
 # WheelSpin
 
-`WheelSpin` representerar en genomförd snurrning av ett hjul.
+Represents one completed spin of a Lucky Wheel.
 
-Detta objekt motsvarar domänbegreppet `WheelResult`, men lagrar även sammanhanget för själva snurrningen.
+WheelSpin corresponds to the domain concept **WheelResult**, while additionally preserving contextual information about the spin itself.
 
-## Data
+### Data
 
-* `id`
-* `wheelId`
-* `selectedOptionId`
-* snapshot av hjulets namn
-* snapshot av alternativets etikett
-* `spunAt`
-* valfri `trainingSessionId`
-* valfri `exerciseId`
+- id
+- wheelId
+- selectedOptionId
+- Wheel name snapshot
+- Option label snapshot
+- spunAt
+- Optional trainingSessionId
+- Optional exerciseId
 
-## Regler
+### Rules
 
-* Resultatet ska bevaras efter snurrningen.
-* Ett historiskt WheelSpin får inte ändras när hjulet redigeras.
-* Ett WheelSpin ska kunna skapas utan ett aktivt träningspass vid Quick Challenge-förhandsvisning.
+- Spin results are immutable.
+- Editing a Lucky Wheel must never change historical Wheel Spins.
+- Wheel Spins may exist without an active Training Session to support Quick Challenge previews.
 
 ---
 
 # QuickChallenge
 
-`QuickChallenge` representerar en direkt genererad träningsutmaning.
+Represents an immediately generated training challenge.
 
-## Data
+### Data
 
-* `id`
-* `title`
-* `instruction`
-* `status`
-* `createdAt`
-* valfri `acceptedAt`
-* valfri `completedAt`
-* lista med relevanta WheelSpin-ID:n
-* valfri `exerciseId`
-* `schemaVersion`
+- id
+- title
+- instruction
+- status
+- createdAt
+- Optional acceptedAt
+- Optional completedAt
+- Associated WheelSpin identifiers
+- Optional exerciseId
+- schemaVersion
 
-## Status
+### Status
 
-* generated,
-* accepted,
-* completed.
+- Generated
+- Accepted
+- Completed
 
-## Regler
+### Rules
 
-* Quick Challenge ska kunna genereras utan föregående konfigurering.
-* Utmaningen ska kunna förstås även om ursprungshjulen senare redigeras.
-* Därför ska relevant text och valda alternativ lagras som snapshot.
+- Quick Challenge must require no prior configuration.
+- The generated challenge must remain understandable even if the originating Lucky Wheels are later modified.
+- Relevant wheel selections and generated text should therefore be stored as snapshots.
 
 ---
 
 # TrainingProgram
 
-`TrainingProgram` representerar ett strukturerat träningsupplägg.
+Represents a structured collection of Training Scenarios.
 
-## Data
+### Data
 
-* `id`
-* `name`
-* valfri `description`
-* `sourceType`
-* `status`
-* `createdAt`
-* `updatedAt`
-* `schemaVersion`
+- id
+- name
+- Optional description
+- sourceType
+- status
+- createdAt
+- updatedAt
+- schemaVersion
 
-## Relationer
+### Relationships
 
-* Ett Training Program innehåller minst ett Training Scenario.
-* Ett Training Program kan användas av flera Training Sessions.
+A Training Program:
 
-## Status
+- Contains one or more Training Scenarios
+- May be used by multiple Training Sessions
 
-I MVP används främst:
+### Status
 
-* draft,
-* saved.
+The MVP primarily uses:
 
-## Regler
+- Draft
+- Saved
 
-* Ett program får inte sparas utan namn.
-* Ett program får inte sparas utan minst ett scenario.
-* Ett borttaget program får inte påverka historiska träningspass.
+### Rules
 
----
-
+- Programs require a name.
+- Programs require at least one Training Scenario.
+- Removing a program must never affect historical Training Sessions.
 # TrainingScenario
 
-`TrainingScenario` representerar en verklig eller virtuell spelsituation.
+Represents a real or virtual disc golf situation used during structured training.
 
-## Data
+### Data
 
-* `id`
-* `trainingProgramId`
-* `name`
-* `description`
-* valfritt `trainingGoal`
-* valfritt avstånd
-* `sourceType`
-* `status`
-* `createdAt`
-* `updatedAt`
-* `schemaVersion`
+- id
+- trainingProgramId
+- name
+- description
+- Optional trainingGoal
+- Optional distance
+- sourceType
+- status
+- createdAt
+- updatedAt
+- schemaVersion
 
-## Relationer
+### Relationships
 
-Ett Training Scenario kan ha:
+A Training Scenario may contain:
 
-* flera Scenario Components,
-* flera kopplade Lucky Wheels,
-* en eller flera Scenario Visuals,
-* flera Exercises,
-* flera historiska Training Sessions.
+- Multiple Scenario Components
+- Multiple linked Lucky Wheels
+- One or more Scenario Visuals
+- Multiple Exercises
+- Multiple historical Training Sessions
 
-## Regler
+### Rules
 
-* Ett scenario ska kunna användas utan bild.
-* Ett scenario ska kunna användas utan alla möjliga komponenttyper.
-* Scenariot ska beskriva situationen, inte nödvändigtvis den korrekta lösningen.
+- A scenario must function without an image.
+- A scenario does not require every possible component type.
+- The scenario describes the situation—not the correct solution.
 
 ---
 
 # ScenarioComponent
 
-`ScenarioComponent` beskriver en del av ett Training Scenario.
+Represents one reusable part of a Training Scenario.
 
-För att undvika onödig komplexitet kan flera typer av scenariokomponenter följa en gemensam struktur.
+Instead of creating many specialized object types, Scenario Components share one common structure.
 
-## Data
+### Data
 
-* `id`
-* `scenarioId`
-* `componentType`
-* `label`
-* valfri `description`
-* valfritt strukturerat värde
-* `sortOrder`
+- id
+- scenarioId
+- componentType
+- label
+- Optional description
+- Optional structuredValue
+- sortOrder
 
-## ComponentType
+### Component Types
 
-Exempel:
+Typical values include:
 
-* environment,
-* obstacle,
-* terrain,
-* stanceConstraint,
-* weatherCondition,
-* surfaceCondition,
-* target,
-* distance,
-* risk.
+- environment
+- obstacle
+- terrain
+- stanceConstraint
+- weatherCondition
+- surfaceCondition
+- target
+- distance
+- risk
 
-## Exempel
+### Examples
 
 ```text
 componentType: obstacle
-label: Mando höger
+label: Mando Right
 ```
 
 ```text
 componentType: weatherCondition
-label: Hällregn
+label: Heavy Rain
 ```
 
 ```text
 componentType: terrain
-label: Ena foten betydligt högre än den andra
+label: One Foot Significantly Higher
 ```
 
-## Modellprincip
+### Design Principle
 
-Enskilda företeelser som mur, skogsbryn, duggregn och ojämnt underlag behöver inte vara egna datatyper i MVP.
+Objects such as:
 
-De kan representeras som komponenter med:
+- Walls
+- Trees
+- Forest Edge
+- Light Rain
+- Uneven Ground
 
-* typ,
-* etikett,
-* beskrivning,
-* eventuellt strukturerat värde.
+do not require dedicated data structures during the MVP.
 
-Modellen ska senare kunna specialiseras om det finns ett tydligt behov.
+Instead they are represented using:
+
+- Component Type
+- Label
+- Description
+- Optional structured values
+
+The model may later introduce specialized object types if they provide clear value.
 
 ---
 
 # ScenarioWheelLink
 
-`ScenarioWheelLink` beskriver kopplingen mellan ett Training Scenario och ett Lucky Wheel.
+Defines the relationship between a Training Scenario and a Lucky Wheel.
 
-Ett separat kopplingsobjekt gör att:
+Using a separate link object allows:
 
-* ett scenario kan använda flera hjul,
-* ett hjul kan användas av flera scenarier,
-* ordning och roll kan definieras per scenario.
+- Multiple wheels per scenario
+- Multiple scenarios per wheel
+- Ordered wheels
+- Different wheel purposes
 
-## Data
+### Data
 
-* `id`
-* `scenarioId`
-* `wheelId`
-* `sortOrder`
-* valfri `role`
-* valfri `isRequired`
+- id
+- scenarioId
+- wheelId
+- sortOrder
+- Optional role
+- Optional isRequired
 
-## Exempel på role
+### Example Roles
 
-* discType,
-* throwType,
-* throwLine,
-* stance,
-* condition,
-* obstacle.
+- discType
+- throwType
+- throwLine
+- stance
+- condition
+- obstacle
 
 ---
 
 # ScenarioVisual
 
-`ScenarioVisual` lagrar information om en visuell representation av ett scenario.
+Represents a visual reference for a Training Scenario.
 
-## Data
+### Data
 
-* `id`
-* `scenarioId`
-* `visualType`
-* lokal filreferens eller framtida extern referens
-* valfri beskrivning
-* valfri prompt eller metadata
-* `createdAt`
-* `sourceType`
+- id
+- scenarioId
+- visualType
+- Local file reference or future external reference
+- Optional description
+- Optional prompt or metadata
+- createdAt
+- sourceType
 
-## VisualType
+### Visual Types
 
-Exempel:
+Examples include:
 
-* illustration,
-* photo,
-* generatedImage,
-* map,
-* animation,
-* augmentedReality.
+- Illustration
+- Photo
+- Generated Image
+- Map
+- Animation
+- Augmented Reality
 
-Endast statisk lokal bild behöver stödjas initialt om visualisering inkluderas.
+Only static local images are required during the MVP.
 
-## Regler
+### Rules
 
-* Ett scenario ska fungera utan Scenario Visual.
-* Om bilden saknas ska textbeskrivningen fortfarande visas.
-* Bilddata ska inte lagras direkt i träningspassets kärnpost.
+- Scenarios must work without images.
+- Missing images must never prevent the scenario from being understood.
+- Image data should not be embedded directly inside Training Session records.
 
 ---
 
 # Exercise
 
-`Exercise` representerar en konkret träningsuppgift.
+Represents one concrete training task.
 
-## Data
+### Data
 
-* `id`
-* `title`
-* `instruction`
-* valfritt `trainingGoal`
-* `sourceType`
-* valfri `quickChallengeId`
-* valfri `trainingScenarioId`
-* `createdAt`
-* `schemaVersion`
+- id
+- title
+- instruction
+- Optional trainingGoal
+- sourceType
+- Optional quickChallengeId
+- Optional trainingScenarioId
+- createdAt
+- schemaVersion
 
-## Snapshot-data
+### Snapshot Data
 
-När en Exercise läggs till i ett träningspass ska följande kunna bevaras:
+When an Exercise becomes part of a Training Session it should preserve:
 
-* titel,
-* instruktion,
-* träningsmål,
-* scenarioinformation,
-* relevanta hjulresultat.
+- Title
+- Instructions
+- Training Goal
+- Scenario information
+- Relevant Wheel Spins
 
-## Regler
+### Rules
 
-* En Exercise ska kunna förstås fristående i ett historiskt träningspass.
-* Exercise ska inte vara beroende av att ursprungsprogrammet fortfarande finns kvar.
+- Historical Exercises must remain understandable independently.
+- Exercises must not depend on their original Training Program continuing to exist.
 
 ---
 
 # TrainingSession
 
-`TrainingSession` representerar ett sammanhållet träningspass.
+Represents one complete training session.
 
-## Data
+### Data
 
-* `id`
-* `status`
-* `createdAt`
-* `startedAt`
-* valfri `completedAt`
-* valfritt namn
-* valfri `trainingProgramId`
-* valfri `trainingScenarioId`
-* valfri `quickChallengeId`
-* snapshot av programnamn
-* snapshot av scenarionamn
-* snapshot av relevant scenariobeskrivning
-* `schemaVersion`
+- id
+- status
+- createdAt
+- startedAt
+- Optional completedAt
+- Optional name
+- Optional trainingProgramId
+- Optional trainingScenarioId
+- Optional quickChallengeId
+- Training Program snapshot
+- Training Scenario snapshot
+- Scenario description snapshot
+- schemaVersion
 
-## Relationer
+### Relationships
 
-Ett Training Session innehåller:
+A Training Session contains:
 
-* en eller flera Session Exercises,
-* noll eller flera Attempts,
-* noll eller flera Results.
+- One or more Session Exercises
+- Zero or more Attempts
+- Zero or more Results
 
-## Status
+### Status
 
-* created,
-* active,
-* completed.
+- Created
+- Active
+- Completed
 
-## Regler
+### Rules
 
-* Endast ett Training Session får vara aktivt åt gången.
-* Ett aktivt pass ska kunna återställas efter oväntad avstängning.
-* Ett avslutat pass är skrivskyddat i MVP.
-* Ett pass kan startas från Quick Challenge eller strukturerad träning.
+- Only one Training Session may be active.
+- Active sessions must be recoverable after unexpected shutdown.
+- Completed sessions are read-only.
+- Sessions may originate from either Quick Challenge or Structured Training.
 
 ---
 
 # SessionExercise
 
-`SessionExercise` representerar den version av en Exercise som faktiskt användes under ett visst träningspass.
+Represents the exact version of an Exercise used during a Training Session.
 
-Detta objekt bevarar historisk integritet.
+This object preserves historical integrity.
 
-## Data
+### Data
 
-* `id`
-* `trainingSessionId`
-* valfri `sourceExerciseId`
-* `titleSnapshot`
-* `instructionSnapshot`
-* valfritt `trainingGoalSnapshot`
-* valfri `scenarioSnapshot`
-* valfri lista med Wheel Spin-ID:n
-* `sortOrder`
-* `createdAt`
-* valfri `completedAt`
+- id
+- trainingSessionId
+- Optional sourceExerciseId
+- titleSnapshot
+- instructionSnapshot
+- Optional trainingGoalSnapshot
+- Optional scenarioSnapshot
+- Optional WheelSpin references
+- sortOrder
+- createdAt
+- Optional completedAt
 
-## Regler
+### Rules
 
-* Ändringar i ursprunglig Exercise eller Scenario får inte ändra Session Exercise.
-* Ett Training Session kan innehålla flera Session Exercises.
-* Session Exercise är skrivskyddad efter avslutat träningspass.
-
----
-
+- Changes to the original Exercise or Scenario must never modify Session Exercises.
+- A Training Session may contain multiple Session Exercises.
+- Session Exercises become read-only after session completion.
 # Attempt
 
-`Attempt` representerar ett enskilt genomförande av en Session Exercise.
+Represents one execution of a Session Exercise.
 
-## Data
+### Data
 
-* `id`
-* `trainingSessionId`
-* `sessionExerciseId`
-* `status`
-* `startedAt`
-* valfri `finishedAt`
-* valfritt discval
-* valfri kasttyp
-* valfri kastlinje
-* valfri strategi
-* valfri risknivå
-* valfri kommentar
-* `schemaVersion`
+- id
+- trainingSessionId
+- sessionExerciseId
+- status
+- startedAt
+- Optional finishedAt
+- Optional disc
+- Optional throwType
+- Optional throwLine
+- Optional strategy
+- Optional riskLevel
+- Optional comment
+- schemaVersion
 
-## Regler
+### Rules
 
-* Ett Attempt tillhör exakt ett Training Session.
-* Ett Attempt tillhör exakt en Session Exercise.
-* Discgolfarens val ska vara frivilliga i MVP om snabb registrering annars försvåras.
-* Ett avslutat Attempt ska kunna ha ett Result.
+- An Attempt belongs to exactly one Training Session.
+- An Attempt belongs to exactly one Session Exercise.
+- Player decision fields are optional during the MVP to preserve fast registration.
+- A completed Attempt may have one Result.
 
 ---
 
 # Result
 
-`Result` representerar utfallet av ett Attempt.
+Represents the outcome of an Attempt.
 
-## Data
+### Data
 
-* `id`
-* `attemptId`
-* `resultType`
-* valfritt numeriskt värde
-* valfri text
-* valfri enhet
-* `recordedAt`
-* `schemaVersion`
+- id
+- attemptId
+- resultType
+- Optional numericValue
+- Optional textValue
+- Optional unit
+- recordedAt
+- schemaVersion
 
-## Exempel på ResultType
+### Result Types
 
-* success,
-* partialSuccess,
-* miss,
-* withinTarget,
-* outsideTarget,
-* ob,
-* hazard,
-* distanceFromTarget,
-* custom.
+Examples include:
 
-## Modellprincip
+- success
+- partialSuccess
+- miss
+- withinTarget
+- outsideTarget
+- ob
+- hazard
+- distanceFromTarget
+- custom
 
-Resultatmodellen ska vara enkel i MVP men utbyggbar.
+### Design Principle
 
-En kombination av:
+The MVP Result model should remain simple but extensible.
 
-* resultattyp,
-* valfritt värde,
-* valfri enhet,
-* valfri text
+The combination of:
 
-ger flexibilitet utan att alla framtida resultattyper behöver definieras nu.
+- Result type
+- Optional numeric value
+- Optional unit
+- Optional text
 
-## Regler
+provides flexibility without requiring every future result format to be defined in advance.
 
-* Ett Result tillhör exakt ett Attempt.
-* Resultat ska sparas omedelbart.
-* Ett Result är skrivskyddat efter avslutat träningspass i MVP.
+### Rules
+
+- A Result belongs to exactly one Attempt.
+- Results must be persisted immediately.
+- Results become read-only after Training Session completion.
 
 ---
 
 # SessionSummary
 
-`SessionSummary` kan beräknas från ett avslutat Training Session och behöver inte nödvändigtvis lagras som ett separat objekt.
+Represents information calculated from a completed Training Session.
 
-## Beräknad information
+SessionSummary does not need to be stored as a separate object during the MVP.
 
-* starttid,
-* sluttid,
-* total längd,
-* antal genomförda övningar,
-* antal Attempts,
-* antal registrerade Results.
+### Calculated Data
 
-## Modellprincip
+- Start time
+- Completion time
+- Total duration
+- Number of completed Session Exercises
+- Number of Attempts
+- Number of recorded Results
 
-Information som säkert kan beräknas från kärndata bör normalt inte dupliceras.
+### Design Principle
 
-En lagrad sammanfattning kan senare införas om det krävs för:
+Data that can be reliably calculated from canonical records should not be duplicated.
 
-* prestanda,
-* export,
-* synkronisering,
-* avancerad analys.
+A stored SessionSummary may be introduced later for:
+
+- Performance
+- Export
+- Synchronization
+- Advanced analytics
 
 ---
 
-# Relationer
+# Relationships
 
-## Övergripande relationer
+## Overall Data Relationships
 
 ```text
 UserProfile
@@ -754,254 +767,293 @@ UserProfile
 
 ---
 
-# Quick Challenge-flöde
+## Quick Challenge Flow
 
 ```text
 LuckyWheel
-   │
-   ▼
+    │
+    ▼
 WheelSpin
-   │
-   ▼
+    │
+    ▼
 QuickChallenge
-   │
-   ▼
+    │
+    ▼
 Exercise
-   │
-   ▼
+    │
+    ▼
 TrainingSession
-   │
-   ▼
+    │
+    ▼
 SessionExercise
-   │
-   ▼
+    │
+    ▼
 Attempt
-   │
-   ▼
+    │
+    ▼
 Result
 ```
 
 ---
 
-# Strukturerat träningsflöde
+## Structured Training Flow
 
 ```text
 TrainingProgram
-   │
-   ▼
+    │
+    ▼
 TrainingScenario
-   │
-   ├── ScenarioComponent
-   ├── ScenarioVisual
-   └── LuckyWheel
-           │
-           ▼
-       WheelSpin
-           │
-           ▼
-        Exercise
-           │
-           ▼
-    TrainingSession
-           │
-           ▼
-    SessionExercise
-           │
-           ▼
-        Attempt
-           │
-           ▼
-         Result
+    │
+    ├── ScenarioComponent
+    ├── ScenarioVisual
+    └── LuckyWheel
+            │
+            ▼
+        WheelSpin
+            │
+            ▼
+         Exercise
+            │
+            ▼
+     TrainingSession
+            │
+            ▼
+     SessionExercise
+            │
+            ▼
+         Attempt
+            │
+            ▼
+          Result
 ```
 
 ---
 
-# Sparstrategi
+# Persistence Strategy
 
-## Omedelbar sparning
+## Immediate Persistence
 
-Följande ska sparas direkt efter ändring:
+The following objects should be saved immediately after modification:
 
-* AppSettings,
-* Lucky Wheels,
-* Wheel Options,
-* Training Programs,
-* Training Scenarios,
-* Scenario Components,
-* Results.
-
----
-
-## Aktivt träningspass
-
-Ett aktivt träningspass ska sparas kontinuerligt.
-
-Minst följande händelser ska utlösa sparning:
-
-* träningspass startas,
-* Exercise läggs till,
-* Wheel Spin genomförs,
-* Attempt startas,
-* Attempt avslutas,
-* Result registreras,
-* träningspass avslutas.
+- AppSettings
+- Lucky Wheels
+- Wheel Options
+- Training Programs
+- Training Scenarios
+- Scenario Components
+- Results
 
 ---
 
-## Atomära sparoperationer
+## Active Training Sessions
 
-En operation som ändrar flera relaterade objekt ska antingen:
+Active Training Sessions must be persisted continuously.
 
-* sparas helt,
-* eller inte sparas alls.
+At minimum, persistence should occur when:
 
-Exempel:
-
-När ett Training Program och dess scenarier sparas får inte endast delar av strukturen bli kvar om ett fel uppstår.
+- A Training Session is created
+- A Training Session is started
+- A Session Exercise is added
+- A Wheel Spin is completed
+- An Attempt is started
+- An Attempt is completed
+- A Result is recorded
+- A Training Session is completed
 
 ---
 
-# Radering och återställning
+## Atomic Operations
+
+Operations that modify multiple related objects must either:
+
+- Complete entirely
+- Leave the previous valid state unchanged
+
+Example:
+
+Saving a Training Program and its Training Scenarios must not leave only part of the structure persisted if the operation fails.
+# Deletion and Restoration
 
 ## Lucky Wheels
 
-När ett standardhjul återställs ska det aktuella redigerade innehållet ersättas av standardalternativen.
+Restoring a built-in Lucky Wheel replaces the current editable version with the original default content.
 
-Historiska Wheel Spins och Training Sessions påverkas inte.
+Historical Wheel Spins and Training Sessions must remain unchanged.
 
 ---
 
-## Training Programs och Scenarios
+## Training Programs and Training Scenarios
 
-När användaren tar bort ett program eller scenario ska det tas bort från framtida val.
+Deleting a Training Program or Training Scenario removes it from future selection.
 
-Historiska träningspass ska fortsätta visa sparade snapshots.
+Historical Training Sessions continue to reference their stored snapshots.
 
 ---
 
 ## Training Sessions
 
-Radering av historiska träningspass ingår inte i MVP-kraven om den inte definieras separat.
+Deleting historical Training Sessions is outside the scope of the MVP.
 
-Arkitekturen ska dock senare kunna stödja användarstyrd radering och full dataexport.
+The architecture should later support:
 
----
-
-# Datavalidering
-
-Följande ska valideras innan sparning:
-
-* obligatoriska fält finns,
-* textfält inte endast innehåller blanksteg,
-* Lucky Wheels har minst två alternativ,
-* Training Programs har minst ett scenario,
-* refererade objekt finns eller har giltiga snapshots,
-* tillståndsövergångar följer State Model,
-* avslutade träningspass inte ändras.
+- User-controlled deletion
+- Complete data export
 
 ---
 
-# Felhantering
+# Data Validation
 
-Om lokal data inte kan läsas ska systemet:
+Before data is persisted, the following should be validated:
 
-1. försöka läsa en tidigare giltig version eller backup om sådan finns,
-2. bevara opåverkad data,
-3. använda standardinnehåll där det är möjligt,
-4. informera användaren utan att appen kraschar.
-
-Om en sparning misslyckas ska systemet:
-
-* behålla den senast giltiga versionen,
-* informera användaren,
-* erbjuda eller automatiskt genomföra ett nytt försök,
-* aldrig markera operationen som slutförd innan den faktiskt är sparad.
+- Required fields exist
+- Text fields are not blank
+- Lucky Wheels contain at least two Wheel Options
+- Training Programs contain at least one Training Scenario
+- Referenced objects exist or valid snapshots are available
+- State transitions comply with the State Model
+- Completed Training Sessions cannot be modified
 
 ---
 
-# Datamigrering
+# Error Handling
 
-Varje lagrad huvudmodell ska kunna versionsmärkas.
+## Loading Failures
 
-När datamodellen förändras ska systemet kunna:
+If local data cannot be loaded, the application should:
 
-* identifiera gammal data,
-* migrera den till aktuell struktur,
-* bevara användarens information,
-* avbryta säkert om migreringen misslyckas.
-
-Datamigrering ska testas innan nya appversioner publiceras.
+1. Attempt to load the most recent valid version or backup.
+2. Preserve unaffected data.
+3. Use built-in content whenever possible.
+4. Inform the user without crashing.
 
 ---
 
-# Export och framtida synkronisering
+## Save Failures
 
-MVP behöver inte implementera molnsynkronisering, men datamodellen ska förberedas genom:
+If persistence fails, the application should:
 
-* stabila unika ID:n,
-* tidsstämplar,
-* ursprungsinformation,
-* schemaversioner,
-* tydligt ägarskap,
-* separerade historiska snapshots.
-
-Framtida export ska kunna omfatta:
-
-* inställningar,
-* egna hjul,
-* egna träningsprogram,
-* egna scenarier,
-* träningspass,
-* försök,
-* resultat.
+- Preserve the last valid state.
+- Inform the user.
+- Retry automatically or allow a retry.
+- Never report an operation as completed before it has actually been saved.
 
 ---
 
-# Integritet
+# Data Migration
 
-DGTC ska endast lagra data som har ett tydligt produktvärde.
+Every persistent root object should include a schema version.
 
-MVP ska inte kräva lagring av:
+When the data model changes, the application must be able to:
 
-* fullständigt namn,
-* e-postadress,
-* exakt plats,
-* kontaktlista,
-* personlig profilinformation.
+- Detect older versions.
+- Migrate data safely.
+- Preserve user information.
+- Abort safely if migration fails.
 
-GPS- eller platsdata får endast införas när en definierad funktion kräver det och användaren aktivt godkänner användningen.
-
----
-
-# Medvetna avgränsningar
-
-Följande definieras inte tekniskt i denna version:
-
-* databasprodukt,
-* SQL-schema,
-* krypteringsteknik,
-* molndatabas,
-* konfliktlösning vid synkronisering,
-* filsystemslayout,
-* bildkomprimering,
-* backupformat,
-* exportformat.
-
-Dessa beslut fattas i samband med den tekniska implementationen och dokumenteras separat.
+Migration procedures should be verified before application releases.
 
 ---
 
-# Sammanfattning
+# Export and Synchronization
 
-DGTC:s datamodell bygger på fyra huvudprinciper:
+Cloud synchronization is outside the MVP.
 
-1. **Offline först:** Lokal data är alltid tillgänglig.
-2. **Historisk integritet:** Genomförd träning förändras aldrig i efterhand.
-3. **Stabila relationer:** Alla centrala objekt har unika identifierare.
-4. **Utbyggbarhet:** Data ska senare kunna exporteras, delas och synkroniseras.
+The data model should nevertheless prepare for future synchronization through:
 
-Redigerbart innehåll beskriver hur användaren vill träna framöver.
+- Stable identifiers
+- Timestamps
+- Source information
+- Schema versions
+- Explicit ownership
+- Historical snapshots
 
-Snapshots beskriver vad som faktiskt användes under ett genomfört träningspass.
+Future exports should support:
 
-Den skillnaden är avgörande för att DGTC ska kunna växa utan att användarens träningshistorik förlorar sin betydelse.
+- App Settings
+- Lucky Wheels
+- Training Programs
+- Training Scenarios
+- Training Sessions
+- Attempts
+- Results
+
+---
+
+# Privacy
+
+DGTC should only store information that provides clear product value.
+
+The MVP should never require:
+
+- Full name
+- Email address
+- Exact location
+- Contact lists
+- Personal profile information
+
+Location or GPS data should only be introduced when required by a clearly defined feature and explicitly approved by the user.
+
+---
+
+# Out of Scope
+
+This document intentionally does not define:
+
+- Database technology
+- SQL schemas
+- Encryption implementation
+- Cloud databases
+- Synchronization conflict resolution
+- File system layout
+- Image compression
+- Backup formats
+- Export formats
+
+These decisions belong to implementation-specific architecture documents.
+
+---
+
+# Summary
+
+The DGTC data model is built on four core principles.
+
+1. **Offline First**  
+   Local data is always available.
+
+2. **Historical Integrity**  
+   Completed training never changes afterward.
+
+3. **Stable Relationships**  
+   Every major object has a stable unique identifier.
+
+4. **Extensibility**  
+   The model supports future export, synchronization, and collaboration.
+
+Editable content defines how the user intends to train.
+
+Snapshots preserve what actually happened during completed Training Sessions.
+
+Maintaining this distinction is fundamental to preserving long-term training history while allowing the application to evolve.
+
+---
+
+## Related Documents
+
+- `DOMAIN_MODEL.md`
+- `STATE_MODEL.md`
+- `SYSTEM_OVERVIEW.md`
+- `ARCHITECTURE.md`
+- `../product/PRD.md`
+- `../product/MVP.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Architecture
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

@@ -2,176 +2,246 @@
 
 # Master Index
 
-**Status:** v0.1 Draft
+**Version:** 1.0
 
-**Dokumenttyp:** Navigation Document
+**Status:** Draft
 
----
-
-# Syfte
-
-Master Index är den centrala navigationspunkten för DGTC Business Operating System.
-
-Dokumentet beskriver dokumenthierarki, status, beroenden och arbetsflöde.
-
-Master Index innehåller ingen affärsstrategi.
+**Document Type:** Navigation Document
 
 ---
 
-# Business Operating System
+# Purpose
 
-Business Operating System består av fyra nivåer.
+The Master Index serves as the central navigation document for the DGTC Business Operating System (BOS).
 
-## Nivå 1 – Foundation
+It defines the documentation hierarchy, document status, governance structure, dependencies, and workflow.
 
-Gemensam sanningskälla.
+This document contains **no business strategy**.
 
-Ansvaras av Product Operating System.
-
-| Dokument | Status |
-|----------|--------|
-| Foundation | External Reference |
+Its purpose is to make the Business Operating System understandable and easy to navigate.
 
 ---
 
-## Nivå 2 – Analys och styrning
+# Business Operating System Overview
 
-Dokument som översätter Foundation till affärsarbete.
+The Business Operating System is organized into four strategic layers.
 
-| Dokument | Status | Roll |
-|----------|--------|------|
-| FOUNDATION_ANALYSIS.md | Approved | Destillat av Foundation |
-| BUSINESS_GUARDRAILS.md | Draft | Styrande principer |
+Each layer builds upon the previous one.
 
----
-
-## Nivå 3 – Identitet
-
-Dokument som definierar hur DGTC ska uppfattas.
-
-| Dokument | Status | Roll |
-|----------|--------|------|
-| BRAND_PLATFORM.md | Draft | Varumärkesidentitet |
-| MESSAGING_FRAMEWORK.md | Planned | Kommunikation |
-
----
-
-## Nivå 4 – Strategier
-
-Dokument som beskriver hur identiteten omsätts i praktiken.
-
-| Dokument | Status | Roll |
-|----------|--------|------|
-| WEBSITE_STRATEGY.md | Planned | Webbplats |
-| COMMUNITY_STRATEGY.md | Planned | Community |
-| SPONSORSHIP_STRATEGY.md | Planned | Partners |
-| PRICING_STRATEGY.md | Planned | Prismodell |
-| GO_TO_MARKET.md | Planned | Lansering |
-
----
-
-## Governance
-
-Dokument som styr Business Operating System.
-
-| Dokument | Status | Roll |
-|----------|--------|------|
-| BUSINESS_DECISION_LOG.md | Planned | Beslutshistorik |
-| MASTER_INDEX.md | Draft | Navigering |
-
----
-
-# Dokumenthierarki
-
-```
+```text
 Foundation
-        │
-        ▼
-Foundation Analysis
-        │
-        ├──────────────┐
-        ▼              ▼
-Business Guardrails   Brand Platform
-        │              │
-        └──────┬───────┘
-               ▼
-      Messaging Framework
-               ▼
-      Website Strategy
-               ▼
-      Community Strategy
-               ▼
-      Sponsorship Strategy
-               ▼
-      Pricing Strategy
-               ▼
-      Go-To-Market
+      │
+      ▼
+Analysis & Governance
+      │
+      ▼
+Identity
+      │
+      ▼
+Execution Strategies
 ```
 
 ---
 
-# Dokumentstatus
+# Level 1 — Foundation
 
-Business Operating System använder fyra statusnivåer.
+The Foundation serves as the single source of truth for the entire DGTC ecosystem.
+
+Ownership belongs to the Product Operating System.
+
+| Document | Status |
+|----------|--------|
+| `FOUNDATION.md` | External Reference |
+
+---
+
+# Level 2 — Analysis & Governance
+
+These documents translate the Foundation into business strategy and governance.
+
+| Document | Status | Purpose |
+|----------|----------|---------|
+| `FOUNDATION_ANALYSIS.md` | Approved | Business interpretation of the Foundation |
+| `BUSINESS_GUARDRAILS.md` | Draft | Strategic governance principles |
+| `CHANGE_QUEUE.md` | Active | Future business improvements and documentation proposals |
+
+---
+
+# Level 3 — Brand Identity
+
+These documents define how DGTC should be perceived.
+
+| Document | Status | Purpose |
+|----------|----------|---------|
+| `BRAND_PLATFORM.md` | Draft | Brand identity |
+| `MESSAGING_FRAMEWORK.md` | Planned | Communication framework |
+# Level 4 — Execution Strategies
+
+These documents describe how the DGTC identity is translated into practical business execution.
+
+| Document | Status | Purpose |
+|----------|----------|---------|
+| `WEBSITE_STRATEGY.md` | Planned | Website strategy |
+| `COMMUNITY_STRATEGY.md` | Planned | Community development |
+| `SPONSORSHIP_STRATEGY.md` | Planned | Partnership strategy |
+| `PRICING_STRATEGY.md` | Planned | Pricing model |
+| `GO_TO_MARKET.md` | Planned | Launch strategy |
+
+---
+
+# Governance
+
+Governance documents manage the Business Operating System itself.
+
+| Document | Status | Purpose |
+|----------|----------|---------|
+| `BUSINESS_DECISION_LOG.md` | Planned | Strategic decision history |
+| `MASTER_INDEX.md` | Draft | Documentation navigation |
+
+---
+
+# Documentation Hierarchy
+
+```text
+Foundation
+      │
+      ▼
+Foundation Analysis
+      │
+      ├─────────────────────┐
+      ▼                     ▼
+Business Guardrails    Brand Platform
+      │                     │
+      └──────────┬───────────┘
+                 ▼
+      Messaging Framework
+                 ▼
+        Website Strategy
+                 ▼
+      Community Strategy
+                 ▼
+     Sponsorship Strategy
+                 ▼
+        Pricing Strategy
+                 ▼
+         Go-To-Market
+```
+
+The hierarchy ensures that every strategic decision ultimately traces back to the Foundation.
+
+---
+
+# Document Status Lifecycle
+
+The Business Operating System uses four document states.
 
 ## Planned
 
-Dokumentet är planerat men inte påbörjat.
+The document has been identified but development has not yet begun.
 
 ---
 
 ## Draft
 
-Dokumentet utvecklas aktivt.
+The document is actively being developed and remains subject to revision.
 
 ---
 
 ## Approved
 
-Dokumentet är granskat och godkänt.
+The document has completed review and is considered the current authoritative version.
 
-Kan fortfarande förbättras.
+Improvements remain possible without changing its status.
 
 ---
 
 ## Frozen
 
-Dokumentet betraktas som stabilt.
+The document is considered strategically stable.
 
-Ändringar ska endast göras genom medvetna beslut och dokumenteras i BUSINESS_DECISION_LOG.
+Changes should only occur through deliberate governance decisions and be recorded in the Business Decision Log.
+# Document Workflow
+
+When a new Business document is created, it should follow the standard governance process.
+
+1. Be derived from the Foundation.
+2. Comply with the Business Guardrails.
+3. Complete the review process.
+4. Reach **Approved** status.
+5. If appropriate, later transition to **Frozen** status.
+
+This process ensures strategic consistency throughout the Business Operating System.
 
 ---
 
-# Arbetsordning
-
-När ett nytt dokument skapas ska det:
-
-1. Härledas från Foundation.
-2. Följa Business Guardrails.
-3. Passera granskning.
-4. Markeras som Approved.
-5. Vid behov senare markeras som Frozen.
-
----
-
-# Ägarskap
+# Ownership
 
 ## Product Operating System
 
-Ansvarar för Foundation.
+Responsible for the Foundation and all product philosophy.
 
 ---
 
 ## Business Operating System
 
-Ansvarar för samtliga dokument under `/docs/business`.
+Responsible for all documentation located within:
+
+```text
+/docs/business
+```
+
+This includes governance, branding, communication, and execution strategy.
 
 ---
 
-# Versionshantering
+# Version Management
 
-Master Index ska uppdateras när:
+The Master Index should be updated whenever:
 
-- nya dokument tillkommer,
-- dokument byter status,
-- dokumenthierarkin förändras.
+- New documents are added.
+- Existing documents change status.
+- The documentation hierarchy changes.
+- Governance responsibilities change.
+- New strategic layers are introduced.
+
+The Master Index should always reflect the current structure of the Business Operating System.
+
+---
+
+# Navigation Principles
+
+The Master Index serves as the primary entry point for Business documentation.
+
+Every Business document should be reachable from this index, either directly or through the documented hierarchy.
+
+The objective is to ensure that contributors can understand:
+
+- Where information belongs
+- Which document owns a topic
+- Which documents depend on one another
+- How strategic decisions flow through the Business Operating System
+
+Navigation should prioritize clarity over completeness.
+
+---
+
+## Related Documents
+
+- `FOUNDATION_ANALYSIS.md`
+- `BUSINESS_GUARDRAILS.md`
+- `CHANGE_QUEUE.md`
+- `BRAND_PLATFORM.md`
+- `MESSAGING_FRAMEWORK.md`
+- `BUSINESS_DECISION_LOG.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Business
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

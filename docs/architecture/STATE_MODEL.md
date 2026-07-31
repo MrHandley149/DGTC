@@ -1,435 +1,421 @@
 # State Model
 
-**Produkt:** DGTC Platform
+## Purpose
 
-**Dokument:** STATE_MODEL.md
+This document defines the lifecycle of the primary domain objects within DGTC.
 
-**Version:** v1.0
+Each object may exist in a defined set of states.
 
-**Status:** Draft
+Only valid state transitions are permitted.
 
----
-
-# Syfte
-
-Detta dokument beskriver livscykeln för DGTC:s centrala domänobjekt.
-
-Varje objekt kan befinna sig i ett antal definierade tillstånd.
-
-Endast giltiga övergångar mellan tillstånd är tillåtna.
-
-Syftet är att skapa ett robust och förutsägbart system.
+The purpose of the State Model is to provide predictable system behavior, simplify implementation, and preserve data integrity.
 
 ---
 
-# Grundprinciper
+# State Principles
 
-* Ett objekt får endast befinna sig i ett tillstånd åt gången.
-* Ett objekt får endast övergå till ett giltigt nästa tillstånd.
-* Ogiltiga övergångar ska förhindras av systemet.
-* Ett avslutat objekt ska inte kunna återgå till ett tidigare tillstånd om det inte uttryckligen stöds.
+Every stateful object follows these principles.
+
+- An object may only exist in one state at a time.
+- An object may only transition to a valid next state.
+- Invalid transitions must be prevented by the application.
+- Completed objects should not return to earlier states unless explicitly supported.
 
 ---
 
 # Training Session
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Created
-   │
-   ▼
+    │
+    ▼
 Active
-   │
-   ▼
+    │
+    ▼
 Completed
 ```
 
----
+### Created
 
-## Created
+The Training Session has been created but has not yet started.
 
-Träningspasset har skapats men inte startats.
+### Active
 
----
+The Training Session is currently in progress.
 
-## Active
+During this state the user may:
 
-Träningspasset pågår.
+- Generate Exercises
+- Record Attempts
+- Record Results
 
-Användaren kan:
+### Completed
 
-* generera övningar,
-* registrera försök,
-* registrera resultat.
+The Training Session has ended.
 
----
+Completed sessions are read-only during the MVP.
 
-## Completed
+A Session Summary may be generated.
 
-Träningspasset är avslutat.
+### Valid Transitions
 
-Det får inte längre ändras i MVP.
+- Created → Active
+- Active → Completed
 
-En sammanfattning skapas.
+### Invalid Transitions
 
----
-
-## Tillåtna övergångar
-
-Created → Active
-
-Active → Completed
-
----
-
-## Ej tillåtna övergångar
-
-Completed → Active
-
-Completed → Created
+- Completed → Active
+- Completed → Created
 
 ---
 
 # Training Program
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Draft
-   │
-   ▼
+    │
+    ▼
 Saved
 ```
 
----
+### Draft
 
-## Draft
+The Training Program is being created or edited.
 
-Programmet håller på att skapas eller redigeras.
+### Saved
 
----
+The Training Program is complete and available for use.
 
-## Saved
+### Valid Transitions
 
-Programmet är sparat och kan användas.
-
----
-
-## Tillåtna övergångar
-
-Draft → Saved
-
-Saved → Draft
+- Draft → Saved
+- Saved → Draft
 
 ---
 
 # Training Scenario
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Draft
-   │
-   ▼
+    │
+    ▼
 Saved
 ```
 
----
-
-Scenarier följer samma modell som träningsprogram.
+Training Scenarios follow the same lifecycle as Training Programs.
 
 ---
 
 # Lucky Wheel
 
-Lucky Wheel har två oberoende tillstånd:
+Lucky Wheels have two independent state machines.
 
-## Användning
+## Usage State
 
 ```text
 Idle
-   │
-   ▼
+    │
+    ▼
 Spinning
-   │
-   ▼
+    │
+    ▼
 Idle
 ```
-
----
 
 ### Idle
 
-Hjulet väntar på användarens nästa handling.
-
----
+The wheel is waiting for user interaction.
 
 ### Spinning
 
-Animation och slumpgenerator är aktiva.
+The animation and random selection process are active.
 
-När snurrningen avslutas återgår hjulet till Idle.
+After the spin completes, the wheel returns to Idle.
 
 ---
 
-## Redigering
+## Editing State
 
 ```text
 View
-   │
-   ▼
+    │
+    ▼
 Editing
-   │
-   ├────────► Saved
-   │
-   └────────► Cancelled
+    │
+    ├──────► Saved
+    │
+    └──────► Cancelled
 ```
-
----
 
 ### View
 
-Normalt användarläge.
-
----
+Normal viewing mode.
 
 ### Editing
 
-Alternativ kan:
+Users may:
 
-* läggas till,
-* ändras,
-* tas bort,
-* sorteras.
-
----
+- Add Wheel Options
+- Modify Wheel Options
+- Delete Wheel Options
+- Reorder Wheel Options
 
 ### Saved
 
-Ändringarna sparas.
+Changes are persisted.
 
-Hjulet återgår till View.
-
----
+The wheel returns to View mode.
 
 ### Cancelled
 
-Alla osparade ändringar ignoreras.
+Unsaved changes are discarded.
 
-Hjulet återgår till View.
+The wheel returns to View mode.
 
 ---
 
 # Exercise
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Generated
-   │
-   ▼
+    │
+    ▼
 In Progress
-   │
-   ▼
+    │
+    ▼
 Completed
 ```
 
----
+### Generated
 
-Generated
+The Exercise has been created but not yet performed.
 
-Övningen har skapats men ännu inte genomförts.
+### In Progress
 
----
+The player is performing the Exercise.
 
-In Progress
+### Completed
 
-Discgolfaren genomför övningen.
+The Exercise has finished.
 
----
-
-Completed
-
-Övningen är klar.
-
-Resultat kan registreras.
-
----
-
+Results may now be recorded.
 # Attempt
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Started
-   │
-   ▼
+    │
+    ▼
 Finished
 ```
 
----
+### Started
 
-Started
+The player has begun an Attempt.
 
-Discgolfaren påbörjar ett försök.
+### Finished
 
----
+The Attempt has ended.
 
-Finished
-
-Försöket är avslutat.
-
-Resultatet kan dokumenteras.
+A Result may now be recorded.
 
 ---
 
 # Result
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Pending
-   │
-   ▼
+    │
+    ▼
 Recorded
 ```
 
----
+### Pending
 
-Pending
+The Result has not yet been recorded.
 
-Resultatet väntar på registrering.
+### Recorded
 
----
+The Result has been saved.
 
-Recorded
-
-Resultatet är sparat.
-
-Det får inte ändras i MVP.
+Recorded Results are read-only during the MVP.
 
 ---
 
 # Quick Challenge
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Generated
-   │
-   ▼
+    │
+    ▼
 Accepted
-   │
-   ▼
+    │
+    ▼
 Completed
 ```
 
----
+### Generated
 
-Generated
+The Quick Challenge has been created.
 
-Utmaningen har skapats.
+### Accepted
 
----
+The player has chosen to perform the challenge.
 
-Accepted
+### Completed
 
-Discgolfaren har valt att genomföra den.
-
----
-
-Completed
-
-Utmaningen är genomförd.
+The challenge has been finished.
 
 ---
 
 # Scenario Visual
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Unavailable
 
-eller
+or
 
 Available
 ```
 
-Visualisering är valfri.
+Scenario visuals are optional.
 
-Scenariot ska fungera även utan en bild.
+Training Scenarios must remain fully usable without images.
 
 ---
 
 # App Settings
 
-## Tillstånd
+## Lifecycle
 
 ```text
 Loaded
-   │
-   ▼
+    │
+    ▼
 Modified
-   │
-   ▼
+    │
+    ▼
 Saved
 ```
 
----
+### Loaded
 
-# Gemensamma regler
+Application settings have been loaded into memory.
 
-## Regel 1
+### Modified
 
-Endast ett aktivt träningspass får finnas åt gången.
+One or more settings have changed but are not yet fully persisted.
 
----
+### Saved
 
-## Regel 2
-
-Lucky Wheels får inte redigeras samtidigt som de används i en aktiv snurrning.
+The updated settings have been successfully stored.
 
 ---
 
-## Regel 3
+# Global Rules
 
-Avslutade träningspass är skrivskyddade.
+## Rule 1
 
----
-
-## Regel 4
-
-Historiska träningspass påverkas aldrig av senare ändringar i träningsprogram eller scenarier.
+Only one Training Session may be active at any time.
 
 ---
 
-## Regel 5
+## Rule 2
 
-Alla sparoperationer ska vara atomära.
-
-Antingen sparas hela objektet eller inget alls.
+Lucky Wheels must not be edited while an active spin is in progress.
 
 ---
 
-# Framtida utbyggnad
+## Rule 3
 
-Arkitekturen ska kunna stödja ytterligare tillstånd, exempelvis:
-
-* Archived
-* Shared
-* Downloaded
-* Synced
-* Published
-* Deprecated
-
-Dessa tillstånd ingår inte i MVP men ska kunna läggas till utan att befintliga tillstånd behöver ändras.
+Completed Training Sessions are read-only.
 
 ---
 
-# Sammanfattning
+## Rule 4
 
-Varje centralt objekt i DGTC har en tydlig livscykel.
+Historical Training Sessions must never be affected by later edits to:
 
-Tillståndsmodellen säkerställer att objekt endast kan användas på ett giltigt sätt och ger en stabil grund för implementation, testning och framtida utbyggnad.
+- Training Programs
+- Training Scenarios
+- Lucky Wheels
+- Wheel Options
+
+---
+
+## Rule 5
+
+All persistence operations should be atomic.
+
+Either the complete operation succeeds or no changes are committed.
+
+---
+
+# Future Extensions
+
+The state model should support additional lifecycle states without requiring changes to existing states.
+
+Possible future states include:
+
+- Archived
+- Shared
+- Downloaded
+- Synced
+- Published
+- Deprecated
+
+These states are intentionally excluded from the MVP.
+
+---
+
+# Summary
+
+Every major DGTC domain object follows a clearly defined lifecycle.
+
+The State Model ensures:
+
+- Predictable application behavior
+- Valid state transitions
+- Consistent business rules
+- Reliable persistence
+- Safe future expansion
+
+By separating object states from implementation details, the model provides a stable foundation for development, testing, and long-term maintenance.
+
+---
+
+## Related Documents
+
+- `DOMAIN_MODEL.md`
+- `DATA_MODEL.md`
+- `SYSTEM_OVERVIEW.md`
+- `ARCHITECTURE.md`
+- `../product/PRD.md`
+- `../product/MVP.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Architecture
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

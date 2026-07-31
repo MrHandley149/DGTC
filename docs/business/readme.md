@@ -1,114 +1,126 @@
 # DGTC Business Operating System (BOS)
 
-**Status:** v1.1 Draft
+**Version:** 2.0
+
+**Status:** Draft
 
 ---
 
-# Syfte
+# Purpose
 
-DGTC Business Operating System (BOS) beskriver hur DGTC:s filosofi omsätts till varumärke, affär, kommunikation och marknad.
+The DGTC Business Operating System (BOS) defines how the philosophy established by the DGTC Foundation is translated into brand, communication, marketing, partnerships, and commercial strategy.
 
-Business Operating System introducerar inte nya produktbeslut.
+The BOS does **not** define product behavior.
 
-Produktens identitet definieras i Foundation.
+Product philosophy, user experience, and technical direction belong to the Product Operating System (POS).
 
-Business Operating System analyserar, destillerar och kommunicerar Foundation.
-
----
-
-# Princip
-
-DGTC Product Operating System (POS) definierar **vad** produkten är.
-
-DGTC Business Operating System (BOS) definierar **hur** produkten uppfattas.
-
-Foundation är den gemensamma sanningskällan.
+The Business Operating System exists to interpret, communicate, and commercialize the Foundation without altering it.
 
 ---
 
-# Arbetsordning
+# Relationship to the Product Operating System
 
+The Product Operating System answers:
+
+> **What is the product?**
+
+The Business Operating System answers:
+
+> **How is the product perceived?**
+
+Both systems share a single source of truth:
+
+**The DGTC Foundation.**
+
+The Foundation defines identity.
+
+The Business Operating System communicates that identity consistently across every external touchpoint.
+
+---
+
+# Business Development Flow
+
+Business strategy is developed through a structured progression.
+
+```text
 Foundation
-
-↓
-
+        │
+        ▼
 Foundation Analysis
-
-↓
-
+        │
+        ▼
 Business Guardrails
-
-↓
-
+        │
+        ▼
 Brand Platform
-
-↓
-
+        │
+        ▼
 Messaging Framework
-
-↓
-
+        │
+        ▼
 Website Strategy
-
-↓
-
+        │
+        ▼
 Community Strategy
-
-↓
-
-Sponsorship Strategy
-
-↓
-
+        │
+        ▼
+Partnership & Sponsorship Strategy
+        │
+        ▼
 Pricing Strategy
-
-↓
-
+        │
+        ▼
 Go-To-Market
+        │
+        ▼
+External Communication
+```
 
-↓
+Each stage builds upon the previous one.
 
-Extern kommunikation
-
----
-
-# Grundprinciper
-
-Business Operating System ska alltid:
-
-- utgå från Foundation,
-- använda Foundation Analysis som underlag,
-- följa Business Guardrails,
-- aldrig introducera nya produktbeslut,
-- aldrig motsäga Foundation,
-- bygga långsiktigt förtroende,
-- kommunicera konsekvent över alla kanaler.
+Business decisions should never bypass this progression.
 
 ---
 
-# Hard och Soft Guardrails
+# Core Principles
 
-Business Operating System använder två typer av styrande regler.
+The Business Operating System shall always:
+
+- Build upon the Foundation.
+- Use Foundation Analysis as its strategic interpretation.
+- Follow all Business Guardrails.
+- Avoid introducing new product decisions.
+- Never contradict the Foundation.
+- Build long-term trust rather than short-term attention.
+- Maintain consistent communication across every channel.
+
+---
+
+# Business Guardrails
+
+The Business Operating System uses two categories of governance.
 
 ## Hard Guardrails
 
-Absoluta regler.
+Hard Guardrails define absolute strategic rules.
 
-De får inte brytas utan ett medvetet strategiskt beslut.
+Breaking a Hard Guardrail requires an explicit strategic decision.
 
----
+These rules protect the identity of DGTC.
 
 ## Soft Guardrails
 
-Riktlinjer.
+Soft Guardrails define preferred behaviors and communication patterns.
 
-De beskriver hur DGTC normalt arbetar och kommunicerar men kan frångås om det finns tydliga skäl.
+They provide flexibility while maintaining consistency.
+
+Exceptions should be intentional rather than accidental.
 
 ---
 
-# Dokumentstruktur
+# Documentation Structure
 
-```
+```text
 business/
 
 README.md
@@ -127,7 +139,7 @@ WEBSITE_STRATEGY.md
 
 COMMUNITY_STRATEGY.md
 
-SPONSORSHIP_STRATEGY.md
+PARTNERSHIP_STRATEGY.md
 
 PRICING_STRATEGY.md
 
@@ -138,123 +150,191 @@ BUSINESS_DECISION_LOG.md
 
 ---
 
-# Dokumentbeskrivningar
+# Document Overview
 
-## FOUNDATION_ANALYSIS
+## Foundation Analysis
 
-Destillerar Foundation till de viktigaste budskapen för affär, varumärke och kommunikation.
+Distills the Foundation into strategic business insights for branding, positioning, communication, and commercial decision-making.
 
----
+## Business Guardrails
 
-## BUSINESS_GUARDRAILS
+Defines the Hard and Soft Guardrails that govern every Business document.
 
-Skyddar DGTC:s identitet genom Hard och Soft Guardrails.
+All Business documentation should comply with these guardrails.
 
-Alla Business-dokument ska följa dessa.
+## Brand Platform
 
----
+Defines the DGTC brand identity, positioning, personality, promise, and market differentiation.
 
-## BRAND_PLATFORM
+## Messaging Framework
 
-Definierar DGTC:s identitet, positionering, personlighet och löfte.
+Defines how DGTC communicates with different audiences while maintaining a consistent voice.
+## Brand Platform
 
----
+Defines the long-term strategic identity of DGTC.
 
-## MESSAGING_FRAMEWORK
+This document describes:
 
-Definierar hur DGTC uttrycker sig mot olika målgrupper.
+- Brand purpose
+- Vision
+- Positioning
+- Brand promise
+- Personality
+- Core values
+- Differentiators
 
----
-
-## WEBSITE_STRATEGY
-
-Beskriver webbplatsens syfte, struktur och kommunikationsmål.
-
----
-
-## COMMUNITY_STRATEGY
-
-Beskriver hur DGTC bygger och utvecklar sin community.
+The Brand Platform ensures consistent strategic positioning across products, communication, and partnerships.
 
 ---
 
-## SPONSORSHIP_STRATEGY
+## Messaging Framework
 
-Definierar hur DGTC arbetar med partners och sponsorer.
+Defines how DGTC communicates with different audiences while maintaining a consistent voice.
 
----
+The framework establishes:
 
-## PRICING_STRATEGY
-
-Beskriver prismodell, erbjudanden och affärslogik.
-
----
-
-## GO_TO_MARKET
-
-Strategi för lansering, tillväxt och marknadsintroduktion.
+- Core messages
+- Audience-specific messaging
+- Tone of voice
+- Communication principles
+- Narrative structure
 
 ---
 
-## BUSINESS_DECISION_LOG
+## Website Strategy
 
-Dokumenterar viktiga affärsbeslut och motiveringen bakom dem.
+Defines the objectives, structure, and communication goals for the DGTC website.
 
----
-
-## MASTER_INDEX
-
-Visar dokumentstatus, versioner och relationer mellan dokumenten.
+The website should communicate the Foundation while supporting product discovery, education, and conversion.
 
 ---
 
-# Ansvarsfördelning
+## Community Strategy
 
-## DGTC Product Operating System
+Defines how DGTC builds and supports a long-term community.
 
-Ansvarar för:
+The strategy focuses on:
 
-- produktfilosofi
-- produktbeslut
-- arkitektur
-- utveckling
-
----
-
-## DGTC Business Operating System
-
-Ansvarar för:
-
-- varumärke
-- positionering
-- kommunikation
-- marknadsföring
-- affärsutveckling
-- partnerskap
-- kommersiell strategi
+- Community growth
+- Engagement
+- Knowledge sharing
+- Long-term relationships
+- Player development
 
 ---
 
-# Relation mellan POS och BOS
+## Partnership Strategy
 
-Product Operating System och Business Operating System utvecklas parallellt.
+Defines how DGTC approaches commercial partnerships and sponsorships.
 
-Foundation utgör den gemensamma referenspunkten.
-
-Business ska aldrig förändra Foundation.
-
-Foundation ska aldrig anpassas efter marknadsföring.
-
-När Foundation utvecklas ska Business Operating System analyseras och uppdateras vid behov.
+Partnerships should strengthen the DGTC ecosystem while remaining aligned with the Foundation.
 
 ---
 
-# Versionshantering
+## Pricing Strategy
 
-Business Operating System är ett levande system.
+Defines pricing principles, commercial offerings, and monetization strategy.
 
-Nya dokument kan tillkomma när verksamheten utvecklas.
+Pricing should reinforce long-term trust and sustainable business growth.
 
-Ändringar dokumenteras i BUSINESS_DECISION_LOG.
+---
 
-MASTER_INDEX ska alltid hållas uppdaterad.
+## Go-To-Market
+
+Defines the launch strategy for new products, features, and markets.
+
+The strategy includes:
+
+- Product launches
+- Marketing campaigns
+- Growth initiatives
+- Market expansion
+
+---
+
+## Business Decision Log
+
+Documents significant business decisions together with their rationale.
+
+The log provides historical context for future strategic decisions.
+
+---
+
+## Master Index
+
+Maintains document status, version information, ownership, and relationships across the Business Operating System.
+
+---
+
+# Responsibilities
+
+## Product Operating System (POS)
+
+Responsible for:
+
+- Product philosophy
+- Product decisions
+- User experience
+- Architecture
+- Software development
+
+## Business Operating System (BOS)
+
+Responsible for:
+
+- Brand strategy
+- Positioning
+- Communication
+- Marketing
+- Business development
+- Partnerships
+- Commercial strategy
+
+---
+
+# Relationship Between POS and BOS
+
+The Product Operating System and Business Operating System evolve together while remaining independent.
+
+The Foundation remains the shared source of truth.
+
+Business strategy must never redefine the Foundation.
+
+Likewise, the Foundation should never be modified solely to support marketing objectives.
+
+When the Foundation evolves, the Business Operating System should be reviewed and updated where necessary to maintain alignment.
+
+---
+
+# Version Management
+
+The Business Operating System is intended to evolve alongside the organization.
+
+New strategic documents may be introduced as the business matures.
+
+Strategic decisions should be documented in the Business Decision Log.
+
+The Master Index should always reflect the current structure and status of the Business Operating System.
+
+---
+
+## Related Documents
+
+- `../foundation/FOUNDATION.md`
+- `../foundation/FOUNDATION_ANALYSIS.md`
+- `BUSINESS_GUARDRAILS.md`
+- `BRAND_PLATFORM.md`
+- `MESSAGING_FRAMEWORK.md`
+- `MASTER_INDEX.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Business
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated and aligned with the Product Operating System.

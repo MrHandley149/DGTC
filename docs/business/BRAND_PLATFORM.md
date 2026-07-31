@@ -1,249 +1,340 @@
 # DGTC Brand Platform
 
-**Status:** v0.2 Draft
+**Version:** 1.0
 
-**Dokumenttyp:** Core Document
+**Status:** Draft
 
----
-
-# Syfte
-
-Brand Platform beskriver DGTC:s identitet.
-
-Dokumentet definierar hur DGTC ska uppfattas av användare, partners, media och marknaden.
-
-Brand Platform bygger på Foundation, Foundation Analysis och följer Business Guardrails.
-
----
-
-# Relation till övriga dokument
-
-Foundation beskriver produktens filosofi.
-
-Foundation Analysis destillerar Foundation.
-
-Business Guardrails definierar de styrande principerna.
-
-Brand Platform definierar DGTC:s identitet.
-
-Messaging Framework beskriver hur identiteten uttrycks.
+**Document Type:** Core Business Document
 
 ---
 
 # Purpose
 
-DGTC finns för att hjälpa människor att utvecklas.
+The Brand Platform defines the long-term identity of DGTC.
 
-Vi tror att bättre förståelse leder till bättre beslut.
+It establishes how DGTC should be perceived by users, partners, creators, media, and the broader market.
 
-Bättre beslut leder till bättre prestation.
+The Brand Platform is derived from:
 
-Produkten finns därför inte för att samla statistik.
+- The DGTC Foundation
+- Foundation Analysis
+- Business Guardrails
 
-Produkten finns för att utveckla människor.
+It does not introduce new product decisions.
+
+Instead, it translates the philosophy established by the Foundation into a consistent strategic brand identity.
+
+---
+
+# Relationship to Other Documents
+
+The Business Operating System follows a clear hierarchy.
+
+```text
+Foundation
+        │
+        ▼
+Foundation Analysis
+        │
+        ▼
+Business Guardrails
+        │
+        ▼
+Brand Platform
+        │
+        ▼
+Messaging Framework
+```
+
+Each document has a distinct responsibility.
+
+| Document | Responsibility |
+|----------|----------------|
+| Foundation | Defines the philosophy of DGTC |
+| Foundation Analysis | Distills the Foundation into strategic business insights |
+| Business Guardrails | Defines strategic constraints for business decisions |
+| Brand Platform | Defines the identity of DGTC |
+| Messaging Framework | Defines how the identity is communicated |
+
+---
+
+# Brand Purpose
+
+DGTC exists to help people develop.
+
+We believe that:
+
+> Better understanding leads to better decisions.
+
+Better decisions lead to better performance.
+
+DGTC therefore exists to develop people rather than simply collecting statistics.
 
 ---
 
 # Vision
 
-Vi vill skapa världens mest förtroendeingivande plattform för lärande, prestationsutveckling och beslutsstöd.
+To become the world's most trusted platform for learning, performance development, and decision support.
 
-Discgolf är början.
+Disc golf is the starting point.
 
-Inte slutmålet.
+Not the destination.
 
 ---
 
 # Mission
 
-Vi hjälper människor att förstå mer.
+DGTC helps people:
 
-Fatta bättre beslut.
-
-Utvecklas snabbare.
-
-Och bli mer självständiga över tid.
+- Understand more.
+- Make better decisions.
+- Improve more effectively.
+- Become increasingly self-sufficient over time.
 
 ---
 
 # Brand Essence
 
-Brand Essence sammanfattar DGTC:s identitet i en enda mening.
+The Brand Essence expresses the identity of DGTC in its simplest form.
 
-**Status:** Under utveckling.
+The final expression will emerge naturally as the Foundation matures.
 
-Första arbetsförslag:
+Current working concepts include:
 
 - Better Decisions. Better Development.
 - Understand. Improve. Repeat.
 - Understand More. Become Better.
 
-Brand Essence ska härledas från Foundation och fastställas först när den tydligt representerar projektets filosofi.
+The Brand Essence should never be invented independently of the Foundation.
+
+Instead, it should emerge from it.
 
 ---
 
 # Brand Promise
 
-När du använder DGTC ska du inte bara bli bättre.
+When using DGTC, users should experience more than improvement.
 
-Du ska förstå varför du blir bättre.
+They should understand **why** they are improving.
+
+Understanding creates confidence.
+
+Confidence creates independence.
 
 ---
 
 # Positioning
 
-DGTC är inte en statistikapp.
+DGTC is **not**:
 
-DGTC är inte en träningslogg.
+- A statistics application.
+- A training log.
+- An AI that replaces human thinking.
 
-DGTC är inte en AI som spelar åt dig.
+DGTC is:
 
-DGTC är ett beslutsstöd för mänsklig utveckling.
-
----
-
+A decision-support platform for human development.
 # Core Values
 
-- User Development
-- Positive First
-- Data With Purpose
-- Explainability
-- Transparency
-- Continuous Learning
+The DGTC brand is built upon six enduring values.
+
+## User Development
+
+Every decision should contribute to meaningful long-term user growth.
+
+## Positive First
+
+Encouragement creates better learning than criticism.
+
+The product should begin with strengths before identifying opportunities for improvement.
+
+## Data With Purpose
+
+Data exists to improve understanding rather than simply measuring activity.
+
+Every metric should support better decision-making.
+
+## Explainability
+
+Recommendations should be understandable.
+
+Users should know why the platform suggests a particular action.
+
+## Transparency
+
+DGTC should communicate openly about:
+
+- Data
+- AI
+- Limitations
+- Decision-making
+
+Trust is built through clarity.
+
+## Continuous Learning
+
+Learning is never complete.
+
+The platform should continuously evolve while helping users become increasingly independent.
 
 ---
 
 # Brand Personality
 
-DGTC är:
+DGTC should consistently feel:
 
-- pedagogisk
-- lugn
-- positiv
-- nyfiken
-- trovärdig
-- mänsklig
-- evidensinformerad
-- transparent
+- Educational
+- Calm
+- Positive
+- Curious
+- Trustworthy
+- Human
+- Evidence-informed
+- Transparent
 
-DGTC är inte:
+DGTC should never feel:
 
-- arrogant
-- dömande
-- sensationsdriven
-- elitistisk
-- stressande
+- Arrogant
+- Judgmental
+- Sensational
+- Elitist
+- Stressful
+
+Every interaction should reinforce psychological safety and confidence.
 
 ---
 
 # Tone of Voice
 
-Vi inspirerar.
+DGTC communicates by:
 
-Vi undervisar.
+- Inspiring
+- Teaching
+- Supporting
+- Explaining
+- Simplifying without oversimplifying
 
-Vi hjälper.
+Even complex subjects should be communicated using clear and accessible language.
 
-Vi förklarar.
-
-Vi förenklar utan att förvanska.
-
-Vi använder ett enkelt språk även när ämnet är avancerat.
+The goal is understanding—not demonstrating expertise.
 
 ---
 
 # Emotional Outcome
 
-Efter varje möte med DGTC ska användaren känna:
+Every interaction with DGTC should leave users feeling:
 
-- Jag förstår mer.
-- Jag vet vad nästa steg är.
-- Jag kan utvecklas.
-- Jag äger min utveckling.
+- I understand more.
+- I know what to do next.
+- I am capable of improving.
+- I own my own development.
+
+The platform should increase confidence rather than dependence.
 
 ---
 
-# Competitive Difference
+# Competitive Position
 
-Vi konkurrerar inte genom:
+DGTC does not compete by offering:
 
-- flest funktioner
-- mest AI
-- mest statistik
-- mest skärmtid
+- The largest feature set
+- The most AI
+- The most statistics
+- The most screen time
 
-Vi konkurrerar genom:
+Instead, DGTC competes through:
 
-- bättre förståelse
-- bättre beslut
-- bättre pedagogik
-- högre förtroende
-- långsiktig utveckling
+- Better understanding
+- Better decisions
+- Better teaching
+- Greater trust
+- Sustainable long-term development
 
 ---
 
 # Elevator Pitch
 
-## 15 sekunder
+## 15 Seconds
 
-DGTC hjälper människor att utvecklas genom bättre förståelse och bättre beslut.
-
----
-
-## 30 sekunder
-
-DGTC är en plattform för lärande, prestationsutveckling och beslutsstöd.
-
-Vi använder data och AI för att hjälpa människor förstå sin utveckling, fatta bättre beslut och bli mer självständiga över tid.
+DGTC helps people improve through better understanding and better decision-making.
 
 ---
 
-## 60 sekunder
+## 30 Seconds
 
-De flesta träningsappar visar vad som redan har hänt.
+DGTC is a platform for learning, performance development, and decision support.
 
-DGTC fokuserar istället på vad användaren kan göra härnäst.
+By combining data, pedagogy, and explainable AI, DGTC helps people understand their development, make better decisions, and become increasingly independent over time.
 
-Genom att kombinera pedagogik, beslutsstöd och förklarbar AI hjälper vi människor att utvecklas långsiktigt.
+---
 
-Målet är inte att skapa beroende.
+## 60 Seconds
 
-Målet är att skapa självständiga människor.
+Most training applications focus on reporting what has already happened.
+
+DGTC focuses on helping users decide what to do next.
+
+By combining education, decision support, and explainable AI, the platform enables long-term development rather than short-term optimization.
+
+The objective is not to create dependency.
+
+The objective is to create independent learners.
 
 ---
 
 # Brand Manifesto
 
-Vi tror inte att människor utvecklas av fler grafer.
+We do not believe people grow because they see more graphs.
 
-Vi tror att människor utvecklas av bättre förståelse.
+We believe people grow because they understand more.
 
-Vi tror inte att AI ska ersätta människan.
+We do not believe AI should replace human thinking.
 
-Vi tror att AI ska hjälpa människan tänka.
+We believe AI should strengthen it.
 
-Vi tror inte att data har ett egenvärde.
+We do not believe data has value by itself.
 
-Vi tror att data har ett syfte.
+We believe data has purpose.
 
-Vi tror att framgång inte handlar om perfektion.
+Success is not about perfection.
 
-Den handlar om att bli lite bättre än igår.
+It is about becoming a little better than yesterday.
 
-Det är därför DGTC finns.
+That is why DGTC exists.
 
 ---
 
-# Versionshantering
+# Version Management
 
-Brand Platform är ett levande dokument.
+The Brand Platform is a living strategic document.
 
-Dokumentet ska granskas när:
+It should be reviewed whenever:
 
-- Foundation förändras
-- Foundation Analysis förändras
-- Business Guardrails förändras
-- Positioneringen förändras
-- Ny målgrupp prioriteras
+- The Foundation changes
+- Foundation Analysis changes
+- Business Guardrails change
+- Brand positioning changes
+- A new primary audience is introduced
 
-Större ändringar ska dokumenteras i BUSINESS_DECISION_LOG.
+Significant strategic changes should be documented in the Business Decision Log.
+
+---
+
+## Related Documents
+
+- `FOUNDATION_ANALYSIS.md`
+- `BUSINESS_GUARDRAILS.md`
+- `MESSAGING_FRAMEWORK.md`
+- `../foundation/FOUNDATION.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Business
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

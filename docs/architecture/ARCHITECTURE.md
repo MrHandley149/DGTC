@@ -1,251 +1,233 @@
 # Architecture
 
-**Produkt:** DGTC Platform
+## Purpose
 
-**Dokument:** ARCHITECTURE.md
+This document defines the high-level architecture of DGTC.
 
-**Version:** v1.1
+The architecture establishes a stable, technology-independent foundation that enables long-term evolution while keeping the product modular, maintainable, and easy to extend.
+
+It defines architectural principles, system responsibilities, logical layers, and dependency rules. Detailed models are documented separately.
+
+---
+
+## Architectural Goals
+
+DGTC should be:
+
+- Easy to learn
+- Offline First
+- Modular
+- Scalable
+- Testable
+- Maintainable
+- Extensible
+
+---
+
+## Architectural Principles
+
+### Product Before Technology
+
+Architecture follows the DGTC philosophy.
+
+Technology exists to support the product.
+
+The product must never be redesigned to accommodate technology choices.
+
+### Separation of Concerns
+
+Each module should have a single, clearly defined responsibility.
+
+A module should solve one problem well.
+
+### Modular Design
+
+Major functionality is organized into independent modules.
+
+Current modules include:
+
+- Home
+- Training Programs
+- Lucky Wheels
+- Training Sessions
+- Result Entry
+- Summary
+- Settings
+
+Modules should remain loosely coupled and communicate through well-defined interfaces.
+
+### Offline First
+
+Core functionality must operate without an internet connection.
+
+Network connectivity should only be required for optional capabilities such as:
+
+- Sharing
+- Synchronization
+- Downloading content
+- Community features
+
+### Local Data Ownership
+
+User data is stored locally by default.
+
+Cloud synchronization is considered a future capability.
+
+Local functionality must never depend on server availability.
+
+### Scalability
+
+The architecture should support future capabilities without requiring fundamental redesign of existing modules.
+
+Potential future extensions include:
+
+- AI
+- Analytics
+- Coaching
+- Clubs
+- Sponsors
+- Smartwatch support
+- Web application
+- Additional sports
+
+---
+
+## System Layers
+
+The system is organized into four logical layers.
+
+### Presentation
+
+Responsible for the user interface and user interaction.
+
+### Application
+
+Coordinates workflows and application services.
+
+### Domain
+
+Contains business rules, domain concepts, and core application logic.
+
+This layer is independent of UI and infrastructure concerns.
+
+### Infrastructure
+
+Provides technical services including:
+
+- Local storage
+- Cloud services
+- External integrations
+- File handling
+- Synchronization
+
+---
+
+## Module Architecture
+
+The MVP consists of the following primary modules:
+
+- Home
+- Training Programs
+- Lucky Wheels
+- Training Session
+- Result Entry
+- Summary
+- Settings
+
+Each module has a clearly defined responsibility and communicates through stable interfaces.
+
+---
+
+## Dependency Rules
+
+Dependencies always point inward.
+
+```text
+Presentation
+        ↓
+Application
+        ↓
+Domain
+        ↑
+Infrastructure
+```
+
+- Presentation depends on Application.
+- Application depends on Domain.
+- Infrastructure implements services used by Application and Domain.
+- Domain must not depend on Presentation or Infrastructure.
+
+---
+
+## Typical Data Flow
+
+A typical training session follows this flow:
+
+```text
+Start
+    ↓
+Training Program
+    ↓
+Training Scenario
+    ↓
+Lucky Wheels
+    ↓
+Training Session
+    ↓
+Result Entry
+    ↓
+Summary
+    ↓
+Local Storage
+```
+
+---
+
+## Error Handling
+
+Errors should be handled as close to their source as possible.
+
+Failure within one module should not cause the entire application to fail.
+
+Preserving user data is always the highest priority.
+
+---
+
+## Future Expansion
+
+The architecture is designed to support future modules without changing the architectural foundation.
+
+Examples include:
+
+- AI
+- Analytics
+- Coach
+- Clubs
+- Sponsors
+- Community
+- Smartwatch
+- Import / Export
+- Cloud Sync
+
+---
+
+## Related Documents
+
+- `SYSTEM_OVERVIEW.md`
+- `DOMAIN_MODEL.md`
+- `DATA_MODEL.md`
+- `STATE_MODEL.md`
+- `../foundation/05_Decision_Framework.md`
+- `../product/PRD.md`
+
+---
 
 **Status:** Approved
----
 
-# Syfte
+**Owner:** Architecture
 
-Detta dokument beskriver den övergripande arkitekturen för DGTC Platform.
+**Last Updated:** 2026-07-30
 
-Arkitekturen ska skapa en stabil grund för långsiktig utveckling där nya funktioner kan läggas till utan att befintlig funktionalitet behöver byggas om.
+### Revision History
 
-Arkitekturen är teknikoberoende och beskriver principer, ansvar och struktur.
-
----
-
-# Arkitekturmål
-
-DGTC ska vara:
-
-* Lätt att komma igång med.
-* Offline First.
-* Modulär.
-* Skalbar.
-* Testbar.
-* Enkel att underhålla.
-* Förberedd för framtida funktioner.
----
-
-# Arkitekturprinciper
-
-## Filosofin styr arkitekturen
-
-DGTC POS är grunden för alla arkitekturbeslut.
-
-Teknik väljs för att stödja produkten.
-
-Produkten förändras inte för att passa tekniken.
-
----
-
-## Separation of Concerns
-
-Varje del av systemet ska ha ett tydligt ansvar.
-
-En modul ska lösa ett problem.
-
-Inte flera.
-
----
-
-## Modularitet
-
-Varje större funktion utvecklas som en egen modul.
-
-Exempel:
-
-* Training Programs
-* Lucky Wheels
-* Training Sessions
-* Result Entry
-* Summary
-* Settings
-
-Moduler ska ha låg koppling till varandra och tydliga gränssnitt.
-
----
-
-## Offline First
-
-All kärnfunktionalitet ska fungera utan internetuppkoppling.
-
-Internet används endast för funktioner som uttryckligen kräver det, exempelvis:
-
-* delning,
-* synkronisering,
-* nedladdning av träningsprogram,
-* communityfunktioner.
-
----
-
-## Lokal data
-
-All användardata lagras lokalt.
-
-Molnsynkronisering är en framtida funktion.
-
-Lokal funktionalitet ska aldrig vara beroende av en server.
-
----
-
-## Skalbarhet
-
-Arkitekturen ska stödja framtida funktioner utan att befintliga moduler behöver skrivas om.
-
-Exempel:
-
-* AI
-* klubbar
-* coachfunktioner
-* sponsorer
-* smartklockor
-* webbversion
-* flera sporter
-
----
-
-# Systemlager
-
-DGTC delas upp i fyra logiska lager.
-
-## Presentation
-
-Ansvarar för användargränssnitt och interaktion.
-
----
-
-## Application
-
-Ansvarar för arbetsflöden och samordning mellan funktioner.
-
----
-
-## Domain
-
-Ansvarar för affärslogik och domänobjekt.
-
-Detta lager innehåller regler och modeller som beskriver hur DGTC fungerar.
-
----
-
-## Infrastructure
-
-Ansvarar för:
-
-* lokal lagring,
-* framtida molntjänster,
-* externa integrationer,
-* filhantering,
-* synkronisering.
-
----
-
-# Moduler
-
-MVP består av följande huvudmoduler:
-
-* Home
-* Training Programs
-* Lucky Wheels
-* Training Session
-* Result Entry
-* Summary
-* Settings
-
-Varje modul har ett tydligt ansvar och kommunicerar genom definierade gränssnitt.
-
----
-
-# Beroenderiktning
-
-Beroenden ska alltid peka inåt.
-
-Presentation får använda Application.
-
-Application får använda Domain.
-
-Infrastructure implementerar tjänster som Domain och Application behöver.
-
-Domain ska inte vara beroende av Presentation eller Infrastructure.
-
----
-
-# Dataflöde
-
-Ett normalt träningspass följer detta flöde:
-
-Start
-
-↓
-
-Training Program
-
-↓
-
-Training Scenario
-
-↓
-
-Lucky Wheels
-
-↓
-
-Training Session
-
-↓
-
-Result Entry
-
-↓
-
-Summary
-
-↓
-
-Lokal lagring
-
----
-
-# Felhantering
-
-Fel ska hanteras så nära källan som möjligt.
-
-Ett fel i en modul ska inte orsaka att hela applikationen slutar fungera.
-
-Systemet ska alltid sträva efter att bevara användarens data.
-
----
-
-# Framtida utbyggnad
-
-Arkitekturen ska stödja framtida moduler, exempelvis:
-
-* AI
-* Analytics
-* Coach
-* Clubs
-* Sponsors
-* Community
-* Smartwatch
-* Import/Export
-* Cloud Sync
-
-Dessa moduler ska kunna läggas till utan att förändra kärnarkitekturen.
-
----
-
-# Sammanfattning
-
-DGTC:s arkitektur bygger på en enkel princip:
-
-Små moduler med tydligt ansvar.
-
-Kärnfunktionalitet fungerar alltid lokalt.
-
-Produkten ska kunna växa under många år utan att förlora enkelhet, stabilitet eller användarfokus.
+- **2026-07-30** – Repository documentation consolidated.

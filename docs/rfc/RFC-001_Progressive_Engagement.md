@@ -1,212 +1,197 @@
-# RFC-001 – Progressive Engagement
+# RFC-001 — Progressive Engagement
 
-**ID:** RFC-001
+## Metadata
 
-**Titel:** Progressive Engagement
-
-**Status:** Approved
-
-**Datum:** 2026-07-20
-
-**Beslutsägare:** Product Owner
-
----
-
-# Syfte
-
-Införa **Progressive Engagement** som en grundläggande produktprincip för The Training Companion.
-
-Principen ska styra hur användare introduceras till produkten och hur de stegvis utvecklas från spontan träning till medveten prestationsutveckling.
+| Property | Value |
+|----------|-------|
+| RFC | RFC-001 |
+| Status | Approved |
+| Decision Owner | Product Owner |
+| Approved | 2026-07-20 |
 
 ---
 
-# Bakgrund
+## Purpose
 
-Många träningsappar har ett stort bortfall redan efter första användningen.
+Establish **Progressive Engagement** as a fundamental product principle for DGTC.
 
-Vanliga orsaker är:
-
-* för hög starttröskel,
-* för många val,
-* krav på konto eller konfigurering,
-* för mycket information innan användaren upplever värde,
-* att träningen upplevs som administration istället för glädje.
-
-Många appar är duktiga på att registrera träning.
-
-Få gör själva träningen roligare.
-
-DGTC ska därför ge användaren en positiv upplevelse redan från första knapptrycket och därefter stegvis introducera fler funktioner i takt med att användaren vill utvecklas.
+The principle governs how users are introduced to the product and how they naturally progress from spontaneous practice toward deliberate performance development.
 
 ---
 
-# Problem
+## Background
 
-Om användaren möts av hela systemets komplexitet direkt finns en risk att:
+Many training applications experience significant user drop-off after the first session due to:
 
-* appen upplevs som komplicerad,
-* träningen aldrig påbörjas,
-* användaren lämnar appen innan produktens styrkor upptäcks.
+- High initial complexity
+- Too many choices
+- Mandatory account creation or configuration
+- Information overload before value is experienced
+- Training feeling like administration rather than enjoyment
 
-Produkten behöver därför skapa värde omedelbart, samtidigt som den erbjuder ett tydligt utvecklingsdjup.
+Many applications are effective at recording training.
 
----
+Few make training itself more enjoyable.
 
-# Beslut
-
-DGTC ska utvecklas enligt principen **Progressive Engagement**.
-
-Varje nivå i produkten ska ge ett tydligt eget värde.
-
-Användaren ska själv vilja ta nästa steg.
-
-Ingen funktion ska introduceras innan den skapar ett tydligt mervärde.
+DGTC should therefore deliver value immediately while introducing additional capabilities only when users are ready for them.
 
 ---
 
-# Produktprincip
+## Problem Statement
 
-> **Varje steg i DGTC ska ge användaren tillräckligt värde för att naturligt vilja ta nästa steg – aldrig genom tvång, alltid genom nytta, glädje och utveckling.**
+Presenting the full system immediately increases the risk that:
 
----
+- the application feels complicated,
+- users never begin training,
+- users leave before discovering the product's strengths.
 
-# Värdehierarki
-
-DGTC:s värde byggs stegvis.
-
-## 1. Glädje
-
-Användaren ska vilja öppna appen därför att träningen blir roligare.
+The product must therefore provide immediate value while supporting long-term growth.
 
 ---
 
-## 2. Variation
+## Decision
 
-Produkten ska hjälpa användaren att bryta invanda träningsmönster och upptäcka nya utmaningar.
+DGTC shall be designed according to the principle of **Progressive Engagement**.
 
----
+Each level of the product must provide meaningful standalone value.
 
-## 3. Utveckling
+Users should naturally want to take the next step.
 
-När användaren fortsätter använda DGTC ska produkten bidra till ökad förståelse, bättre beslut och mer medveten träning.
-
----
-
-## 4. Prestation
-
-Förbättrad prestation är resultatet av glädje, variation och utveckling – inte produktens första löfte.
+No feature should be introduced before it provides clear additional value.
 
 ---
 
-# Produktresa
+## Product Principle
 
-DGTC ska introducera funktioner stegvis.
+> **Every step in DGTC should provide enough value that users naturally want to take the next step—never through pressure, always through usefulness, enjoyment, and development.**
 
-## Nivå 1
+---
+
+## Value Hierarchy
+
+Product value should be introduced progressively.
+
+### 1. Enjoyment
+
+Users should want to open the application because practice becomes more enjoyable.
+
+### 2. Variety
+
+The product should encourage users to break routine and discover new challenges.
+
+### 3. Development
+
+Continued use should improve understanding, decision-making, and deliberate practice.
+
+### 4. Performance
+
+Improved performance is the result of enjoyment, variety, and development—not the product's initial promise.
+
+---
+
+## Product Journey
+
+### Level 1
 
 Quick Challenge
 
-Öppna appen.
+Open the app.
 
-Tryck.
+Press.
 
-Kasta.
+Throw.
 
----
+### Level 2
 
-## Nivå 2
+Explore Lucky Wheels.
 
-Utforska Lucky Wheels.
+### Level 3
 
----
+Create and customize Lucky Wheels.
 
-## Nivå 3
+### Level 4
 
-Skapa och anpassa egna Lucky Wheels.
+Use Training Programs.
 
----
+### Level 5
 
-## Nivå 4
+Practice with realistic Training Scenarios.
 
-Använd Training Programs.
+### Level 6
 
----
-
-## Nivå 5
-
-Träna med realistiska Training Scenarios.
+Document, reflect, and improve through future analysis and decision support.
 
 ---
 
-## Nivå 6
+## Consequences
 
-Dokumentera, reflektera och utvecklas genom framtida analys och beslutsstöd.
+This decision establishes:
 
----
-
-# Konsekvenser
-
-Quick Challenge blir produktens primära ingång.
-
-Training Programs och Training Scenarios blir produktens naturliga fördjupning.
-
-Navigation, arkitektur och framtida funktioner ska stödja denna resa.
-
-Alla nya funktioner ska utvärderas utifrån om de:
-
-* ökar glädjen,
-* skapar variation,
-* stödjer utveckling,
-* förbättrar prestation.
+- Quick Challenge as the primary entry point.
+- Training Programs and Training Scenarios as the natural progression.
+- Navigation and architecture should support this journey.
+- Future features should be evaluated according to whether they:
+  - increase enjoyment,
+  - create variety,
+  - support development,
+  - improve performance.
 
 ---
 
-# Påverkade dokument
+## Affected Documents
 
-Detta beslut påverkar följande dokument:
-
-* Vision & Principles
-* Decision Framework
-* PRD
-* MVP
-* Navigation
-* Architecture
-* System Overview
-* Decision Log
-* MASTER_INDEX
+- `../foundation/04_Vision_and_Principles.md`
+- `../foundation/05_Decision_Framework.md`
+- `../product/PRD.md`
+- `../product/MVP.md`
+- `../architecture/NAVIGATION.md`
+- `../architecture/ARCHITECTURE.md`
+- `../architecture/SYSTEM_OVERVIEW.md`
+- `../foundation/08_Decision_Log.md`
+- `../MASTER_INDEX.md`
 
 ---
 
-# Påverkar inte
+## Not Affected
 
-Detta beslut förändrar inte:
+This RFC does not change:
 
-* Domain Model,
-* State Model,
-* Data Model.
+- `../architecture/DOMAIN_MODEL.md`
+- `../architecture/STATE_MODEL.md`
+- `../architecture/DATA_MODEL.md`
 
-Dessa stödjer redan den beslutade produktresan.
-
----
-
-# Motivation
-
-DGTC ska inte försöka maximera skärmtid.
-
-DGTC ska maximera glädjen i att träna och värdet av varje träningspass.
-
-Målet är att användaren ska känna:
-
-> **"Jag ska ändå ut och kasta lite. Jag tar med DGTC."**
-
-När den känslan uppstår har DGTC blivit användarens naturliga träningspartner.
+These documents already support the defined product journey.
 
 ---
 
-# Beslut
+## Motivation
 
-RFC-001 är godkänd.
+DGTC should not maximize screen time.
 
-Progressive Engagement blir från och med detta dokument en styrande princip för utvecklingen av The Training Companion.
+DGTC should maximize the enjoyment of practice and the value of every training session.
 
-Alla framtida produkt-, design- och arkitekturbeslut ska utvärderas mot denna princip.
+The desired user reaction is:
+
+> **"I'm going out to throw anyway. I'll bring DGTC."**
+
+When that feeling exists, DGTC has become the user's natural training companion.
+
+---
+
+## Decision Summary
+
+RFC-001 is approved.
+
+Progressive Engagement becomes a governing principle for DGTC product, UX, and architecture decisions.
+
+---
+
+**Status:** Approved
+
+**Owner:** Product Owner
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

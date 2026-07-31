@@ -1,194 +1,267 @@
 # DGTC Business Guardrails
 
-**Status:** v0.1 Draft
+**Version:** 1.0
 
-**Dokumenttyp:** Governance Document
+**Status:** Draft
 
----
-
-# Syfte
-
-Business Guardrails definierar de principer som skyddar DGTC:s varumärke, trovärdighet och långsiktiga riktning.
-
-Guardrails fungerar som ett beslutsfilter för allt arbete inom DGTC Business Operating System.
-
-Alla Business-dokument ska följa dessa principer.
+**Document Type:** Governance Document
 
 ---
 
-# Relation till övriga dokument
+# Purpose
 
-Foundation beskriver produktens filosofi.
+The Business Guardrails define the strategic principles that protect the long-term identity, credibility, and direction of DGTC.
 
-Foundation Analysis destillerar Foundation.
+They serve as the decision framework for every activity within the Business Operating System (BOS).
 
-Business Guardrails definierar vilka principer som aldrig får kompromissas bort när Foundation omsätts till affär, kommunikation och marknad.
-
-Brand Platform, Messaging Framework och övriga Business-dokument ska alltid följa Business Guardrails.
+Every Business document should comply with these guardrails.
 
 ---
 
-# Två typer av Guardrails
+# Relationship to Other Documents
 
-Business Operating System använder två nivåer av Guardrails.
+The Business Operating System follows a hierarchical structure.
+
+```text
+Foundation
+        │
+        ▼
+Foundation Analysis
+        │
+        ▼
+Business Guardrails
+        │
+        ▼
+Brand Platform
+        │
+        ▼
+Messaging Framework
+```
+
+Each layer depends on the previous one.
+
+The Foundation defines product philosophy.
+
+Foundation Analysis translates philosophy into strategic insight.
+
+Business Guardrails define the principles that may never be compromised when translating the Foundation into branding, communication, partnerships, and commercial strategy.
+
+All Business documentation should remain consistent with these guardrails.
+
+---
+
+# Types of Guardrails
+
+The Business Operating System uses two levels of governance.
 
 ## Hard Guardrails
 
-Absoluta regler.
+Hard Guardrails define non-negotiable strategic principles.
 
-De får inte brytas utan ett uttryckligt strategiskt beslut.
+Breaking a Hard Guardrail requires an explicit strategic decision.
 
-Ett avsteg ska alltid dokumenteras i BUSINESS_DECISION_LOG.
-
----
+Every exception must be documented in the Business Decision Log.
 
 ## Soft Guardrails
 
-Riktlinjer.
+Soft Guardrails describe preferred behaviors.
 
-De beskriver hur DGTC normalt arbetar och kommunicerar.
+They establish the normal way DGTC communicates and operates.
 
-Undantag är möjliga men ska kunna motiveras.
+Exceptions are acceptable when supported by clear strategic reasoning.
 
 ---
 
 # Hard Guardrails
 
-## Foundation har alltid företräde
+## Foundation Always Comes First
 
-Business får aldrig skapa en egen produktfilosofi.
+Business strategy must never establish its own product philosophy.
 
-Vid konflikt gäller alltid Foundation.
-
----
-
-## Sanningen före försäljning
-
-Vi kommunicerar det produkten är.
-
-Inte det vi hoppas att den ska bli.
-
-Vi lovar aldrig funktioner som inte finns beslutade.
+Whenever conflict exists, the Foundation always takes precedence.
 
 ---
 
-## Förtroende före konvertering
+## Truth Before Marketing
 
-Vi väljer alltid långsiktigt förtroende framför kortsiktig försäljning.
+DGTC communicates what the product is.
 
----
+Not what it may eventually become.
 
-## Användaren före affären
-
-Om ett affärsbeslut försämrar användarens utveckling ska beslutet omprövas.
+Features that have not been approved should never be presented as existing capabilities.
 
 ---
 
-## Transparens före inlåsning
+## Trust Before Conversion
 
-Vi kommunicerar öppet.
+Long-term trust is always more valuable than short-term sales.
 
-Vi använder aldrig inlåsning som affärsstrategi.
-
----
-
-## Etik före tillväxt
-
-Vi använder aldrig manipulation, rädsla, skuld eller skam som primära försäljningsmetoder.
+Commercial decisions should strengthen credibility rather than maximize immediate conversion.
 
 ---
 
-## En sanning
+## Users Before Business
 
-Alla officiella budskap ska kunna härledas till Foundation.
+If a commercial decision reduces user development, that decision should be reconsidered.
+
+Long-term user success remains the primary objective.
 
 ---
 
+## Transparency Before Lock-In
+
+DGTC communicates openly.
+
+Vendor lock-in is never used as a competitive strategy.
+
+Users should retain ownership of their development.
+
+---
+
+## Ethics Before Growth
+
+DGTC does not rely on manipulation.
+
+Fear, guilt, shame, or psychological pressure should never become primary marketing mechanisms.
+
+---
+
+## One Source of Truth
+
+Every official business message should be traceable back to the Foundation.
+
+Business communication should never create alternative interpretations of the product philosophy.
 # Soft Guardrails
 
-## Utbilda före att sälja
+## Educate Before Selling
 
-Vi hjälper människor att förstå innan vi försöker övertyga.
+Help people understand before attempting to persuade them.
 
----
+Education builds trust.
 
-## Förklara före att imponera
-
-Vi använder ett språk som gör komplexa ämnen begripliga.
+Trust creates sustainable growth.
 
 ---
 
-## Positionering före konkurrenter
+## Explain Before Impressing
 
-Vi bygger DGTC utifrån vår identitet.
+Complex ideas should be made understandable.
 
-Inte utifrån konkurrenternas roadmap.
-
----
-
-## Långsiktighet före trender
-
-Vi följer inte trender enbart för att de är populära.
+Clear communication is more valuable than sounding sophisticated.
 
 ---
 
-## Enkelhet före komplexitet
+## Identity Before Competition
 
-Vi väljer den enklaste lösningen som uppfyller användarens behov.
+DGTC should evolve according to its own philosophy.
 
----
-
-## Konsistens före kreativitet
-
-Kreativitet är värdefull.
-
-Konsekvent identitet är viktigare.
+Competitors may inspire observation but should never dictate strategy.
 
 ---
 
-## Människan före algoritmen
+## Long-Term Thinking Before Trends
 
-Vi optimerar för användarens utveckling.
+Trends may be evaluated but should never determine product direction.
 
-Inte för skärmtid.
-
-Inte för klick.
-
-Inte för engagemang.
+Long-term consistency is more valuable than temporary relevance.
 
 ---
 
-# Beslutsfilter
+## Simplicity Before Complexity
 
-Inför större affärsbeslut ska följande frågor besvaras.
+Choose the simplest solution that satisfies user needs.
 
-- Är detta förenligt med Foundation?
-- Är detta förenligt med Brand Platform?
-- Hjälper detta användaren att utvecklas?
-- Bygger detta långsiktigt förtroende?
-- Är detta transparent?
-- Skulle vi fatta samma beslut om ingen konkurrent gjorde det?
-- Kommer vi att vara stolta över detta beslut om fem år?
-
-Om svaret på någon av de fyra första frågorna är **nej** ska beslutet omprövas.
+Complexity should only be introduced when it creates meaningful value.
 
 ---
 
-# Avvikelser
+## Consistency Before Creativity
 
-Avsteg från Hard Guardrails ska:
+Creativity is encouraged.
 
-- dokumenteras,
-- motiveras,
-- godkännas,
-- registreras i BUSINESS_DECISION_LOG.
+Consistency is essential.
+
+Every communication should reinforce the same long-term identity.
 
 ---
 
-# Versionshantering
+## Humans Before Algorithms
 
-Business Guardrails är ett styrande dokument.
+Optimize for human development.
 
-Alla större ändringar ska dokumenteras i BUSINESS_DECISION_LOG.
+Not for:
 
-Brand Platform och övriga Business-dokument ska granskas om Business Guardrails förändras.
+- Screen time
+- Clicks
+- Addictive engagement
+- Vanity metrics
+
+Technology exists to support people—not the other way around.
+
+---
+
+# Decision Filter
+
+Before making significant business decisions, the following questions should be answered.
+
+- Does this align with the Foundation?
+- Does this align with the Brand Platform?
+- Does this help users develop?
+- Does this strengthen long-term trust?
+- Is this transparent?
+- Would we make the same decision if no competitor existed?
+- Will we still be proud of this decision five years from now?
+
+If the answer to any of the first four questions is **No**, the decision should be reconsidered.
+
+---
+
+# Exceptions
+
+Exceptions to Hard Guardrails require:
+
+- Documentation
+- Clear rationale
+- Explicit approval
+- Registration in the Business Decision Log
+
+Hard Guardrails are intended to be exceptional rather than flexible.
+
+---
+
+# Version Management
+
+Business Guardrails is a governance document.
+
+Changes should be made carefully because they affect every Business document.
+
+Whenever the Guardrails change, the following documents should be reviewed:
+
+- Brand Platform
+- Messaging Framework
+- Foundation Analysis
+- Other Business Operating System documents
+
+Major strategic changes should be documented in the Business Decision Log.
+
+---
+
+## Related Documents
+
+- `FOUNDATION_ANALYSIS.md`
+- `BRAND_PLATFORM.md`
+- `MESSAGING_FRAMEWORK.md`
+- `BUSINESS_DECISION_LOG.md`
+- `../foundation/FOUNDATION.md`
+
+---
+
+**Status:** Draft
+
+**Owner:** Business
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.

@@ -1,207 +1,203 @@
 # DGTC Foundation Analysis
 
-**Status:** v1.1 Approved
+**Version:** 2.0
 
-**Dokumenttyp:** Business Foundation
+**Status:** Approved
 
----
-
-# Syfte
-
-Detta dokument sammanfattar DGTC Foundation ur ett affärs-, varumärkes- och kommunikationsperspektiv.
-
-Syftet är att skapa en gemensam förståelse för de budskap som definierar DGTC som produkt, plattform och varumärke.
-
-Dokumentet introducerar inte nya projektbeslut.
-
-Alla slutsatser ska kunna härledas till Foundation.
+**Document Type:** Business Foundation
 
 ---
 
-# Omfattning
+# Purpose
 
-Foundation Analysis används som grund för:
+Foundation Analysis translates the DGTC Foundation into a business, brand, and communication perspective.
+
+Its purpose is to create a shared understanding of the principles that define DGTC as a product, platform, and brand.
+
+This document does **not** introduce new strategic decisions.
+
+Every conclusion should be directly traceable to the Foundation.
+
+---
+
+# Scope
+
+Foundation Analysis serves as the strategic basis for:
 
 - Brand Platform
-- Positionering
-- Kommunikationsstrategi
-- Webbplats
-- App Store
-- Google Play
-- Sponsorpresentationer
-- Investor Deck
-- Pressmaterial
-- Sociala medier
-- Onboarding
-- Marknadsföringsmaterial
+- Positioning
+- Communication strategy
+- Website content
+- App Store presentation
+- Google Play listing
+- Sponsor presentations
+- Investor materials
+- Press resources
+- Social media
+- User onboarding
+- Marketing assets
 
-Detta dokument beskriver **vad Foundation betyder för marknaden**, inte hur produkten implementeras.
+This document explains **what the Foundation means for the market**, not how the product is implemented.
 
 ---
 
-# Relation till övriga dokument
+# Relationship to Other Documents
 
-Foundation är projektets officiella filosofi.
+The Business Operating System follows a structured hierarchy.
 
-Foundation Analysis är en destillering av Foundation.
-
-Brand Platform bygger på Foundation Analysis.
-
-All extern kommunikation ska utgå från Brand Platform.
-
-Arbetsordningen är därför:
-
+```text
 Foundation
-
-↓
-
+      │
+      ▼
 Foundation Analysis
-
-↓
-
+      │
+      ▼
 Brand Platform
+      │
+      ▼
+External Communication
+```
 
-↓
+The Foundation defines the philosophy.
 
-Extern kommunikation
+Foundation Analysis interprets that philosophy from a strategic business perspective.
 
----
+The Brand Platform translates those insights into communication.
 
-# Arbetsregler
-
-När detta dokument uppdateras gäller följande:
-
-- Endast Foundation får användas som källa.
-- Alla slutsatser ska kunna spåras till Foundation.
-- Egna tolkningar ska tydligt markeras.
-- Rekommendationer får inte presenteras som projektbeslut.
-- Om Foundation ändras ska detta dokument granskas.
+Every external message should ultimately be traceable back to the Foundation.
 
 ---
 
-# Analysmetod
+# Working Principles
 
-Varje slutsats redovisas enligt följande struktur.
+Whenever this document is updated, the following rules apply:
 
-## Källa
-
-Vilka Foundation-dokument stöder slutsatsen.
-
-## Typ
-
-En av:
-
-- Direkt citat
-- Sammanfattning
-- Rekommendation
-
-## Budskap
-
-Den viktigaste slutsatsen.
+- Only the Foundation may be used as the primary source.
+- Every conclusion should be traceable to the Foundation.
+- Interpretations should be clearly identified.
+- Recommendations should never be presented as established project decisions.
+- Whenever the Foundation changes, this document should be reviewed.
 
 ---
 
-# Foundationens viktigaste budskap
+# Analysis Method
+
+Every conclusion follows a consistent structure.
+
+## Source
+
+The Foundation documents supporting the conclusion.
+
+## Classification
+
+Each conclusion is classified as one of the following:
+
+- Direct quotation
+- Summary
+- Recommendation
+
+## Core Message
+
+The most important strategic conclusion derived from the Foundation.
 
 ---
 
-## 1. DGTC finns för att hjälpa människor att utvecklas
+# Core Messages of the Foundation
 
-### Källa
+## 1. DGTC Exists to Help People Grow
+
+### Source
 
 - DGTC Compass
 - Problem Statement
 - Vision & Principles
 - DGTC DNA
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-DGTC:s existensberättigande är inte discgolf, statistik eller AI.
+DGTC does not exist because of disc golf, statistics, or artificial intelligence.
 
-Produkten finns för att hjälpa människor att utvecklas genom bättre förståelse, bättre beslut och meningsfull träning.
+Its purpose is to help people grow through better understanding, better decisions, and meaningful practice.
 
-Discgolf är den första tillämpningen.
+Disc golf is the first application.
 
-Inte slutmålet.
+It is not the final destination.
 
 ---
 
-## 2. Användarens utveckling är det högsta beslutskriteriet
+## 2. User Development Is the Highest Decision Criterion
 
-### Källa
+### Source
 
 - DGTC Compass
 - Vision & Principles
 - Decision Framework
 - DGTC DNA
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Den fråga som återkommer oftast i Foundation är:
+One question appears repeatedly throughout the Foundation:
 
-"Hjälper detta användaren att utvecklas?"
+> **"Does this help the user grow?"**
 
-Den fungerar som projektets nordstjärna.
+This question functions as the project's North Star.
 
 ---
 
-## 3. Beslut är viktigare än statistik
+## 3. Decisions Matter More Than Statistics
 
-### Källa
+### Source
 
 - Problem Statement
 - Performance Model
 - AIE Philosophy
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Statistik beskriver det förflutna.
+Statistics describe the past.
 
-Beslut påverkar framtiden.
+Decisions shape the future.
 
-DGTC bygger därför beslutsstöd snarare än statistik.
+DGTC therefore focuses on decision support rather than statistical reporting.
 
 ---
 
-## 4. AI ska coacha – aldrig styra
+## 4. AI Should Coach—Never Control
 
-### Källa
+### Source
 
 - AIE Philosophy
 - Decision Framework
 - DGTC DNA
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-AI ska observera.
+Artificial intelligence should:
 
-Förstå.
+- Observe
+- Understand
+- Recommend
 
-Rekommendera.
+It should never replace human judgment.
+## 5. Positive First Shapes the Entire Platform
 
-Aldrig ta över användarens omdöme.
-
----
-
-## 5. Positive First genomsyrar hela plattformen
-
-### Källa
+### Source
 
 - Vision & Principles
 - Learning Building Blocks
@@ -209,274 +205,300 @@ Aldrig ta över användarens omdöme.
 - UX Principles
 - AIE Philosophy
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Feedback ska bygga självförtroende före den utmanar.
+Feedback should build confidence before introducing challenge.
 
-Misstag är information.
+Mistakes are information.
 
-Inte identitet.
+They are never identity.
 
 ---
 
-## 6. Filosofin styr tekniken
+## 6. Philosophy Directs Technology
 
-### Källa
+### Source
 
 - Vision & Principles
 - Decision Framework
 - Decision Log
 - DGTC DNA
 
-### Typ
+### Classification
 
-Direkt budskap från Foundation
+Direct Foundation Principle
 
-### Budskap
+### Core Message
 
-Kod får aldrig styra filosofin.
+Technology must never dictate philosophy.
 
-Filosofin ska styra koden.
+Instead:
+
+> **The philosophy guides the code.**
+
+Technical implementation should always serve the project's values rather than redefine them.
 
 ---
 
-## 7. Förtroende är viktigare än inlåsning
+## 7. Trust Is More Important Than Lock-In
 
-### Källa
+### Source
 
 - Vision & Principles
 - Decision Log
 - DGTC DNA
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Användaren äger sin data.
+Users own their data.
 
-DGTC bygger relation genom värde.
+DGTC builds relationships by creating value—not by creating dependency.
 
-Inte genom inlåsning.
+Long-term trust is considered a stronger competitive advantage than artificial retention mechanisms.
 
 ---
 
-## 8. Lärande är en spiral
+## 8. Learning Is a Continuous Spiral
 
-### Källa
+### Source
 
 - Learning Building Blocks
 - Performance Model
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Utveckling sker genom:
+Learning follows an iterative cycle.
 
-Nyfikenhet
-
-↓
-
-Handling
-
-↓
-
-Erfarenhet
-
-↓
-
+```text
+Curiosity
+      ↓
+Action
+      ↓
+Experience
+      ↓
 Feedback
+      ↓
+Reflection
+      ↓
+Understanding
+      ↓
+Decision
+      ↓
+New Action
+```
 
-↓
-
-Reflektion
-
-↓
-
-Förståelse
-
-↓
-
-Beslut
-
-↓
-
-Ny handling
+Growth is achieved through continuous repetition of this process.
 
 ---
 
-## 9. Enkelhet är en konkurrensfördel
+## 9. Simplicity Creates Competitive Advantage
 
-### Källa
+### Source
 
 - UX Principles
 - Decision Framework
 - Decision Log
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Komplexitet ska förtjänas.
+Complexity should be earned.
 
-Produkten ska göra det enkelt att börja.
+The product should be easy to begin using while remaining capable of growing alongside the user.
 
-Sedan växa tillsammans med användaren.
+Accessibility is considered a competitive strength rather than a limitation.
 
 ---
 
-## 10. DGTC är en plattform
+## 10. DGTC Is a Platform
 
-### Källa
+### Source
 
 - Problem Statement
 - Vision & Principles
 - DGTC DNA
 - Glossary
 
-### Typ
+### Classification
 
-Sammanfattning
+Summary
 
-### Budskap
+### Core Message
 
-Discgolf är den första tillämpningen.
+Disc golf is only the first implementation.
 
-Den verkliga produkten är en plattform för lärande, prestationsutveckling och beslutsstöd.
+The real product is a platform for learning, performance development, and decision support.
 
----
-
-# Foundationens röda tråd
-
-## Typ
-
-Sammanfattning
-
-## Beskrivning
-
-Foundation beskriver konsekvent DGTC som ett system för mänsklig utveckling.
-
-Tekniken är ett verktyg.
-
-AI är ett verktyg.
-
-Statistik är ett verktyg.
-
-Produkten finns för att hjälpa människor förstå mer, fatta bättre beslut och utvecklas över tid.
-
-Tre teman genomsyrar samtliga dokument.
-
-## Människan före tekniken
-
-Teknik ska stödja människan.
-
-Aldrig styra henne.
-
-## Förståelse före statistik
-
-Data har värde först när den leder till förståelse.
-
-## Självständighet före beroende
-
-En framgångsrik användare behöver med tiden DGTC mindre.
-
-Inte mer.
+The underlying philosophy is intended to extend beyond any single sport or domain.
 
 ---
 
-# Varumärkeskonsekvenser
+# The Common Thread
 
-Foundation innebär att DGTC:s varumärke ska uppfattas som:
+### Classification
 
-- Trovärdigt
-- Mänskligt
-- Evidensinformerat
-- Positivt
-- Pedagogiskt
+Summary
+
+### Description
+
+Across every Foundation document, DGTC is consistently presented as a system for human development.
+
+Technology is a tool.
+
+Artificial intelligence is a tool.
+
+Statistics are tools.
+
+The product exists to help people understand more, make better decisions, and improve over time.
+
+Three themes appear consistently throughout the Foundation.
+
+## People Before Technology
+
+Technology exists to support people.
+
+It should never replace them.
+
+## Understanding Before Statistics
+
+Data becomes valuable only when it creates understanding.
+
+Information alone is insufficient.
+
+## Independence Before Dependence
+
+Successful users should become increasingly self-sufficient.
+
+Over time, they should need DGTC less—not more.
+# Brand Implications
+
+The Foundation indicates that the DGTC brand should be perceived as:
+
+- Credible
+- Human
+- Evidence-informed
+- Positive
+- Educational
 - Transparent
-- Långsiktigt
-- Hjälpsamt
+- Long-term oriented
+- Helpful
+
+These characteristics should remain consistent across every public touchpoint.
 
 ---
 
-# Affärskonsekvenser
+# Business Implications
 
-Foundation innebär att DGTC ska konkurrera genom:
+The Foundation suggests that DGTC should compete by delivering:
 
-- bättre beslutsstöd
-- bättre förståelse
-- bättre lärande
-- högre användarförtroende
-- tydlig pedagogik
-- öppen data
-- transparent AI
+- Better decision support
+- Better understanding
+- Better learning experiences
+- Greater user trust
+- Clear educational value
+- Open data
+- Transparent artificial intelligence
 
-Inte genom flest funktioner.
+DGTC should **not** compete by offering:
 
-Inte genom mest statistik.
+- The largest feature set
+- The most statistics
+- Artificial dependency
+- User lock-in
 
-Inte genom att skapa beroende.
-
----
-
-# Kommunikationsprinciper
-
-All kommunikation ska:
-
-- börja med användarens utveckling
-- vara positiv
-- vara pedagogisk
-- bygga förtroende
-- vara transparent
-- visa hur DGTC hjälper användaren att fatta bättre beslut
+Competitive advantage comes from improving people—not from maximizing product complexity.
 
 ---
 
-# Spårbarhet
+# Communication Principles
 
-Samtliga slutsatser i detta dokument ska kunna härledas till Foundation.
+Every external communication should:
 
-Om Foundation ändras ska Foundation Analysis granskas innan:
+- Begin with the user's development
+- Maintain a positive tone
+- Teach before attempting to persuade
+- Build trust
+- Communicate transparently
+- Demonstrate how DGTC helps users make better decisions
 
-- Brand Platform uppdateras
-- ny marknadsföring produceras
-- nya säljbudskap används
-- ny positionering beslutas
-
----
-
-# Versionshantering
-
-Foundation Analysis är ett levande dokument.
-
-Dokumentet får endast uppdateras när:
-
-- Foundation har ändrats,
-- en tidigare analys visat sig felaktig,
-- eller ny Foundation lagts till.
-
-Ändringar ska dokumenteras i Business Decision Log.
+Communication should consistently reinforce the values established in the Foundation.
 
 ---
 
-# Sammanfattning
+# Traceability
 
-Foundation Analysis är länken mellan DGTC:s filosofi och dess kommersiella uttryck.
+Every conclusion contained within this document should be traceable to the Foundation.
 
-Foundation definierar varför DGTC finns.
+Whenever the Foundation changes, Foundation Analysis should be reviewed before:
 
-Foundation Analysis beskriver vad det betyder.
+- Updating the Brand Platform
+- Producing new marketing materials
+- Introducing new commercial messaging
+- Making strategic positioning decisions
 
-Brand Platform beskriver hur det kommuniceras.
+Traceability preserves consistency throughout the Business Operating System.
 
-All extern kommunikation ska kunna spåras tillbaka till Foundation genom detta dokument.
+---
+
+# Version Management
+
+Foundation Analysis is a living document.
+
+Updates should only occur when:
+
+- The Foundation has changed.
+- A previous interpretation has proven inaccurate.
+- New Foundation documentation has been introduced.
+
+Significant revisions should be documented in the Business Decision Log.
+
+---
+
+# Summary
+
+Foundation Analysis forms the bridge between DGTC's philosophy and its commercial expression.
+
+The Foundation defines **why** DGTC exists.
+
+Foundation Analysis explains **what that philosophy means** from a business perspective.
+
+The Brand Platform defines **how those ideas are communicated**.
+
+Every external message should ultimately be traceable back to the Foundation through this document.
+
+---
+
+## Related Documents
+
+- `../foundation/FOUNDATION.md`
+- `BRAND_PLATFORM.md`
+- `BUSINESS_GUARDRAILS.md`
+- `MESSAGING_FRAMEWORK.md`
+- `BUSINESS_DECISION_LOG.md`
+
+---
+
+**Status:** Approved
+
+**Owner:** Business
+
+**Last Updated:** 2026-07-30
+
+### Revision History
+
+- **2026-07-30** – Repository documentation consolidated.
