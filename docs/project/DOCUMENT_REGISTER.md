@@ -1,251 +1,226 @@
 # Document Register
 
+**Document Type:** Register  
+**Version:** 2.0  
+**Status:** Approved  
+**Information Owner:** Project
+
+---
+
 ## Purpose
 
-This document is the authoritative register for DGTC documentation metadata.
+This document is the authoritative metadata register for DGTC documentation.
 
 It records:
 
-- which documents exist,
-- where each document is located,
-- the document type,
-- the lifecycle status,
-- the information owner,
-- known consolidation notes.
+- which governed documents exist,
+- their repository paths,
+- document type,
+- lifecycle status,
+- information owner,
+- whether they belong to the Frozen MVP implementation baseline.
 
-This register does not define document content, project status, product requirements, or implementation priorities.
+The [DGTC Documentation Index](../MASTER_INDEX.md) owns navigation.
 
-The [DGTC Documentation Index](../MASTER_INDEX.md) owns documentation navigation.
+The [Repository Review Matrix](REVIEW_MATRIX.md) owns review findings and implementation-readiness conclusions.
 
 ---
 
-## Lifecycle model
+## Lifecycle Model
 
 | Status | Meaning |
 |---|---|
-| Draft | The document is being created and is not yet authoritative. |
-| Review | The document is being evaluated before approval. |
-| Approved | The document is authoritative and maintained through the normal governance process. |
-| Frozen | The document is authoritative and intentionally protected from routine modification. Changes require an explicit governance decision. |
-| Deprecated | The document has been replaced but remains temporarily available for reference. |
-| Archived | The document is retained for historical purposes and is no longer active. |
+| Draft | Under development and not authoritative. |
+| Approved | Authoritative and maintained through normal governance. |
+| Frozen | Authoritative and protected from routine modification. Unlocking requires an explicit governance decision. |
+| Deprecated | Replaced and retained only for controlled reference or redirection. |
 
 No additional lifecycle states may be used.
 
-A document without a verified lifecycle status is marked with `—` until its status has been established through repository review.
-
 ---
 
-## Document types
-
-### Operational documents
-
-| Type | Purpose |
-|---|---|
-| Workflow | Defines an end-to-end sequence of work. |
-| Procedure | Defines how a specific activity is performed. |
-| Guide | Provides practical support for completing an activity. |
-
-### Specifications
-
-| Type | Purpose |
-|---|---|
-| PRD | Defines product intent, scope, users, and outcomes. |
-| FRS | Defines functional product behavior. |
-| Architecture | Defines system structure and technical boundaries. |
-| Domain | Defines domain concepts and relationships. |
-| Data | Defines persistent and exchanged information. |
-| State | Defines system states and transitions. |
-| API | Defines interfaces between system components. |
-
-### Supporting documents
-
-Documents that do not belong to the operational or specification types are classified by their explicit repository function, such as Foundation, Governance, Research, Planning, Register, Queue, RFC, or README.
-
----
-
-## Ownership model
+## Ownership Model
 
 | Role | Responsibility |
 |---|---|
-| Product Owner | Approves product direction and Change Class C decisions. |
+| Product Owner | Approves product direction and product-scope changes. |
 | Information Owner | Owns the accuracy and authority of a document's information. |
-| Editor | Creates and maintains document content. |
-| Reviewer | Verifies correctness, consistency, and conformity. |
+| Editor | Creates or maintains content under the approved process. |
+| Reviewer | Verifies correctness, consistency, conformity, and traceability. |
 
-The `Owner` column identifies the Information Owner, not the current editor.
-
----
-
-# Repository documents
-
-## Repository entry and project control
-
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../MASTER_INDEX.md` | Index | Approved | Project | Navigation only |
-| `DOCUMENT_REGISTER.md` | Register | Review | Project | Under RCP-002 consolidation |
-| `Future_Queue.md` | Queue | — | Project | Ownership and relationship to other queues must be verified |
+The `Owner` column identifies the Information Owner.
 
 ---
+
+# Repository Documents
+
+## Repository Entry and Project Control
+
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../../README.md` | README | Approved | Project | No |
+| `../MASTER_INDEX.md` | Index | Approved | Project | Yes |
+| `DOCUMENT_REGISTER.md` | Register | Approved | Project | Yes |
+| `REVIEW_MATRIX.md` | Governance / Review | Frozen | Project | Yes |
+| `Future_Queue.md` | Queue | Approved | Project | No |
 
 ## Foundation
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../foundation/README.md` | README | — | Foundation | Domain entry document |
-| `../foundation/FOUNDATION.md` | Foundation | — | Foundation | Scope and authority must be verified |
-| `../foundation/00_The_DGTC_Way.md` | Foundation | — | Foundation | — |
-| `../foundation/01_DGTC_Problem_Statement.md` | Foundation | — | Product | — |
-| `../foundation/02_Learning_Building_Blocks.md` | Foundation | — | Learning | — |
-| `../foundation/03_Performance_Model.md` | Foundation | — | Performance | — |
-| `../foundation/04_Vision_and_Principles.md` | Foundation | — | Product | — |
-| `../foundation/05_Decision_Framework.md` | Governance | — | Project | Candidate authoritative Decision Framework |
-| `../foundation/06_DGTC_DNA.md` | Foundation | — | Product | — |
-| `../foundation/07_Glossary.md` | Glossary | — | Project | — |
-| `../foundation/08_Decision_Log.md` | Governance | — | Project | — |
-| `../foundation/AIE Philosophy.md` | Foundation | — | Product | Filename does not conform to naming standard |
-| `../foundation/Decision_Framework.md` | Governance | — | Project | Duplicate candidate; resolve in RCP-003 |
-| `../foundation/Product Experience Principles.md` | Foundation | — | Product | Filename does not conform to naming standard |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../foundation/README.md` | README | Frozen | Foundation | Yes |
+| `../foundation/FOUNDATION.md` | Foundation compilation | Frozen | Foundation | Yes |
+| `../foundation/00_The_DGTC_Way.md` | Foundation | Frozen | Foundation | Yes |
+| `../foundation/01_DGTC_Problem_Statement.md` | Foundation | Frozen | Product | Yes |
+| `../foundation/02_Learning_Building_Blocks.md` | Foundation | Frozen | Learning | Yes |
+| `../foundation/03_Performance_Model.md` | Foundation | Frozen | Performance | Yes |
+| `../foundation/04_Vision_and_Principles.md` | Foundation | Frozen | Product | Yes |
+| `../foundation/05_Decision_Framework.md` | Governance | Frozen | Project | Yes |
+| `../foundation/Decision_Framework.md` | Redirect | Deprecated | Project | No |
+| `../foundation/06_DGTC_DNA.md` | Foundation | Frozen | Product | Yes |
+| `../foundation/07_Glossary.md` | Glossary | Frozen | Project | Yes |
+| `../foundation/08_Decision_Log.md` | Governance | Frozen | Project | Yes |
+| `../foundation/AIE Philosophy.md` | Foundation | Frozen | Product | Yes |
+| `../foundation/Product Experience Principles.md` | Foundation | Frozen | Product | Yes |
 
 ## Product
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../product/README.md` | README | — | Product | Domain entry document |
-| `../product/PRD.md` | PRD | — | Product | — |
-| `../product/MVP.md` | Product scope | — | Product | Relationship to PRD must be verified |
-| `../product/USER_PERSONAS.md` | Product research | — | Product | — |
-| `../product/feature_requests/Feature_Request_Log.md` | Register | — | Product | Filename does not conform to naming standard |
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../product/README.md` | README | Approved | Product | No |
+| `../product/PRD.md` | PRD | Frozen | Product | Yes |
+| `../product/MVP.md` | Product scope | Frozen | Product | Yes |
+| `../product/USER_PERSONAS.md` | Product research | Frozen | Product | Yes |
+| `../product/feature_requests/Feature_Request_Log.md` | Register | Approved | Product | No |
 
----
+## Functional Requirements
 
-## Functional requirements
-
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../functional/FRS.md` | FRS | — | Product | Functional requirements entry document |
-| `../functional/FRS_Home.md` | FRS | — | Product | — |
-| `../functional/FRS_Wheels.md` | FRS | — | Product | — |
-| `../functional/FRS_Training_Programs.md` | FRS | — | Product | — |
-| `../functional/FRS_Training_Session.md` | FRS | — | Product | — |
-| `../functional/FRS_Result_Entry.md` | FRS | — | Product | — |
-| `../functional/FRS_Summary.md` | FRS | — | Product | — |
-| `../functional/FRS_Settings.md` | FRS | — | Product | — |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../functional/FRS.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Home.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Wheels.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Training_Session.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Result_Entry.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Summary.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Settings.md` | FRS | Frozen | Product | Yes |
+| `../functional/FRS_Training_Programs.md` | FRS | Draft | Product | No |
 
 ## Architecture
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../architecture/README.md` | README | — | Architecture | Domain entry document |
-| `../architecture/SYSTEM_OVERVIEW.md` | Architecture | — | Architecture | Ownership reviewed in RCP-001 |
-| `../architecture/ARCHITECTURE.md` | Architecture | — | Architecture | Boundary with System Overview must be verified |
-| `../architecture/DOMAIN_MODEL.md` | Domain | — | Architecture | Boundary with Data and State must be verified |
-| `../architecture/DATA_MODEL.md` | Data | — | Architecture | Boundary with Domain and State must be verified |
-| `../architecture/STATE_MODEL.md` | State | — | Architecture | Boundary with Domain and Data must be verified |
-| `../architecture/NAVIGATION.md` | Architecture | — | Product | Information ownership must be verified |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../architecture/README.md` | README | Frozen | Architecture | Yes |
+| `../architecture/SYSTEM_OVERVIEW.md` | Architecture | Frozen | Architecture | Yes |
+| `../architecture/ARCHITECTURE.md` | Architecture | Frozen | Architecture | Yes |
+| `../architecture/DOMAIN_MODEL.md` | Domain | Frozen | Architecture | Yes |
+| `../architecture/DATA_MODEL.md` | Data | Frozen | Architecture | Yes |
+| `../architecture/STATE_MODEL.md` | State | Frozen | Architecture | Yes |
+| `../architecture/NAVIGATION.md` | Navigation | Frozen | Product | Yes |
 
 ## Development
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../development/DEVELOPMENT_WORKFLOW.md` | Workflow | — | Development | — |
-| `../development/IMPLEMENTATION_WORKFLOW.md` | Workflow | — | Development | Relationship to Development Workflow must be verified |
-| `../development/GIT_WORKFLOW.md` | Workflow | — | Development | — |
-| `../development/GITHUB_WORKING_AGREEMENT.md` | Governance | Draft | Project Owner | Operational agreement for collaboration between the Project Owner, ChatGPT and the repository |
-| `../development/Guardian_Operating_Procedure.md` | Procedure | — | Project | Overlaps Operational Session Ritual |
-| `../development/CODING_STANDARD.md` | Standard | — | Development | — |
-| `../development/REPOSITORY_STRUCTURE.md` | Architecture | — | Development | Repository structure owner |
-| `../development/SPRINT_0.md` | Planning | — | Project | Historical or active status must be verified |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../development/CODING_STANDARD.md` | Standard | Frozen | Development | Yes |
+| `../development/DEVELOPMENT_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
+| `../development/IMPLEMENTATION_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
+| `../development/GIT_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
+| `../development/GitHub_Guide.md` | Guide | Frozen | Development | Yes |
+| `../development/GITHUB_WORKING_AGREEMENT.md` | Governance | Approved | Project Owner | Yes |
+| `../development/Guardian_Operating_Procedure.md` | Procedure | Frozen | Project | Yes |
+| `../development/REPOSITORY_STRUCTURE.md` | Architecture | Frozen | Development | Yes |
+| `../development/SPRINT_0.md` | Planning / Evidence | Frozen | Project | Yes |
 
 ## Engineering
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../engineering/README.md` | README | — | Engineering | Domain entry document |
-| `../engineering/Getting_Started.md` | Guide | — | Engineering | Filename does not conform to naming standard |
-| `../development/GitHub_Guide.md` | Guide | — | Development | Overlaps Git Workflow |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../engineering/README.md` | README | Approved | Engineering | No |
+| `../engineering/Getting_Started.md` | Guide | Approved | Engineering | No |
 
 ## Operations
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../operations/BUSINESS_PROFILE.md` | Profile | — | Business | — |
-| `../operations/DEVELOPMENT_PROFILE.md` | Profile | — | Development | — |
-| `../operations/Repository_Review_Procedure.md` | Procedure | — | Project | Duplicate filename and overlapping scope with `../development/Repository_Review_Procedure.md`; authority must be resolved |
-| `../operations/OPERATIONAL_SESSION_RITUAL.md` | Procedure | — | Project | Overlaps Guardian Operating Procedure |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../operations/BUSINESS_PROFILE.md` | Profile | Approved | Business | No |
+| `../operations/DEVELOPMENT_PROFILE.md` | Profile | Approved | Development | No |
+| `../operations/OPERATIONAL_SESSION_RITUAL.md` | Procedure | Approved | Project | No |
+| `../operations/Repository_Review_Procedure.md` | Procedure | Approved | Project | No |
 
 ## Business
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../business/readme.md` | README | — | Business | Filename casing does not conform |
-| `../business/BUSINESS_INDEX.md` | Index | — | Business | Name overlaps repository MASTER_INDEX |
-| `../business/BRAND_PLATFORM.md` | Business | — | Business | Existing file was previously listed as planned |
-| `../business/BUSINESS_GUARDRAILS.md` | Governance | — | Business | — |
-| `../business/CHANGE_QUEUE.md` | Queue | — | Business | Boundary with Future Queue must be verified |
-| `../business/FOUNDATION_ANALYSIS.md` | Analysis | — | Business | — |
-| `../business/MESSAGING_FRAMEWORK.md` | Business | — | Business | — |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../business/readme.md` | README | Approved | Business | No |
+| `../business/BUSINESS_INDEX.md` | Index | Approved | Business | No |
+| `../business/BRAND_PLATFORM.md` | Business | Approved | Business | No |
+| `../business/BUSINESS_GUARDRAILS.md` | Governance | Approved | Business | No |
+| `../business/CHANGE_QUEUE.md` | Queue | Approved | Business | No |
+| `../business/FOUNDATION_ANALYSIS.md` | Analysis | Approved | Business | No |
+| `../business/MESSAGING_FRAMEWORK.md` | Business | Approved | Business | No |
 
 ## Research
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../research/README.md` | README | — | Research | Research entry document |
-| `../research/ai/README.md` | Research | — | Research | Placeholder status must be verified |
-| `../research/hci/README.md` | Research | — | Research | Placeholder status must be verified |
-| `../research/learning/README.md` | Research | — | Research | Placeholder status must be verified |
-| `../research/motor_learning/README.md` | Research | — | Research | Placeholder status must be verified |
-| `../research/psycology/README.md` | Research | — | Research | Directory spelling must be reviewed |
-| `../research/sports_science/README.md` | Research | — | Research | Placeholder status must be verified |
-
----
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../research/README.md` | Research index | Draft | Research | No |
+| `../research/ai/README.md` | Research | Draft | Research | No |
+| `../research/hci/README.md` | Research | Draft | Research | No |
+| `../research/learning/README.md` | Research | Draft | Research | No |
+| `../research/motor_learning/README.md` | Research | Draft | Research | No |
+| `../research/psycology/README.md` | Research | Draft | Research | No |
+| `../research/sports_science/README.md` | Research | Draft | Research | No |
 
 ## RFC
 
-| Path | Type | Lifecycle | Owner | Consolidation note |
-|---|---|---:|---|---|
-| `../rfc/RFC-001_Progressive_Engagement.md` | RFC | — | Product | Closed/approved status must be verified in the document |
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../rfc/RFC-001_Progressive_Engagement.md` | RFC | Frozen | Product | Yes |
+
+## Supporting Repository Areas
+
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../../assets/README.md` | README | Draft | Development | No |
+| `../../backend/README.md` | README | Draft | Development | No |
+| `../../flutter_app/README.md` | README | Approved | Development | No |
 
 ---
 
-# Register maintenance
+# Frozen Baseline Governance
 
-The register must be updated when:
+A Frozen document:
 
-- a document is created,
-- a document is renamed or moved,
-- ownership changes,
+- is authoritative,
+- may not receive routine, editorial, cosmetic, or convenience changes,
+- may only be unlocked through an explicit governance decision,
+- must be reviewed for downstream impact before modification,
+- must be re-frozen through a recorded decision after approved changes are complete.
+
+---
+
+# Register Maintenance
+
+Update this register when:
+
+- a governed document is created, renamed, moved, or removed,
 - lifecycle status changes,
-- a document is replaced,
-- a consolidation finding is resolved.
+- information ownership changes,
+- baseline membership changes,
+- a document is replaced or deprecated.
 
-Navigation links belong in `MASTER_INDEX.md`.
+Navigation links belong in `../MASTER_INDEX.md`.
 
-Project work, sprint status, blockers, and current tasks do not belong in this register.
-
-Change proposals belong in their authoritative queue or RFC, not in this file.
+Review findings and readiness decisions belong in `REVIEW_MATRIX.md`.
 
 ---
 
-# Revision history
+# Revision History
 
 | Version | Date | Description |
 |---|---|---|
-| v1.0 | 2026-07-26 | Initial register |
-| v1.1 | 2026-07-29 | Rebuilt as repository-wide metadata register under RCP-002 |
-| v1.2 | 2026-07-31 | Registered the GitHub Working Agreement |
+| 1.0 | 2026-07-26 | Initial register. |
+| 1.1 | 2026-07-29 | Rebuilt as a repository-wide metadata register. |
+| 1.2 | 2026-07-31 | Registered the GitHub Working Agreement. |
+| 2.0 | 2026-07-31 | Reconciled inventory, adopted the four-state lifecycle, and registered the Frozen MVP implementation baseline. |
