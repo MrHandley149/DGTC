@@ -1,8 +1,22 @@
 # DGTC Documentation Index
 
-This index provides an overview of the DGTC documentation.
+**Document Type:** Index  
+**Version:** 2.0  
+**Status:** Approved  
+**Information Owner:** Project
 
-Use it to identify the authoritative document for each area of the project.
+---
+
+## Purpose
+
+This index is the primary navigation point for DGTC documentation.
+
+It identifies the authoritative document set for product decisions, MVP requirements, architecture, governance, and implementation.
+
+Lifecycle status and review findings are maintained in:
+
+- [Document Register](project/DOCUMENT_REGISTER.md)
+- [Repository Review Matrix](project/REVIEW_MATRIX.md)
 
 The repository [README](../README.md) is the primary entry point to the project.
 
@@ -10,123 +24,150 @@ The repository [README](../README.md) is the primary entry point to the project.
 
 ## Foundation
 
-Foundation documentation defines why DGTC exists, how the product should behave, and how it supports player development.
+Foundation documentation defines why DGTC exists and the principles that govern the product.
 
-Foundation documents are technology-independent. Implementation may change, but the approved product philosophy remains authoritative.
-
-### Vision
-
-- Vision & Principles
-- Problem Statement
-
-### Core Models
-
-- Product Experience Principles
-- Learning Model
-- Performance Model
-- AIE Philosophy
-- DGTC Way
-
-### Governance
-
-- Decision Framework
-- Decision Log
-- Glossary
+- [The DGTC Way](foundation/00_The_DGTC_Way.md)
+- [Problem Statement](foundation/01_DGTC_Problem_Statement.md)
+- [Learning Building Blocks](foundation/02_Learning_Building_Blocks.md)
+- [Performance Model](foundation/03_Performance_Model.md)
+- [Vision and Principles](foundation/04_Vision_and_Principles.md)
+- [Decision Framework](foundation/05_Decision_Framework.md)
+- [DGTC DNA](foundation/06_DGTC_DNA.md)
+- [Glossary](foundation/07_Glossary.md)
+- [Decision Log](foundation/08_Decision_Log.md)
+- [AIE Philosophy](foundation/AIE%20Philosophy.md)
+- [Product Experience Principles](foundation/Product%20Experience%20Principles.md)
+- [Foundation compilation](foundation/FOUNDATION.md)
 
 ---
 
 ## Product
 
-Product documentation defines what DGTC should deliver and for whom.
+Product documentation defines what DGTC delivers, for whom, and within which scope.
 
-- Product Requirements Document
-- Minimum Viable Product
-- User Personas
-
----
-
----
-
-## Business
-
-Business documentation defines how DGTC is positioned, governed, communicated, financed, and brought to market.
-
-The authoritative navigation document for the Business Operating System is:
-
-- [Business Index](business/BUSINESS_INDEX.md)
+- [Product Requirements Document](product/PRD.md)
+- [MVP Specification](product/MVP.md)
+- [User Personas](product/USER_PERSONAS.md)
+- [Product documentation overview](product/README.md)
+- [Feature Request Log](product/feature_requests/Feature_Request_Log.md)
 
 ---
 
 ## Functional Requirements
 
-Functional requirements define the expected behavior of individual product capabilities.
+Functional requirements define the behavior required for MVP implementation and verification.
 
-- Home
-- Wheels
-- Training Programs
-- Training Session
-- Result Entry
-- Summary
-- Settings
+- [Functional Requirements Specification](functional/FRS.md)
+- [Home and Quick Challenge](functional/FRS_Home.md)
+- [Challenge Wheels](functional/FRS_Wheels.md)
+- [Training Session](functional/FRS_Training_Session.md)
+- [Result Entry](functional/FRS_Result_Entry.md)
+- [Session Summary and Friction Feedback](functional/FRS_Summary.md)
+- [Settings](functional/FRS_Settings.md)
+
+[Training Programs](functional/FRS_Training_Programs.md) is a deferred post-MVP specification and is not part of the frozen MVP implementation baseline.
 
 ---
 
 ## Architecture
 
-Architecture documentation defines how the product requirements are represented in the system.
+Architecture documentation defines system structure, domain concepts, persistence, state, and navigation.
 
-- System Overview
-- Architecture
-- Domain Model
-- Data Model
-- State Model
-- Navigation
+- [Architecture overview](architecture/README.md)
+- [System Overview](architecture/SYSTEM_OVERVIEW.md)
+- [Architecture](architecture/ARCHITECTURE.md)
+- [Domain Model](architecture/DOMAIN_MODEL.md)
+- [Data Model](architecture/DATA_MODEL.md)
+- [State Model](architecture/STATE_MODEL.md)
+- [Navigation](architecture/NAVIGATION.md)
 
 ---
 
-## Development
+## Development and Engineering
 
-Development documentation defines how approved requirements and architecture are implemented, reviewed, and maintained.
+Development documentation defines how approved requirements are implemented, verified, reviewed, and committed.
 
+- [Development Workflow](development/DEVELOPMENT_WORKFLOW.md)
+- [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
+- [Git Workflow](development/GIT_WORKFLOW.md)
+- [GitHub Guide](development/GitHub_Guide.md)
 - [GitHub Working Agreement](development/GITHUB_WORKING_AGREEMENT.md)
+- [Guardian Operating Procedure](development/Guardian_Operating_Procedure.md)
+- [Coding Standard](development/CODING_STANDARD.md)
+- [Repository Structure](development/REPOSITORY_STRUCTURE.md)
+- [Sprint 0](development/SPRINT_0.md)
+- [Engineering overview](engineering/README.md)
+- [Getting Started](engineering/Getting_Started.md)
 
 ---
 
-## Document metadata
+## Project Governance
 
-Document versions, lifecycle status, ownership, and review information belong in the Document Register.
-
-The lifecycle states used by the repository are:
-
-- Draft
-- Review
-- Approved
-- Deprecated
-- Archived
+- [Document Register](project/DOCUMENT_REGISTER.md)
+- [Repository Review Matrix](project/REVIEW_MATRIX.md)
+- [Future Queue](project/Future_Queue.md)
+- [Progressive Engagement RFC](rfc/RFC-001_Progressive_Engagement.md)
 
 ---
 
-## Documentation dependency
+## Operations
 
-The principal documentation dependency is:
+- [Business Profile](operations/BUSINESS_PROFILE.md)
+- [Development Profile](operations/DEVELOPMENT_PROFILE.md)
+- [Operational Session Ritual](operations/OPERATIONAL_SESSION_RITUAL.md)
+- [Repository Review Procedure](operations/Repository_Review_Procedure.md)
+
+---
+
+## Business
+
+The Business Operating System is navigated through the [Business Index](business/BUSINESS_INDEX.md).
+
+---
+
+## Research
+
+Research supports future product and design decisions but is not authoritative implementation scope.
+
+- [Research overview](research/README.md)
+
+---
+
+## Documentation Dependency
 
 ```text
-Vision
-↓
+Foundation
+    ↓
 Product Requirements
-↓
+    ↓
+MVP Scope
+    ↓
 Functional Requirements
-↓
+    ↓
 Architecture
-↓
-Domain
-↓
-Data
-↓
-State
-↓
-API
-↓
-Implementation
+    ↓
+Implementation Tasks
+    ↓
+Code
+    ↓
+Verification and Approval
+```
 
 ---
+
+## Lifecycle Model
+
+The repository uses four lifecycle states:
+
+- **Draft** — under development and not authoritative.
+- **Approved** — authoritative and maintained through normal governance.
+- **Frozen** — authoritative and locked against routine modification; unlocking requires an explicit governance decision.
+- **Deprecated** — replaced and retained only for controlled reference or redirection.
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 2.0 | 2026-07-31 | Rebuilt for repository-wide implementation readiness and linked to the permanent Review Matrix. |
