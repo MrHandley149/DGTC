@@ -30,7 +30,6 @@ The [DGTC Documentation Index](../MASTER_INDEX.md) owns documentation navigation
 | Deprecated | The document has been replaced but remains temporarily available for reference. |
 | Archived | The document is retained for historical purposes and is no longer active. |
 
-
 No additional lifecycle states may be used.
 
 A document without a verified lifecycle status is marked with `—` until its status has been established through repository review.
@@ -159,6 +158,7 @@ The `Owner` column identifies the Information Owner, not the current editor.
 | `../development/DEVELOPMENT_WORKFLOW.md` | Workflow | — | Development | — |
 | `../development/IMPLEMENTATION_WORKFLOW.md` | Workflow | — | Development | Relationship to Development Workflow must be verified |
 | `../development/GIT_WORKFLOW.md` | Workflow | — | Development | — |
+| `../development/GITHUB_WORKING_AGREEMENT.md` | Governance | Draft | Project Owner | Operational agreement for collaboration between the Project Owner, ChatGPT and the repository |
 | `../development/Guardian_Operating_Procedure.md` | Procedure | — | Project | Overlaps Operational Session Ritual |
 | `../development/CODING_STANDARD.md` | Standard | — | Development | — |
 | `../development/REPOSITORY_STRUCTURE.md` | Architecture | — | Development | Repository structure owner |
@@ -175,7 +175,6 @@ The `Owner` column identifies the Information Owner, not the current editor.
 | `../development/GitHub_Guide.md` | Guide | — | Development | Overlaps Git Workflow |
 
 ---
-
 
 ## Operations
 
@@ -249,3 +248,4 @@ Change proposals belong in their authoritative queue or RFC, not in this file.
 |---|---|---|
 | v1.0 | 2026-07-26 | Initial register |
 | v1.1 | 2026-07-29 | Rebuilt as repository-wide metadata register under RCP-002 |
+| v1.2 | 2026-07-31 | Registered the GitHub Working Agreement |
