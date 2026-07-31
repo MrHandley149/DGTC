@@ -159,7 +159,6 @@ The `Owner` column identifies the Information Owner, not the current editor.
 | `../development/DEVELOPMENT_WORKFLOW.md` | Workflow | — | Development | — |
 | `../development/IMPLEMENTATION_WORKFLOW.md` | Workflow | — | Development | Relationship to Development Workflow must be verified |
 | `../development/GIT_WORKFLOW.md` | Workflow | — | Development | — |
-| `../development/GitHub_Guide.md` | Guide | — | Development | Duplicate filename and overlapping scope with `../engineering/GitHub_Guide.md`; authority must be resolved |
 | `../development/Guardian_Operating_Procedure.md` | Procedure | — | Project | Overlaps Operational Session Ritual |
 | `../development/CODING_STANDARD.md` | Standard | — | Development | — |
 | `../development/REPOSITORY_STRUCTURE.md` | Architecture | — | Development | Repository structure owner |
