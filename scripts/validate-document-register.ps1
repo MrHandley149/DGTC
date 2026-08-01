@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
@@ -17,7 +17,7 @@ if (-not (Test-Path $registerPath)) {
     exit 1
 }
 
-# Hämta alla faktiska Markdown-filer under docs.
+# Hämta alla styrda Markdown-filer under docs.
 $actualFiles = Get-ChildItem -Path $docsPath -Recurse -File -Filter "*.md" |
     ForEach-Object {
         $_.FullName.Replace($repoRoot + "\", "").Replace("\", "/")
@@ -46,7 +46,9 @@ $missingFromRegister = $actualFiles |
     Where-Object { $_ -notin $registeredPaths }
 
 $missingFromDisk = $registeredPaths |
-    Where-Object { $_ -notin $actualFiles }
+    Where-Object {
+        -not (Test-Path -LiteralPath (Join-Path $repoRoot $_))
+    }
 
 $duplicateNames = $actualFiles |
     Group-Object {
@@ -107,5 +109,5 @@ if ($hasErrors) {
 }
 
 Write-Host ""
-Write-Host "OK: Alla Markdown-filer under docs finns i dokumentregistret."
+Write-Host "OK: Alla styrda Markdown-filer under docs är registrerade och alla registerposter finns på disk."
 exit 0

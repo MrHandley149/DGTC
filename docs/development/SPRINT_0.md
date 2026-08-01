@@ -1,187 +1,105 @@
-# Sprint 0
+# Sprint 0 — Historical Record
 
-**Document Type:** Project
+**Document Type:** Project / Historical Record
 
-**Version:** 2.0
+**Version:** 3.0
 
-**Status:** Completed
+**Lifecycle:** Frozen
+
+**Sprint Status:** Not started
+
+**Outcome:** Abandoned before execution
 
 **Information Owner:** Development
 
----
-
-# Purpose
-
-Sprint 0 establishes the technical foundation required for successful product development.
-
-Its objective is to deliver a complete, stable, and verified development environment so that subsequent sprints can focus entirely on building product functionality.
-
-Sprint 0 delivers infrastructure—not product features.
+**Corrected:** 2026-08-01 by Product Owner decision `DEC-001`
 
 ---
 
-# Sprint Goal
+## Purpose
 
-The goal of Sprint 0 is to ensure that Sprint 1 can begin without additional infrastructure work.
+This document preserves the accurate history of the planned Sprint 0.
 
-At the completion of Sprint 0, the project should provide:
-
-- A fully configured development environment.
-- A verified toolchain.
-- An approved repository structure.
-- Documented development workflows.
-- A working application capable of building and running successfully.
-
-This sprint minimizes future development friction by resolving technical setup before feature implementation begins.
+Sprint 0 was intended to establish the technical foundation for DGTC development. It never entered formal execution and none of its planned deliverables may be treated as completed Sprint 0 results.
 
 ---
 
-# Definition of Done
+## What Happened
 
-Sprint 0 is complete when all of the following conditions have been satisfied:
+Sprint 0 was planned as an infrastructure sprint covering:
 
-- The project can be cloned and built from GitHub.
-- All required development tools have been installed and verified.
-- The repository structure has been established.
-- The development workflow has been documented.
-- The initial application successfully builds and launches.
-- Continuous Integration (if adopted) has been configured and verified.
-- Sprint 1 can begin without further infrastructure work.
+- development-environment verification,
+- repository organization,
+- development standards and workflows,
+- initial Flutter application creation,
+- build and launch verification.
 
-Completion is based on a verified development platform rather than application functionality.
+Problems were identified when work was about to move into Sprint 0. The project stopped and returned to a quality review and consolidation of the documentation.
 
----
+Substantial effort was then spent establishing reliable GitHub access and governed repository workflows.
 
-# Scope
-
-Sprint 0 is limited exclusively to development infrastructure.
-
-Included:
-
-- Development environment setup.
-- Repository organization.
-- Development standards.
-- Toolchain verification.
-- Initial project creation.
-
-Excluded:
-
-- Product functionality.
-- User interface development.
-- Business logic.
-- Feature implementation.
-
-Keeping Sprint 0 narrowly focused reduces technical risk during later development.
+Sprint 0 therefore became a dead end in the earlier development path and was abandoned before formal execution began.
 
 ---
 
-# Sprint Backlog
+## Verified Outcome
 
-## Development Environment
+- Sprint 0 was not started.
+- No Sprint 0 backlog item is recorded as completed.
+- No Sprint 0 Definition of Done criterion is recorded as satisfied.
+- No application build or launch is accepted as verified Sprint 0 evidence.
+- The current repository contains no application source code under `flutter_app/`; that directory contains only a placeholder README at the time of this correction.
 
-- ✅ Install Git.
-- ✅ Verify Git installation.
-- ✅ Install the Flutter SDK.
-- ✅ Verify Flutter.
-- ✅ Install Android Studio.
-- ✅ Install the Android SDK.
-- ✅ Install Android SDK Command-line Tools.
-- ✅ Accept Android SDK licenses.
-- ✅ Verify the Android toolchain.
-- ✅ Verify Visual Studio Code.
-- ☐ Verify iOS development environment (future work).
-
----
-## Development Environment
-
-| Task | Status |
-|------|:------:|
-| Install Git | ✅ |
-| Verify Git installation | ✅ |
-| Install Flutter SDK | ✅ |
-| Verify Flutter | ✅ |
-| Install Android Studio | ✅ |
-| Install Android SDK | ✅ |
-| Install Android SDK Command-line Tools | ✅ |
-| Accept Android SDK licenses | ✅ |
-| Verify Android toolchain | ✅ |
-| Verify Visual Studio Code | ✅ |
-| Verify iOS development environment | ☐ Future Work |
+Development-environment preparation or documentation work performed outside a formally started Sprint 0 does not constitute Sprint 0 completion.
 
 ---
 
-## Repository
+## Original Intended Goal
 
-| Task | Status |
-|------|:------:|
-| Establish repository structure | ✅ |
-| Define naming standards | ✅ |
-| Create initial project structure | ✅ |
+The intended goal was to ensure that later product implementation could begin from a stable, verified technical foundation.
 
----
+The planned Definition of Done included:
 
-## Development Workflow
+- a repository that could be cloned and built,
+- a verified development toolchain,
+- an established repository structure,
+- documented development workflows,
+- an initial application that built and launched,
+- verified readiness for the next implementation phase.
 
-| Task | Status |
-|------|:------:|
-| Define Git strategy | ✅ |
-| Define branch strategy | ✅ |
-| Define commit standards | ✅ |
-| Define coding standards | ✅ |
+These were planning criteria only. They were not achieved or verified through Sprint 0.
 
 ---
 
-## First Build
+## Governance Effect
 
-| Task | Status |
-|------|:------:|
-| Build the project successfully | ✅ |
-| Launch the application | ✅ |
-| Run the initial empty application | ✅ |
+This correction removes the false historical claim that Sprint 0 was completed.
 
----
+It does not:
 
-# Core Principle
+- authorize a new Sprint 0,
+- select the first Implementation Task,
+- change MVP product scope,
+- prove or disprove the current state of any developer's local toolchain.
 
-Sprint 0 does **not** deliver product functionality.
-
-Sprint 0 delivers the infrastructure required to build product functionality efficiently, consistently, and with minimal technical risk.
-
-A strong foundation enables predictable progress throughout the remainder of the project.
+Any future technical-start phase must be explicitly defined and approved from the current verified repository state.
 
 ---
 
-# Decision References
+## Related Documents
 
-Sprint 0 is based on the following governing documents:
-
-- Documentation Baseline v1.1
-- Vision & Principles
-- Decision Framework
-- Product Requirements Document (PRD)
-- Minimum Viable Product (MVP)
-- Architecture
-
----
-# Related Documents
-
-- `REPOSITORY_STRUCTURE.md`
-- `DEVELOPMENT_WORKFLOW.md`
-- `IMPLEMENTATION_WORKFLOW.md`
-- `GIT_WORKFLOW.md`
-- `ARCHITECTURE.md`
+- [Current Project Status](../PROJECT_STATUS.md)
+- [Repository Review Matrix](../project/REVIEW_MATRIX.md)
+- [Decision Log](../foundation/08_Decision_Log.md)
+- [Development Playbook](DEVELOPMENT_PLAYBOOK.md)
+- [Implementation Workflow](IMPLEMENTATION_WORKFLOW.md)
 
 ---
 
-**Status:** Completed
-
-**Owner:** Development
-
-**Last Updated:** 2026-07-30
-
-### Revision History
+## Revision History
 
 | Version | Date | Description |
-|----------|------------|--------------------------------|
-| 2.0 | 2026-07-30 | Repository documentation consolidated and expanded. |
-| 1.0 | Initial | Sprint 0 baseline established. |
+|---|---|---|
+| 1.0 | Initial | Sprint 0 baseline was planned. |
+| 2.0 | 2026-07-30 | Documentation consolidation incorrectly recorded Sprint 0 as completed. |
+| 3.0 | 2026-08-01 | Corrected by Product Owner decision: Sprint 0 never started and was abandoned before execution. |

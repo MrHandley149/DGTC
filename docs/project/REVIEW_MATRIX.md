@@ -1,7 +1,7 @@
 # DGTC Repository Review Matrix
 
 **Document Type:** Governance / Review  
-**Version:** 1.1  
+**Version:** 1.2
 **Status:** Frozen  
 **Information Owner:** Project  
 **Review Date:** 2026-07-31  
@@ -195,7 +195,7 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | `../development/GITHUB_WORKING_AGREEMENT.md` | Approved | Yes | Pass | Approved as the operational repository agreement. |
 | `../development/Guardian_Operating_Procedure.md` | Frozen | Yes | Pass | Verified / Recommendation / Unknown and no-guessing process established. |
 | `../development/REPOSITORY_STRUCTURE.md` | Frozen | Yes | Pass with note | Some future directories described by principle rather than current physical structure; non-blocking. |
-| `../development/SPRINT_0.md` | Frozen | Yes | Pass | Completed infrastructure baseline preserved as historical project evidence. |
+| `../development/SPRINT_0.md` | Frozen | Yes | Pass with note | Corrected historical record: Sprint 0 never started and was abandoned before execution. It provides no implementation-readiness evidence. |
 | `../engineering/README.md` | Approved | No | Pass with note | Supporting navigation; not authoritative implementation scope. |
 | `../engineering/Getting_Started.md` | Approved | No | Pass with note | Practical setup guide; environment-specific updates may be required later. |
 
@@ -263,6 +263,7 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | RR-009 | Repository Review Procedure was reported as duplicated in development. | Inventory defect | Direct verification found no duplicate development-path file. |
 | RR-010 | Naming and casing inconsistencies remain in non-baseline files. | Non-blocking structural debt | Deferred; any rename requires a separate structural decision after MVP implementation begins. |
 | RR-011 | The implementation-phase collaboration model was distributed across several governance documents. | Operational clarity | Added the Approved Development Playbook without changing the Frozen product or technical baseline. |
+| RR-012 | Sprint 0 was incorrectly recorded as completed although it never entered formal execution. | Historical status defect | Corrected by Product Owner decision DEC-001; Sprint 0 is now recorded as not started and abandoned before execution. |
 
 ---
 
@@ -318,3 +319,4 @@ No application feature implementation is authorized by this document alone. The 
 |---|---|---|
 | 1.0 | 2026-07-31 | Completed repository-wide documentation review, established the Frozen MVP baseline, and declared documentation ready for implementation. |
 | 1.1 | 2026-08-01 | Recorded the approved Development Playbook as the implementation-phase operating model; readiness decision unchanged. |
+| 1.2 | 2026-08-01 | Corrected Sprint 0 historical status under Product Owner decision DEC-001; documentation-readiness conclusion remains unchanged. |

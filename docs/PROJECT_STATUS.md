@@ -1,11 +1,11 @@
 # Current Project Status
 
 **Document Type:** Status
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Approved
 **Information Owner:** Project
 **Verified Date:** 2026-08-01
-**Verified Ref:** `main` at `4c6ed9f`
+**Verified Ref:** `main` at `a6d5e35`
 
 ---
 
@@ -31,7 +31,7 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 - The Repository Review Matrix records a PASS for documentation readiness.
 - The Document Register identifies document lifecycle, ownership, and baseline membership.
 - The Development Playbook defines the implementation-phase collaboration model.
-- Sprint 0 is recorded as completed historical project evidence.
+- The earlier Sprint 0 completion claim has been corrected by Product Owner decision: Sprint 0 never started and was abandoned before execution.
 - GitHub `main` is the project's official source of truth.
 
 ---
@@ -50,7 +50,7 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 - `flutter_app/` currently contains only a placeholder README.
 - No application source code is present on the verified ref.
 - No product feature implementation can therefore be verified from the current repository state.
-- `SPRINT_0.md` records that an initial empty application previously built and launched. That historical record does not establish that the corresponding source code is present now.
+- `SPRINT_0.md` is a corrected historical record: the sprint never started and no application build or launch is accepted as Sprint 0 evidence.
 
 ---
 
@@ -103,3 +103,4 @@ Stop before feature implementation and request the Product Owner's selection and
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established verified project status during the first Consolidation Sprint. |
+| 1.1 | 2026-08-01 | Corrected Sprint 0 history following Product Owner decision DEC-001. |
