@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.1  
+**Version:** 2.2
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -19,6 +19,18 @@ Lifecycle status and review findings are maintained in:
 - [Repository Review Matrix](project/REVIEW_MATRIX.md)
 
 The repository [README](../README.md) is the primary entry point to the project.
+
+---
+
+## Start Every Work Session Here
+
+1. Read [Current Project Status](PROJECT_STATUS.md) for the verified current phase, active objective, blockers, and next decision.
+2. Read [AI Project Context](AI_PROJECT_CONTEXT.md) for authority, operating rules, and prohibited assumptions.
+3. Use this index to locate the relevant authoritative documents.
+4. Confirm lifecycle status and Frozen-baseline membership in the [Document Register](project/DOCUMENT_REGISTER.md).
+5. Review the [Decision Log](foundation/08_Decision_Log.md) and the applicable approved or Frozen source documents before proposing or performing work.
+
+Chat history is working material, not project authority. If chat and repository content conflict, the repository governs.
 
 ---
 
@@ -104,6 +116,8 @@ Development documentation defines how approved requirements are implemented, ver
 
 ## Project Governance
 
+- [Current Project Status](PROJECT_STATUS.md)
+- [AI Project Context](AI_PROJECT_CONTEXT.md)
 - [Document Register](project/DOCUMENT_REGISTER.md)
 - [Repository Review Matrix](project/REVIEW_MATRIX.md)
 - [Future Queue](project/Future_Queue.md)
@@ -173,3 +187,4 @@ The repository uses four lifecycle states:
 |---|---|---|
 | 2.0 | 2026-07-31 | Rebuilt for repository-wide implementation readiness and linked to the permanent Review Matrix. |
 | 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
+| 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
