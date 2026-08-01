@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.1  
+**Version:** 2.2
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -60,6 +60,8 @@ The `Owner` column identifies the Information Owner.
 |---|---|---|---|:---:|
 | `../../README.md` | README | Approved | Project | No |
 | `../MASTER_INDEX.md` | Index | Approved | Project | Yes |
+| `../PROJECT_STATUS.md` | Status | Approved | Project | No |
+| `../AI_PROJECT_CONTEXT.md` | AI operating context | Approved | Project | No |
 | `DOCUMENT_REGISTER.md` | Register | Approved | Project | Yes |
 | `REVIEW_MATRIX.md` | Governance / Review | Frozen | Project | Yes |
 | `Future_Queue.md` | Queue | Approved | Project | No |
@@ -226,3 +228,4 @@ Review findings and readiness decisions belong in `REVIEW_MATRIX.md`.
 | 1.2 | 2026-07-31 | Registered the GitHub Working Agreement. |
 | 2.0 | 2026-07-31 | Reconciled inventory, adopted the four-state lifecycle, and registered the Frozen MVP implementation baseline. |
 | 2.1 | 2026-08-01 | Registered the Approved Development Playbook as part of the implementation operating baseline. |
+| 2.2 | 2026-08-01 | Registered the current project status and AI operating context created during the first Consolidation Sprint. |
