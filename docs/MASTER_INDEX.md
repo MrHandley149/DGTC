@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.2
+**Version:** 2.3  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -11,7 +11,7 @@
 
 This index is the primary navigation point for DGTC documentation.
 
-It identifies the authoritative document set for product decisions, MVP requirements, architecture, governance, and implementation.
+It identifies the authoritative document set for product decisions, MVP requirements, architecture, governance, implementation, and business development.
 
 Lifecycle status and review findings are maintained in:
 
@@ -22,13 +22,39 @@ The repository [README](../README.md) is the primary entry point to the project.
 
 ---
 
-## Start Every Work Session Here
+## Mandatory Session Lifecycle
 
-1. Read [Current Project Status](PROJECT_STATUS.md) for the verified current phase, active objective, blockers, and next decision.
-2. Read [AI Project Context](AI_PROJECT_CONTEXT.md) for authority, operating rules, and prohibited assumptions.
-3. Use this index to locate the relevant authoritative documents.
-4. Confirm lifecycle status and Frozen-baseline membership in the [Document Register](project/DOCUMENT_REGISTER.md).
-5. Review the [Decision Log](foundation/08_Decision_Log.md) and the applicable approved or Frozen source documents before proposing or performing work.
+Every governed DGTC work session shall use the procedures in the [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md).
+
+Start with:
+
+```text
+Starta DGTC-session
+```
+
+End with:
+
+```text
+Avsluta DGTC-session
+```
+
+The same lifecycle applies to both Development and Business work profiles.
+
+### Session Start Sequence
+
+1. Read [Current Project Status](PROJECT_STATUS.md).
+2. Read [AI Project Context](AI_PROJECT_CONTEXT.md).
+3. Read this index.
+4. Identify the active work profile:
+   - **Development** for application, architecture, functional requirements, engineering, testing, and implementation.
+   - **Business** for brand, communication, community, sponsorship, pricing, go-to-market, and Business Operating System work.
+5. Verify the current GitHub repository state.
+6. Read only the approved or Frozen documents relevant to the active task.
+7. Report verified status before beginning work.
+
+### Session End Sequence
+
+The Guardian / AI CTO shall verify repository state, documentation impact, delivered work, open Pull Requests, blockers, decisions, the exact stopping point, and the next task. Required status and reference updates shall be completed before the session is declared closed unless a documented blocker prevents completion.
 
 Chat history is working material, not project authority. If chat and repository content conflict, the repository governs.
 
@@ -77,7 +103,7 @@ Functional requirements define the behavior required for MVP implementation and 
 - [Session Summary and Friction Feedback](functional/FRS_Summary.md)
 - [Settings](functional/FRS_Settings.md)
 
-[Training Programs](functional/FRS_Training_Programs.md) is a deferred post-MVP specification and is not part of the frozen MVP implementation baseline.
+[Training Programs](functional/FRS_Training_Programs.md) is a deferred post-MVP specification and is not part of the Frozen MVP implementation baseline.
 
 ---
 
@@ -99,7 +125,7 @@ Architecture documentation defines system structure, domain concepts, persistenc
 
 Development documentation defines how approved requirements are implemented, verified, reviewed, and committed.
 
-- [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md)
+- [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md) — mandatory Start and End DGTC Session procedures
 - [Development Workflow](development/DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
 - [Git Workflow](development/GIT_WORKFLOW.md)
@@ -137,6 +163,8 @@ Development documentation defines how approved requirements are implemented, ver
 ## Business
 
 The Business Operating System is navigated through the [Business Index](business/BUSINESS_INDEX.md).
+
+Business sessions use the same mandatory session lifecycle while loading only the Business documents relevant to the active objective.
 
 ---
 
@@ -188,3 +216,4 @@ The repository uses four lifecycle states:
 | 2.0 | 2026-07-31 | Rebuilt for repository-wide implementation readiness and linked to the permanent Review Matrix. |
 | 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
 | 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
+| 2.3 | 2026-08-01 | Made Start and End DGTC Session the mandatory entry and exit points for Development and Business work. |
