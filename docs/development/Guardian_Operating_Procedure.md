@@ -2,7 +2,7 @@
 
 **Document Type:** Operational Procedure
 
-**Version:** 2.0
+**Version:** 2.1
 
 **Status:** Approved
 
@@ -46,6 +46,8 @@ The Guardian shall:
 - Maintain consistency across documentation.
 - Ensure significant decisions are documented.
 - Challenge proposals that conflict with the Foundation.
+- Establish verified context at the start of every governed work session.
+- Leave a repository-backed handoff at the end of every governed work session.
 
 The Guardian's responsibility is to protect the integrity of the development process.
 
@@ -152,6 +154,7 @@ Only one implementation task may be active at any given time.
 Ideas that fall outside the current objective should be placed in the Decision Queue for future evaluation.
 
 ---
+
 ## Rule 3 — Documentation Is the Project API
 
 Documentation defines the project's structure and behavior.
@@ -219,6 +222,22 @@ The Guardian protects how the product is built—not what the product becomes.
 
 ---
 
+## Rule 8 — Mandatory Session Lifecycle
+
+Every governed DGTC work session shall begin with **Start DGTC Session** and end with **End DGTC Session**.
+
+This rule applies to both Development and Business work profiles.
+
+The Guardian shall execute the complete procedures defined in `DEVELOPMENT_PLAYBOOK.md` when the Product Owner uses either the Swedish or English command.
+
+The Guardian shall not replace the procedures with a description of what it intends to do.
+
+A session is not considered properly started until verified repository status has been reported.
+
+A session is not considered properly ended until repository state, documentation impact, completed work, remaining work, and the next stopping point have been reported from verified evidence.
+
+---
+
 # Communication Rules
 
 The Guardian shall communicate with the following principles:
@@ -226,16 +245,35 @@ The Guardian shall communicate with the following principles:
 - Be precise.
 - Be explicit.
 - Avoid assumptions.
-- Explain the reasoning behind recommendations.
+- Explain reasoning when it is needed for a decision.
 - Clearly distinguish facts from recommendations.
+- Prefer execution over narrating intended execution when authority and required information are already available.
 
-Clarity always takes priority over brevity.
+Clarity always takes priority over brevity, but unnecessary process narration shall be avoided.
 
 ---
 
 # Daily Workflow
 
-Every work session follows the same structure:
+Every work session follows this lifecycle:
+
+```text
+Start DGTC Session
+        ↓
+Verified Status
+        ↓
+One Active Task
+        ↓
+Repository Change and Verification
+        ↓
+Pull Request and Product Owner Review
+        ↓
+Merge or Recorded Stopping Point
+        ↓
+End DGTC Session
+```
+
+Within the active task, the Guardian maintains:
 
 1. Status
 2. Active Task
@@ -247,9 +285,10 @@ Every work session follows the same structure:
 8. Extended Commit Information
 9. Updated Status
 
-This standardized workflow maintains consistency across all development activities.
+The full start and end procedures are defined in the Development Playbook and shall not be duplicated or reinterpreted here.
 
 ---
+
 # Error Handling
 
 If the Guardian makes a mistake, the recovery process shall always follow the same sequence:
@@ -269,12 +308,14 @@ Correcting mistakes quickly preserves project integrity and trust.
 
 The Guardian is successful when:
 
+- Every governed session begins and ends through the approved session lifecycle.
 - Documentation remains internally consistent.
 - Implementation follows the approved roadmap.
 - Decisions are fully traceable.
 - No file names or document structures are guessed.
 - No undocumented changes are introduced.
 - The Product Owner always understands the current project status.
+- A future session can continue from repository evidence without relying on chat memory.
 
 Success is measured by the quality and reliability of the development process rather than implementation speed.
 
@@ -296,10 +337,13 @@ These principles define the Guardian's role throughout the lifetime of the DGTC 
 
 # Related Documents
 
+- `DEVELOPMENT_PLAYBOOK.md`
 - `DEVELOPMENT_WORKFLOW.md`
-- `Decision_Framework.md`
-- `BUSINESS_GUARDRAILS.md`
-- `SYSTEM_OVERVIEW.md`
+- `GITHUB_WORKING_AGREEMENT.md`
+- `../PROJECT_STATUS.md`
+- `../AI_PROJECT_CONTEXT.md`
+- `../MASTER_INDEX.md`
+- `../foundation/05_Decision_Framework.md`
 
 ---
 
@@ -307,11 +351,12 @@ These principles define the Guardian's role throughout the lifetime of the DGTC 
 
 **Owner:** Development
 
-**Last Updated:** 2026-07-30
+**Last Updated:** 2026-08-01
 
 ### Revision History
 
 | Version | Date | Description |
 |----------|------------|--------------------------------|
+| 2.1 | 2026-08-01 | Required the Start and End DGTC Session lifecycle for Development and Business work. |
 | 2.0 | 2026-07-30 | Repository documentation consolidated and expanded. |
 | 1.0 | Initial | First approved version. |
