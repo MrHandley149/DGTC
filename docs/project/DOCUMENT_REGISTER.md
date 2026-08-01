@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.0  
+**Version:** 2.1  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -123,6 +123,7 @@ The `Owner` column identifies the Information Owner.
 | Path | Type | Lifecycle | Owner | MVP Baseline |
 |---|---|---|---|:---:|
 | `../development/CODING_STANDARD.md` | Standard | Frozen | Development | Yes |
+| `../development/DEVELOPMENT_PLAYBOOK.md` | Operational Guide | Approved | Development | Yes |
 | `../development/DEVELOPMENT_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
 | `../development/IMPLEMENTATION_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
 | `../development/GIT_WORKFLOW.md` | Workflow | Frozen | Development | Yes |
@@ -224,3 +225,4 @@ Review findings and readiness decisions belong in `REVIEW_MATRIX.md`.
 | 1.1 | 2026-07-29 | Rebuilt as a repository-wide metadata register. |
 | 1.2 | 2026-07-31 | Registered the GitHub Working Agreement. |
 | 2.0 | 2026-07-31 | Reconciled inventory, adopted the four-state lifecycle, and registered the Frozen MVP implementation baseline. |
+| 2.1 | 2026-08-01 | Registered the Approved Development Playbook as part of the implementation operating baseline. |

@@ -1,7 +1,7 @@
 # DGTC Repository Review Matrix
 
 **Document Type:** Governance / Review  
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** Frozen  
 **Information Owner:** Project  
 **Review Date:** 2026-07-31  
@@ -187,6 +187,7 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | Document | Lifecycle | Baseline | Review | Finding / Action |
 |---|---|:---:|---|---|
 | `../development/CODING_STANDARD.md` | Frozen | Yes | Pass | Simplicity, readability, and one-feature-at-a-time principles established. |
+| `../development/DEVELOPMENT_PLAYBOOK.md` | Approved | Yes | Pass | Establishes the implementation-phase operating model and official-reference maintenance responsibility. |
 | `../development/DEVELOPMENT_WORKFLOW.md` | Frozen | Yes | Pass | Standard development sequence established. |
 | `../development/IMPLEMENTATION_WORKFLOW.md` | Frozen | Yes | Pass | FRS → Implementation Task → code → test → verification → approval → commit established. |
 | `../development/GIT_WORKFLOW.md` | Frozen | Yes | Pass | Atomic change and branch/commit workflow established. |
@@ -261,6 +262,7 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | RR-008 | Document Register contained stale paths and unresolved lifecycle values. | Metadata defect | Reconciled during Phase 5. |
 | RR-009 | Repository Review Procedure was reported as duplicated in development. | Inventory defect | Direct verification found no duplicate development-path file. |
 | RR-010 | Naming and casing inconsistencies remain in non-baseline files. | Non-blocking structural debt | Deferred; any rename requires a separate structural decision after MVP implementation begins. |
+| RR-011 | The implementation-phase collaboration model was distributed across several governance documents. | Operational clarity | Added the Approved Development Playbook without changing the Frozen product or technical baseline. |
 
 ---
 
@@ -279,6 +281,7 @@ The documentation is ready for implementation when every criterion below is sati
 | Historical integrity and active-session recovery are specified. | Pass |
 | The MVP friction-validation question is traceable into functional requirements. | Pass |
 | Implementation workflow and Definition of Done are authoritative. | Pass |
+| The implementation-phase operating model is Approved and indexed. | Pass |
 | GitHub is the Single Source of Truth. | Pass |
 | Frozen-document change control is defined. | Pass |
 | The authoritative navigation and metadata registers are current. | Pass |
@@ -299,7 +302,7 @@ The Frozen implementation baseline is sufficient to begin Phase 6 through contro
 - Phase 6 shall implement only the Frozen MVP baseline.
 - `FRS_Training_Programs.md`, research documents, business expansion, backend work, and future queues shall not enter implementation without an explicit decision.
 - A Frozen document may only be unlocked through an explicit governance decision recorded in GitHub.
-- Implementation shall begin through the approved Implementation Workflow, not through ad hoc coding.
+- Implementation shall begin through the approved Implementation Workflow and Development Playbook, not through ad hoc coding.
 
 ## Stop Point
 
@@ -314,3 +317,4 @@ No application feature implementation is authorized by this document alone. The 
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-07-31 | Completed repository-wide documentation review, established the Frozen MVP baseline, and declared documentation ready for implementation. |
+| 1.1 | 2026-08-01 | Recorded the approved Development Playbook as the implementation-phase operating model; readiness decision unchanged. |
