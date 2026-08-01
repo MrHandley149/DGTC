@@ -1,7 +1,7 @@
 # DGTC Repository Review Matrix
 
 **Document Type:** Governance / Review  
-**Version:** 1.2
+**Version:** 1.3  
 **Status:** Frozen  
 **Information Owner:** Project  
 **Review Date:** 2026-07-31  
@@ -122,9 +122,9 @@ The implementation baseline satisfies the Definition of Ready in this document.
 
 | Document | Lifecycle | Baseline | Review | Finding / Action |
 |---|---|:---:|---|---|
-| `../../README.md` | Approved | No | Pass | Broken documentation link corrected; now points to `docs/MASTER_INDEX.md`. |
-| `../MASTER_INDEX.md` | Approved | Yes | Pass | Rebuilt as authoritative navigation for implementation. |
-| `DOCUMENT_REGISTER.md` | Approved | Yes | Pass | Reconciled to the approved four-state lifecycle and current review results. |
+| `../../README.md` | Approved | No | Pass | Repository entry now directs contributors to the mandatory session-start procedure. |
+| `../MASTER_INDEX.md` | Approved | Yes | Pass | Authoritative navigation identifies the Development Playbook as the owner of daily operating procedures. |
+| `DOCUMENT_REGISTER.md` | Approved | Yes | Pass | Reconciled to the approved four-state lifecycle and current governance references. |
 | `REVIEW_MATRIX.md` | Frozen | Yes | Pass | Permanent replacement for the lost revision report. |
 | `Future_Queue.md` | Approved | No | Pass with note | Contains deferred ideas; none authorize implementation. |
 
@@ -161,12 +161,12 @@ The implementation baseline satisfies the Definition of Ready in this document.
 
 | Document | Lifecycle | Baseline | Review | Finding / Action |
 |---|---|:---:|---|---|
-| `../functional/FRS.md` | Frozen | Yes | Pass | Rebuilt to define the exact MVP FRS baseline and traceability chain. |
-| `../functional/FRS_Home.md` | Frozen | Yes | Pass | Corrected to make Quick Challenge the primary entry and preserve active-session recovery. |
-| `../functional/FRS_Wheels.md` | Frozen | Yes | Pass | Corrected sound priority and established Challenge Wheel as the user-facing term. |
+| `../functional/FRS.md` | Frozen | Yes | Pass | Defines the exact MVP FRS baseline and traceability chain. |
+| `../functional/FRS_Home.md` | Frozen | Yes | Pass | Quick Challenge is the primary entry and active-session recovery is preserved. |
+| `../functional/FRS_Wheels.md` | Frozen | Yes | Pass | Sound priority and Challenge Wheel terminology aligned. |
 | `../functional/FRS_Training_Session.md` | Frozen | Yes | Pass | Persistence, recovery, single-active-session, and completion rules aligned. |
 | `../functional/FRS_Result_Entry.md` | Frozen | Yes | Pass | Minimal offline result entry and persistence requirements clarified. |
-| `../functional/FRS_Summary.md` | Frozen | Yes | Pass | Added the approved friction question and Yes/No follow-up behavior. |
+| `../functional/FRS_Summary.md` | Frozen | Yes | Pass | Includes the approved friction question and Yes/No follow-up behavior. |
 | `../functional/FRS_Settings.md` | Frozen | Yes | Pass | Language, sound, reset, persistence, and offline scope aligned. |
 | `../functional/FRS_Training_Programs.md` | Draft | No | Deferred | Post-MVP capability; explicitly excluded from the implementation baseline. |
 
@@ -187,13 +187,13 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | Document | Lifecycle | Baseline | Review | Finding / Action |
 |---|---|:---:|---|---|
 | `../development/CODING_STANDARD.md` | Frozen | Yes | Pass | Simplicity, readability, and one-feature-at-a-time principles established. |
-| `../development/DEVELOPMENT_PLAYBOOK.md` | Approved | Yes | Pass | Establishes the implementation-phase operating model and official-reference maintenance responsibility. |
+| `../development/DEVELOPMENT_PLAYBOOK.md` | Approved | Yes | Pass | Owns the mandatory Start and End DGTC Session procedures for Development and Business work. |
 | `../development/DEVELOPMENT_WORKFLOW.md` | Frozen | Yes | Pass | Standard development sequence established. |
 | `../development/IMPLEMENTATION_WORKFLOW.md` | Frozen | Yes | Pass | FRS → Implementation Task → code → test → verification → approval → commit established. |
 | `../development/GIT_WORKFLOW.md` | Frozen | Yes | Pass | Atomic change and branch/commit workflow established. |
 | `../development/GitHub_Guide.md` | Frozen | Yes | Pass | Practical GitHub guidance retained. |
 | `../development/GITHUB_WORKING_AGREEMENT.md` | Approved | Yes | Pass | Approved as the operational repository agreement. |
-| `../development/Guardian_Operating_Procedure.md` | Frozen | Yes | Pass | Verified / Recommendation / Unknown and no-guessing process established. |
+| `../development/Guardian_Operating_Procedure.md` | Frozen | Yes | Pass | Requires the Guardian to execute the complete session lifecycle rather than merely describe it. |
 | `../development/REPOSITORY_STRUCTURE.md` | Frozen | Yes | Pass with note | Some future directories described by principle rather than current physical structure; non-blocking. |
 | `../development/SPRINT_0.md` | Frozen | Yes | Pass with note | Corrected historical record: Sprint 0 never started and was abandoned before execution. It provides no implementation-readiness evidence. |
 | `../engineering/README.md` | Approved | No | Pass with note | Supporting navigation; not authoritative implementation scope. |
@@ -205,7 +205,7 @@ The implementation baseline satisfies the Definition of Ready in this document.
 |---|---|:---:|---|---|
 | `../operations/BUSINESS_PROFILE.md` | Approved | No | Pass | Supporting operational profile. |
 | `../operations/DEVELOPMENT_PROFILE.md` | Approved | No | Pass | Supporting operational profile. |
-| `../operations/OPERATIONAL_SESSION_RITUAL.md` | Approved | No | Pass with note | Complements but does not override the Guardian procedure. |
+| `../operations/OPERATIONAL_SESSION_RITUAL.md` | Approved | No | Pass with note | Complements but does not override the Development Playbook session lifecycle. |
 | `../operations/Repository_Review_Procedure.md` | Approved | No | Pass with note | Repository-review procedure retained; no duplicate development-path file exists. |
 
 ## Business
@@ -253,17 +253,18 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | ID | Finding | Classification | Resolution |
 |---|---|---|---|
 | RR-001 | The original revision report was not stored in the repository. | Governance | Replaced permanently by this Frozen Review Matrix. |
-| RR-002 | Root README linked to `docs/docs/business/BUSINESS_INDEX.md`. | Blocking navigation defect | Corrected to `docs/MASTER_INDEX.md`. |
+| RR-002 | Root README linked to an invalid documentation path. | Blocking navigation defect | Corrected to `docs/MASTER_INDEX.md`. |
 | RR-003 | Documentation lifecycle used incompatible states and omitted Frozen. | Governance conflict | Standardized to Draft, Approved, Frozen, Deprecated. |
-| RR-004 | Functional requirements did not fully match the approved MVP. | Blocking specification conflict | Rebuilt the MVP FRS index and corrected Home, Wheels, Summary, Session, Result Entry, and Settings. |
+| RR-004 | Functional requirements did not fully match the approved MVP. | Blocking specification conflict | Rebuilt the MVP FRS index and corrected the affected FRS documents. |
 | RR-005 | Training Programs appeared as implementation-ready despite being outside MVP scope. | Scope conflict | Classified as Draft and Deferred; excluded from the implementation baseline. |
 | RR-006 | The approved friction question was missing from FRS Summary. | Blocking traceability gap | Added exact Yes/No flow, reason selection, and optional comment. |
-| RR-007 | Challenge Wheel sound was classified as Should Have despite approved MVP scope. | Requirement priority conflict | Corrected to Must Have. |
+| RR-007 | Challenge Wheel sound was classified below approved MVP priority. | Requirement priority conflict | Corrected to Must Have. |
 | RR-008 | Document Register contained stale paths and unresolved lifecycle values. | Metadata defect | Reconciled during Phase 5. |
 | RR-009 | Repository Review Procedure was reported as duplicated in development. | Inventory defect | Direct verification found no duplicate development-path file. |
 | RR-010 | Naming and casing inconsistencies remain in non-baseline files. | Non-blocking structural debt | Deferred; any rename requires a separate structural decision after MVP implementation begins. |
 | RR-011 | The implementation-phase collaboration model was distributed across several governance documents. | Operational clarity | Added the Approved Development Playbook without changing the Frozen product or technical baseline. |
 | RR-012 | Sprint 0 was incorrectly recorded as completed although it never entered formal execution. | Historical status defect | Corrected by Product Owner decision DEC-001; Sprint 0 is now recorded as not started and abandoned before execution. |
+| RR-013 | Session start and end depended on chat memory and were not an enforceable repository-backed lifecycle. | Governance improvement | Institutionalized Start DGTC Session and End DGTC Session in the Approved Development Playbook, made execution mandatory in the Guardian Operating Procedure, and exposed the procedures through repository navigation. |
 
 ---
 
@@ -283,6 +284,7 @@ The documentation is ready for implementation when every criterion below is sati
 | The MVP friction-validation question is traceable into functional requirements. | Pass |
 | Implementation workflow and Definition of Done are authoritative. | Pass |
 | The implementation-phase operating model is Approved and indexed. | Pass |
+| Mandatory session start and end procedures are Approved, indexed, and assigned to the Guardian. | Pass |
 | GitHub is the Single Source of Truth. | Pass |
 | Frozen-document change control is defined. | Pass |
 | The authoritative navigation and metadata registers are current. | Pass |
@@ -304,6 +306,7 @@ The Frozen implementation baseline is sufficient to begin Phase 6 through contro
 - `FRS_Training_Programs.md`, research documents, business expansion, backend work, and future queues shall not enter implementation without an explicit decision.
 - A Frozen document may only be unlocked through an explicit governance decision recorded in GitHub.
 - Implementation shall begin through the approved Implementation Workflow and Development Playbook, not through ad hoc coding.
+- Every governed Development or Business work session shall use the mandatory Start and End DGTC Session lifecycle.
 
 ## Stop Point
 
@@ -320,3 +323,4 @@ No application feature implementation is authorized by this document alone. The 
 | 1.0 | 2026-07-31 | Completed repository-wide documentation review, established the Frozen MVP baseline, and declared documentation ready for implementation. |
 | 1.1 | 2026-08-01 | Recorded the approved Development Playbook as the implementation-phase operating model; readiness decision unchanged. |
 | 1.2 | 2026-08-01 | Corrected Sprint 0 historical status under Product Owner decision DEC-001; documentation-readiness conclusion remains unchanged. |
+| 1.3 | 2026-08-01 | Registered the mandatory Start and End DGTC Session lifecycle as an approved governance improvement within the implementation operating baseline. |

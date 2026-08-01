@@ -1,7 +1,7 @@
 # DGTC Development Playbook
 
 **Document Type:** Operational Guide  
-**Version:** 1.0  
+**Version:** 1.2  
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -9,11 +9,13 @@
 
 ## Purpose
 
-This document defines the day-to-day operating model for implementing DGTC.
+This document defines the day-to-day operating model for implementing and developing DGTC.
 
 It translates the approved governance, development workflow, and GitHub working agreement into a practical collaboration model between the Product Owner and the Guardian / AI CTO.
 
-The objective is to keep implementation predictable, traceable, repository-first, and aligned with the Frozen MVP baseline.
+The objective is to keep work predictable, traceable, repository-first, and aligned with the applicable approved or Frozen baseline.
+
+This playbook applies to both application development and business development. The selected work profile determines which authoritative documents govern the active task.
 
 ---
 
@@ -25,7 +27,7 @@ Conversation is used for decisions, clarification, and review.
 
 GitHub is used for governed project work, including documentation, implementation, traceability, and repository history.
 
-No implementation work shall rely on copied or remembered document content when an authoritative repository version exists.
+No work shall rely on copied or remembered document content when an authoritative repository version exists.
 
 ---
 
@@ -62,12 +64,78 @@ The Guardian / AI CTO protects **how** the product is built and may not overrule
 
 ---
 
+## Daily Operations
+
+Every governed DGTC work session shall begin with **Start DGTC Session** and end with **End DGTC Session**.
+
+The commands may be issued in Swedish or English:
+
+- `Starta DGTC-session` / `Start DGTC Session`
+- `Avsluta DGTC-session` / `End DGTC Session`
+
+These procedures form the normal operating cycle for both Development and Business work profiles.
+
+### Start DGTC Session
+
+When the Product Owner issues the start command, the Guardian / AI CTO shall:
+
+1. Read [Current Project Status](../PROJECT_STATUS.md).
+2. Read [AI Project Context](../AI_PROJECT_CONTEXT.md).
+3. Read the [Repository Review Matrix](../project/REVIEW_MATRIX.md).
+4. Identify the active work profile:
+   - **Business** for brand, communication, community, sponsorship, pricing, go-to-market, and other Business Operating System work.
+   - **Development** for application, architecture, functional requirements, engineering, testing, and implementation work.
+   - **Architecture**, **Foundation**, or **Governance** when the task is primarily governed by that domain.
+5. Read the [DGTC Documentation Index](../MASTER_INDEX.md).
+6. Read only the approved or Frozen governing documents required for the active task.
+7. Verify the current repository state directly from GitHub, including the target branch, open Pull Requests, and relevant recent merges.
+8. Identify the governing source, dependencies, documentation impact, verification obligations, and any required Product Owner decisions.
+9. Present a concise verified project status containing:
+   - active work profile,
+   - current phase,
+   - active task or required decision,
+   - governing documents,
+   - repository state,
+   - blockers or Unknown information.
+10. Begin work only after the verified status has been established.
+
+The Guardian / AI CTO shall not load the complete repository by default. The session start establishes sufficient verified context from the smallest relevant document set.
+
+### End DGTC Session
+
+When the Product Owner issues the end command, the Guardian / AI CTO shall:
+
+1. Verify repository state, including open Pull Requests, active branches, merge status, and known uncommitted local work.
+2. Verify documentation impact.
+3. Update all affected official references, including when applicable:
+   - `docs/PROJECT_STATUS.md`,
+   - `docs/AI_PROJECT_CONTEXT.md`,
+   - `docs/MASTER_INDEX.md`,
+   - `docs/project/DOCUMENT_REGISTER.md`,
+   - `docs/project/REVIEW_MATRIX.md`,
+   - decision logs, queues, RFCs, cross-references, lifecycle metadata, and traceability records.
+4. Verify traceability and delivered work through repository evidence. Plans, promises, and uncommitted changes are not completed work.
+5. Summarize completed work, exact changed paths, Pull Requests, commits, and verification performed.
+6. Record the next recommended or approved task, unresolved blockers, Product Owner decisions, and the exact stopping point.
+7. Leave the repository in a ready state from which the next session can begin without reconstructing project state from chat history.
+8. Remind the Product Owner to synchronize the local repository through GitHub Desktop when changes have been merged.
+
+### Session Continuity Rule
+
+The Guardian / AI CTO shall never reconstruct authoritative project state from memory.
+
+Changing session state belongs in `PROJECT_STATUS.md`. Stable AI operating rules belong in `AI_PROJECT_CONTEXT.md`. Navigation belongs in `MASTER_INDEX.md`. The repository—not the conversation—provides continuity across days, chats, tools, and future contributors.
+
+---
+
 ## Standard Implementation Workflow
 
 Every implementation objective follows this sequence:
 
 ```text
 Product Owner decision
+        ↓
+Start DGTC Session
         ↓
 Identify the governing Frozen requirement
         ↓
@@ -92,6 +160,8 @@ Product Owner review and acceptance
 Squash merge
         ↓
 Synchronize the local repository
+        ↓
+End DGTC Session
 ```
 
 No implementation begins without an approved requirement and a defined Implementation Task.
@@ -170,6 +240,8 @@ Pull Request
 
 When applicable, the same change shall update:
 
+- `docs/PROJECT_STATUS.md`,
+- `docs/AI_PROJECT_CONTEXT.md`,
 - `docs/MASTER_INDEX.md`,
 - `docs/project/DOCUMENT_REGISTER.md`,
 - `docs/project/REVIEW_MATRIX.md`,
@@ -252,6 +324,7 @@ Unknown information shall never be replaced by an assumption.
 
 The playbook is followed successfully when:
 
+- every governed session has a verified start and controlled end,
 - GitHub always represents the current governed project state,
 - implementation remains inside the Frozen MVP baseline,
 - every change is traceable from requirement to merge commit,
@@ -264,6 +337,10 @@ The playbook is followed successfully when:
 
 ## Related Documents
 
+- [Current Project Status](../PROJECT_STATUS.md)
+- [AI Project Context](../AI_PROJECT_CONTEXT.md)
+- [Repository Review Matrix](../project/REVIEW_MATRIX.md)
+- [DGTC Documentation Index](../MASTER_INDEX.md)
 - [Development Workflow](DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](IMPLEMENTATION_WORKFLOW.md)
 - [Git Workflow](GIT_WORKFLOW.md)
@@ -272,7 +349,6 @@ The playbook is followed successfully when:
 - [Guardian Operating Procedure](Guardian_Operating_Procedure.md)
 - [Coding Standard](CODING_STANDARD.md)
 - [Document Register](../project/DOCUMENT_REGISTER.md)
-- [Repository Review Matrix](../project/REVIEW_MATRIX.md)
 
 ---
 
@@ -281,3 +357,5 @@ The playbook is followed successfully when:
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established the implementation-phase operating model for collaboration between the Product Owner and the Guardian / AI CTO. |
+| 1.1 | 2026-08-01 | Institutionalized Start and End DGTC Session as the mandatory lifecycle for Development and Business work. |
+| 1.2 | 2026-08-01 | Aligned the mandatory start and end procedures with the approved final session sequence. |
