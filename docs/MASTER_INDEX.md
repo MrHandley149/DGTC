@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.0  
+**Version:** 2.1  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -87,6 +87,7 @@ Architecture documentation defines system structure, domain concepts, persistenc
 
 Development documentation defines how approved requirements are implemented, verified, reviewed, and committed.
 
+- [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md)
 - [Development Workflow](development/DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
 - [Git Workflow](development/GIT_WORKFLOW.md)
@@ -171,3 +172,4 @@ The repository uses four lifecycle states:
 | Version | Date | Description |
 |---|---|---|
 | 2.0 | 2026-07-31 | Rebuilt for repository-wide implementation readiness and linked to the permanent Review Matrix. |
+| 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
