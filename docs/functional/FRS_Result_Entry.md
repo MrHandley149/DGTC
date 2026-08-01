@@ -1,171 +1,169 @@
-# FRS – Result Entry
+# FRS — Result Entry
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Dokument:** FRS_Result_Entry.md
-
-**Version:** v1.0
-
-**Status:** Draft
+**Product:** Disc Golf Training Companion (DGTC)  
+**Version:** 2.0  
+**Status:** Frozen  
+**Information Owner:** Product
 
 ---
 
-# Syfte
+## Purpose
 
-Result Entry ansvarar för registrering av resultat under ett aktivt träningspass.
+Result Entry records the outcome of an attempt during an Active Training Session.
 
-Funktionen ska göra det möjligt att dokumentera utfallet av en genomförd övning på ett snabbt, enkelt och konsekvent sätt.
-
----
-
-# Mål
-
-Resultatregistreringen ska:
-
-* vara snabb,
-* kräva så få steg som möjligt,
-* inte störa träningsflödet,
-* koppla varje registrering till rätt träningspass och övning.
+The MVP prioritizes fast, reliable registration over detailed statistics. The interaction shall require as few steps as possible and shall not interrupt practice flow.
 
 ---
 
-# User Stories
+## User Stories
 
 ### US-RE-001
 
-Som användare vill jag registrera resultat direkt efter en genomförd övning.
-
----
+As a player, I want to record a result immediately after an attempt.
 
 ### US-RE-002
 
-Som användare vill att registreringen ska gå snabbt så att fokus ligger kvar på träningen.
-
----
+As a player, I want result entry to require minimal attention so that I can remain focused on practice.
 
 ### US-RE-003
 
-Som användare vill kunna fortsätta till nästa övning direkt efter registreringen.
+As a player, I want to continue to another attempt or challenge immediately after saving a result.
 
 ---
 
-# Funktionella krav
+## Functional Requirements
 
-## FRS-RE-001
+### FRS-RE-001 — Active Session Only
 
-Resultat ska kunna registreras under ett aktivt träningspass.
+Result Entry shall be available only during an Active Training Session.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-RE-002 — Attempt Association
 
-## FRS-RE-002
+Every Result shall be associated with exactly one Attempt or the MVP's equivalent atomic exercise execution record.
 
-Varje registrering ska kopplas till den aktuella övningen.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-RE-003 — Session Association
 
----
+Every Result shall be traceable to exactly one Training Session.
 
-## FRS-RE-003
+**Priority:** Must Have
 
-Varje registrering ska kopplas till det aktuella träningspasset.
+### FRS-RE-004 — Simple Outcome
 
-**Prioritet:** Must Have
+The MVP shall provide a simple result input suitable for rapid registration. The exact initial options shall be defined by the first Implementation Task and verified against the Data Model without expanding MVP scope.
 
----
+**Priority:** Must Have
 
-## FRS-RE-004
+### FRS-RE-005 — Automatic Timestamp
 
-Tidpunkten för registreringen ska sparas automatiskt.
+The application shall record the result timestamp automatically.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-RE-006 — Immediate Persistence
 
-## FRS-RE-005
+A Result shall be persisted immediately after confirmation.
 
-Efter registrering ska användaren kunna fortsätta direkt till nästa övning.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-RE-007 — Continue Flow
 
----
+After a successful save, the player shall be able to:
 
-## FRS-RE-006
+- repeat the current exercise,
+- generate the next challenge,
+- or finish the Training Session.
 
-Registrering ska kunna genomföras helt offline.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-RE-008 — Offline Operation
 
----
+All MVP Result Entry behavior shall function without an internet connection.
 
-## FRS-RE-007
-
-Resultatet ska sparas lokalt omedelbart efter registrering.
-
-**Prioritet:** Must Have
+**Priority:** Must Have
 
 ---
 
-# Affärsregler
+## Business Rules
 
-## BR-RE-001
+### BR-RE-001
 
-Resultat får endast registreras under ett aktivt träningspass.
+A Result shall not be stored without a valid active-session association.
 
----
+### BR-RE-002
 
-## BR-RE-002
+Result Entry shall not require optional player-decision metadata when that metadata would slow the MVP flow.
 
-Varje registrering ska tillhöra exakt en övning.
+### BR-RE-003
 
----
+A persisted Result shall not be lost if the application closes unexpectedly.
 
-## BR-RE-003
+### BR-RE-004
 
-Varje registrering ska tillhöra exakt ett träningspass.
+Results in a Completed Training Session are read-only.
 
----
+### BR-RE-005
 
-## BR-RE-004
-
-Registrerade resultat får inte gå förlorade om appen stängs oväntat.
+Product-friction feedback collected after a session is not a training Result and shall be stored separately.
 
 ---
 
-# Felhantering
+## Failure Handling
 
-Om resultatet inte kan sparas ska användaren informeras.
+If saving fails:
 
-Appen ska försöka spara igen innan användaren fortsätter.
-
-Resultatregistreringen får inte orsaka att ett aktivt träningspass avslutas.
-
----
-
-# Acceptanskriterier
-
-Result Entry är godkänd när användaren kan:
-
-* registrera resultat under ett aktivt träningspass,
-* fortsätta träningen direkt efter registreringen,
-* använda funktionen utan internetuppkoppling,
-* återuppta ett träningspass utan att tidigare registreringar har gått förlorade.
+- the current session shall remain Active,
+- the last valid persisted state shall be preserved,
+- the player shall be informed,
+- the application shall retry automatically or provide a retry action,
+- the application shall not claim that the Result was saved before persistence succeeds.
 
 ---
 
-# Framtida utveckling
+## Acceptance Criteria
 
-Arkitekturen ska möjliggöra framtida stöd för:
+The capability is accepted when:
 
-* flera olika resultattyper,
-* numeriska värden,
-* kategorier,
-* anteckningar,
-* bilder och video,
-* röstinmatning,
-* smartwatch-inmatning,
-* automatisk registrering via sensorer,
-* AI-stöd för analys.
+- a simple result can be recorded during an Active Training Session,
+- the result is linked to the correct session and attempt or equivalent record,
+- the result is persisted immediately,
+- the player can continue without unnecessary navigation,
+- a save failure does not end the session or lose the last valid data,
+- persisted results survive application restart,
+- completed-session results are read-only,
+- all Must Have behavior works offline.
 
-Detaljerna för dessa funktioner ingår inte i MVP och dokumenteras när respektive funktion planeras.
+---
+
+## Deferred Capabilities
+
+Outside the MVP:
+
+- detailed result taxonomies,
+- advanced numeric measurements,
+- media attachments,
+- voice or sensor input,
+- smartwatch input,
+- automated analysis,
+- AIE coaching.
+
+---
+
+## Related Documents
+
+- [MVP Specification](../product/MVP.md)
+- [Data Model](../architecture/DATA_MODEL.md)
+- [FRS — Training Session](FRS_Training_Session.md)
+- [FRS — Session Summary](FRS_Summary.md)
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | Initial | Initial Result Entry specification. |
+| 2.0 | 2026-07-31 | Clarified the minimal MVP input, persistence, failure handling, and separation from friction feedback; froze the requirements. |

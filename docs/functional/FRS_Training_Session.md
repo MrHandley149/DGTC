@@ -1,213 +1,202 @@
-# FRS – Training Session
+# FRS — Training Session
 
-**Produkt:** Disc Golf Training Companion (DGTC)
-
-**Dokument:** FRS_Training_Session.md
-
-**Version:** v1.0
-
-**Status:** Draft
+**Product:** Disc Golf Training Companion (DGTC)  
+**Version:** 2.0  
+**Status:** Frozen  
+**Information Owner:** Product
 
 ---
 
-# Syfte
+## Purpose
 
-Training Session hanterar hela livscykeln för ett träningspass.
+A Training Session is the persistent structure that connects generated challenges, completed exercises, attempts, results, and the final Session Summary.
 
-Ett träningspass är den struktur som binder samman Lucky Wheels, resultatregistrering och sammanfattning.
-
----
-
-# Mål
-
-Användaren ska snabbt kunna:
-
-* starta ett träningspass,
-* genomföra övningar,
-* registrera resultat,
-* avsluta passet,
-* se en sammanfattning.
+The MVP shall support starting, recovering, completing, and preserving one active session without requiring an account or internet connection.
 
 ---
 
-# Livscykel
+## Lifecycle
 
-Varje träningspass genomgår följande steg:
+```text
+Created
+    ↓
+Active
+    ↓
+Completed
+```
 
-1. Skapas
-2. Startas
-3. Pågår
-4. Avslutas
-5. Sparas
-
-Ett avslutat träningspass kan inte återupptas i MVP.
+A completed Training Session is read-only in the MVP and cannot return to Active.
 
 ---
 
-# User Stories
+## User Stories
 
 ### US-TS-001
 
-Som användare vill jag kunna starta ett nytt träningspass direkt från startskärmen.
-
----
+As a player, I want to start a Training Session from a generated challenge.
 
 ### US-TS-002
 
-Som användare vill jag kunna genomföra flera övningar inom samma träningspass.
-
----
+As a player, I want to complete multiple exercises in one session.
 
 ### US-TS-003
 
-Som användare vill kunna avsluta träningspasset när jag är klar.
-
----
+As a player, I want my active session to survive an unexpected application shutdown.
 
 ### US-TS-004
 
-Som användare vill att träningspasset sparas automatiskt när det avslutas.
+As a player, I want to finish the session and receive a saved summary.
 
 ---
 
-# Funktionella krav
+## Functional Requirements
 
-## FRS-TS-001
+### FRS-TS-001 — Create Session
 
-Användaren ska kunna skapa ett nytt träningspass.
+The player shall be able to create a Training Session from an approved MVP entry flow.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-TS-002 — Stable Identifier
 
-## FRS-TS-002
+Every Training Session shall receive a stable unique identifier before becoming Active.
 
-Ett träningspass ska få ett unikt ID.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-TS-003 — Start Timestamp
 
----
+The application shall persist the session start time automatically.
 
-## FRS-TS-003
+**Priority:** Must Have
 
-Starttid ska registreras automatiskt.
+### FRS-TS-004 — Multiple Exercises
 
-**Prioritet:** Must Have
+An Active Training Session shall support multiple exercises and repeated challenge generation.
 
----
+**Priority:** Must Have
 
-## FRS-TS-004
+### FRS-TS-005 — Result Registration
 
-Användaren ska kunna genomföra ett obegränsat antal övningar inom samma träningspass.
+Results shall be registerable throughout an Active Training Session.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-TS-006 — Continuous Persistence
 
-## FRS-TS-005
+The active session shall be persisted after every state-changing event defined by the Data Model, including exercise creation, wheel spin, attempt completion, and result entry.
 
-Resultat ska kunna registreras löpande under träningspasset.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-TS-007 — Resume Session
 
----
+If the application closes while a session is Active, the player shall be able to resume the persisted session when the application opens again.
 
-## FRS-TS-006
+**Priority:** Must Have
 
-Användaren ska kunna avsluta träningspasset när som helst.
+### FRS-TS-008 — Single Active Session
 
-**Prioritet:** Must Have
+The application shall prevent more than one Active Training Session.
 
----
+**Priority:** Must Have
 
-## FRS-TS-007
+### FRS-TS-009 — Complete Session
 
-Sluttid ska registreras automatiskt.
+The player shall be able to complete an Active Training Session at any time.
 
-**Prioritet:** Must Have
+**Priority:** Must Have
 
----
+### FRS-TS-010 — Completion Timestamp
 
-## FRS-TS-008
+The application shall persist the completion time automatically.
 
-Träningspasset ska sparas automatiskt när det avslutas.
+**Priority:** Must Have
 
-**Prioritet:** Must Have
+### FRS-TS-011 — Read-Only Completion
 
----
+A Completed Training Session shall not be editable or resumable in the MVP.
 
-## FRS-TS-009
+**Priority:** Must Have
 
-Efter avslutat träningspass ska användaren visas sammanfattningen.
+### FRS-TS-012 — Summary Transition
 
-**Prioritet:** Must Have
+After successful persistence of the completed session, the application shall open the Session Summary.
 
----
-
-## FRS-TS-010
-
-Ett avslutat träningspass får inte kunna ändras i MVP.
-
-**Prioritet:** Must Have
+**Priority:** Must Have
 
 ---
 
-# Affärsregler
+## Business Rules
 
-## BR-TS-001
+### BR-TS-001
 
-Endast ett träningspass får vara aktivt åt gången.
+Every exercise, attempt, result, and relevant wheel spin recorded during a session shall be associated with that session.
 
----
+### BR-TS-002
 
-## BR-TS-002
+A completed session shall preserve snapshots required to understand what was used at the time of training.
 
-Om appen stängs under ett aktivt träningspass ska användaren kunna fortsätta passet när appen öppnas igen.
+### BR-TS-003
 
----
+Later edits to Challenge Wheels or other editable source content shall not modify completed sessions.
 
-## BR-TS-003
+### BR-TS-004
 
-Alla registrerade övningar ska tillhöra exakt ett träningspass.
+Session timestamps shall represent the device's recorded instant consistently. Display may use the device's local time zone.
 
----
+### BR-TS-005
 
-## BR-TS-004
-
-Alla tider sparas enligt enhetens lokala datum och tid.
+The application shall not report a session as completed until the completion state has been persisted successfully.
 
 ---
 
-# Felhantering
+## Failure Handling
 
-Om appen avslutas oväntat ska ett aktivt träningspass återställas automatiskt vid nästa start.
+If persistence fails during an Active Training Session, the application shall preserve the most recent valid state, inform the player, and retry or provide a retry path.
 
-Om sparning misslyckas ska användaren informeras och appen försöka spara igen innan träningspasset avslutas.
-
----
-
-# Acceptanskriterier
-
-Training Session är godkänd när användaren kan:
-
-* skapa ett träningspass,
-* genomföra flera övningar,
-* registrera resultat,
-* avsluta passet,
-* återuppta ett aktivt pass efter en oväntad avstängning,
-* få en sammanfattning när passet avslutas.
+An unexpected shutdown shall not silently create a new session or discard the recoverable active session.
 
 ---
 
-# Framtida utveckling
+## Acceptance Criteria
 
-Funktioner som inte ingår i MVP men som arkitekturen ska stödja:
+The capability is accepted when the player can:
 
-* paus och återuppta träningspass,
-* mallar för träningspass,
-* schemalagda träningspass,
-* delade träningspass,
-* coachstyrda träningspass,
-* gruppträning,
-* livesynkronisering,
-* molnbackup.
+- start one Training Session,
+- complete multiple exercises,
+- register results,
+- close and reopen the application without losing the active session,
+- resume the same session,
+- complete and persist the session,
+- receive the Session Summary,
+- verify that the completed session is read-only,
+- use all Must Have behavior offline.
+
+---
+
+## Deferred Capabilities
+
+Outside the MVP:
+
+- paused state distinct from Active,
+- scheduled sessions,
+- shared or coach-controlled sessions,
+- group sessions,
+- cloud backup and live synchronization.
+
+---
+
+## Related Documents
+
+- [State Model](../architecture/STATE_MODEL.md)
+- [Data Model](../architecture/DATA_MODEL.md)
+- [FRS — Result Entry](FRS_Result_Entry.md)
+- [FRS — Session Summary](FRS_Summary.md)
+
+---
+
+## Revision History
+
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | Initial | Initial Training Session specification. |
+| 2.0 | 2026-07-31 | Aligned persistence, recovery, and completion with the approved architecture and froze the requirements. |

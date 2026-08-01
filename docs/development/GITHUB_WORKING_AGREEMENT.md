@@ -1,18 +1,18 @@
 # GitHub Working Agreement (GWA)
 
 **Document ID:** GWA-001  
-**Version:** 1.0.0  
-**Status:** Draft  
+**Version:** 1.1.0  
+**Status:** Approved  
 **Owner:** Project Owner  
-**Applies to:** All work performed between the Project Owner, ChatGPT and the DGTC GitHub repository.
+**Applies to:** All work performed between the Project Owner, ChatGPT, and the DGTC GitHub repository.
 
 ---
 
 # 1. Purpose
 
-This document defines the standard operating procedure for all collaboration between the Project Owner, ChatGPT and the DGTC GitHub repository.
+This document defines the standard operating procedure for collaboration between the Project Owner, ChatGPT, and the DGTC GitHub repository.
 
-The objective is to ensure that all repository changes are:
+The objective is to ensure that repository changes are:
 
 - Traceable
 - Reproducible
@@ -20,7 +20,7 @@ The objective is to ensure that all repository changes are:
 - Consistent
 - Governed
 
-This agreement defines how work shall be performed. It does not define product requirements, architecture or implementation.
+This agreement defines how work is performed. It does not define product requirements, architecture, or implementation behavior.
 
 ---
 
@@ -39,62 +39,48 @@ This agreement applies to:
 
 # 3. Principles
 
-## GWA-001 — GitHub is the Single Source of Truth
+## GWA-001 — GitHub Is the Single Source of Truth
 
-The GitHub repository is the authoritative source for all project documentation, source code and governance.
+The GitHub repository is authoritative for project documentation, source code, configuration, and governance.
 
-No local copy or conversation shall override the repository.
-
----
+No local copy or conversation overrides the repository.
 
 ## GWA-002 — Repository First
 
-Before any modification is proposed, the latest repository version shall be considered the current state.
-
----
+Before a modification is proposed or performed, the latest repository version shall be treated as the current state.
 
 ## GWA-003 — Never Assume
 
-Repository content shall never be assumed.
+Repository contents shall be read and verified when they are required for a decision or change.
 
-When repository contents are required, they shall be read before modifications are proposed.
-
----
+File names, paths, content, status, and implementation state shall not be inferred from memory.
 
 ## GWA-004 — Documentation Governs Implementation
 
-Documentation defines implementation.
+Approved and Frozen documentation defines implementation.
 
-Implementation shall not redefine approved documentation.
-
----
+Implementation shall not silently redefine documentation.
 
 ## GWA-005 — Governance Before Convenience
 
 Repository governance takes precedence over implementation convenience.
 
-Short-term implementation gains shall never compromise repository integrity.
+Short-term speed shall not compromise traceability, document authority, or repository integrity.
 
 ---
 
 # 4. Standard Workflow
 
-Every repository change shall follow the same workflow.
-
-```
+```text
 Request
     ↓
 Identify Target
     ↓
-Read Current Version
+Read Current Repository Version
     ↓
-Analyse
+Analyze Scope and Impact
     ↓
-Determine Impact
-    ↓
-Present Proposal
-    ↓
-Project Owner Approval
+Obtain Required Approval
     ↓
 Modify
     ↓
@@ -102,63 +88,62 @@ Validate
     ↓
 Commit
     ↓
-Verify
+Verify Repository State
 ```
 
-No step may be skipped unless explicitly approved by the Project Owner.
+A step may only be omitted through explicit approval when the omission does not weaken governance or verification.
 
 ---
 
 # 5. Read Policy
 
-Before reading a repository document the following shall be identified:
+Before repository content is used, identify:
 
-- Repository
-- Branch
-- Target document
+- repository,
+- branch or ref,
+- exact target path.
 
 When reading:
 
-- Always use the latest repository version.
-- Verify the correct target document.
-- Preserve document metadata.
-- Preserve document intent.
-
-ChatGPT shall never rely solely on remembered document contents when a newer repository version exists.
+- use the latest relevant repository version,
+- verify the target path,
+- preserve document intent and authority,
+- prefer repository content over remembered conversation content.
 
 ---
 
 # 6. Change Policy
 
-Every modification shall have a clearly defined purpose.
+Every modification shall have one clearly defined purpose.
 
 Changes shall:
 
-- Modify only requested content.
-- Preserve existing structure where possible.
-- Preserve metadata.
-- Preserve document hierarchy.
-- Preserve traceability.
+- modify only the approved scope,
+- preserve document intent,
+- preserve traceability,
+- avoid unrelated cleanup,
+- respect lifecycle governance,
+- use the smallest safe change.
 
-Unrelated modifications shall not be introduced.
+Frozen documents may only be unlocked through an explicit governance decision.
 
 ---
 
 # 7. Validation Policy
 
-Every completed modification shall be validated.
-
 Validation includes, where applicable:
 
-- Document status
-- Metadata
-- Internal links
-- Cross references
-- Navigation
-- Repository hierarchy
-- Traceability
+- lifecycle status,
+- metadata,
+- internal links,
+- cross-references,
+- navigation,
+- terminology,
+- repository hierarchy,
+- requirement traceability,
+- implementation readiness.
 
-Validation shall occur before the change is considered complete.
+A change is not complete until the resulting repository state has been verified.
 
 ---
 
@@ -166,123 +151,96 @@ Validation shall occur before the change is considered complete.
 
 Repository history is a project asset.
 
-Commits should follow these principles:
+Commits shall:
 
-- One logical change per commit.
-- Clear and descriptive commit message.
-- No mixed-purpose commits.
-- Preserve repository history.
-
----
-
-# 9. AI Behaviour
-
-## ChatGPT shall
-
-- Read repository content before proposing modifications.
-- Distinguish facts from assumptions.
-- Preserve metadata.
-- Preserve document intent.
-- Explain significant changes.
-- Highlight governance implications.
-- Respect approved project decisions.
+- contain one logical change,
+- use a clear imperative subject,
+- explain significant scope or governance effects in the body,
+- avoid mixed-purpose changes,
+- preserve traceability to the relevant requirement, decision, or review finding.
 
 ---
 
-## ChatGPT shall not
+# 9. AI Behavior
 
-- Invent repository contents.
-- Assume document contents.
-- Modify unrelated sections.
-- Introduce governance changes without explicit approval.
-- Continue working from outdated document versions.
+## ChatGPT Shall
+
+- read repository content before modifying it,
+- distinguish verified facts from recommendations and unknowns,
+- preserve document intent and authority,
+- identify material conflicts,
+- respect approved product decisions,
+- stop for Product Owner input when a true product decision is required.
+
+## ChatGPT Shall Not
+
+- invent repository contents,
+- assume file or implementation state,
+- introduce unapproved product scope,
+- modify unrelated content,
+- continue from an identified incorrect assumption.
 
 ---
 
 # 10. Decision Levels
 
-Repository decisions are classified according to impact.
-
 ## Level 1 — Editorial
 
 Examples:
 
-- Grammar
-- Formatting
-- Typographical corrections
+- grammar,
+- formatting,
+- typographical corrections,
+- repair of an unambiguous broken link.
 
-May be performed directly.
-
----
+May be performed directly when the target is not Frozen.
 
 ## Level 2 — Structural
 
 Examples:
 
-- New sections
-- Document restructuring
-- Navigation updates
+- new sections,
+- document restructuring,
+- navigation changes,
+- file creation, rename, move, or deletion.
 
-Require Project Owner approval.
+Requires Project Owner approval.
 
----
-
-## Level 3 — Governance
+## Level 3 — Governance or Product
 
 Examples:
 
-- Foundation principles
-- Repository hierarchy
-- MASTER_INDEX
-- DOCUMENT_REGISTER
-- Governance model
-- Document lifecycle
+- Foundation principles,
+- product behavior or scope,
+- repository hierarchy,
+- lifecycle model,
+- Document Register,
+- Review Matrix,
+- unlocking a Frozen document.
 
-Require explicit governance approval.
-
----
-
-# 11. Repository Operations
-
-Repository operations include:
-
-- Read
-- Create
-- Modify
-- Rename
-- Move
-- Delete
-
-Structural operations require Project Owner approval.
+Requires explicit approval from the authorized decision owner.
 
 ---
 
-# 12. Continuous Improvement
+# 11. Continuous Improvement
 
-Process improvements are encouraged.
+Process improvements are encouraged after the active objective has been completed or when they are required to complete it safely.
 
-However:
-
-> Complete the current objective before improving the process.
-
-Continuous improvement shall never prevent completion of the current task.
+Continuous improvement shall not become a substitute for delivery.
 
 ---
 
-# 13. Authority
+# 12. Authority
 
-This agreement governs operational collaboration between the Project Owner and ChatGPT.
+Foundation and recorded product decisions take precedence over this agreement.
 
-Where conflicts exist:
-
-Foundation documents take precedence over this agreement.
-
-Project governance decisions take precedence over operational convenience.
+The Project Owner remains the final authority for product and governance decisions.
 
 ---
 
-# 14. Revision History
+# 13. Revision History
 
-| Version | Status | Description |
-|----------|--------|-------------|
-| 1.0.0 | Draft | Initial version |
+| Version | Date | Status | Description |
+|---|---|---|---|
+| 1.0.0 | 2026-07-31 | Draft | Initial version. |
+| 1.1.0 | 2026-07-31 | Approved | Approved for repository operations and aligned with Frozen-document governance. |

@@ -1,247 +1,126 @@
 # DGTC Business Operating System (BOS)
 
-# Master Index
+# Business Index
 
-**Version:** 1.0
-
-**Status:** Draft
-
-**Document Type:** Navigation Document
-
----
-
-# Purpose
-
-The Master Index serves as the central navigation document for the DGTC Business Operating System (BOS).
-
-It defines the documentation hierarchy, document status, governance structure, dependencies, and workflow.
-
-This document contains **no business strategy**.
-
-Its purpose is to make the Business Operating System understandable and easy to navigate.
+**Document Type:** Navigation  
+**Version:** 2.0  
+**Status:** Approved  
+**Information Owner:** Business
 
 ---
 
-# Business Operating System Overview
+## Purpose
 
-The Business Operating System is organized into four strategic layers.
+This document is the authoritative navigation point for the DGTC Business Operating System.
 
-Each layer builds upon the previous one.
+It identifies the existing Business documents, their roles, and their dependency on the DGTC Foundation.
+
+Lifecycle metadata is owned by the [Document Register](../project/DOCUMENT_REGISTER.md). Proposed Business documents and improvements belong in [CHANGE_QUEUE.md](CHANGE_QUEUE.md).
+
+---
+
+## Operating Model
 
 ```text
 Foundation
-      │
-      ▼
-Analysis & Governance
-      │
-      ▼
-Identity
-      │
-      ▼
-Execution Strategies
-```
-
----
-
-# Level 1 — Foundation
-
-The Foundation serves as the single source of truth for the entire DGTC ecosystem.
-
-Ownership belongs to the Product Operating System.
-
-| Document | Status |
-|----------|--------|
-| `FOUNDATION.md` | External Reference |
-
----
-
-# Level 2 — Analysis & Governance
-
-These documents translate the Foundation into business strategy and governance.
-
-| Document | Status | Purpose |
-|----------|----------|---------|
-| `FOUNDATION_ANALYSIS.md` | Approved | Business interpretation of the Foundation |
-| `BUSINESS_GUARDRAILS.md` | Draft | Strategic governance principles |
-| `CHANGE_QUEUE.md` | Active | Future business improvements and documentation proposals |
-
----
-
-# Level 3 — Brand Identity
-
-These documents define how DGTC should be perceived.
-
-| Document | Status | Purpose |
-|----------|----------|---------|
-| `BRAND_PLATFORM.md` | Draft | Brand identity |
-| `MESSAGING_FRAMEWORK.md` | Planned | Communication framework |
-# Level 4 — Execution Strategies
-
-These documents describe how the DGTC identity is translated into practical business execution.
-
-| Document | Status | Purpose |
-|----------|----------|---------|
-| `WEBSITE_STRATEGY.md` | Planned | Website strategy |
-| `COMMUNITY_STRATEGY.md` | Planned | Community development |
-| `SPONSORSHIP_STRATEGY.md` | Planned | Partnership strategy |
-| `PRICING_STRATEGY.md` | Planned | Pricing model |
-| `GO_TO_MARKET.md` | Planned | Launch strategy |
-
----
-
-# Governance
-
-Governance documents manage the Business Operating System itself.
-
-| Document | Status | Purpose |
-|----------|----------|---------|
-| `BUSINESS_DECISION_LOG.md` | Planned | Strategic decision history |
-| `docs/business/BUSINESS_INDEX.md` | Draft | Documentation navigation |
-
----
-
-# Documentation Hierarchy
-
-```text
-Foundation
-      │
-      ▼
+    ↓
 Foundation Analysis
-      │
-      ├─────────────────────┐
-      ▼                     ▼
-Business Guardrails    Brand Platform
-      │                     │
-      └──────────┬───────────┘
-                 ▼
-      Messaging Framework
-                 ▼
-        Website Strategy
-                 ▼
-      Community Strategy
-                 ▼
-     Sponsorship Strategy
-                 ▼
-        Pricing Strategy
-                 ▼
-         Go-To-Market
+    ↓
+Business Guardrails
+    ↓
+Brand Platform
+    ↓
+Messaging Framework
+    ↓
+Future Execution Strategies
 ```
 
-The hierarchy ensures that every strategic decision ultimately traces back to the Foundation.
+The Business Operating System interprets and communicates the Foundation. It does not redefine product philosophy or introduce product behavior.
 
 ---
 
-# Document Status Lifecycle
+## Existing Documents
 
-The Business Operating System uses four document states.
+### Analysis and Governance
 
-## Planned
+| Document | Role |
+|---|---|
+| [FOUNDATION_ANALYSIS.md](FOUNDATION_ANALYSIS.md) | Distills the Foundation into business, brand, and communication implications. |
+| [BUSINESS_GUARDRAILS.md](BUSINESS_GUARDRAILS.md) | Defines Hard and Soft Guardrails for business decisions. |
+| [CHANGE_QUEUE.md](CHANGE_QUEUE.md) | Records proposed Business documents and improvements that are not yet approved decisions. |
 
-The document has been identified but development has not yet begun.
+### Brand and Communication
 
----
+| Document | Role |
+|---|---|
+| [BRAND_PLATFORM.md](BRAND_PLATFORM.md) | Defines brand purpose, positioning, personality, promise, and differentiation. |
+| [MESSAGING_FRAMEWORK.md](MESSAGING_FRAMEWORK.md) | Defines the core message, message pillars, audiences, proof structure, and communication hierarchy. |
 
-## Draft
+### Operating-System Overview
 
-The document is actively being developed and remains subject to revision.
-
----
-
-## Approved
-
-The document has completed review and is considered the current authoritative version.
-
-Improvements remain possible without changing its status.
-
----
-
-## Frozen
-
-The document is considered strategically stable.
-
-Changes should only occur through deliberate governance decisions and be recorded in the Business Decision Log.
-# Document Workflow
-
-When a new Business document is created, it should follow the standard governance process.
-
-1. Be derived from the Foundation.
-2. Comply with the Business Guardrails.
-3. Complete the review process.
-4. Reach **Approved** status.
-5. If appropriate, later transition to **Frozen** status.
-
-This process ensures strategic consistency throughout the Business Operating System.
+| Document | Role |
+|---|---|
+| [readme.md](readme.md) | Defines the purpose, principles, responsibilities, and intended evolution of the Business Operating System. |
 
 ---
 
-# Ownership
+## Future Business Documents
 
-## Product Operating System
+Future execution strategies may include website, community, partnership, pricing, and go-to-market documentation.
 
-Responsible for the Foundation and all product philosophy.
+They do not exist as authoritative documents until they are:
 
----
+1. proposed in the Business Change Queue,
+2. explicitly approved,
+3. created in the repository,
+4. registered in the Document Register.
 
-## Business Operating System
-
-Responsible for all documentation located within:
-
-```text
-/docs/business
-```
-
-This includes governance, branding, communication, and execution strategy.
+A future document name mentioned in Business planning is not evidence that a file exists or that its content has been approved.
 
 ---
 
-# Version Management
+## Governance Rules
 
-The Master Index should be updated whenever:
+Every Business document shall:
 
-- New documents are added.
-- Existing documents change status.
-- The documentation hierarchy changes.
-- Governance responsibilities change.
-- New strategic layers are introduced.
+- derive from the Foundation,
+- follow Business Guardrails,
+- avoid introducing product requirements,
+- distinguish proposals from decisions,
+- use the repository lifecycle model,
+- be registered when created, renamed, moved, deprecated, or removed.
 
-The Master Index should always reflect the current structure of the Business Operating System.
+The allowed lifecycle states are:
+
+- Draft
+- Approved
+- Frozen
+- Deprecated
 
 ---
 
-# Navigation Principles
+## Ownership
 
-The Master Index serves as the primary entry point for Business documentation.
+The Product Operating System owns the Foundation and product behavior.
 
-Every Business document should be reachable from this index, either directly or through the documented hierarchy.
+The Business Operating System owns brand, positioning, communication, commercial strategy, and partnership strategy.
 
-The objective is to ensure that contributors can understand:
-
-- Where information belongs
-- Which document owns a topic
-- Which documents depend on one another
-- How strategic decisions flow through the Business Operating System
-
-Navigation should prioritize clarity over completeness.
+When a Business proposal would change product behavior or scope, the proposal must enter product governance rather than being decided inside the Business Operating System.
 
 ---
 
 ## Related Documents
 
-- `FOUNDATION_ANALYSIS.md`
-- `BUSINESS_GUARDRAILS.md`
-- `CHANGE_QUEUE.md`
-- `BRAND_PLATFORM.md`
-- `MESSAGING_FRAMEWORK.md`
-- `BUSINESS_DECISION_LOG.md`
+- [Foundation](../foundation/FOUNDATION.md)
+- [Document Register](../project/DOCUMENT_REGISTER.md)
+- [Repository Review Matrix](../project/REVIEW_MATRIX.md)
+- [Business Change Queue](CHANGE_QUEUE.md)
 
 ---
 
-**Status:** Draft
+## Revision History
 
-**Owner:** Business
-
-**Last Updated:** 2026-07-30
-
-### Revision History
-
-- **2026-07-30** – Repository documentation consolidated.
+| Version | Date | Description |
+|---|---|---|
+| 1.0 | 2026-07-30 | Initial consolidated Business index. |
+| 2.0 | 2026-07-31 | Aligned navigation with the verified repository, the four-state lifecycle, and queue-based future-document governance. |
