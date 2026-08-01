@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.2
+**Version:** 2.3  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -23,6 +23,8 @@ It records:
 The [DGTC Documentation Index](../MASTER_INDEX.md) owns navigation.
 
 The [Repository Review Matrix](REVIEW_MATRIX.md) owns review findings and implementation-readiness conclusions.
+
+The [Development Playbook](../development/DEVELOPMENT_PLAYBOOK.md) owns the mandatory Start and End DGTC Session procedures for Development and Business work.
 
 ---
 
@@ -217,6 +219,8 @@ Navigation links belong in `../MASTER_INDEX.md`.
 
 Review findings and readiness decisions belong in `REVIEW_MATRIX.md`.
 
+Operational session procedures belong in `../development/DEVELOPMENT_PLAYBOOK.md`.
+
 ---
 
 # Revision History
@@ -229,3 +233,4 @@ Review findings and readiness decisions belong in `REVIEW_MATRIX.md`.
 | 2.0 | 2026-07-31 | Reconciled inventory, adopted the four-state lifecycle, and registered the Frozen MVP implementation baseline. |
 | 2.1 | 2026-08-01 | Registered the Approved Development Playbook as part of the implementation operating baseline. |
 | 2.2 | 2026-08-01 | Registered the current project status and AI operating context created during the first Consolidation Sprint. |
+| 2.3 | 2026-08-01 | Recorded the Development Playbook as the authoritative owner of the mandatory Start and End DGTC Session procedures. |
