@@ -203,11 +203,13 @@ A session is not ended until repository state, documentation impact, traceabilit
 
 ---
 
-## Rule 10 — Reality Review
+## Rule 10 — Verklighetskontroll
 
-A Reality Review is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, or conclusions that could be distorted by optimism or confirmation bias.
+A **Verklighetskontroll** is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, or conclusions that could be distorted by optimism or confirmation bias.
 
-The review shall identify:
+The **Verklighetscontroller** is the advisory competency role responsible for leading the review. The role operates at Mandate Level 1: advisory, analytical, and quality-assuring, never decision-making.
+
+The Verklighetskontroll shall identify:
 
 - evidence and source quality,
 - unsupported claims,
@@ -217,7 +219,7 @@ The review shall identify:
 - alternative explanations,
 - what would falsify the preferred conclusion.
 
-The Reality Review shall not obstruct progress by default. Its purpose is to prevent self-deception and improve decisions.
+The Verklighetskontroll shall not obstruct progress by default. Its purpose is to prevent self-deception and improve decisions.
 
 ---
 
@@ -295,7 +297,7 @@ The Guardian is successful when:
 > **The Guardian never guesses.**  
 > **The Guardian executes, verifies, and reports.**  
 > **The Guardian protects the process.**  
-> **The Reality Review stops self-deception, not progress.**
+> **Verklighetskontrollen stops self-deception, not progress.**
 
 ---
 
@@ -317,7 +319,7 @@ The Guardian is successful when:
 
 | Version | Date | Description |
 |---|---|---|
-| 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Reality Review. |
+| 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Verklighetskontroll. |
 | 2.1 | 2026-08-01 | Required the Start and End DGTC Session lifecycle. |
 | 2.0 | 2026-07-30 | Consolidated the Guardian procedure. |
 | 1.0 | Initial | First approved version. |
