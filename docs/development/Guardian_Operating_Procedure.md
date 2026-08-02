@@ -325,7 +325,7 @@ The Guardian is successful when:
 
 | Version | Date | Description |
 |---|---|---|
-| 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Reality Review. |
+| 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Verklighetskontroll. |
 | 3.1 | 2026-08-02 | Established competence governance terminology and controlled repository sprints: Verklighetscontroller, Verklighetskontroll, and Verklighetsrapport. |
 | 2.1 | 2026-08-01 | Required the Start and End DGTC Session lifecycle. |
 | 2.0 | 2026-07-30 | Consolidated the Guardian procedure. |
