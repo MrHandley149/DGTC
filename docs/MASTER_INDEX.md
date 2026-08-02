@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.3  
+**Version:** 2.4  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -140,6 +140,18 @@ Development documentation defines how approved requirements are implemented, ver
 
 ---
 
+## Competence Governance and Skill Library
+
+DGTC competence roles are governed professional perspectives operating at Mandate Level 1. They advise, analyze, and assure quality but never make project decisions.
+
+- [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
+- [Skill Orchestration](skills/SKILL_ORCHESTRATION.md)
+- [Competence Governance Framework](skills/COMPETENCE_GOVERNANCE_FRAMEWORK.md)
+
+The Skill Library includes Marknadsförare, Försäljningschef, Sponsoransvarig, Elitspelare, Vardagsspelare, Tävlingsspelare, Verklighetscontroller, and Föreningsordförande. Material uncertainty is handled through Verklighetskontroll and documented in a Verklighetsrapport.
+
+---
+
 ## Project Governance
 
 - [Current Project Status](PROJECT_STATUS.md)
@@ -217,3 +229,4 @@ The repository uses four lifecycle states:
 | 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
 | 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
 | 2.3 | 2026-08-01 | Made Start and End DGTC Session the mandatory entry and exit points for Development and Business work. |
+| 2.4 | 2026-08-02 | Registered competence governance, Skill Library, orchestration, and the initial eight roles. |
