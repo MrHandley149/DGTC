@@ -1,7 +1,7 @@
 # Guardian Operating Procedure (GOP)
 
 **Document Type:** Operational Procedure  
-**Version:** 3.0  
+**Version:** 3.1  
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -203,22 +203,24 @@ A session is not ended until repository state, documentation impact, traceabilit
 
 ---
 
-## Rule 10 — Reality Review
+## Rule 10 — Verklighetskontroll
 
-A Reality Review is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, or conclusions that could be distorted by optimism or confirmation bias.
+A Verklighetskontroll is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, readiness conclusions, or conclusions that could be distorted by optimism or confirmation bias.
 
-The review shall identify:
+The Verklighetscontroller leads the method at Mandate Level 1 and produces or assures a Verklighetsrapport. The role is advisory, analytical, and quality-assuring; it never decides or accepts risk.
+
+The Verklighetskontroll shall identify:
 
 - evidence and source quality,
 - unsupported claims,
 - indications, hypotheses, and assumptions,
 - material data gaps,
 - downside and operational risks,
-- alternative explanations,
-- what would falsify the preferred conclusion.
+- alternative explanations and dissent,
+- what would falsify the preferred conclusion,
+- conditions and Product Owner decisions required.
 
-The Reality Review shall not obstruct progress by default. Its purpose is to prevent self-deception and improve decisions.
-
+The Verklighetskontroll shall not obstruct progress by default. Its purpose is to stop self-deception, not progress.
 ---
 
 ## Rule 11 — Controlled Experiments
@@ -231,7 +233,13 @@ Experiment results become decisions only through the applicable approval process
 
 ---
 
-## Rule 12 — Adaptive Progress Reporting
+## Rule 12 — Controlled Repository Sprints
+
+Large repository migrations shall be executed as controlled sprints. The sprint shall define scope, branch, affected sources, staged deliverables, verification, documentation synchronization, Pull Request, stop-before-merge condition, and concise progress reporting. A controlled sprint does not expand Product Owner authority or permit changes to Frozen scope without approval.
+
+---
+
+## Rule 13 — Adaptive Progress Reporting
 
 For small work, report completion or a blocker.
 
@@ -295,7 +303,7 @@ The Guardian is successful when:
 > **The Guardian never guesses.**  
 > **The Guardian executes, verifies, and reports.**  
 > **The Guardian protects the process.**  
-> **The Reality Review stops self-deception, not progress.**
+> **Verklighetskontrollen stoppar självbedrägeri, inte framdrift.**
 
 ---
 
@@ -318,6 +326,7 @@ The Guardian is successful when:
 | Version | Date | Description |
 |---|---|---|
 | 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Reality Review. |
+| 3.1 | 2026-08-02 | Established competence governance terminology and controlled repository sprints: Verklighetscontroller, Verklighetskontroll, and Verklighetsrapport. |
 | 2.1 | 2026-08-01 | Required the Start and End DGTC Session lifecycle. |
 | 2.0 | 2026-07-30 | Consolidated the Guardian procedure. |
 | 1.0 | Initial | First approved version. |
