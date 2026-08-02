@@ -1,10 +1,10 @@
 # Current Project Status
 
 **Document Type:** Status
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Approved
 **Information Owner:** Project
-**Verified Date:** 2026-08-01
+**Verified Date:** 2026-08-02
 **Verified Ref:** `main` at `a6d5e35`
 
 ---
@@ -19,7 +19,7 @@ Update it whenever the current phase, active objective, implementation state, bl
 
 ## Current Phase
 
-**Consolidation Sprint before Phase 6 implementation.**
+**Competence Governance consolidation before Phase 6 implementation.**
 
 The repository-wide documentation review is complete and the Frozen MVP baseline is declared ready for implementation in the [Repository Review Matrix](project/REVIEW_MATRIX.md). Product-feature implementation has not been authorized by that readiness decision alone.
 
@@ -38,6 +38,9 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 
 ## Current Consolidation Objective
 
+- Review and approve the Draft DGTC Skill Library, Skill Orchestration, Competence Governance Framework, and eight initial competence roles.
+- Keep all roles at Mandate Level 1: advisory, analytical, and quality-assuring; never decision-making.
+- Use Verklighetscontroller, Verklighetskontroll, and Verklighetsrapport consistently.
 - Maintain `MASTER_INDEX.md` as the authoritative navigation entry.
 - Maintain this file as the verified current-state handoff.
 - Maintain `AI_PROJECT_CONTEXT.md` as the operating context for future AI sessions.
@@ -73,7 +76,7 @@ The first Implementation Task has not yet been selected or approved in the repos
 
 ## Product Owner Decision Required
 
-The Product Owner must select and approve the first Phase 6 Implementation Task before product-feature implementation begins.
+The Product Owner shall review the Skill Library Pull Request and approve, return, or reject the Draft competence framework and roles. After competence governance is resolved, the Product Owner must select and approve the first Phase 6 Implementation Task before product-feature implementation begins.
 
 This status document does not recommend or select that task.
 
@@ -81,7 +84,7 @@ This status document does not recommend or select that task.
 
 ## Next Approved Action
 
-Stop before feature implementation and request the Product Owner's selection and approval of the first Implementation Task.
+Review the Skill Library Pull Request. Do not merge or treat Draft roles as authoritative until Product Owner approval. After that governance decision, select and approve the first Phase 6 Implementation Task.
 
 ---
 
@@ -94,6 +97,9 @@ Stop before feature implementation and request the Product Owner's selection and
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
 - [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md)
 - [Sprint 0](development/SPRINT_0.md)
+- [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
+- [Skill Orchestration](skills/SKILL_ORCHESTRATION.md)
+- [Competence Governance Framework](skills/COMPETENCE_GOVERNANCE_FRAMEWORK.md)
 - [`flutter_app` status](../flutter_app/README.md)
 
 ---
@@ -104,3 +110,4 @@ Stop before feature implementation and request the Product Owner's selection and
 |---|---|---|
 | 1.0 | 2026-08-01 | Established verified project status during the first Consolidation Sprint. |
 | 1.1 | 2026-08-01 | Corrected Sprint 0 history following Product Owner decision DEC-001. |
+| 1.2 | 2026-08-02 | Recorded the Draft Skill Library and Product Owner approval gate before Phase 6. |
