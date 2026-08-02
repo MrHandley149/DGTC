@@ -1,7 +1,7 @@
 # Operational Session Ritual
 
 **Document Type:** Operations  
-**Version:** v2.0  
+**Version:** v2.1
 **Lifecycle:** Approved  
 **Information Owner:** Project
 
@@ -12,6 +12,20 @@
 This document defines the standard workflow for repository work sessions.
 
 It ensures that every session follows the same process regardless of scope.
+
+---
+
+# Start MACKERIET
+
+1. Read [MASTER_INDEX.md](../MASTER_INDEX.md).
+2. Verify repository readability.
+3. Load the [Project Manifest](../PROJECT_MANIFEST.md).
+4. Load active working rules.
+5. Check open work queues.
+6. Report project status.
+7. Start work.
+
+The Project Manifest owns the detailed sequence and failure behavior. If `docs/MASTER_INDEX.md` cannot be read, repository work stops; chat or memory may not substitute for repository authority.
 
 ---
 
@@ -41,6 +55,9 @@ Repeat
 
 During a work session:
 
+- synchronize affected documentation as part of the same logical change,
+- complete the applicable competence-role cross-review,
+- require the Reality Auditor evidence check before reporting completion,
 - work on one revision at a time,
 - complete revisions before starting new ones,
 - preserve document ownership,
@@ -89,3 +106,4 @@ A session is complete when:
 | Version | Date | Description |
 |---|---|---|
 | v2.0 | 2026-07-29 | Repository consolidation |
+| v2.1 | 2026-08-02 | Added the governed Start MACKERIET sequence, synchronization, cross-review, and Reality Auditor check. |

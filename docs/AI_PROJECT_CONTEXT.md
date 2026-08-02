@@ -1,10 +1,10 @@
 # AI Project Context
 
 **Document Type:** AI operating context
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Approved
 **Information Owner:** Project
-**Last Reviewed:** 2026-08-01
+**Last Reviewed:** 2026-08-02
 
 ---
 
@@ -31,12 +31,12 @@ It summarizes operating rules only. It does not replace the authoritative source
 Before proposing or performing work:
 
 1. Read [MASTER_INDEX.md](MASTER_INDEX.md).
-2. Read [PROJECT_STATUS.md](PROJECT_STATUS.md).
-3. Confirm lifecycle and baseline membership in the [Document Register](project/DOCUMENT_REGISTER.md).
-4. Read the relevant approved or Frozen source documents in full.
-5. For implementation work, read the [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md).
-6. Check the [Decision Log](foundation/08_Decision_Log.md) and applicable queues or RFCs.
-7. Verify the current repository ref, paths, and implementation state directly.
+2. Verify repository readability as defined by the [Project Manifest](PROJECT_MANIFEST.md). If `MASTER_INDEX.md` cannot be read, stop repository work and report the prescribed failure.
+3. Load the Project Manifest and confirm the MACKERIET process version.
+4. Load active working rules, including the applicable profile and the [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md) for implementation work.
+5. Check the Decision Log, applicable queues, RFCs, and repository-tracked implementation work.
+6. Read [PROJECT_STATUS.md](PROJECT_STATUS.md), verify the current repository ref and implementation state directly, and report status, objective, blockers, and unknowns.
+7. Start authorized work and apply the required competence-role cross-review and Reality Auditor check.
 
 If required information cannot be verified, label it **Unknown** and stop where a Product Owner or governance decision is genuinely required.
 
@@ -143,6 +143,7 @@ The current phase, active objective, blockers, implementation state, and next Pr
 ## Authoritative Operating Sources
 
 - [Foundation entry and reading order](foundation/README.md)
+- [Project Manifest](PROJECT_MANIFEST.md)
 - [The DGTC Way](foundation/00_The_DGTC_Way.md)
 - [Decision Framework](foundation/05_Decision_Framework.md)
 - [DGTC DNA](foundation/06_DGTC_DNA.md)
@@ -162,3 +163,4 @@ The current phase, active objective, blockers, implementation state, and next Pr
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established permanent AI handoff and verification rules during the first Consolidation Sprint. |
+| 1.1 | 2026-08-02 | Aligned required session start with Project Manifest and Start MACKERIET. |

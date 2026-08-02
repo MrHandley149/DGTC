@@ -1,7 +1,7 @@
 # DGTC Development Playbook
 
 **Document Type:** Operational Guide  
-**Version:** 1.0  
+**Version:** 1.1
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -26,6 +26,8 @@ Conversation is used for decisions, clarification, and review.
 GitHub is used for governed project work, including documentation, implementation, traceability, and repository history.
 
 No implementation work shall rely on copied or remembered document content when an authoritative repository version exists.
+
+The [Project Manifest](../PROJECT_MANIFEST.md) is the operating contract for Start MACKERIET, core project rules, competence-role cross-review, and the Reality Auditor.
 
 ---
 
@@ -181,6 +183,16 @@ When applicable, the same change shall update:
 
 The Product Owner shall not need to request these maintenance updates separately.
 
+This is **Automatic Documentation Synchronization**: source changes and all affected official references are one logical change and must be reviewed and committed together.
+
+---
+
+## Competence-Role Quality Gate
+
+Before completion, every material change shall be reviewed through each affected active competence role listed in the Project Manifest. Findings must be resolved or explicitly recorded.
+
+The Reality Auditor then performs the mandatory independent evidence check. A task may not be reported as complete when repository state, tests, references, or status claims do not support that conclusion.
+
 ---
 
 ## Implementation Task Standard
@@ -273,6 +285,7 @@ The playbook is followed successfully when:
 - [Coding Standard](CODING_STANDARD.md)
 - [Document Register](../project/DOCUMENT_REGISTER.md)
 - [Repository Review Matrix](../project/REVIEW_MATRIX.md)
+- [Project Manifest](../PROJECT_MANIFEST.md)
 
 ---
 
@@ -281,3 +294,4 @@ The playbook is followed successfully when:
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established the implementation-phase operating model for collaboration between the Product Owner and the Guardian / AI CTO. |
+| 1.1 | 2026-08-02 | Added Project Manifest authority, automatic documentation synchronization, competence-role cross-review, and Reality Auditor gate. |

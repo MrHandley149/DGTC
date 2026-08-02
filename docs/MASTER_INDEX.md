@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.2
+**Version:** 2.3
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -24,11 +24,17 @@ The repository [README](../README.md) is the primary entry point to the project.
 
 ## Start Every Work Session Here
 
-1. Read [Current Project Status](PROJECT_STATUS.md) for the verified current phase, active objective, blockers, and next decision.
-2. Read [AI Project Context](AI_PROJECT_CONTEXT.md) for authority, operating rules, and prohibited assumptions.
-3. Use this index to locate the relevant authoritative documents.
-4. Confirm lifecycle status and Frozen-baseline membership in the [Document Register](project/DOCUMENT_REGISTER.md).
-5. Review the [Decision Log](foundation/08_Decision_Log.md) and the applicable approved or Frozen source documents before proposing or performing work.
+Use the governed **Start MACKERIET** sequence:
+
+1. Read this index.
+2. Verify repository readability.
+3. Load the [Project Manifest](PROJECT_MANIFEST.md).
+4. Load active working rules.
+5. Check open work queues.
+6. Report verified project status.
+7. Start the authorized work.
+
+The Project Manifest defines the full sequence, required sources, competence-role review, and mandatory failure behavior if this index cannot be read.
 
 Chat history is working material, not project authority. If chat and repository content conflict, the repository governs.
 
@@ -116,6 +122,7 @@ Development documentation defines how approved requirements are implemented, ver
 
 ## Project Governance
 
+- [Project Manifest](PROJECT_MANIFEST.md)
 - [Current Project Status](PROJECT_STATUS.md)
 - [AI Project Context](AI_PROJECT_CONTEXT.md)
 - [Document Register](project/DOCUMENT_REGISTER.md)
@@ -188,3 +195,4 @@ The repository uses four lifecycle states:
 | 2.0 | 2026-07-31 | Rebuilt for repository-wide implementation readiness and linked to the permanent Review Matrix. |
 | 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
 | 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
+| 2.3 | 2026-08-02 | Made the Project Manifest authoritative for the Start MACKERIET sequence and repository-read failure behavior. |

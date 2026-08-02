@@ -1,11 +1,11 @@
 # Current Project Status
 
 **Document Type:** Status
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Approved
 **Information Owner:** Project
-**Verified Date:** 2026-08-01
-**Verified Ref:** `main` at `4c6ed9f`
+**Verified Date:** 2026-08-02
+**Verified Ref:** `docs/start-mackeriet-project-manifest`, based on `c263635`
 
 ---
 
@@ -33,6 +33,7 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 - The Development Playbook defines the implementation-phase collaboration model.
 - Sprint 0 is recorded as completed historical project evidence.
 - GitHub `main` is the project's official source of truth.
+- The Project Manifest defines MACKERIET process version 1.0, the Start MACKERIET sequence, core operating rules, active competence roles, and the Reality Auditor gate.
 
 ---
 
@@ -41,6 +42,7 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 - Maintain `MASTER_INDEX.md` as the authoritative navigation entry.
 - Maintain this file as the verified current-state handoff.
 - Maintain `AI_PROJECT_CONTEXT.md` as the operating context for future AI sessions.
+- Maintain `PROJECT_MANIFEST.md` as the compact operating contract for Start MACKERIET and cross-role quality control.
 - Continue later consolidation of application-development and business-development chat material as historical source material, without treating chat content as authoritative or inventing decisions.
 
 ---
@@ -88,6 +90,7 @@ Stop before feature implementation and request the Product Owner's selection and
 ## Evidence
 
 - [Repository Review Matrix](project/REVIEW_MATRIX.md)
+- [Project Manifest](PROJECT_MANIFEST.md)
 - [Document Register](project/DOCUMENT_REGISTER.md)
 - [MVP Specification](product/MVP.md)
 - [Functional Requirements Specification](functional/FRS.md)
@@ -103,3 +106,4 @@ Stop before feature implementation and request the Product Owner's selection and
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established verified project status during the first Consolidation Sprint. |
+| 1.1 | 2026-08-02 | Recorded Project Manifest and Start MACKERIET process version 1.0 on the working branch. |

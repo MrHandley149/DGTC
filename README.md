@@ -8,6 +8,8 @@ This repository is the authoritative source for DGTC product documentation, arch
 
 Open the [DGTC Documentation Index](docs/MASTER_INDEX.md) to navigate the project documentation.
 
+Use the [Project Manifest](docs/PROJECT_MANIFEST.md) to run Start MACKERIET and load the project's core operating rules.
+
 Use the [Repository Review Matrix](docs/project/REVIEW_MATRIX.md) to verify documentation status, implementation readiness, and outstanding actions.
 
 ## Repository purpose
