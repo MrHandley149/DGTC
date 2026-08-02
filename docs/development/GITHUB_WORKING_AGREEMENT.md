@@ -1,7 +1,7 @@
 # GitHub Working Agreement (GWA)
 
 **Document ID:** GWA-001  
-**Version:** 1.1.0  
+**Version:** 2.0.0
 **Status:** Approved  
 **Owner:** Project Owner  
 **Applies to:** All work performed between the Project Owner, ChatGPT, and the DGTC GitHub repository.
@@ -71,6 +71,8 @@ Short-term speed shall not compromise traceability, document authority, or repos
 
 # 4. Standard Workflow
 
+The complete operating sequence and direct-to-`main` classification are authoritative in [GitHub Workflow v2](GIT_WORKFLOW.md). Material, cross-cutting, governing, role, process, security, release, version, architecture, scope, behavioral, structural, and Frozen-baseline changes require a branch and Pull Request.
+
 ```text
 Request
     ↓
@@ -88,7 +90,11 @@ Validate
     ↓
 Commit
     ↓
-Verify Repository State
+    Review and Owner Approval
+    â†“
+    Merge
+    â†“
+    Verified Closeout
 ```
 
 A step may only be omitted through explicit approval when the omission does not weaken governance or verification.
@@ -236,6 +242,8 @@ Foundation and recorded product decisions take precedence over this agreement.
 
 The Project Owner remains the final authority for product and governance decisions.
 
+Git Operations is a non-decision-making execution and control process. It cannot accept risk, approve specialist content, prioritize work, or merge material changes without Project Owner or Project Lead approval.
+
 ---
 
 # 13. Revision History
@@ -244,3 +252,4 @@ The Project Owner remains the final authority for product and governance decisio
 |---|---|---|---|
 | 1.0.0 | 2026-07-31 | Draft | Initial version. |
 | 1.1.0 | 2026-07-31 | Approved | Approved for repository operations and aligned with Frozen-document governance. |
+| 2.0.0 | 2026-08-02 | Approved | Adopted GitHub Workflow v2 and established Git Operations as a non-decision-making process. |

@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.3  
+**Version:** 2.4
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -19,6 +19,8 @@ Lifecycle status and review findings are maintained in:
 - [Repository Review Matrix](project/REVIEW_MATRIX.md)
 
 The repository [README](../README.md) is the primary entry point to the project.
+
+The [Project Manifest](PROJECT_MANIFEST.md) maps operating concerns to their authoritative sources.
 
 ---
 
@@ -129,6 +131,7 @@ Development documentation defines how approved requirements are implemented, ver
 - [Development Workflow](development/DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
 - [Git Workflow](development/GIT_WORKFLOW.md)
+- [Git Operations](operations/GIT_OPERATIONS.md)
 - [GitHub Guide](development/GitHub_Guide.md)
 - [GitHub Working Agreement](development/GITHUB_WORKING_AGREEMENT.md)
 - [Guardian Operating Procedure](development/Guardian_Operating_Procedure.md)
@@ -141,6 +144,11 @@ Development documentation defines how approved requirements are implemented, ver
 ---
 
 ## Project Governance
+
+- [Project Manifest](PROJECT_MANIFEST.md)
+- [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
+- [Skill Orchestration](skills/SKILL_ORCHESTRATION.md)
+- [Skill Library Governance](skills/SKILL_LIBRARY_GOVERNANCE.md)
 
 - [Current Project Status](PROJECT_STATUS.md)
 - [AI Project Context](AI_PROJECT_CONTEXT.md)
@@ -217,3 +225,4 @@ The repository uses four lifecycle states:
 | 2.1 | 2026-08-01 | Added the Development Playbook as the primary implementation-phase operating guide. |
 | 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
 | 2.3 | 2026-08-01 | Made Start and End DGTC Session the mandatory entry and exit points for Development and Business work. |
+| 2.4 | 2026-08-02 | Indexed the Project Manifest, GitHub Workflow v2, Git Operations, and Skill Library governance set. |

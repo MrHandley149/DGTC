@@ -1,7 +1,7 @@
 # DGTC Development Playbook
 
 **Document Type:** Operational Guide  
-**Version:** 2.0  
+**Version:** 2.1
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -77,13 +77,15 @@ The same lifecycle applies to Development, Business, Architecture, Foundation, a
 When the start command is issued, the Guardian shall:
 
 1. **Verify GitHub Capability**:
+   - record the working directory, remote, default branch, current branch, HEAD SHA, and worktree state,
+   - verify `git --version`, `gh --version`, `gh auth status`, and repository access when CLI is available,
    - verify the authenticated GitHub identity,
    - verify access to `MrHandley149/DGTC`,
    - verify repository read capability,
    - verify repository write capability,
    - verify collaborator permission,
    - verify that required repository operations are exposed, including branch creation, file read/write, and Pull Request creation.
-2. Stop immediately and report a **Tool Capability Gap** if any required capability cannot be verified. Repository work shall not proceed on assumed access.
+2. Prefer local `git` with authenticated `gh`. When `gh` is absent, unauthenticated, or insufficient, use the installed GitHub connector or API after verifying equivalent identity, access, read/write, branch, and Pull Request capabilities. Stop and report a **Tool Capability Gap** only when neither path can verify required capability.
 3. Read [Current Project Status](../PROJECT_STATUS.md).
 4. Read [AI Project Context](../AI_PROJECT_CONTEXT.md).
 5. Read the [Repository Review Matrix](../project/REVIEW_MATRIX.md).
@@ -124,6 +126,7 @@ When the end command is issued, the Guardian shall:
 6. Record unresolved blockers, required Product Owner decisions, the exact stopping point, and the next recommended or approved task.
 7. Leave the repository ready for the next session.
 8. Remind the Product Owner to synchronize through GitHub Desktop after merges.
+9. Record branch, every commit SHA, push result, Pull Request and issue links, checks, unresolved decisions, and exact stopping point.
 
 Plans, promises, and uncommitted changes are not completed work.
 
@@ -275,7 +278,8 @@ No product implementation begins without an approved requirement and a defined I
 ## Repository Rules
 
 - `main` shall remain releasable.
-- No direct development shall occur on `main`.
+- Direct commit to `main` is limited to small, local, low-risk, easily reversible, non-governing corrections that meet every criterion in GitHub Workflow v2.
+- Material, cross-cutting, governing, role, process, security, release, version, architecture, scope, behavioral, structural, or Frozen-baseline changes require a branch and Pull Request.
 - One logical objective shall be implemented per branch and Pull Request.
 - Squash merge is the standard merge strategy unless an explicit decision creates an exception.
 - Changes shall be based on the latest target branch.
@@ -333,6 +337,9 @@ If formalization is justified, update the document that owns the rule and all of
 - [Development Workflow](DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](IMPLEMENTATION_WORKFLOW.md)
 - [GitHub Working Agreement](GITHUB_WORKING_AGREEMENT.md)
+- [GitHub Workflow v2](GIT_WORKFLOW.md)
+- [Git Operations](../operations/GIT_OPERATIONS.md)
+- [Project Manifest](../PROJECT_MANIFEST.md)
 - [Document Register](../project/DOCUMENT_REGISTER.md)
 
 ---
@@ -341,6 +348,7 @@ If formalization is justified, update the document that owns the rule and all of
 
 | Version | Date | Description |
 |---|---|---|
+| 2.1 | 2026-08-02 | Integrated GitHub Workflow v2, CLI/connector fallback, direct-main classification, and evidence-backed Git Operations closeout. |
 | 2.0 | 2026-08-02 | Established Operational Governance v2.0, including GitHub capability verification, execute-before-explain, evidence classification, data-gap handling, and repository-migration principles. |
 | 1.2 | 2026-08-01 | Aligned the mandatory start and end procedures with the approved final session sequence. |
 | 1.1 | 2026-08-01 | Institutionalized Start and End DGTC Session. |

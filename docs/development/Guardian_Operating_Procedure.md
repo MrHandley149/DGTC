@@ -1,7 +1,7 @@
 # Guardian Operating Procedure (GOP)
 
 **Document Type:** Operational Procedure  
-**Version:** 3.0  
+**Version:** 3.1
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -60,6 +60,8 @@ If any required capability cannot be verified, the Guardian shall:
 3. state which capability failed,
 4. avoid claiming that work has been performed,
 5. resume only after capability is verified.
+
+Local `git` with authenticated `gh` is preferred. An installed GitHub connector or API is the fallback when CLI is absent, unauthenticated, or insufficient, provided equivalent capability is verified. Tool choice never changes governance.
 
 ---
 
@@ -203,9 +205,9 @@ A session is not ended until repository state, documentation impact, traceabilit
 
 ---
 
-## Rule 10 — Reality Review
+## Rule 10 — Verklighetskontroll
 
-A Reality Review is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, or conclusions that could be distorted by optimism or confirmation bias.
+A Verklighetskontroll, performed by the Verklighetscontroller when that competence role is registered or by an equivalent evidence function, is required when work includes material uncertainty, external evidence, market claims, strategic investment, significant risk, or conclusions that could be distorted by optimism or confirmation bias.
 
 The review shall identify:
 
@@ -217,7 +219,7 @@ The review shall identify:
 - alternative explanations,
 - what would falsify the preferred conclusion.
 
-The Reality Review shall not obstruct progress by default. Its purpose is to prevent self-deception and improve decisions.
+The Verklighetskontroll shall not obstruct progress by default. Its purpose is to prevent self-deception and improve decisions.
 
 ---
 
@@ -247,6 +249,12 @@ Done.
 ```
 
 Progress reporting shall never substitute for execution.
+
+## Rule 13 — Git Operations Has No Decision Mandate
+
+Git Operations executes and verifies branch strategy, synchronization, staging, commits, Pull Requests, checks, mergeability, versioning, releases, and closeout evidence. It is an operational process, not a competence role, and is excluded from the Skill Library role count.
+
+It may not prioritize, make subject-matter decisions, accept risk, approve specialist content, replace the Product Owner, or merge a material change without Product Owner or Project Lead approval.
 
 ---
 
@@ -295,7 +303,7 @@ The Guardian is successful when:
 > **The Guardian never guesses.**  
 > **The Guardian executes, verifies, and reports.**  
 > **The Guardian protects the process.**  
-> **The Reality Review stops self-deception, not progress.**
+> **The Verklighetskontroll stops self-deception, not progress.**
 
 ---
 
@@ -310,6 +318,9 @@ The Guardian is successful when:
 - `../MASTER_INDEX.md`
 - `../project/REVIEW_MATRIX.md`
 - `../foundation/05_Decision_Framework.md`
+- `GIT_WORKFLOW.md`
+- `../operations/GIT_OPERATIONS.md`
+- `../skills/SKILL_LIBRARY_GOVERNANCE.md`
 
 ---
 
@@ -317,6 +328,7 @@ The Guardian is successful when:
 
 | Version | Date | Description |
 |---|---|---|
+| 3.1 | 2026-08-02 | Integrated GitHub Workflow v2, CLI/connector fallback, Verklighetskontroll terminology, and the non-decision-making Git Operations mandate. |
 | 3.0 | 2026-08-02 | Established Operational Governance v2.0 rules, including GitHub capability verification, execute-before-explain, evidence hierarchy, data-gap handling, repository migrations, and Reality Review. |
 | 2.1 | 2026-08-01 | Required the Start and End DGTC Session lifecycle. |
 | 2.0 | 2026-07-30 | Consolidated the Guardian procedure. |

@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.3  
+**Version:** 2.4
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -64,6 +64,7 @@ The `Owner` column identifies the Information Owner.
 | `../MASTER_INDEX.md` | Index | Approved | Project | Yes |
 | `../PROJECT_STATUS.md` | Status | Approved | Project | No |
 | `../AI_PROJECT_CONTEXT.md` | AI operating context | Approved | Project | No |
+| `../PROJECT_MANIFEST.md` | Project manifest | Approved | Project | No |
 | `DOCUMENT_REGISTER.md` | Register | Approved | Project | Yes |
 | `REVIEW_MATRIX.md` | Governance / Review | Frozen | Project | Yes |
 | `Future_Queue.md` | Queue | Approved | Project | No |
@@ -137,6 +138,14 @@ The `Owner` column identifies the Information Owner.
 | `../development/REPOSITORY_STRUCTURE.md` | Architecture | Frozen | Development | Yes |
 | `../development/SPRINT_0.md` | Planning / Evidence | Frozen | Project | Yes |
 
+## Skill Library
+
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../skills/SKILL_LIBRARY_INDEX.md` | Index | Approved | Project | No |
+| `../skills/SKILL_ORCHESTRATION.md` | Operational model | Approved | Project | No |
+| `../skills/SKILL_LIBRARY_GOVERNANCE.md` | Governance | Approved | Project | No |
+
 ## Engineering
 
 | Path | Type | Lifecycle | Owner | MVP Baseline |
@@ -152,6 +161,7 @@ The `Owner` column identifies the Information Owner.
 | `../operations/DEVELOPMENT_PROFILE.md` | Profile | Approved | Development | No |
 | `../operations/OPERATIONAL_SESSION_RITUAL.md` | Procedure | Approved | Project | No |
 | `../operations/Repository_Review_Procedure.md` | Procedure | Approved | Project | No |
+| `../operations/GIT_OPERATIONS.md` | Operational process | Approved | Development | No |
 
 ## Business
 
@@ -234,3 +244,4 @@ Operational session procedures belong in `../development/DEVELOPMENT_PLAYBOOK.md
 | 2.1 | 2026-08-01 | Registered the Approved Development Playbook as part of the implementation operating baseline. |
 | 2.2 | 2026-08-01 | Registered the current project status and AI operating context created during the first Consolidation Sprint. |
 | 2.3 | 2026-08-01 | Recorded the Development Playbook as the authoritative owner of the mandatory Start and End DGTC Session procedures. |
+| 2.4 | 2026-08-02 | Registered the Project Manifest, Git Operations, and Skill Library governance documents. |
