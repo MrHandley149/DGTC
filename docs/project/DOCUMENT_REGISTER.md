@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.3  
+**Version:** 2.4  
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -165,6 +165,22 @@ The `Owner` column identifies the Information Owner.
 | `../business/FOUNDATION_ANALYSIS.md` | Analysis | Approved | Business | No |
 | `../business/MESSAGING_FRAMEWORK.md` | Business | Approved | Business | No |
 
+## Competence Governance and Skill Library
+
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../skills/SKILL_LIBRARY_INDEX.md` | Competence Index | Draft | Project | No |
+| `../skills/SKILL_ORCHESTRATION.md` | Competence Workflow | Draft | Project | No |
+| `../skills/COMPETENCE_GOVERNANCE_FRAMEWORK.md` | Governance | Draft | Project | No |
+| `../skills/roles/MARKNADSFORARE.md` | Competence Role | Draft | Marketing | No |
+| `../skills/roles/FORSALJNINGSCHEF.md` | Competence Role | Draft | Sales | No |
+| `../skills/roles/SPONSORANSVARIG.md` | Competence Role | Draft | Sponsorship | No |
+| `../skills/roles/ELITSPELARE.md` | Competence Role | Draft | Player Perspective | No |
+| `../skills/roles/VARDAGSSPELARE.md` | Competence Role | Draft | Player Perspective | No |
+| `../skills/roles/TAVLINGSSPELARE.md` | Competence Role | Draft | Player Perspective | No |
+| `../skills/roles/VERKLIGHETSCONTROLLER.md` | Competence Role | Draft | Project | No |
+| `../skills/roles/FORENINGSORDFORANDE.md` | Competence Role | Draft | Club Governance | No |
+
 ## Research
 
 | Path | Type | Lifecycle | Owner | MVP Baseline |
@@ -234,3 +250,4 @@ Operational session procedures belong in `../development/DEVELOPMENT_PLAYBOOK.md
 | 2.1 | 2026-08-01 | Registered the Approved Development Playbook as part of the implementation operating baseline. |
 | 2.2 | 2026-08-01 | Registered the current project status and AI operating context created during the first Consolidation Sprint. |
 | 2.3 | 2026-08-01 | Recorded the Development Playbook as the authoritative owner of the mandatory Start and End DGTC Session procedures. |
+| 2.4 | 2026-08-02 | Registered competence governance, orchestration, and eight Draft roles pending Product Owner approval. |
