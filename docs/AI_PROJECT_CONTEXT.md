@@ -1,10 +1,10 @@
 # AI Project Context
 
 **Document Type:** AI operating context
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Approved
 **Information Owner:** Project
-**Last Reviewed:** 2026-08-01
+**Last Reviewed:** 2026-08-02
 
 ---
 
@@ -73,6 +73,16 @@ Also classify claims using the Guardian confidence levels:
 - **Verified:** directly confirmed in the repository or by completed verification.
 - **Recommendation:** a clearly labelled proposal that is not approved.
 - **Unknown:** information that cannot be verified and must not be assumed.
+
+---
+
+## Competence Governance
+
+- Competence roles are professional knowledge models, never fictional people or claimed personal experience.
+- Every role operates at Mandate Level 1: advisory, analytical, and quality-assuring; never decision-making.
+- Use the [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md), [Skill Orchestration](skills/SKILL_ORCHESTRATION.md), and [Competence Governance Framework](skills/COMPETENCE_GOVERNANCE_FRAMEWORK.md).
+- Material uncertainty triggers a Verklighetskontroll led by the Verklighetscontroller and documented in a Verklighetsrapport.
+- Draft roles are not authoritative until Product Owner approval.
 
 ---
 
@@ -154,6 +164,9 @@ The current phase, active objective, blockers, implementation state, and next Pr
 - [GitHub Working Agreement](development/GITHUB_WORKING_AGREEMENT.md)
 - [Guardian Operating Procedure](development/Guardian_Operating_Procedure.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
+- [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
+- [Skill Orchestration](skills/SKILL_ORCHESTRATION.md)
+- [Competence Governance Framework](skills/COMPETENCE_GOVERNANCE_FRAMEWORK.md)
 
 ---
 
@@ -162,3 +175,4 @@ The current phase, active objective, blockers, implementation state, and next Pr
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established permanent AI handoff and verification rules during the first Consolidation Sprint. |
+| 1.1 | 2026-08-02 | Added competence governance, Mandate Level 1, and Verklighetskontroll terminology. |
