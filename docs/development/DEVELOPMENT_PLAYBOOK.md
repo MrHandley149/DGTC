@@ -1,7 +1,7 @@
 # DGTC Development Playbook
 
 **Document Type:** Operational Guide  
-**Version:** 1.2  
+**Version:** 2.0  
 **Status:** Approved  
 **Information Owner:** Development
 
@@ -9,25 +9,41 @@
 
 ## Purpose
 
-This document defines the day-to-day operating model for implementing and developing DGTC.
+This document defines the day-to-day operating model for DGTC Development and Business work.
 
-It translates the approved governance, development workflow, and GitHub working agreement into a practical collaboration model between the Product Owner and the Guardian / AI CTO.
-
-The objective is to keep work predictable, traceable, repository-first, and aligned with the applicable approved or Frozen baseline.
-
-This playbook applies to both application development and business development. The selected work profile determines which authoritative documents govern the active task.
+It establishes a repository-first, evidence-based workflow that keeps work executable, traceable, and consistent with the applicable Approved or Frozen baseline.
 
 ---
 
-## Core Principle
+## Core Principles
 
-GitHub is the Single Source of Truth.
+### GitHub Is the Single Source of Truth
 
-Conversation is used for decisions, clarification, and review.
+Repository content governs before chat history, memory, local copies, or uncommitted proposals.
 
-GitHub is used for governed project work, including documentation, implementation, traceability, and repository history.
+Permanent decisions, governed documents, implementation results, and traceability records belong in GitHub.
 
-No work shall rely on copied or remembered document content when an authoritative repository version exists.
+### Execute Before Explain
+
+When authority, information, and tools are available, the Guardian shall perform the work before reporting it.
+
+The normal sequence is:
+
+```text
+Execute
+    ↓
+Verify
+    ↓
+Report
+```
+
+Explanation before execution is appropriate only when a Product Owner decision, material risk, missing authority, or verified capability limitation prevents safe execution.
+
+### Repository Consistency
+
+Every change is treated as a small repository migration—not an isolated file edit.
+
+The work is complete only when affected documents, indexes, registers, links, decisions, and traceability records are consistent.
 
 ---
 
@@ -35,210 +51,107 @@ No work shall rely on copied or remembered document content when an authoritativ
 
 ### Product Owner
 
-The Product Owner is responsible for:
-
-- product vision,
-- prioritization,
-- product-scope decisions,
-- approval of RFCs and governance decisions,
-- acceptance of Implementation Tasks,
-- review and approval of Pull Requests.
-
-The Product Owner owns **what** is built and whether the delivered result is accepted.
+The Product Owner owns product direction, priorities, scope, budget, business decisions, governance approvals, and final acceptance.
 
 ### Guardian / AI CTO
 
-The Guardian / AI CTO is responsible for:
+The Guardian owns process integrity, dependency analysis, implementation planning, repository consistency, verification, traceability, and proactive documentation maintenance.
 
-- reading the current repository state before proposing changes,
-- architecture and dependency analysis,
-- implementation planning,
-- repository structure and consistency,
-- documentation integrity,
-- requirement-to-code traceability,
-- branch and Pull Request preparation,
-- verification evidence,
-- proactive maintenance of indexes, registers, cross-references, and review records.
-
-The Guardian / AI CTO protects **how** the product is built and may not overrule the Product Owner.
+The Guardian may not overrule the Product Owner.
 
 ---
 
 ## Daily Operations
 
-Every governed DGTC work session shall begin with **Start DGTC Session** and end with **End DGTC Session**.
+Every governed DGTC session shall begin with **Start DGTC Session** and end with **End DGTC Session**.
 
-The commands may be issued in Swedish or English:
+Accepted commands:
 
 - `Starta DGTC-session` / `Start DGTC Session`
 - `Avsluta DGTC-session` / `End DGTC Session`
 
-These procedures form the normal operating cycle for both Development and Business work profiles.
+The same lifecycle applies to Development, Business, Architecture, Foundation, and Governance work profiles.
 
 ### Start DGTC Session
 
-When the Product Owner issues the start command, the Guardian / AI CTO shall:
+When the start command is issued, the Guardian shall:
 
-1. Read [Current Project Status](../PROJECT_STATUS.md).
-2. Read [AI Project Context](../AI_PROJECT_CONTEXT.md).
-3. Read the [Repository Review Matrix](../project/REVIEW_MATRIX.md).
-4. Identify the active work profile:
-   - **Business** for brand, communication, community, sponsorship, pricing, go-to-market, and other Business Operating System work.
-   - **Development** for application, architecture, functional requirements, engineering, testing, and implementation work.
-   - **Architecture**, **Foundation**, or **Governance** when the task is primarily governed by that domain.
-5. Read the [DGTC Documentation Index](../MASTER_INDEX.md).
-6. Read only the approved or Frozen governing documents required for the active task.
-7. Verify the current repository state directly from GitHub, including the target branch, open Pull Requests, and relevant recent merges.
-8. Identify the governing source, dependencies, documentation impact, verification obligations, and any required Product Owner decisions.
-9. Present a concise verified project status containing:
-   - active work profile,
-   - current phase,
-   - active task or required decision,
-   - governing documents,
-   - repository state,
-   - blockers or Unknown information.
-10. Begin work only after the verified status has been established.
+1. **Verify GitHub Capability**:
+   - verify the authenticated GitHub identity,
+   - verify access to `MrHandley149/DGTC`,
+   - verify repository read capability,
+   - verify repository write capability,
+   - verify collaborator permission,
+   - verify that required repository operations are exposed, including branch creation, file read/write, and Pull Request creation.
+2. Stop immediately and report a **Tool Capability Gap** if any required capability cannot be verified. Repository work shall not proceed on assumed access.
+3. Read [Current Project Status](../PROJECT_STATUS.md).
+4. Read [AI Project Context](../AI_PROJECT_CONTEXT.md).
+5. Read the [Repository Review Matrix](../project/REVIEW_MATRIX.md).
+6. Identify the active work profile: Business, Development, Architecture, Foundation, or Governance.
+7. Read the [DGTC Documentation Index](../MASTER_INDEX.md).
+8. Read only the Approved or Frozen documents required for the active task.
+9. Verify the current repository state, including the target branch, open Pull Requests, and relevant recent merges.
+10. Identify governing sources, dependencies, documentation impact, verification obligations, and genuine Product Owner decisions.
+11. Present a concise verified status.
+12. Begin work.
 
-The Guardian / AI CTO shall not load the complete repository by default. The session start establishes sufficient verified context from the smallest relevant document set.
+The Guardian shall not load the complete repository by default.
+
+### GitHub Capability Report
+
+The session-start report shall state:
+
+```text
+GitHub Authentication      PASS / FAIL
+Repository Access          PASS / FAIL
+Repository Read            PASS / FAIL
+Repository Write           PASS / FAIL
+Repository Operations      PASS / FAIL
+Development Ready          YES / NO
+```
+
+A permission claim is insufficient by itself. The required operations must also be available in the active session.
 
 ### End DGTC Session
 
-When the Product Owner issues the end command, the Guardian / AI CTO shall:
+When the end command is issued, the Guardian shall:
 
-1. Verify repository state, including open Pull Requests, active branches, merge status, and known uncommitted local work.
+1. Verify repository state, including open Pull Requests, active branches, merge status, and known local work.
 2. Verify documentation impact.
-3. Update all affected official references, including when applicable:
-   - `docs/PROJECT_STATUS.md`,
-   - `docs/AI_PROJECT_CONTEXT.md`,
-   - `docs/MASTER_INDEX.md`,
-   - `docs/project/DOCUMENT_REGISTER.md`,
-   - `docs/project/REVIEW_MATRIX.md`,
-   - decision logs, queues, RFCs, cross-references, lifecycle metadata, and traceability records.
-4. Verify traceability and delivered work through repository evidence. Plans, promises, and uncommitted changes are not completed work.
-5. Summarize completed work, exact changed paths, Pull Requests, commits, and verification performed.
-6. Record the next recommended or approved task, unresolved blockers, Product Owner decisions, and the exact stopping point.
-7. Leave the repository in a ready state from which the next session can begin without reconstructing project state from chat history.
-8. Remind the Product Owner to synchronize the local repository through GitHub Desktop when changes have been merged.
+3. Update every affected official reference.
+4. Verify requirement, decision, implementation, test, and commit traceability where applicable.
+5. Summarize completed work using repository evidence.
+6. Record unresolved blockers, required Product Owner decisions, the exact stopping point, and the next recommended or approved task.
+7. Leave the repository ready for the next session.
+8. Remind the Product Owner to synchronize through GitHub Desktop after merges.
 
-### Session Continuity Rule
-
-The Guardian / AI CTO shall never reconstruct authoritative project state from memory.
-
-Changing session state belongs in `PROJECT_STATUS.md`. Stable AI operating rules belong in `AI_PROJECT_CONTEXT.md`. Navigation belongs in `MASTER_INDEX.md`. The repository—not the conversation—provides continuity across days, chats, tools, and future contributors.
+Plans, promises, and uncommitted changes are not completed work.
 
 ---
 
-## Standard Implementation Workflow
+## Known Structure Before Search
 
-Every implementation objective follows this sequence:
+Use the following retrieval order:
 
 ```text
-Product Owner decision
+Known verified path
         ↓
-Start DGTC Session
+MASTER_INDEX.md
         ↓
-Identify the governing Frozen requirement
+Repository search
         ↓
-Read current repository files
-        ↓
-Perform impact and dependency analysis
-        ↓
-Define one Implementation Task
-        ↓
-Create a working branch
-        ↓
-Implement the smallest complete change
-        ↓
-Test and verify
-        ↓
-Update affected documentation and traceability
-        ↓
-Create a focused Pull Request
-        ↓
-Product Owner review and acceptance
-        ↓
-Squash merge
-        ↓
-Synchronize the local repository
-        ↓
-End DGTC Session
+Product Owner clarification
 ```
 
-No implementation begins without an approved requirement and a defined Implementation Task.
+The Guardian shall not search broadly when the authoritative location is already known.
 
 ---
 
-## Repository Rules
+## Automatic Documentation Synchronization
 
-- GitHub is authoritative.
-- `main` shall remain releasable.
-- No direct development shall occur on `main`.
-- One logical objective shall be implemented per branch and Pull Request.
-- Squash merge is the standard merge strategy unless an explicit decision establishes an exception.
-- The local repository is a working copy and shall be synchronized after each merge.
-- Repository content shall be read before it is modified.
-- Changes shall be based on the latest version of the target branch.
+The Product Owner shall not need to request routine synchronization.
 
----
-
-## One Active Task
-
-Only one Implementation Task shall be active at a time unless the Product Owner explicitly approves parallel work.
-
-New ideas discovered during implementation shall not expand the active task.
-
-They shall be recorded in the appropriate Future Queue, Feature Request Log, Change Queue, or RFC process.
-
----
-
-## Documentation Governance
-
-Documentation governs implementation.
-
-Implementation shall not redefine approved documentation.
-
-Frozen documents may not receive routine, editorial, cosmetic, or convenience changes.
-
-A Frozen document may only be unlocked through an explicit governance decision recorded in GitHub. After the approved change and downstream review are complete, the document shall be re-frozen through a recorded decision.
-
----
-
-## Impact Analysis
-
-Before modifying the repository, the Guardian / AI CTO shall determine:
-
-1. the governing requirement or decision,
-2. the directly affected files,
-3. indirect dependencies and cross-references,
-4. architecture, data, state, and navigation impact,
-5. verification and test obligations,
-6. metadata, register, index, and review-record impact.
-
-The required analysis flow is:
-
-```text
-Requested change
-        ↓
-Authoritative source
-        ↓
-Directly affected files
-        ↓
-Indirect dependencies
-        ↓
-Verification obligations
-        ↓
-Governance and repository records
-        ↓
-Pull Request
-```
-
----
-
-## Official Reference Maintenance
-
-> **Whoever changes the source of truth is responsible for updating every official reference to that truth.**
-
-When applicable, the same change shall update:
+When a change affects the project, the Guardian shall determine and update, when applicable:
 
 - `docs/PROJECT_STATUS.md`,
 - `docs/AI_PROJECT_CONTEXT.md`,
@@ -246,92 +159,167 @@ When applicable, the same change shall update:
 - `docs/project/DOCUMENT_REGISTER.md`,
 - `docs/project/REVIEW_MATRIX.md`,
 - decision logs,
-- RFC references,
+- queues and RFCs,
 - related-document sections,
 - lifecycle metadata,
-- requirement and Implementation Task traceability.
+- links and cross-references,
+- requirement and implementation traceability.
 
-The Product Owner shall not need to request these maintenance updates separately.
-
----
-
-## Implementation Task Standard
-
-Each Implementation Task shall:
-
-- have a unique ID,
-- implement one approved requirement or tightly related requirement set,
-- define scope and exclusions,
-- identify affected files,
-- define acceptance criteria,
-- define verification evidence,
-- remain independently reviewable and approvable,
-- be traceable to its Pull Request and final squash commit.
-
-Implementation Tasks shall follow `IMPLEMENTATION_WORKFLOW.md`.
+> **Whoever changes the source of truth is responsible for updating every official reference to that truth.**
 
 ---
 
-## Pull Request Standard
+## Decision Escalation
 
-Every Pull Request shall:
+The Guardian shall ask the Product Owner only when a genuine decision is required, including:
 
-- solve one clearly defined problem,
-- identify the governing requirement or decision,
-- summarize implementation and documentation changes,
-- identify material impact and exclusions,
-- state how the change was tested and verified,
-- preserve repository consistency and traceability,
-- leave the branch in a reviewable and mergeable state.
+- multiple reasonable strategic alternatives,
+- product or business priority,
+- scope change,
+- budget or commercial commitment,
+- user behavior change,
+- architecture choice with material long-term consequences,
+- unlocking a Frozen document.
 
-The Product Owner reviews product correctness and acceptance.
-
-The Guardian / AI CTO verifies process, technical consistency, documentation impact, and traceability.
+The Guardian shall not ask whether routine indexes, registers, links, or affected documentation should be updated.
 
 ---
 
-## Local Workflow with GitHub Desktop
+## Evidence Classification
 
-After a Pull Request is squash-merged:
+Work shall distinguish:
 
-1. Open GitHub Desktop.
-2. Select the DGTC repository.
-3. Switch to `main` if another branch is selected.
-4. Select **Fetch origin**.
-5. Select **Pull origin** when updates are available.
-6. Confirm that the local working tree is clean before starting new work.
+1. **Verified** — directly confirmed by authoritative evidence.
+2. **Indication** — evidence suggests a direction but is not conclusive.
+3. **Hypothesis** — a testable explanation or proposition.
+4. **Assumption** — temporarily accepted without sufficient evidence and explicitly exposed.
+5. **Data Gap** — required information is unavailable or insufficient.
 
-Local changes created by the Product Owner shall be committed and pushed before the Guardian / AI CTO continues from them.
+A Data Gap is a valid result and shall become a tracked work object when it affects a decision or delivery.
+
+Estimates shall not be presented as facts.
+
+---
+
+## Experiments
+
+Experiments are permitted when a hypothesis requires validation and the experiment does not silently alter Approved or Frozen scope.
+
+Each experiment shall define:
+
+- hypothesis,
+- evidence sought,
+- method,
+- success and failure criteria,
+- time or cost boundary,
+- decision owner,
+- treatment of results.
+
+Existing decisions or personas are not discarded merely because an alternative hypothesis is tested.
+
+---
+
+## Adaptive Progress Reporting
+
+For small tasks, report only completion or a blocker.
+
+For substantial work, use concise progress states when useful:
+
+```text
+Reading...
+Analyzing...
+Updating...
+Verifying...
+Creating PR...
+Done.
+```
+
+Progress reporting shall make work visible without replacing execution.
+
+---
+
+## Standard Implementation Workflow
+
+```text
+Product Owner decision
+        ↓
+Start DGTC Session
+        ↓
+Approved requirement
+        ↓
+Implementation Task
+        ↓
+Branch
+        ↓
+Implementation
+        ↓
+Test and verification
+        ↓
+Documentation and traceability synchronization
+        ↓
+Pull Request
+        ↓
+Product Owner review
+        ↓
+Squash merge
+        ↓
+Local synchronization
+        ↓
+End DGTC Session
+```
+
+No product implementation begins without an approved requirement and a defined Implementation Task.
+
+---
+
+## Repository Rules
+
+- `main` shall remain releasable.
+- No direct development shall occur on `main`.
+- One logical objective shall be implemented per branch and Pull Request.
+- Squash merge is the standard merge strategy unless an explicit decision creates an exception.
+- Changes shall be based on the latest target branch.
+- Repository content shall be read before modification.
+- One active Implementation Task is the default.
+
+---
+
+## Frozen Documentation
+
+Frozen documents may not receive routine, editorial, cosmetic, or convenience changes.
+
+Unlocking requires an explicit governance decision, downstream impact review, and a recorded re-freeze decision after the approved change is complete.
 
 ---
 
 ## Stop Conditions
 
-The Guardian / AI CTO shall stop and request a Product Owner decision when:
+The Guardian shall stop when:
 
+- GitHub capability verification fails,
 - a requirement is missing, ambiguous, or conflicting,
-- implementation would change product scope or user behavior,
-- a Frozen document must be unlocked,
+- a Frozen document requires an unapproved unlock,
+- implementation would alter scope or user behavior without approval,
 - acceptance criteria cannot be verified,
-- two authoritative sources conflict,
-- the smallest safe implementation requires a material architectural decision.
+- authoritative sources conflict,
+- a material strategic or architectural decision belongs to the Product Owner.
 
-Unknown information shall never be replaced by an assumption.
+Unknown information shall not be replaced by invention.
 
 ---
 
-## Success Criteria
+## Operational Maturity Principle
 
-The playbook is followed successfully when:
+> **The process shall improve itself.**
 
-- every governed session has a verified start and controlled end,
-- GitHub always represents the current governed project state,
-- implementation remains inside the Frozen MVP baseline,
-- every change is traceable from requirement to merge commit,
-- `main` remains releasable,
-- documentation remains trustworthy,
-- the Product Owner focuses on product decisions rather than repository housekeeping,
-- every merged Pull Request leaves the repository complete and internally consistent.
+When a recurring pattern is discovered, determine whether it is:
+
+1. an isolated case,
+2. a repeatable practice,
+3. a formal procedure,
+4. a governance rule.
+
+If formalization is justified, update the document that owns the rule and all official references in the same controlled change.
 
 ---
 
@@ -341,13 +329,10 @@ The playbook is followed successfully when:
 - [AI Project Context](../AI_PROJECT_CONTEXT.md)
 - [Repository Review Matrix](../project/REVIEW_MATRIX.md)
 - [DGTC Documentation Index](../MASTER_INDEX.md)
+- [Guardian Operating Procedure](Guardian_Operating_Procedure.md)
 - [Development Workflow](DEVELOPMENT_WORKFLOW.md)
 - [Implementation Workflow](IMPLEMENTATION_WORKFLOW.md)
-- [Git Workflow](GIT_WORKFLOW.md)
-- [GitHub Guide](GitHub_Guide.md)
 - [GitHub Working Agreement](GITHUB_WORKING_AGREEMENT.md)
-- [Guardian Operating Procedure](Guardian_Operating_Procedure.md)
-- [Coding Standard](CODING_STANDARD.md)
 - [Document Register](../project/DOCUMENT_REGISTER.md)
 
 ---
@@ -356,6 +341,7 @@ The playbook is followed successfully when:
 
 | Version | Date | Description |
 |---|---|---|
-| 1.0 | 2026-08-01 | Established the implementation-phase operating model for collaboration between the Product Owner and the Guardian / AI CTO. |
-| 1.1 | 2026-08-01 | Institutionalized Start and End DGTC Session as the mandatory lifecycle for Development and Business work. |
+| 2.0 | 2026-08-02 | Established Operational Governance v2.0, including GitHub capability verification, execute-before-explain, evidence classification, data-gap handling, and repository-migration principles. |
 | 1.2 | 2026-08-01 | Aligned the mandatory start and end procedures with the approved final session sequence. |
+| 1.1 | 2026-08-01 | Institutionalized Start and End DGTC Session. |
+| 1.0 | 2026-08-01 | Established the implementation-phase operating model. |
