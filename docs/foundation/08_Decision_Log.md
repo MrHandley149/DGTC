@@ -1,7 +1,7 @@
 # Decision Log
 
 **Document Type:** Foundation  
-**Version:** v2.1
+**Version:** v2.2
 **Lifecycle:** Approved  
 **Information Owner:** Project
 
@@ -109,9 +109,34 @@ The previous completed status did not reflect the actual project history and was
 
 ---
 
+## DEC-002 — Adopt GitHub Workflow v2 and Git Operations
+
+**Status:** Approved
+**Date:** 2026-08-02
+**Owner:** Product Owner
+
+**Summary:**
+DGTC shall use GitHub Workflow v2 for repository changes and Git Operations as a non-decision-making execution and control process. Material changes require a branch, Pull Request, review, and Product Owner or Project Lead approval before merge.
+
+**Rationale:**
+The repository required an explicit end-to-end path from session start through verified closeout and a clear separation between repository mechanics and project decisions.
+
+**Impact:**
+Direct commit to `main` is limited to small, local, low-risk, reversible, non-governing corrections. Git Operations is excluded from the Skill Library role count and cannot prioritize, accept risk, approve specialist content, or merge material work without approval.
+
+**Related Documents:**
+
+- `docs/development/GIT_WORKFLOW.md`
+- `docs/operations/GIT_OPERATIONS.md`
+- `docs/development/GITHUB_WORKING_AGREEMENT.md`
+- `docs/skills/SKILL_LIBRARY_GOVERNANCE.md`
+
+---
+
 # Revision History
 
 | Version | Date | Description |
 |---|---|---|
 | v2.0 | 2026-07-29 | Repository consolidation |
 | v2.1 | 2026-08-01 | Recorded Product Owner decision DEC-001 correcting Sprint 0 historical status. |
+| v2.2 | 2026-08-02 | Recorded the owner-authorized GitHub Workflow v2 governance change as DEC-002. |

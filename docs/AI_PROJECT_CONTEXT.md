@@ -1,7 +1,7 @@
 # AI Project Context
 
 **Document Type:** AI operating context
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Approved
 **Information Owner:** Project
 **Last Reviewed:** 2026-08-01
@@ -23,6 +23,7 @@ It summarizes operating rules only. It does not replace the authoritative source
 - GitHub `main` is the project's official source of truth.
 - The Document Register owns lifecycle metadata and Frozen-baseline membership.
 - Approved and Frozen source documents govern implementation; chat history does not.
+- Git Operations is a non-decision-making process, not a competence role; it cannot accept risk, approve content, prioritize work, or replace the Product Owner.
 
 ---
 
@@ -37,6 +38,7 @@ Before proposing or performing work:
 5. For implementation work, read the [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md).
 6. Check the [Decision Log](foundation/08_Decision_Log.md) and applicable queues or RFCs.
 7. Verify the current repository ref, paths, and implementation state directly.
+8. Follow [GitHub Workflow v2](development/GIT_WORKFLOW.md) and route repository mechanics through [Git Operations](operations/GIT_OPERATIONS.md).
 
 If required information cannot be verified, label it **Unknown** and stop where a Product Owner or governance decision is genuinely required.
 
@@ -154,6 +156,10 @@ The current phase, active objective, blockers, implementation state, and next Pr
 - [GitHub Working Agreement](development/GITHUB_WORKING_AGREEMENT.md)
 - [Guardian Operating Procedure](development/Guardian_Operating_Procedure.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
+- [Project Manifest](PROJECT_MANIFEST.md)
+- [GitHub Workflow v2](development/GIT_WORKFLOW.md)
+- [Git Operations](operations/GIT_OPERATIONS.md)
+- [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
 
 ---
 
@@ -162,3 +168,4 @@ The current phase, active objective, blockers, implementation state, and next Pr
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-08-01 | Established permanent AI handoff and verification rules during the first Consolidation Sprint. |
+| 1.1 | 2026-08-02 | Added GitHub Workflow v2, Git Operations mandate boundaries, and Skill Library authority references. |

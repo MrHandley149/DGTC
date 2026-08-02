@@ -1,11 +1,11 @@
 # Current Project Status
 
 **Document Type:** Status
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Approved
 **Information Owner:** Project
-**Verified Date:** 2026-08-01
-**Verified Ref:** `main` at `a6d5e35`
+**Verified Date:** 2026-08-02
+**Verified Ref:** `main` at `68ab497`
 
 ---
 
@@ -33,6 +33,8 @@ The repository-wide documentation review is complete and the Frozen MVP baseline
 - The Development Playbook defines the implementation-phase collaboration model.
 - The earlier Sprint 0 completion claim has been corrected by Product Owner decision: Sprint 0 never started and was abandoned before execution.
 - GitHub `main` is the project's official source of truth.
+- GitHub Workflow v2 and Git Operations are proposed on `agent/github-workflow-v2` pending Pull Request review and Product Owner or Project Lead approval; they are not effective on `main` until merged.
+- The Skill Library authority documents exist on the proposal branch with zero registered competence roles; Git Operations is excluded from the role count.
 
 ---
 
@@ -93,6 +95,9 @@ Stop before feature implementation and request the Product Owner's selection and
 - [Functional Requirements Specification](functional/FRS.md)
 - [Implementation Workflow](development/IMPLEMENTATION_WORKFLOW.md)
 - [Development Playbook](development/DEVELOPMENT_PLAYBOOK.md)
+- [Project Manifest](PROJECT_MANIFEST.md)
+- [GitHub Workflow v2](development/GIT_WORKFLOW.md)
+- [Git Operations](operations/GIT_OPERATIONS.md)
 - [Sprint 0](development/SPRINT_0.md)
 - [`flutter_app` status](../flutter_app/README.md)
 
@@ -104,3 +109,4 @@ Stop before feature implementation and request the Product Owner's selection and
 |---|---|---|
 | 1.0 | 2026-08-01 | Established verified project status during the first Consolidation Sprint. |
 | 1.1 | 2026-08-01 | Corrected Sprint 0 history following Product Owner decision DEC-001. |
+| 1.2 | 2026-08-02 | Recorded the GitHub Workflow v2 governance proposal, verified source ref, and pending approval state. |

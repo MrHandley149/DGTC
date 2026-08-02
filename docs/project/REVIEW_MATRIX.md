@@ -265,6 +265,8 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | RR-011 | The implementation-phase collaboration model was distributed across several governance documents. | Operational clarity | Added the Approved Development Playbook without changing the Frozen product or technical baseline. |
 | RR-012 | Sprint 0 was incorrectly recorded as completed although it never entered formal execution. | Historical status defect | Corrected by Product Owner decision DEC-001; Sprint 0 is now recorded as not started and abandoned before execution. |
 | RR-013 | Session start and end depended on chat memory and were not an enforceable repository-backed lifecycle. | Governance improvement | Institutionalized Start DGTC Session and End DGTC Session in the Approved Development Playbook, made execution mandatory in the Guardian Operating Procedure, and exposed the procedures through repository navigation. |
+| RR-014 | Repository governance lacked an explicit end-to-end GitHub workflow and a bounded execution/control process. | Governance improvement | Established GitHub Workflow v2 and Git Operations; direct-to-main is narrowly bounded, material work requires a Pull Request, and material merge requires owner approval. |
+| RR-015 | Project Manifest and Skill Library authority documents were absent. | Documentation gap | Added the authority map and Skill Library governance set; the authoritative competence-role count is zero and Git Operations is explicitly excluded. |
 
 ---
 
@@ -289,6 +291,7 @@ The documentation is ready for implementation when every criterion below is sati
 | Frozen-document change control is defined. | Pass |
 | The authoritative navigation and metadata registers are current. | Pass |
 | No unresolved Product Owner decision blocks the first Implementation Task. | Pass |
+| Git Operations has no subject-matter or approval mandate and is excluded from the Skill Library role count. | Pass |
 
 ---
 
@@ -324,3 +327,4 @@ No application feature implementation is authorized by this document alone. The 
 | 1.1 | 2026-08-01 | Recorded the approved Development Playbook as the implementation-phase operating model; readiness decision unchanged. |
 | 1.2 | 2026-08-01 | Corrected Sprint 0 historical status under Product Owner decision DEC-001; documentation-readiness conclusion remains unchanged. |
 | 1.3 | 2026-08-01 | Registered the mandatory Start and End DGTC Session lifecycle as an approved governance improvement within the implementation operating baseline. |
+| 1.4 | 2026-08-02 | Recorded GitHub Workflow v2, Git Operations mandate boundaries, and Skill Library authority controls; readiness decision unchanged. |

@@ -27,9 +27,12 @@ The end procedure verifies repository state, documentation impact, completed wor
 ## Start here
 
 - [Current Project Status](docs/PROJECT_STATUS.md)
+- [Project Manifest](docs/PROJECT_MANIFEST.md)
 - [AI Project Context](docs/AI_PROJECT_CONTEXT.md)
 - [DGTC Documentation Index](docs/MASTER_INDEX.md)
 - [Development Playbook](docs/development/DEVELOPMENT_PLAYBOOK.md)
+- [GitHub Workflow v2](docs/development/GIT_WORKFLOW.md)
+- [Git Operations](docs/operations/GIT_OPERATIONS.md)
 - [Repository Review Matrix](docs/project/REVIEW_MATRIX.md)
 
 ## Repository purpose
@@ -65,4 +68,4 @@ Before changing product behavior, architecture, business documentation, or imple
 6. Update documentation and implementation together when an approved change requires both.
 7. End the session with **Avsluta DGTC-session**.
 
-GitHub is the Single Source of Truth for the project.
+GitHub is the Single Source of Truth for the project. Material changes use a branch and pull request; Git Operations executes and verifies repository mechanics without making project decisions.

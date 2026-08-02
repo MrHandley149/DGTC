@@ -1,91 +1,54 @@
 # Operational Session Ritual
 
 **Document Type:** Operations  
-**Version:** v2.0  
+**Version:** v2.1
 **Lifecycle:** Approved  
 **Information Owner:** Project
 
 ---
 
-# Purpose
+## Purpose
 
-This document defines the standard workflow for repository work sessions.
+This document summarizes the standard repository work session. The detailed start/end procedures are authoritative in the Development Playbook and repository changes follow GitHub Workflow v2.
 
-It ensures that every session follows the same process regardless of scope.
-
----
-
-# Session workflow
+## Session Workflow
 
 ```text
-Open repository
-    ↓
-Review current objective
-    ↓
-Select one revision
-    ↓
-Implement change
-    ↓
-Review consistency
-    ↓
-Commit
-    ↓
-Update revision status
-    ↓
-Repeat
+Start DGTC Session
+    -> verify working directory, remote, branches, changes, tools, identity, and access
+    -> review current objective and governing sources
+    -> synchronize the repository
+    -> select or create the correct branch
+    -> implement and verify one logical change
+    -> stage narrowly and commit atomically
+    -> push and open a Pull Request when material
+    -> review and obtain required owner approval
+    -> merge only when authorized
+    -> record verified closeout
+    -> End DGTC Session
 ```
 
----
+## Session Rules
 
-# Session rules
+- Work on one governed objective at a time.
+- Preserve document ownership, links, terminology, lifecycle metadata, and repository consistency.
+- Use the direct-to-`main` exception only when every GitHub Workflow v2 criterion is met.
+- Use Git Operations for execution and control without delegating project decisions to it.
+- Keep commits atomic and reversible.
 
-During a work session:
+## Completion Evidence
 
-- work on one revision at a time,
-- complete revisions before starting new ones,
-- preserve document ownership,
-- avoid duplicate information,
-- keep commits atomic,
-- maintain repository consistency.
+A session records intended paths, validation, branch, commit SHAs, push result, Pull Request and issue links, unresolved decisions, and the exact stopping point. Uncommitted or unverified work is not complete.
 
----
+## Related Documents
 
-# Revision checklist
+- [Development Playbook](../development/DEVELOPMENT_PLAYBOOK.md)
+- [GitHub Workflow v2](../development/GIT_WORKFLOW.md)
+- [Git Operations](GIT_OPERATIONS.md)
 
-Before committing, verify:
-
-- document ownership is correct,
-- duplicated information has been removed,
-- references are valid,
-- terminology is consistent,
-- lifecycle metadata is correct,
-- revision history is updated when required.
-
----
-
-# Commit principles
-
-Every commit should:
-
-- represent one logical change,
-- have a descriptive commit message,
-- be reversible,
-- leave the repository in a consistent state.
-
----
-
-# Session completion
-
-A session is complete when:
-
-- planned revisions are committed,
-- repository consistency has been verified,
-- remaining work has been identified.
-
----
-
-# Revision history
+## Revision History
 
 | Version | Date | Description |
 |---|---|---|
-| v2.0 | 2026-07-29 | Repository consolidation |
+| v2.1 | 2026-08-02 | Aligned session execution and closeout with GitHub Workflow v2 and Git Operations. |
+| v2.0 | 2026-07-29 | Repository consolidation. |
