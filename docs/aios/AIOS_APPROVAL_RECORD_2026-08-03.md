@@ -1,8 +1,10 @@
 # AIOS Approval and Adoption Record
 
 **Decision ID:** AIOS-DR-001  
+**Version:** 1.0
+**Lifecycle:** Approved
 **Date:** 2026-08-03  
-**Status:** Accepted  
+**Decision Status:** Accepted
 **Decision authority:** Project Owner  
 **Implementation owner:** DGTC App Development Master
 

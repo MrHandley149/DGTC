@@ -1,11 +1,11 @@
 # DGTC Repository Review Matrix
 
 **Document Type:** Governance / Review  
-**Version:** 1.3  
+**Version:** 1.5
 **Status:** Frozen  
 **Information Owner:** Project  
-**Review Date:** 2026-07-31  
-**Review Scope:** Repository-wide documentation readiness for MVP implementation
+**Review Date:** 2026-08-04
+**Review Scope:** Repository-wide documentation readiness and controlled project recovery
 
 ---
 
@@ -267,6 +267,12 @@ The implementation baseline satisfies the Definition of Ready in this document.
 | RR-013 | Session start and end depended on chat memory and were not an enforceable repository-backed lifecycle. | Governance improvement | Institutionalized Start DGTC Session and End DGTC Session in the Approved Development Playbook, made execution mandatory in the Guardian Operating Procedure, and exposed the procedures through repository navigation. |
 | RR-014 | Repository governance lacked an explicit end-to-end GitHub workflow and a bounded execution/control process. | Governance improvement | Established GitHub Workflow v2 and Git Operations; direct-to-main is narrowly bounded, material work requires a Pull Request, and material merge requires owner approval. |
 | RR-015 | Project Manifest and Skill Library authority documents were absent. | Documentation gap | Added the authority map and Skill Library governance set; the authoritative competence-role count is zero and Git Operations is explicitly excluded. |
+| RR-016 | Eleven approved AIOS documents on `main` were absent from the Document Register and AIOS was missing from primary navigation. | Blocking metadata and navigation defect | Registered the complete AIOS set and added the AIOS subsystem index to `MASTER_INDEX.md`. |
+| RR-017 | AIOS lifecycle metadata contained stale Draft headers and referenced a Tess role file that does not exist in DGTC. | Lifecycle and path inconsistency | Synchronized approved headers and reconciled the lifecycle register with files that actually exist in DGTC. |
+| RR-018 | `PROJECT_STATUS.md` still described pre-merge governance state at `68ab497`. | Blocking current-state defect | Replaced the stale handoff with the verified recovery state at `d2db1aa`. |
+| RR-019 | PR #8 and PR #9 remained open although their work was respectively superseded and not adopted. | Repository hygiene defect | Closed both without merge under explicit Product Owner authorization; the competence-role count remains zero. |
+| RR-020 | Two stale file inventories and a completed access-test artifact remained in the repository. | Repository hygiene defect | Removed the obsolete artifacts; the repository and Document Register remain the controlled inventory sources. |
+| RR-021 | The Business Change Queue referenced a Business Decision Log that does not exist. | Broken governance reference | Routed decisions to the existing authoritative DGTC Decision Log without creating a new document. |
 
 ---
 
@@ -328,3 +334,4 @@ No application feature implementation is authorized by this document alone. The 
 | 1.2 | 2026-08-01 | Corrected Sprint 0 historical status under Product Owner decision DEC-001; documentation-readiness conclusion remains unchanged. |
 | 1.3 | 2026-08-01 | Registered the mandatory Start and End DGTC Session lifecycle as an approved governance improvement within the implementation operating baseline. |
 | 1.4 | 2026-08-02 | Recorded GitHub Workflow v2, Git Operations mandate boundaries, and Skill Library authority controls; readiness decision unchanged. |
+| 1.5 | 2026-08-04 | Recorded the controlled recovery findings and corrections; MVP documentation-readiness decision remains unchanged. |

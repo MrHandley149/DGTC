@@ -1,10 +1,12 @@
 # AIOS Pilot — Tess Role Creation Handoff
 
 **Handoff ID:** H-001  
+**Version:** 1.0
+**Lifecycle:** Approved
 **Project:** DGTC App Development  
 **Source work type:** Spawned large-run role design  
 **Primary role:** Persona and Role Builder  
-**Status:** Accepted as AIOS reference workflow  
+**Pilot Status:** Accepted as AIOS reference workflow
 **Date:** 2026-08-03
 
 ## Executive summary

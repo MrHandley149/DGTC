@@ -1,7 +1,7 @@
 # Document Register
 
 **Document Type:** Register  
-**Version:** 2.4
+**Version:** 2.5
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -146,6 +146,22 @@ The `Owner` column identifies the Information Owner.
 | `../skills/SKILL_ORCHESTRATION.md` | Operational model | Approved | Project | No |
 | `../skills/SKILL_LIBRARY_GOVERNANCE.md` | Governance | Approved | Project | No |
 
+## AI Operating System
+
+| Path | Type | Lifecycle | Owner | MVP Baseline |
+|---|---|---|---|:---:|
+| `../aios/README.md` | Subsystem index | Approved | DGTC App Development | No |
+| `../aios/AIOS_CORE_V2.md` | Operating system | Approved | DGTC App Development | No |
+| `../aios/AIOS_ROLES_V1.md` | Role catalogue | Approved | DGTC App Development | No |
+| `../aios/AIOS_PROJECT_TEMPLATES_V1.md` | Templates | Approved | DGTC App Development | No |
+| `../aios/AIOS_PROJECT_PROFILES_V1.md` | Project profiles | Approved | DGTC App Development | No |
+| `../aios/AIOS_APPROVAL_RECORD_2026-08-03.md` | Decision record | Approved | Project Owner | No |
+| `../aios/AIOS_LIFECYCLE_REGISTER.md` | Lifecycle register | Approved | DGTC App Development | No |
+| `../aios/AIOS_IMPLEMENTATION_COMPLETION_RECORD.md` | Completion record | Approved | DGTC App Development | No |
+| `../aios/pilots/TESS_ROLE_PILOT_HANDOFF.md` | Reference pilot | Approved | DGTC App Development | No |
+| `../aios/pilots/TESS_ROLE_INTEGRATION_STATUS.md` | Integration status | Approved | DGTC App Development | No |
+| `../aios/projects/MACKERIET_BOOTSTRAP_V1.md` | Project bootstrap | Approved | Mackeriet Project Owner | No |
+
 ## Engineering
 
 | Path | Type | Lifecycle | Owner | MVP Baseline |
@@ -245,3 +261,4 @@ Operational session procedures belong in `../development/DEVELOPMENT_PLAYBOOK.md
 | 2.2 | 2026-08-01 | Registered the current project status and AI operating context created during the first Consolidation Sprint. |
 | 2.3 | 2026-08-01 | Recorded the Development Playbook as the authoritative owner of the mandatory Start and End DGTC Session procedures. |
 | 2.4 | 2026-08-02 | Registered the Project Manifest, Git Operations, and Skill Library governance documents. |
+| 2.5 | 2026-08-04 | Registered the complete approved AIOS document set during project recovery. |

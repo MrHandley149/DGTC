@@ -1,7 +1,7 @@
 # DGTC Documentation Index
 
 **Document Type:** Index  
-**Version:** 2.4
+**Version:** 2.5
 **Status:** Approved  
 **Information Owner:** Project
 
@@ -159,6 +159,14 @@ Development documentation defines how approved requirements are implemented, ver
 
 ---
 
+## AI Operating System
+
+The approved AIOS operating model and its complete controlled document set are navigated through the [AIOS Index](aios/README.md).
+
+AIOS governs reusable AI-assisted work practices. It does not change DGTC product scope or replace DGTC's Product Owner, Foundation, MVP requirements, or implementation governance.
+
+---
+
 ## Operations
 
 - [Business Profile](operations/BUSINESS_PROFILE.md)
@@ -226,3 +234,4 @@ The repository uses four lifecycle states:
 | 2.2 | 2026-08-01 | Added the permanent session-start sequence and links to current project status and AI operating context. |
 | 2.3 | 2026-08-01 | Made Start and End DGTC Session the mandatory entry and exit points for Development and Business work. |
 | 2.4 | 2026-08-02 | Indexed the Project Manifest, GitHub Workflow v2, Git Operations, and Skill Library governance set. |
+| 2.5 | 2026-08-04 | Added the approved AIOS subsystem to authoritative repository navigation during project recovery. |

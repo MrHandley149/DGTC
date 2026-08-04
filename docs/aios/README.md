@@ -1,5 +1,8 @@
 # AI Operating System (AIOS)
 
+**Document Type:** Subsystem index
+**Version:** 1.0
+**Status:** Approved
 **Canonical Owner:** DGTC App Development  
 **Adoption scope:** DGTC App Development, DGTC Business Development, Mackeriet, and future projects  
 

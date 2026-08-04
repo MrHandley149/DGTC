@@ -2,7 +2,7 @@
 
 **Document Type:** Governing operating system  
 **Version:** 2.0  
-**Status:** Draft for approval  
+**Status:** Approved
 **Canonical Owner:** DGTC App Development  
 
 ## 1. Purpose

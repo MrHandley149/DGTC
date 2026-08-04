@@ -2,7 +2,7 @@
 
 **Document Type:** Reusable template pack  
 **Version:** 1.0  
-**Status:** Draft for approval  
+**Status:** Approved
 **Canonical Owner:** DGTC App Development  
 
 ## 1. Purpose
