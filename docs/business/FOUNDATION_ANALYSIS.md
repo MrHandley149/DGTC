@@ -489,7 +489,7 @@ Every external message should ultimately be traceable back to the Foundation thr
 - `BRAND_PLATFORM.md`
 - `BUSINESS_GUARDRAILS.md`
 - `MESSAGING_FRAMEWORK.md`
-- `BUSINESS_DECISION_LOG.md`
+- `../foundation/08_Decision_Log.md`
 
 ---
 

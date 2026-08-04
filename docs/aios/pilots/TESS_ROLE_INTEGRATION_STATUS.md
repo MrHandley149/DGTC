@@ -2,7 +2,8 @@
 
 **Record ID:** AIOS-H-001  
 **Version:** 1.0  
-**Status:** Controlled pending approval  
+**Lifecycle:** Approved
+**Integration Status:** Controlled pending approval
 **Source project:** Mackeriet  
 **Destination:** Mackeriet source of truth  
 **AIOS owner:** DGTC App Development

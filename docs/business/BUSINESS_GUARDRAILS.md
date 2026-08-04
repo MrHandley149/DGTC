@@ -251,7 +251,7 @@ Major strategic changes should be documented in the Business Decision Log.
 - `FOUNDATION_ANALYSIS.md`
 - `BRAND_PLATFORM.md`
 - `MESSAGING_FRAMEWORK.md`
-- `BUSINESS_DECISION_LOG.md`
+- `../foundation/08_Decision_Log.md`
 - `../foundation/FOUNDATION.md`
 
 ---

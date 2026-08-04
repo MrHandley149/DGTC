@@ -1,7 +1,7 @@
 # AI Project Context
 
 **Document Type:** AI operating context
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Approved
 **Information Owner:** Project
 **Last Reviewed:** 2026-08-01
@@ -24,6 +24,7 @@ It summarizes operating rules only. It does not replace the authoritative source
 - The Document Register owns lifecycle metadata and Frozen-baseline membership.
 - Approved and Frozen source documents govern implementation; chat history does not.
 - Git Operations is a non-decision-making process, not a competence role; it cannot accept risk, approve content, prioritize work, or replace the Product Owner.
+- The approved [AI Operating System](aios/README.md) governs reusable AI-assisted work practices and handoffs; it does not create product scope or override DGTC authority documents.
 
 ---
 
@@ -160,6 +161,7 @@ The current phase, active objective, blockers, implementation state, and next Pr
 - [GitHub Workflow v2](development/GIT_WORKFLOW.md)
 - [Git Operations](operations/GIT_OPERATIONS.md)
 - [Skill Library Index](skills/SKILL_LIBRARY_INDEX.md)
+- [AI Operating System](aios/README.md)
 
 ---
 
@@ -169,3 +171,4 @@ The current phase, active objective, blockers, implementation state, and next Pr
 |---|---|---|
 | 1.0 | 2026-08-01 | Established permanent AI handoff and verification rules during the first Consolidation Sprint. |
 | 1.1 | 2026-08-02 | Added GitHub Workflow v2, Git Operations mandate boundaries, and Skill Library authority references. |
+| 1.2 | 2026-08-04 | Added the approved AIOS authority reference during project recovery. |

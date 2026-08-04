@@ -1,7 +1,7 @@
 # Decision Log
 
 **Document Type:** Foundation  
-**Version:** v2.2
+**Version:** v2.3
 **Lifecycle:** Approved  
 **Information Owner:** Project
 
@@ -133,6 +133,31 @@ Direct commit to `main` is limited to small, local, low-risk, reversible, non-go
 
 ---
 
+## DEC-003 — Authorize Controlled Project Recovery
+
+**Status:** Approved
+**Date:** 2026-08-04
+**Owner:** Product Owner
+
+**Summary:**
+DGTC shall complete a controlled recovery without introducing new product scope, roles, requirements, architecture, business initiatives, or implementation. The recovery may reconcile current-state records, indexes, lifecycle metadata, broken references, open proposals, obsolete branches, and stale repository artifacts.
+
+**Rationale:**
+Unstructured development and project-management work left conflicting status records, unregistered approved documents, stale proposals, obsolete artifacts, and repository hygiene debt. The repository must return to one documented and verified state before implementation begins.
+
+**Impact:**
+PR #8 is closed as superseded and PR #9 is closed as not adopted, both without merge. The authoritative Skill Library competence-role count remains zero. Recovery changes may update the Frozen Review Matrix only to record verified recovery findings and corrections. Product implementation remains blocked until recovery is complete and the Product Owner separately approves the first Phase 6 Implementation Task.
+
+**Related Documents:**
+
+- `docs/PROJECT_STATUS.md`
+- `docs/MASTER_INDEX.md`
+- `docs/project/DOCUMENT_REGISTER.md`
+- `docs/project/REVIEW_MATRIX.md`
+- `docs/aios/AIOS_LIFECYCLE_REGISTER.md`
+
+---
+
 # Revision History
 
 | Version | Date | Description |
@@ -140,3 +165,4 @@ Direct commit to `main` is limited to small, local, low-risk, reversible, non-go
 | v2.0 | 2026-07-29 | Repository consolidation |
 | v2.1 | 2026-08-01 | Recorded Product Owner decision DEC-001 correcting Sprint 0 historical status. |
 | v2.2 | 2026-08-02 | Recorded the owner-authorized GitHub Workflow v2 governance change as DEC-002. |
+| v2.3 | 2026-08-04 | Recorded the Product Owner-authorized controlled project recovery as DEC-003. |

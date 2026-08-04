@@ -27,11 +27,11 @@ Whenever a potential improvement is identified, it should follow a consistent pr
 1. Record the idea in the Business Change Queue.
 2. Provide a short rationale.
 3. Review and prioritize it during the appropriate planning cycle.
-4. Move the item to the Business Decision Log only after an explicit decision has been made.
+4. Record the outcome in the authoritative DGTC Decision Log only after an explicit decision has been made.
 
 The Change Queue collects possibilities.
 
-The Business Decision Log records decisions.
+The DGTC Decision Log records decisions until an explicitly approved business-specific decision log exists.
 
 ---
 
@@ -87,7 +87,7 @@ Business Change Queue
 Strategic Review
     │
     ▼
-Business Decision Log
+DGTC Decision Log
     │
     ▼
 Documentation Updates
@@ -115,8 +115,8 @@ Ideas should never disappear without traceability.
 
 ## Related Documents
 
-- `BUSINESS_DECISION_LOG.md`
-- `docs/business/BUSINESS_INDEX.md`
+- `../foundation/08_Decision_Log.md`
+- `BUSINESS_INDEX.md`
 - `BUSINESS_GUARDRAILS.md`
 
 ---
